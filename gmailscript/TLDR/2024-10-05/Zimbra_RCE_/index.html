@@ -1,0 +1,619 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR InfoSec</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Zimbra has disclosed a new RCE vulnerability in its SMTP server. There have been attacks since September 28 attempting to exploit this vulnerability&nbsp;</div>
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/LTqcl4yzqgjYaxPNboodz5c3C-Apr1O-Pir3OCnTHk0=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/piLpdOOPwR6EkWKSyE5pgws_bAXmXyyaKCQivGDoCtc=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=ad232f24-8240-11ef-8fa0-e3789a752675%26pt=campaign%26t=1728047120%26s=a1de41c8468d559d993fef6c9f5c32293d4813c1d35f31f101c5a5250db5b55d/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/ak520F8dQU_z9pO2jitvOtjenvNIO_Usa6IXRq-G11A=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.vanta.com%2Fdownloads%2Fgrc-implementation-guide%3Futm_campaign=grc%26utm_source=tldr-infosec%26utm_medium=newsletter/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/nHOxSoG8V1qgXzYbCAqyb8U_0tZ7NVxG8faeChWBwnQ=373"><img src="https://images.tldr.tech/vanta50.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Vanta"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Information Security <span id="date">2024-10-04</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.vanta.com%2Fdownloads%2Fgrc-implementation-guide%3Futm_campaign=grc%26utm_source=tldr-infosec%26utm_medium=newsletter/2/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/7_K32t2eKkLARVvIAZdEH-5AJ_ZX2V5fDRXhgqEiIZw=373">
+                                    <span>
+                                        <strong>The strategy-to-tactics GRC implementation guide (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The information security landscape is constantly changing, which is why it's important to have a scalable and secure strategy that evolves alongside it. Vanta's <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.vanta.com%2Fdownloads%2Fgrc-implementation-guide%3Futm_campaign=grc%26utm_source=tldr-infosec%26utm_medium=newsletter/3/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/m4z07eHXTo1o8VJAnm694hkE-8NBOxL5l5Yc7yEPgOs=373" rel="noopener noreferrer nofollow" target="_blank"><span>GRC implementation guide</span></a> can provide your organization with a structured, proactive approach to managing its IT security that helps your business meet its goals.
+
+<p></p>
+
+<p>Learn how to implement a scalable GRC framework with this tactical guide. Here's what's inside:</p>
+
+<ul>
+<li>Overview of GRC strategy.</li>
+<li>The three components that make up a GRC framework.</li>
+<li>The steps needed to implement GRC for your organization.&nbsp;</li>
+</ul>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.vanta.com%2Fdownloads%2Fgrc-implementation-guide%3Futm_campaign=grc%26utm_source=tldr-infosec%26utm_medium=newsletter/4/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/JjzjrQhBD-bHpHf87xt4gZH1e2yhq2SrRIXpXshoHwM=373" rel="noopener noreferrer nofollow" target="_blank"><span>Download the guide</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🔓</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Attacks &amp; Vulnerabilities</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.darkreading.com%2Fcyberattacks-data-breaches%2Frecent-zimbra-rce-under-attack-patch-now%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/9f0Ub-VScp35Mw3d-Xbeed88WJTWBLzTSwmLyBG2zas=373">
+                                    <span>
+                                        <strong>Zimbra RCE Vulnerability Under Attack (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Zimbra has disclosed a new RCE vulnerability in its SMTP server. The vulnerability arises from improper sanitation, which can lead to a maliciously crafted CC line being executed as shell commands by the server. Researchers at Proofpoint report that there have been attacks since September 28 attempting to exploit this vulnerability and urge immediate patching.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhackread.com%2Flinux-malware-perfctl-hit-millions-mimick-system-files%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/KjooRtIboULohnppuZBaTiERJ9TF5gDwFQ_dsGrqYtI=373">
+                                    <span>
+                                        <strong>New Linux Malware ‘Perfctl' Targets Millions by Mimicking System Files (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A new Linux malware called Perfctl is targeting millions worldwide by mimicking system files to avoid detection. This sophisticated malware compromises Linux servers for cryptomining and resource hijacking, using rootkit and evasion techniques to hide its presence. To protect your Linux systems, update regularly, conduct vulnerability assessments, and use security tools like firewalls.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsecurityaffairs.com%2F169316%2Fcyber-crime%2F4000-unpatched-adobe-commerce-and-magento-stores-hacked.html%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/BmiOrDIKCttHWY4xM1lR2eRxpNOlvIN4LdiAzLXBoSA=373">
+                                    <span>
+                                        <strong>Thousands of Adobe Commerce e-stores hacked by exploiting the CosmicSting bug (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Over 4,000 Adobe Commerce and Magento e-stores were hacked due to a critical vulnerability, CosmicSting (CVE-2024-34102), which allows attackers to execute arbitrary code. The attacks have impacted major organizations and resulted in the installation of payment skimmers on victim stores. Merchants are urged to update their systems immediately to protect against these exploits.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Strategies &amp; Tactics</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.midi12.re%2Fopaque-predicates-how-hunt-them%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/v-Z4yertNUnN7BDI8aWkW9faFPmdyl7M3-V5utsqfSo=373">
+                                    <span>
+                                        <strong>Opaque Predicates and How to Hunt Them (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Opaque predicates are a conditional expression that the programmer knows the answer to but chooses to check anyway. They can be utilized to obscure the control flow for anti-reversing. This post utilizes the MIASM Python library to create an IDA Pro plugin to detect and patch unreachable blocks. The plugin utilizes the Symbolic Execution engine to detect opaque predicates and then patches them with NOPs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.intigriti.com%2Fhacking-tools%2Fhacking-misconfigured-cloudflare-r2-buckets-a-complete-guide%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/8QxWj4iQzNeTNMPXV6Pu666XPYcJ62VrQYJ-VqbAsZI=373">
+                                    <span>
+                                        <strong>Hacking Misconfigured Cloudflare R2 Buckets: A Complete Guide (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog post discusses how to hack Cloudflare R2 buckets to discover sensitive files. Begin by utilizing Google dorking and examining HTTP requests to discover R2 buckets. Exploitation can then be done via abusing missing or improper authorization checks or finding exposed R2.dev buckets.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fany.run%2Fcybersecurity-blog%2Fintercept-stolen-data-in-telegram%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/_i32vIgXefM8fydS10A1euV6JFHpFYduIqEzHGyIPyM=373">
+                                    <span>
+                                        <strong>How to Intercept Data Exfiltrated by Malware via Telegram and Discord (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog post explains how to gather information on threat actors, using Telegram API to identify them and attribute malware samples. It demonstrates steps to intercept data exfiltrated by malware through Telegram and Discord, including obtaining bot tokens, chat IDs, and forwarding messages for analysis. The post provides scripts and examples for interacting with Telegram bots and Discord webhooks to monitor and analyze malware activities in real time.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdegrees.snhu.edu%2Fprograms%2Fbs-in-computer-science-information-security%3Futm_source=TLDR%26utm_medium=PPL%26utm_campaign=PROS_Email%26utm_content=TLDR-InfoSec%26snhu_segment=OL/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/86a5-cgTYO8FArIKMM5mTV_nt7Wppvn6y96Aekk7VaU=373">
+                                    <span>
+                                        <strong>Find an affordable online degree in information security (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    You don't have to put your career on hold to get a high quality education. With 100% online classes, and six 8-week terms a year, SNHU offers the flexibility you need to take the next step. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdegrees.snhu.edu%2Fprograms%2Fbs-in-computer-science-information-security%3Futm_source=TLDR%26utm_medium=PPL%26utm_campaign=PROS_Email%26utm_content=TLDR-InfoSec%26snhu_segment=OL/2/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/NHWtJo0At50Ihu5KNRvqNGUqTZrIlcmz151n_iMw1Wk=373" rel="noopener noreferrer nofollow" target="_blank"><span>Find your InfoSec degree today</span></a> (US based students only)
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fnickvourd%2Fsupernova%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/N9oDzKqnoggf6hJupOZqfZ01FLvGrMX1q4bwsc3zvkg=373">
+                                    <span>
+                                        <strong>Supernova (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Supernova is a tool for advanced encryption and obfuscation of raw shell code.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fattacksurge%2Fax%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/nkL7EZ0UF3DjT1MZ5kkdPDe0y6c7I4pHI5HZdrRKO6s=373">
+                                    <span>
+                                        <strong>Ax (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ax is a framework that utilizes packer files to prepare base images to deploy across multiple cloud providers for penetration testing or bug bounty hunting.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flambdawatchdog.com%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/cfPcCAg53fjzHPxp-_lRQrtQkSvLGGVx8DWh8IAgoqI=373">
+                                    <span>
+                                        <strong>Lambda Watchdog (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Lambda Watchdog continuously scans Lambda images for vulnerabilities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthehackernews.com%2F2024%2F10%2Fandroid-14-adds-new-security-features.html%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/gIe83XNNXCYu2uX-aTCHaLoJax1luQM-idbzNqDNxfU=373">
+                                    <span>
+                                        <strong>Android 14 Adds New Security Features to Block 2G Exploits and Baseband Attacks (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Google has added new security features to its latest Pixel devices to protect against baseband security attacks. These attacks exploit vulnerabilities in cellular baseband software to compromise device security. The new Android 14 update also includes measures to prevent unauthorized network connections and alert users to potential surveillance threats.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F2Ywlv5/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/tixZLpgnbl-hqbIyrqnvD2E1zSd6X3KFeqRsY_BEBNA=373">
+                                    <span>
+                                        <strong>You might want to check your Bank of America account: clients reporting $0 balance (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Bank of America customers nationwide faced an outage with $0 balances in their accounts, causing widespread concern. Over 19,000 people reported the issue, which mainly affected online and mobile banking services. Despite technical problems, Bank of America assures that the issues have been largely resolved.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fblog.quarkslab.com%2Fdifferential-fuzzing-for-cryptography.html%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/xjKygPryCEDo5iWIWD8XQjtXnuY0JJAYD3aX_oP-V54=373">
+                                    <span>
+                                        <strong>Differential fuzzing for cryptography (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Differential fuzzing uses multiple implementations to compare outputs for finding bugs like logic errors and incorrect computations, beyond just memory bugs and crashes. LibAFL is a tool that helps with custom input generation for differential fuzzing, allowing for more efficient bug discovery in cryptographic implementations. The quality of input generation and harness design is crucial for a successful fuzzing campaign, highlighting the importance of testing edge cases while restricting the test range to what the target can handle.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.bleepingcomputer.com%2Fnews%2Fsecurity%2Fcloudflare-blocks-largest-recorded-ddos-attack-peaking-at-38tbps%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/0Zn-ko29FC8JFpLMMXfr9WhQlE8rl2obVJCTQLLikSI=373">
+                                    <span>
+                                        <strong>Cloudflare blocks largest recorded DDoS attack peaking at 3.8Tbps (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cloudflare successfully blocked the largest recorded DDoS attack, which reached 3.8 terabits per second.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthehackernews.com%2F2024%2F10%2Finterpol-arrests-8-in-major-phishing.html%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/uMnF3RcdiOY1DDT07TlMwxO1Z9RdznloYFoSF3xWfO8=373">
+                                    <span>
+                                        <strong>INTERPOL Arrests 8 in Major Phishing and Romance Fraud Crackdown in West Africa (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    INTERPOL arrested eight people in West Africa for phishing and romance fraud involving Swiss citizens that led to $1.4 million in losses.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhackread.com%2Fpig-butchering-fake-apps-crypto-apple-google-play-stores%2F%3Futm_source=tldrinfosec/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/qTL59wpmVrOqPAxrKIoUVsRVAdtIg00FisLMmTxnae8=373">
+                                    <span>
+                                        <strong>Pig Butchering: Fake Trading Apps Target Crypto on Apple, Google Play Stores (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Fake trading apps targeting crypto investors on Apple and Google Play Stores have been discovered.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F9c8a806a%2F8/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/vEqOSvF65NLgCwXV7K6iFnNoDc3Dc5cA4fIqfFOOxA8=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/9c8a806a/8</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_14d48d82f243%2F8/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/-3mwxipEySHabqjV_SbZy-h4khZSevNJvN6qPapyvMg=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of cybersecurity professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/wDMYOAGsJLCi1s_wVQOa0sa-LovtPdLCiyR-n3i971c=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Prasanna Gautam</span>, <span>Eric Fernandez</span> &amp; <span>Sammy Tbeile</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Information Security, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=8d9cea11-3e94-11ed-9a32-0241b9615763%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=ad232f24-8240-11ef-8fa0-e3789a752675%26pt=campaign%26pv=4%26spa=1728046878%26t=1728047120%26s=5f383e3e7a6962662bbdb414e2ebdbeec8fa13b3fbd874101804580780c299cc/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/26-fsiHXNj-S_d6e5MsglUCMZIBK4hjxQmEgJjXaSBI=373">unsubscribe from TLDR Information Security</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/lFbwKggL8NntQ11ZiOd-2_b0JLQEg8mXz-neDnSMYFg=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019257a28281-c4864390-4c77-44c0-89e9-4c2651c307e1-000000/c1G1T1aC2GUYAYqZ3t3tLzzlKYwndYlIRcOHZJwVB_k=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

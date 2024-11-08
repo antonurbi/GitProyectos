@@ -1,0 +1,73 @@
+
+Financial Metrics Calculation Models:
+
+Group 1: Profitability and Operating Margin
+Metrics:
+- Operating Margin
+- Net Profit Margin
+- EBITDA Margin
+- Gross Profit Margin
+- Basic EPS
+- Diluted EPS
+
+Calculations:
+1. Margin as a Percentage of Revenue:
+   Operating Margin % = (Operating Income / Total Revenues) * 100
+   Apply similar formulas for other margins.
+
+2. EPS Growth (year-over-year):
+   EPS Growth = (Current Period EPS - Previous Period EPS) / Previous Period EPS * 100
+
+Group 2: Growth and Financial Performance
+Metrics:
+- Total Revenue Growth Rate
+- Free Cash Flow
+- Various Operating and Financial Trends
+
+Calculations:
+1. Total Revenue Growth Rate:
+   Revenue Growth Rate = (Current Period Revenues - Previous Period Revenues) / Previous Period Revenues * 100
+
+2. Trends (such as moving averages or linear regressions for):
+   - EBITDA Trend
+   - Net Income Trend
+   - EPS Trends (Basic and Diluted)
+
+Group 3: Financial Stability and Operational Efficiency
+Metrics:
+- Cash Flow Stability
+- Interest Coverage Ratio
+- R&D to Revenue Ratio
+- SG&A to Revenue Ratio
+- Expense to Revenue Ratio
+
+Calculations:
+1. Cash Flow Stability:
+   Coefficient of Variation of Cash Flow = (Standard Deviation of Cash Flow) / (Mean of Cash Flow)
+
+2. Operational and Efficiency Ratios:
+   R&D to Revenue Ratio = (R&D Expenses / Total Revenues) * 100
+
+Group 4: Other Financial Factors
+Metrics:
+- Effective Tax Rate (ETR)
+- Unusual Expenses/Incomes
+- Impact on Net Income
+
+Calculations:
+1. Effective Tax Rate:
+   ETR = (Income Tax / Income Before Taxes) * 100
+
+2. Adjusted Impact of Non-Recurring Items on Net Income:
+   Adjusted Impact = Net Income ± Non-Recurring Items
+
+Group 5: General Categories
+These categories can be evaluated using comparative analysis or percentiles as mentioned earlier, based on available sector data.
+
+Group 6: Other Indicators
+Metric:
+- Normalized Earnings
+
+Calculations:
+1. Normalized Earnings:
+   Normalized Earnings = Net Income - Non-Recurring Items

@@ -1,0 +1,4 @@
+\beamer@sectionintoc {1}{Resumen Económico}{3}{0}{1}
+\beamer@sectionintoc {2}{Análisis de Mercado}{4}{0}{2}
+\beamer@sectionintoc {3}{Riesgos Potenciales}{6}{0}{3}
+\beamer@sectionintoc {4}{Estrategia Recomendada}{7}{0}{4}

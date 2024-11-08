@@ -1,0 +1,81 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{geometry}
+\geometry{letterpaper, margin=1in}
+
+\title{Resumen para Inversores: Opciones y Estrategias en Derivados}
+\author{Inversión Estratégica}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introducción}
+
+En este documento, se exploran las características y estrategias clave relacionadas con las opciones, uno de los derivados más utilizados en los mercados financieros. También se introduce una breve discusión sobre los tipos de operadores que utilizan derivados, y sus motivaciones, como cobertura, especulación y arbitraje.
+
+\section*{Tipos de Opciones}
+
+Existen dos tipos de opciones:
+\begin{itemize}
+    \item \textbf{Opción de compra (call)}: Otorga al comprador el derecho, pero no la obligación, de comprar un activo subyacente a un precio específico (precio de ejercicio o strike) en una fecha futura.
+    \item \textbf{Opción de venta (put)}: Otorga al comprador el derecho, pero no la obligación, de vender un activo subyacente a un precio específico en una fecha futura.
+\end{itemize}
+
+A diferencia de los contratos forwards y futuros, en los cuales ambas partes están obligadas a cumplir, las opciones otorgan derechos al comprador, mientras que el vendedor asume la obligación.
+
+\section*{Estilos de Opciones}
+
+\begin{itemize}
+    \item \textbf{Estilo Americano}: El comprador puede ejercer la opción en cualquier momento antes de su vencimiento.
+    \item \textbf{Estilo Europeo}: La opción solo puede ejercerse en la fecha de vencimiento. Sin embargo, es importante destacar que las opciones estilo europeo pueden negociarse durante su vida, aunque el ejercicio solo sea en el último día.
+\end{itemize}
+
+\section*{Prima de la Opción}
+
+A diferencia de los forwards y futuros, al entrar en un contrato de opción se paga una \textbf{prima}. Este es el costo de adquirir el derecho que otorga la opción. La prima cambia de manos al inicio del contrato:
+
+\begin{itemize}
+    \item El \textbf{comprador} paga la prima al vendedor.
+    \item El \textbf{vendedor} recibe la prima, pero asume la obligación asociada.
+\end{itemize}
+
+\section*{Gráficos de Pagos}
+
+En el caso de las opciones, el comportamiento del comprador y el vendedor difiere significativamente, lo que crea un perfil de riesgo asimétrico. Consideremos una opción de compra (call):
+
+\subsection*{Comprador de Call}
+
+\begin{itemize}
+    \item El comprador de call paga la prima ($X$), por lo que su ganancia inicial es negativa.
+    \item A medida que el precio del activo sube por encima del precio de ejercicio ($K$), el comprador experimenta una ganancia ilimitada.
+    \item Sin embargo, la pérdida del comprador está limitada a la prima pagada, incluso si el precio del activo cae a cero.
+\end{itemize}
+
+\subsection*{Vendedor de Call}
+
+\begin{itemize}
+    \item El vendedor de la call gana la prima al inicio, lo que representa su ganancia máxima.
+    \item Si el precio del activo subyacente sube, el vendedor enfrenta una \textbf{pérdida ilimitada}.
+    \item En este caso, el vendedor tiene una ganancia limitada, pero su riesgo es ilimitado, lo que refleja un pago asimétrico.
+\end{itemize}
+
+\subsection*{Punto de Equilibrio}
+
+El punto de equilibrio para el comprador de call es el precio de ejercicio más la prima pagada ($K + X$). Solo a partir de este nivel, el comprador comenzará a obtener ganancias.
+
+\section*{Estrategias y Tipos de Operadores}
+
+Los derivados, incluidas las opciones, son utilizados por diferentes tipos de operadores según sus objetivos financieros:
+
+\begin{itemize}
+    \item \textbf{Cobertura (Hedging)}: Los operadores utilizan derivados para reducir o eliminar riesgos, fijando precios futuros de activos. Este enfoque es común entre empresas que buscan protegerse contra movimientos adversos en los mercados.
+    \item \textbf{Especulación}: Los especuladores asumen riesgos para obtener ganancias. Pueden diseñar el nivel de riesgo que desean asumir utilizando derivados, permitiendo una exposición total o parcial al riesgo de mercado. No es necesario que la apuesta sea direccional (hacia la subida o bajada del precio).
+    \item \textbf{Arbitraje}: Consiste en obtener ganancias sin riesgo aprovechando precios incorrectos en el mercado. Un ejemplo de esto sería comprar un activo en un mercado y venderlo en otro donde el precio es más alto, hasta que los precios se ajusten.
+\end{itemize}
+
+\section*{Conclusión}
+
+Las opciones ofrecen una estructura de riesgo-recompensa que puede ser extremadamente útil tanto para cubrir riesgos como para especular. Los operadores deben entender la asimetría de los pagos y los riesgos inherentes a las posiciones largas y cortas en opciones. Además, las estrategias como la cobertura y el arbitraje ofrecen oportunidades para gestionar riesgos y aprovechar desequilibrios en los precios del mercado.
+
+\end{document}

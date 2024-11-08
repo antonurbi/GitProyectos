@@ -1,0 +1,351 @@
+WEBVTT
+Kind: captions
+Language: es
+[Música]
+la diferencia
+entre el mercado de valores y el mercado
+de futuros
+como hab�a mencionado previamente se
+pueden usar los mismos elementos
+gráficos tanto en el mercado de valores
+como los mercados futuros lo que s� hay
+que tener muy en cuenta ciertas
+especificaciones que posee el mercado de
+futuros antes de realizar cualquier tipo
+de operación
+
+
+hay una gran variedad en una variedad de mercados de
+futuros distinta que hace que justamente
+sea m �s más especies vivir más complejo
+de lo que es el mercado de valores
+convencional 
+
+una vez explicadas todas
+estas cuestiones de forma teórica vamos
+a ir a la página dcm y a el sg para para
+ver justamente todo dónde se pueden
+encontrar estas especificaciones para
+que ustedes tengan la herramienta y
+puedan buscar y puedan decidir a qué
+mercado meterse en función de sus
+preferencias personales 
+
+Estructuras de predios
+el primer punto
+a tener en cuenta la estructura de
+precios en futuros es mas compleja que
+en el mercado de valores dado que cada
+producto cotiza en diferentes unidades e
+incrementos.
+
+El operador tiene que aprender tiene que
+conocer todos los detalles contractuales
+de cada mercado, es muy diferente el nasdaq
+que el s&p 500 que el russell que el
+down jones
+
+Duraci�n limitada
+A diferencia del mercado de
+valores los futuros tienen fecha de
+caducidad, lo que quiere algunos
+problemas a la hora de hacer previsiones
+a largo plazo. Esto se debe a que una vez
+que los contratos dejan de operar se van
+a necesitar nuevos graficos. Esto lo que 
+implica el vencimiento trimestral (cuatro meses)
+
+Por ejemplo en un agente
+de bolsa si se produce ese cambio y no tienen
+una funci�n automatizada que se llama el
+Roll over, este van a tener grafico en
+blanco en el pasaje del siguiente
+d�a porque justamente no se les va a
+haber hecho se va a haber vencido un
+contrato no se va a mover el precio y se
+va a necesitar pasar al otro
+Componente del Margen
+Es casi la esencia de lo que
+implica un contrato de futuros todos los
+futuros se contratan al margen 
+
+esto implica que se usa un porcentaje menor
+de dinero para poder acceder al mismo. 
+Con muy poca plata van a poder  
+acceder a este tipo de contratos
+sin insisto la necesidad de tener un
+caudal enorme de dinero. Es dentro de
+todo accesible pero  como resultado de esto 
+se obtiene much�simo apalancamiento y esto 
+hace que los movimientos peque�os de precios se
+magnifiquen sobre los resultados de la
+operaci�n esto por supuesto genera que
+se puedan ganar mucho dinero 
+o se pueda perder mucho habla totalmente 
+
+cuestiones a tener en cuenta 
+Fundamental a tener en cuenta el
+margen en futuros
+
+Teniendo en cuenta la importancia del
+margen ahora entre un factor que es
+fundamental el tiempo el factor tiempo
+es mas crucial en el mercado futuro 
+que en el mercado de valores dado que justamente como
+mencionaba por el ampa lanka por el
+apalancamiento se podrá pagar la
+totalidad de cuenta en poco tiempo si
+esto
+
+contra y no tiene stop loss y le digo la
+van a pasar bastante mal
+as� que factor tiempo fundamental el
+horizonte temporal
+pasa a ser más corto si se reduce el
+tanto el tiempo en la compresión en la
+temporalidad como en el factor de la
+decisión por eso es dentro de todo
+bastante complicado operar este tipo de
+mercados luego está el punto de las
+herramientas técnicas donde el autor
+hace un 1 por lo menos tiene una
+creencia de que ciertos de cooperadores
+conf�an más en ciertos indicadores a
+corto plazo que son capaces de detectar
+señales más precisas este pero bueno yo
+no va a ver no lo comparto tanto yo he
+usado usó los mismos indicadores para el
+largo plazo como paracorto lo que
+justamente cambia es la temporalidad no
+voy a estar operando el nasdaq por
+ejemplo con una temporalidad de 24 horas
+nos por decir algo un d�a
+este
+lo haré en 5 minutos 1 minuto dado la
+justamente el condicional del tiempo que
+mencionaba previamente además de esto
+además de los indicadores también se le
+presta mucha atención y es me parece
+fundamental la acción del precio dado
+que justamente el precio o sea los
+indicadores actúan en función del precio
+o sea el precio se mueve y hasta que eso
+llegue el indicador tiene una cierta
+demora y es por eso que muchos de los
+operadores que también yo creo que le va
+bien no solo usan indicadores sino que
+también ven la acción del precio bien
+alguna debilidad en algún algún tipo de
+de falla alcista o movimiento no
+impulsivo y ya empiezan a hacer sus
+conjeturas en base a cómo se están
+moviendo las velas que son las que te
+dan la realidad al instante de cómo se
+está moviendo el precio en ese momento
+es el mercado en ese momento quiere
+decir y de lo que puede llegar a pasar
+insisto con el factor tiempo que es
+fundamental bueno como les mencionaba
+previamente está la página de la xi en y
+group que básicamente tiene todos los
+mercados este
+todos los productos bueno korn
+crude oil
+el samp y el nasdaq bueno oro todas las
+demás
+todos los productos acá ponen todos
+todos los productos y los va a
+redireccionar a lo que ustedes quieran
+básicamente está en la página
+simplemente se las muestro la voy a
+dejar en la descripción
+para que la vean y que elijan el mercado
+que ustedes quieran analizar para poner
+justamente dos ejemplos este les traigo
+acá el contrato mini del nasdaq que si
+ustedes lo ven acá bueno que justamente
+tienen el último precio el cambio bueno
+el volumen y demás cuestiones
+dentro de toda esta todas estas
+categor�as si se meten en contra cge
+pecs o sea no hace falta que lo tenga en
+inglés lo pueden traducir al español te
+hacen as�
+y listo
+si viene acá lo cambie pero bueno se va
+a entender no a ningún problema unidad
+del contrato
+20 dólares por el nyse nasdaq ustedes
+van a tener por supuesto el gráfico y
+van a ver el incremento de precio en
+tiempo real este bueno pone los horarios
+pone las fluctuaciones del precio como
+les mencionaba previamente a capone
+total 0.25 puntos del �ndice son 5
+dólares vendr�a a ser que un punto se
+mueve 20 dólares
+bueno cogió el producto contrato
+cotizados esto es justamente en marzo
+junio septiembre diciembre lo que le
+mencionaba el tiempo este el vencimiento
+y bueno todas estas cosas las van a
+poder ver acá
+insisto elija en el mercado que que más
+les convenga por supuesto este este
+�ndice justamente y más este contrato de
+futuros es de los que más movimientos
+tienen es de los más riesgosos y por
+supuesto no recomiendo para nada que se
+inicien acá este as� que bueno también
+está el s p500 que vendr�a a ser una
+categor�a un poco menor tampoco
+recomiendo que inicien acá este insisto
+en futuros y ahora vamos a ver lo otro
+también
+como les mencionaba contrato por unidad
+para que vean si bien éste se mueve los
+puntos cuando cuando se mueve en el
+gráfico son un poco más son un poco más
+lento cada punto vale 50 dólares se hace
+con un 50 por un cuarto éste y bueno las
+mismas especificaciones que antes y
+demás lo último que les voy a mostrar es
+el sg que si bien no hay futuros
+es mejor para m� por lo menos en lo
+personal tiene lo que se llama los los
+efe de los contratos por diferencia que
+si ustedes se fijan y ponemos acá dice y
+uss stage 100 que cambia la nomenclatura
+pero es el nasdaq son las 10 empresas
+tecnológicas justamente y webs
+tecnológicas 100 empresas el you es 500
+que hace referencia al stand p 500 el
+rush 2 acá y el 'wall street' que es el
+dow jones bueno ya que también tengo el
+oro pero bueno este estos ser�an por lo
+menos los �ndices principales con esto
+con esta plataforma que permite hacer
+esta plataforma a diferencia de los las
+las otras que brindan básicamente el
+contrato de futuro de futuros en s� como
+como lo es propiamente dicho
+básicamente fracciona
+y todo él
+todo el instrumento en diversos lotes se
+fijan dice 0 0 1 0 0 0 0 2 356 bueno
+este y as� hasta
+y bueno tenemos 10.000 lotes
+si ustedes se fijan dentro de cada lote
+hay una especificación valor del pib un
+dólar en este caso es el que ser�a el
+nasdaq valor del pib un dólar valor de
+la operación bueno este compraventa es
+lo que por lo que sé ustedes por lo que
+estar�a operando en s� comisión
+requerido a cero en este caso margen
+requerido de compra 27 dólares con 40
+esto es lo que les justamente le
+comentaba el margen y de lo que se
+requiere para abrir una posición en esto
+de una vez que se llega a ese precio o
+que no se puede mantener el margen a m�
+no me pasó pero supongo que esto es as�
+o sea no me pasó que nunca nunca llegue
+a estar en esta situación quiero decir
+pero si te ponen el margen acá es
+justamente que se necesita es esa
+cantidad de plata para poder abrir esa
+operación si no bueno este y si baja de
+la cerrar�a
+luego está el margen disponible que
+básicamente es si bien esto es una
+cuenta demo esto ser�a lo que una vez
+una vez que vos contratas y entras en
+este mercado éste se te restar�a
+justamente del total que tienes en la
+cuenta y se ir�a achicando a poquitito
+ese margen que puedes usar para para
+operar pero básicamente insisto esta es
+la conformación de un lote en el sg si
+ustedes se fijan si pasamos al siguiente
+el 0,02 se multiplica por dos
+estos son 22 dólares y acá pasa a ser 54
+en tres son tres dólares 82 y as�
+y si ustedes pueden ver pueden apreciar
+esto si yo toco acá vamos vamos a
+suponer esta está donde impulsiva
+lo que les mencionaba antes del
+movimiento de un �ndice contra otro si
+yo hago esto puedo medir cuántos pips
+hay en esta onda el son 30 con 67 esas
+ser�an 30 dólares si en esta onda
+vamos a ver esperemos que tenga que ya
+ten�a algún movimiento más él
+l shampoo
+bueno vamos a suponer que sea esto algo
+parecido si yo tomo esta medición
+ser�an seis puntos y acá el m�nimo son
+0.50 centavos de 6 puntos por 0 con 5 2
+2 son 3 dólares
+para que se den una idea de lo que
+estamos hablando y de justamente la
+diferencia entre una cosa y otra si yo
+tomo esto estos 6 puntos y los
+multiplicó por el contrato vamos a poner
+el contrato del contrato micro si no el
+mini el que vimos recién vamos a con el
+contrato micro que son 5 dólares 6 por 5
+30 pero si yo tomo el del nasdaq que es
+el que vimos recién 30 puntos en el
+contrato micro son 2 dólares o sea son
+60 para que vean la diferencia tome más
+o menos una onda que se parec�a porque
+cre� que el mercado estaba haciendo algo
+parecido porque generalmente están
+correlacionados pero bueno si tomamos
+una misma onda impulsiva similar f�jense
+la diferencia uno es el doble el doble
+as� que bueno recomendación final de
+este v�deo
+que ésta es lo que tienen que tener por
+lo menos contemplado a la hora entrar al
+mercado de futuros o a céspedes en este
+caso en el sg con �ndices no se metan si
+no saben practiquen bastante en cuenta
+demo tengan una estrategia traten de
+curtirse en lo que es la psicolog�a es
+fundamental en esto en principalmente en
+este tipo de mercados a m� me sirvió
+mucho también a posteriori este para lo
+que fue las acciones éste
+pero verdaderamente se necesita mucha
+cabeza en este tipo de cosas y se
+necesita la mente de estar seguro de lo
+que de lo que uno hace es de tratar de
+operar como si fuese lo más máquina
+posible pero sin despojarse la parte
+humana es fundamental que insisto vaya
+con un plan y que tratan de respetar lo
+que pone en este tipo de instrumentos
+con margen con apalancamiento uno puede
+perder la cuenta y nadie quiere que nos
+pase eso nunca esté tanto a uno como a
+otro bueno esto es lo que básicamente
+quedaba del v�deo anterior espero que
+les haya servido la explicación
+espero haber sido lo más claro posible
+cualquier duda me lo me lo hacen saber
+por favor den like suscriban se
+compartan lo traten de difundirlo con
+con quién con quién crea que necesita
+esta información antes de mandar sea una
+en este tipo de mercados y nos
+vemos en el próximo v�deo que ya vamos a
+estar pasando una parte un poco más
+entretenida y vamos a ir metiendo no sé
+lo que es no tanto teórico sino este
+teor�a con práctica
+y más análisis de gráficos y
+explicaciones que quizás van a tener
+bastante bastante valor para ustedes as�
+que nada nos vemos el próximo v�deo

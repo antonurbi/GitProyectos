@@ -1,0 +1,613 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Automating processes is far more complex than most people realize. The difficulty stems from handling exceptions, not routine tasks.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/N733b-71M12f94OiOFXOp7uUruvk0SsPLtXBQc6zEm0=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/JLBz4gTxj_QegKWB96CFEoI-DPAAKiVAa7GFVn1Z7H0=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=17332df0-87b0-11ef-8f20-65b645133dcf%26pt=campaign%26t=1728644863%26s=b9207c79438ea2979e2f1d1799d24bc80204fc19df2204a67c32847c98918f25/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/TktLZi9dPWpFEF82d24URr92sN6ZuOCzdD3PgG_PkEQ=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-11</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fweb.dev%2Fblog%2Fat-property-performance%3Fhl=en%26utm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/Ws2TSp9hk57qD5PAoqDyknlG50qlwAixBH_xR3PnDHE=374">
+                                    <span>
+                                        <strong>Benchmarking the performance of CSS @property (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article benchmarks the performance of CSS @property, a new feature that allows developers to register custom CSS properties. PerfTestRunner was used to measure the performance of different types of properties, including regular properties, unregistered custom properties, and registered custom properties with different inheritance settings. The results show that registering a custom property with @property comes at a slight performance cost, but using `inherits: false` when registering a custom property can significantly improve performance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbobaekang.com%2Fblog%2Fserverless-servers-and-the-challenge-of-new-react-architecture%2F%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/vQopX6_bU_lpxQREAysy-rMAz638zo02ASSEcK5GKkI=374">
+                                    <span>
+                                        <strong>Serverless servers and the challenge of new React architecture (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Vercel's new "serverless server" feature optimizes Node.js concurrency within Vercel Functions, allowing multiple requests to be handled by a single function instance. This improvement addresses a key challenge of React's new full-stack architecture, where increased server traffic and async calls are needed to handle server-side rendering and data fetching.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.changs.co.uk%2Ftypeddicts-are-better-than-you-think.html%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/NK1XwaOq91YzC8MV1KqmUdSWLee0XBsdjSviXWDg010=374">
+                                    <span>
+                                        <strong>TypedDicts are better than you think (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    TypedDict, introduced in Python 3.8, provides a powerful way to type-annotate dictionaries. While initially overlooked in favor of dataclasses and Pydantic, TypedDict works best in scenarios where not all fields are required, such as for representing PATCH operations in APIs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhardcoresoftware.learningbyshipping.com%2Fp%2F222-automating-processes-with-software%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/N1YYiYPSNlmoARerpUY_P4WMZgC8VHM6SGUkX9j9BxE=374">
+                                    <span>
+                                        <strong>Automating Processes with Software is HARD (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Automating processes is far more complex than most people realize. The difficulty stems from handling exceptions, not routine tasks. Most automations are defined by their ability to manage unexpected inputs and situations, making them fragile and requiring a lot of effort.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fchrisdone.com%2Fposts%2Frust%2F%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/9aJBT9ed6pt2_JYYG8b5J_o22dw1irRUAAblhix7voE=374">
+                                    <span>
+                                        <strong>My negative views on Rust (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Rust has a reliance on "magical sugar" constructs, which lead to cryptic compile errors and make the language harder to learn. The language's focus on efficient memory representation and its insistence on no garbage collection are also detrimental, as it forces developers to grapple with low-level details that don't always translate to real-world performance gains.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjam.dev%2F%3Futm_source=newsletter%26utm_medium=paid%26utm_campaign=2024_10_TLDR/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/4P8u751wMgq5e2OG9VuEIsc7b4TSXrgOfWCZT2ZGPJg=374">
+                                    <span>
+                                        <strong>A gift for TLDR readers: devtools bundled into every bug report (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A full trace of a bug in every bug report - even if a bad PM reported it. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjam.dev%2F%3Futm_source=newsletter%26utm_medium=paid%26utm_campaign=2024_10_TLDR/2/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/yKdUqkzJK03ed36ioJ8YhfGTU8252VKDkzFafsSIecE=374" rel="noopener noreferrer nofollow" target="_blank"><span>Use the code BUGCATCHER to get free Jam for your team</span></a> &amp; never hop on a debugging call again.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.levels.fyi%2Fheatmap%2F%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/NDf0124itoqySl4MRQUFnDSobqoptNG-FkYSzFKDMLQ=374">
+                                    <span>
+                                        <strong>Software Engineer Pay Heatmap Across the US (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    An interactive heatmap that allows users to explore software engineer salary ranges across the US by DMA region.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fsoftware-mansion%2Fsetup-ci%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/IduHCLVu4Mz0BkGVdIiZbFF-bVqWdc45J_iCwhByOYs=374">
+                                    <span>
+                                        <strong>Setup CI (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Setup-CI is a command-line tool that generates GitHub workflows for common CI tasks in React Native projects.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.indiehackers.com%2Fpost%2Fstarting-up%2Fthe-ai-startup-drama-thats-damaging-y-combinator-s-reputation-GQKuTmpGV2uWOCoxtHBn%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/b586bQ9LE5sxhC4iL360asJD8gHOX6WGAO_yBRFN8ps=374">
+                                    <span>
+                                        <strong>The AI startup drama that's damaging Y Combinator's reputation (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    PearAI, a Y Combinator startup, launched an AI code editor that turned out to be a forked clone of an existing open-source project, Continue.dev. The controversy stemmed from PearAI's attempt to misrepresent its code origins and change the open-source Apache license to a closed one. The incident raises questions about Y Combinator's vetting process and investment strategy.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.chinaza.dev%2Fthe-promind-story-looking-backwards%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/hJiKFQDgEQA0Lli81e76tI7MJ4s0B4kW6un97t12dHY=374">
+                                    <span>
+                                        <strong>The ProMind story looking backwards (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A developer created an application that offered personalized AI assistants for various professional tasks. Eventually, rapid growth led to infrastructure issues, causing service disruptions and user churn. They rebuilt their application with scalable infra. They go through the process in this article.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FSeZF89/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/rEjbgiNEHJgelek17nZtxx25ODEyWfjS0Do4cSeYkUQ=374">
+                                    <span>
+                                        <strong>The Emerging Economy of LLMs (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The key resource in the new "LLM economy” is computational power, mainly GPUs. Tokens, the smallest units of text processed by LLMs, are the new currency of this economy. The cost of using LLMs is typically determined by the number of tokens processed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthreadreaderapp.com%2Fthread%2F1842329158879420864.html%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/DnQWZvQ0KIEB_rzzxX0NzBgap_5I0xWpaWqm1BF009o=374">
+                                    <span>
+                                        <strong>10 Tailwind techniques (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Shadcn, the creator of shadcn/ui, provides 10 techniques for using Tailwind CSS to create better dynamic UIs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.lennysnewsletter.com%2Fp%2Fgoogles-notebooklm-raiza-martin%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/NQrJkfVfnJEPAtJ_krbQaKcchlaccGJAFepOsTxJmII=374">
+                                    <span>
+                                        <strong>Behind the product: NotebookLM (50 minute podcast)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is a podcast interview with Raiza Martin, a senior product manager at Google Labs, about the development and success of NotebookLM, Google's AI-powered research tool with a unique "Audio Overviews" feature.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Ftc39%2Fproposal-structs%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/RTGy5NHwG5JYlFOdQ8WqhFhtpYNbJlVJ5MR3Xq5sJL0=374">
+                                    <span>
+                                        <strong>JavaScript Structs: Fixed Layout Objects and Some Synchronization Primitives (16 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This ECMA proposal introduces JavaScript structs, a new object type with a fixed layout that enables shared memory multithreading, synchronization primitives like mutex and condition, and unsafe blocks for managing memory access.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.blog%2Fengineering%2Fengineering-principles%2Fthe-ultimate-guide-to-developer-happiness%2F%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/vFHYc6inLqcn_hVki94js1Ax5Tx_hPmf9LoAxSRfTFw=374">
+                                    <span>
+                                        <strong>The ultimate guide to developer happiness (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Five strategies for increasing developer happiness: create a great developer experience, use AI to secure code, customize LLMs, prepare repositories for teamwork, and invest in learning opportunities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FStengo%2FDeskPad%3Futm_source=tldrwebdev/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/cphKRRjmHreq7IMyAI5GExpaJ4SbbI3h8Fzh8YgKfrs=374">
+                                    <span>
+                                        <strong>DeskPad (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    DeskPad is a virtual monitor for screen sharing that creates a dedicated, easily shareable workspace by mirroring your main display within its application window.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F7349b0af%2F3/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/p4J0kCE8lB0Jl7NGv-YNSfaxOQSVRmkOtD1auCwpfiA=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/7349b0af/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_3de5f5548c83%2F3/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/ccJO3arLekzrHUwubCgSDsenwMiUc_A1zhu3Novr868=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/9afA3-Zkg5qQb-U_fOf3WQXKWUwdgBW7O7zaYOOfAMU=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=17332df0-87b0-11ef-8f20-65b645133dcf%26pt=campaign%26pv=4%26spa=1728644441%26t=1728644863%26s=1a8e99570913e24fd835beab918183bce9b948a555fd5dc6a5ee79d4aa19e755/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/Zfwm4eawiw1I2wiZa9ibnK3smRBbGcQdmX7UkLu1g0Y=374">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/zEYTrmxmcJdjnOD00aCfXpsGW93gxR2j2z0_ObTxJ1U=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001927b4354f8-73427068-f853-4624-9dc8-8112b302c940-000000/OmLqPmcE299gVKz31qaRduCuSqgOwS4X08PeeAlt6PU=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

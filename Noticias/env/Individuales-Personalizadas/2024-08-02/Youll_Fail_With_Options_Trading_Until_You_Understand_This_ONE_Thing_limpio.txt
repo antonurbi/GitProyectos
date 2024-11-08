@@ -1,0 +1,447 @@
+que obtengo de las opciones iniciales. 
+
+Los comerciantes dicen
+algo como esto, me dicen que ya es
+bastante difícil para mí elegir acciones que
+creo que van a subir y tienen razón,
+pero lo que me vuelve loco es
+que cuando compro una opción de compra sobre esa acción
+que es lo que pensé que se
+
+
+suponía que debías hacer cuando piensas que una acción
+va a subir y esa acción en realidad
+sube, ¿por qué diablos esa llamada
+baja la mayor parte del tiempo? En otras palabras,
+entendí bien la dirección de la acción y
+todavía  perder comprando una opción de compra sobre esa
+acción, ¿hay alguna forma de ganar dinero
+negociando opciones? No puedes imaginar cuántas
+veces he escuchado exactamente esta
+queja, 
+
+por lo que el propósito del
+video de hoy es ser honesto contigo y decirte
+que si  
+
+Si sigues comprando
+acciones que crees que van a subir, lo
+más probable es que sigas teniendo
+exactamente la misma experiencia, lo cual
+será muy frustrante, pero
+hay una salida fácil a este
+dilema exacto y una vez que lo implementes.  Se
+sorprenderá de cuánto
+cambiará su comercio de opciones y
+puedo asegurarle que una vez que comprenda
+este principio básico y siga
+lo que le enseñamos en este video, si
+obtiene la dirección correcta en un
+acciones, ganará dinero con el
+comercio de opciones, así que quédese porque
+obviamente es muy importante que lo
+comprenda ahora antes de entrar en la
+estrategia que le enseñaremos en el
+video de hoy si es absolutamente
+nuevo en el comercio de opciones y  No
+sé mucho sobre cómo funcionan las opciones, hemos
+preparado un video para que
+comprenda los conceptos básicos de las opciones y, si
+hace clic en el video que aparece en su pantalla
+en este momento, le sentará las bases
+para que comprenda la
+estrategia de opciones que usamos.  Lo compartiré contigo
+en este video Luego, cuando hayas terminado,
+puedes volver y ver el resto de
+este video. Este mes Mayo de 20124 ha
+tenido un comienzo extremadamente alcista con el
+S&amp;P 500 subiendo un 5,3 % solo durante la primera
+mitad del año.  mes que finalizó el 17 de mayo el
+viernes pasado, lo cual es un comienzo
+de mes vertiginoso con los alcistas totalmente en
+control después de un retroceso bastante leve
+que tuvo lugar en abril, por lo que el
+máximo histórico que en realidad se había
+[ __ ] en marzo de 2024 se superó en
+mayo.  15, por lo que cada día ofrece
+al Spy la oportunidad de batir
+otro récord al alza, ya que el
+mercado sigue convencido de que la FED
+va a empezar a reducir las tasas de interés
+sin una desaceleración grave de la
+economía, el aterrizaje suave que todos
+esperaban y  Ya sea que el mercado
+finalmente tenga razón o esté equivocado sobre este resultado, ha
+estado actuando como si eso fuera
+exactamente lo que iba a suceder y, por lo tanto, sin
+duda, puede haber sido un
+mes realmente alcista, justo el tipo de mes en el
+que uno pensaría comprando call todos los días
+unos puntos por encima.  El lugar donde opera el Spy
+seguramente le dará un
+resultado ganador, después de todo, ya sabemos que ha
+sido un repunte vertiginoso hasta ahora, por lo que ni
+siquiera tenemos que preocuparnos por la
+dirección del Spy. Ya lo sabemos, así que
+regresemos y veamos exactamente.  cómo se
+habría desarrollado esto sabiendo de
+antemano que el espionaje iba a aumentar la mayor parte de
+los días y supongamos que tenemos una
+cuenta de $ 2,000 para comenzar. Bien, entonces
+comencemos a primera hora justo cuando el
+mercado se abre el 1 de mayo y con
+Apertura espía en
+50170. Abrimos una cadena de opciones que
+vence ese mismo día 1 de mayo y
+notarás que hay una columna llamada
+Delta que verás en cualquier
+plataforma de corretaje que admita el comercio de opciones, por
+lo que vamos a buscar.  la
+opción de compra, que es lo más cercano que podemos llegar
+a al menos 20 deltas, que en este caso
+es la opción de compra 506, como puede ver, y
+vamos a comprar cinco de ellas por un precio
+de 59 centavos, para explicar lo que está
+pasando.  Aquí, lo que se conoce como
+Delta de opciones es una
+predicción matemática de cuánto
+es probable que se mueva el precio de una opción en función de cuánto
+se mueve el precio de las acciones y dependiendo de
+qué tan volátil se espera que sea el mercado
+en un día determinado, el 20 Delta.  La llamada
+puede estar muy cerca de donde se cotizan las acciones,
+a veces a solo unos puntos de
+distancia
+y en otros días podría estar un poco
+más lejos, por lo que en este día
+estuvo un poco más de cuatro puntos por encima de
+donde abrió el Spy ese día, ¿vale?  y
+desde el punto de vista del flujo de efectivo, lo que
+sucedió es que el precio de las llamadas
+fue de 59 centavos, pero recuerde que cada opción de compra espía
+representa 100 acciones, así que
+multiplicamos eso por 100 y compramos
+cinco de ellas, por lo que el costo final para nosotros
+es
+$ 295, como puede ver en el cálculo,
+y al final del día, el Spy se
+había recuperado en la apertura, pero luego se
+vendió por la tarde cerrando en
+5,83, por lo que vamos a comenzar un
+registro de cada una de estas operaciones.  hasta
+la primera quincena de mayo y como se puede ver
+con la acción cerrando a
+5,83 la opción de compra vence sin valor
+porque nadie va a
+ejercer la opción de comprar spy a 506
+cuando puedes conseguir las acciones en el
+mercado abierto por 500 83  y entonces esa opción de compra simplemente
+vence con valor cero y usted pierde
+su operación, por supuesto, está bien, pasemos
+al segundo día de mayo y con la
+acción abriendo en
+[Música]
+durante el resto del día cerrando en
+505,01,
+pero nuestra opción de compra fue al alza.  en 506 y esta
+vez el mercado se recuperó fuertemente desde la
+apertura, compramos opciones de compra en la apertura y
+no obtuvimos nada que mostrar porque el
+mercado cerró nuevamente por debajo de nuestro precio de ejercicio de opciones de compra, por
+lo que eso se convierte en otra
+pérdida a pesar de que teníamos toda la
+razón al respecto.  La dirección del mercado ese
+día y como resultado compró llamadas, por lo que
+al actualizar nuestro registro terminamos
+con otra pérdida de
+$ 215. Ahora, en el tercer día, la 20
+llamada Delta fue de $ 513 y pagamos 285 por cinco
+de ellas, pero el Spy cerró en 51131.  y
+aunque el Spy subió
+$628 centavos ese día, todavía perdimos dinero
+en la operación, entonces el 3 de mayo fue
+viernes, el siguiente día de negociación fue el
+lunes 6 de mayo y ese día la
+llamada 20 Delta fue a las 5:15 para  que pagamos
+$165 pero esta vez el mercado realmente se
+disparó y cerró en 5657, por lo que
+esta es una victoria porque, como puede ver
+en el cálculo, el precio de cierre del espía
+fue 157 por encima del precio de ejercicio de la call,
+por lo que el valor de cada call es de $157 en
+el  Al final del día, multiplicamos ese
+valor por las 100 acciones que le dan
+derecho a comprar a 515 y como
+posee cinco de esas opciones, el valor final
+de las opciones es 785 y para determinar la
+ganancia en la operación restamos el
+costo original de las opciones para una
+ganancia final de
+$620 pero luego, como puede ver, tuvimos
+otra pérdida el 7 de mayo y luego, el
+8 de mayo, algo interesante sucedió
+ese día, la llamada 20 Delta fue 5117 y
+el Spy cerró en 51719, así que cree  Oye,
+eso es bueno, el Spy cerró por encima de
+nuestro precio de ejercicio en 9 C, pero luego
+lo calculas y te das cuenta de que
+para que esas cinco llamadas requirieran un
+costo total de $190 al comienzo del día,
+eso significaba que cada opción habría tenido un
+precio.  a 38 centavos inicialmente y al
+final del día el Spy cerró 19 centavos
+más que el precio de ejercicio 517, por lo que las
+cinco opciones tenían un valor de $95 al
+cierre, pero pagamos $190 por ellas, lo que significa
+que, aunque teníamos razón
+sobre el  dirección del mercado y compramos
+una llamada que expiró con valor, la operación
+aún perdió porque el Spy no se
+recuperó lo suficiente como para que la opción valiera
+más de lo que pagamos por ella en la
+mañana, por lo que nuevamente tenemos una pérdida a pesar de que
+Teníamos razón en casi
+todo, está bien, así que en este punto, para
+no ser demasiado tedioso, solo
+le mostraremos el resto del registro que
+puede hacer usted mismo si
+tiene opciones para volver a probar el software y,
+como puede ver.  Aparte de las victorias del
+9 y 15 de mayo, el resto de las
+operaciones fueron pérdidas y, para resumir,
+la campaña de compra de llamadas resultó en
+tres victorias, 10 pérdidas y una pérdida general
+de
+$265, lo que equivale a un rendimiento negativo del
+13 % en un tiempo muy bajo.  período alcista para el espía
+y, por lo tanto, en este punto tenemos que preguntarnos si
+las opciones funcionan, ¿deberíamo
+simplemente aceptar esta idea de negociar opciones para
+expresar nuestras predicciones direccionales sobre una
+acción o hay otra solución? Bueno,
+probemos algo más y  Ya veremos,
+así que volvamos al 1 de mayo, el
+mismo día que comenzamos nuestra campaña de compra de opciones de compra
+y esa mañana, en lugar de
+comprar la opción de compra de 20 Delta, seguiremos adelante
+e intentaremos algo completamente diferente.
+Recuerde que las opciones de venta solo tienen
+valor si la acción  cierra por debajo del
+precio de ejercicio de venta el día en que vence,
+pero si el precio de las acciones cierra por encima del
+precio de ejercicio de venta, entonces la opción de venta vence
+con valor cero, lo opuesto a una
+opción de compra, por lo que si el 1 de mayo en lugar de
+comprar la opción de compra de 20 Delta, vamos  adelante y
+venda cinco opciones de venta al primer
+precio de ejercicio por debajo de una opción de venta Delta 40 que,
+en este caso, como puede ver, es la
+opción de venta 500 que tiene un Delta del
+36,67% y notará que la opción de
+venta 500 está bastante cerca de donde
+el mercado abrió ese día en
+50170 y, de hecho, la mayoría de los días, el primer
+strike por debajo de 40 Delta generalmente será
+solo uno o dos puntos por debajo de donde
+abrió el mercado, así que sigamos adelante y
+vendamos cinco de esos y luego bajemos
+dos strikes a  las 498 opciones de venta y compramos cinco
+de ellas y cuando hacemos eso,
+entramos en lo que los comerciantes
+llaman un diferencial de crédito de venta en el que se venden
+opciones de venta más arriba en una
+cadena de opciones y se compran opciones de venta por debajo de aquellas en
+la misma cadena de opciones y  Entonces, en el
+caso de esta estrategia, en lugar de
+gastar dinero en efectivo para comprar opciones de compra, en este caso,
+como puede ver en el cálculo, en
+realidad recibiremos efectivo
+porque las opciones de venta que vendimos tenían un precio de
+$129, pero las opciones de venta que compramos tenían un precio
+de  69 y, por lo tanto, al compensar los cinco
+diferenciales de créditos de venta, se obtienen $ 300, por
+lo que su corredor le pedirá que
+tenga al menos $ 700 en su cuenta
+para poder ejecutar esta operación, que
+también es la pérdida en el peor de los casos de la operación
+y, por lo tanto, avanza hasta el final.  del día,
+como recordarán, el espía en realidad cerró a
+la baja donde abrió y cerró en 500.
+183, por lo que, aunque el mercado cerró por
+debajo de donde abrió, echemos un vistazo
+al resultado de nuestra operación de diferencial de crédito de venta
+y después de tomar en
+consideración el  $ 300 que
+recaudamos originalmente, el resto es bastante
+simple porque tanto las 500 opciones de venta cortas
+como las 498 opciones de venta largas expiraron
+sin valor porque el Spy cerró por encima de
+sus precios de ejercicio, lo que nos llevó a
+embolsarnos esos $ 300 a medida que ganamos nuestra operación,
+por lo que en lugar de perder todo nuestro dinero.  Call
+Premium como lo hicimos cuando compramos la
+call en la apertura utilizando la
+estrategia de compra de call anterior el 1 de mayo, terminamos
+manteniendo toda nuestra prima que
+recibimos vendiendo el diferencial de crédito de venta
+para una ganancia total de $300 en esa primera
+operación, por lo que  Ahora comenzaremos a mantener un
+registro de los diferenciales de crédito de venta que
+vendimos ubicados justo debajo de 40 Deltas cada
+día, a diferencia de la estrategia de compra de llamadas que
+estábamos usando antes, así que
+pasemos a esto el próximo día 2 de mayo y
+en este caso estamos.  vendiendo el 502 y
+comprando los 500 puts y recaudando
+$260 con una pérdida en el peor de los casos de
+740 y, como vimos anteriormente, el Spy
+rebotó ese día a 505,01, por lo que nuestro
+resultado será más o menos el
+mismo que en nuestra primera operación en la que ambos puts
+expiró muy por debajo del precio de cierre de Spy,
+por lo que expiró sin valor y nuevamente
+nos permitió embolsarnos los $ 260 iniciales
+que recaudamos y, por lo tanto, si continuamos
+realizando este mismo ejercicio todos los
+días hasta el 17 de mayo, tal como lo hicimos
+antes de vender los casi 40 Delta put
+normalmente.  solo uno o dos puntos por debajo del
+precio de apertura del espía y comprando el put dos
+puntos por debajo para protección cada día a
+primera hora de la mañana, aquí están los
+resultados que verá si prueba
+esto usted mismo y podrá ver que es
+una historia bastante diferente.  donde
+literalmente no tuvimos pérdidas y lo único que cabe
+destacar es que en
+las dos ocasiones destacadas, el 13
+y 16 de mayo, el Spy cerró por
+debajo de la ubicación de las opciones de venta cortas y
+justo antes de que cerrara el mercado en esos
+días, una vez que era obvio que  el Spy
+iba a cerrar por debajo del
+precio de ejercicio del precio de venta, seguiríamos adelante y simplemente
+volveríamos a comprar esas opciones de venta para cerrar la operación
+y el costo de recomprarlas se
+deduciría de la ganancia de la operación
+porque la ganancia siempre se calcula
+tomando  la prima inicial que
+recibió y reducirla mediante cualquier pago
+para cerrar la posición corta porque eso
+es una salida de efectivo que resultó en
+cifras de ganancias más bajas que notará para esas
+dos operaciones, pero esas fueron las únicas dos
+operaciones en las que necesitábamos hacer eso
+y  la razón por la que necesitábamos hacer esto es
+porque en todos los demás casos el Spy
+cerró por encima del putut corto, por lo que
+no había necesidad de hacer nada más que embolsarse
+nuestra prima inicial, mientras que si el Spy
+está a punto de cerrar el dinero entonces usted
+necesita comprar.  las opciones de venta para cerrar la
+operación, de lo contrario, se le asignarán 100
+acciones de espía a su
+precio de ejercicio de venta corta multiplicado por la cantidad de opciones que
+ha vendido y ese no es el propósito
+de este ejercicio, poseer
+acciones de espía, así que simplemente las compramos.  retroceda y cierre
+la operación antes de que eso suceda, por lo que
+lo interesante es que notará
+que, si bien el espía cerró más bajo que
+cuando ingresamos en esas dos
+ocasiones resaltadas en amarillo, todavía
+ganamos dinero en la operación, lo cual, por supuesto,
+es esencialmente una  operación alcista en la que
+esperaba que el Spy se recupere tanto como sea
+posible, lo que luego hará que nuestras
+opciones expiren sin valor, lo que
+nos permitirá embolsarnos el efectivo inicial que
+recibimos en el exterior de la operación y
+estamos señalando esto para enfatizar
+cómo  Lo poderoso de la operación de diferencial de crédito de venta
+es que incluso si las acciones
+bajan después de que ingresamos a la operación, todavía
+tenemos la oportunidad de ganar esta
+operación que de otro modo sería alcista, es sorprendente, por
+lo que cuando resumimos el resultado de esta
+operación, las ganamos todas con una ganancia
+2,685 y un rendimiento de más del 100%,
+obviamente no hay competencia en un
+mes alcista como la primera quincena de mayo de este
+año y solo para recordar cuán
+dramáticamente diferente es este resultado,
+eche un vistazo a esta comparación entre
+los dos enfoques y en este escenario.
+Obviamente, no hay competencia para
+vender diferenciales de crédito de venta que son muy
+superiores en todas y cada una de las categorías, por lo que
+lo que me gustaría que usted entienda del
+video de hoy no es que los
+diferenciales de crédito de venta siempre funcionarán mejor que la
+compra de opciones de compra porque en realidad no lo harán
+en  ciertas condiciones, sino más bien que si
+usted es alcista y tiene razón en que
+vender ligeramente fuera del dinero, los
+diferenciales de crédito siempre ganarán en un día
+en el que el mercado cierra más alto de lo que
+abre y, por otro lado, compra
+opciones de compra, como vimos en este  El ejemplo
+fallará y fallará mucho, solo ganará unas pocas
+veces en este caso, aunque la mayoría de
+los días teníamos toda la razón sobre la
+dirección del espía, pero no lo suficiente como para que
+las llamadas se cerraran con algún valor
+e incluso cuando cerraron con  valor,
+todavía perdimos uno e incluso si las acciones
+sí importan, logramos exceder el
+precio de ejercicio de la opción de compra, eso aún no
+garantiza que ganará la operación
+porque aún necesita recuperar la
+prima que pagó por la opción de compra, por lo que la  El
+punto de equilibrio para una call larga es en realidad
+más alto que el precio de ejercicio de la call y es por eso que
+sigues perdiendo tan a menudo
+cuando intentas comprar
+call relativamente baratas si eres alcista y
+eso se debe a que la compra de call tiene este
+gran obstáculo que la acción tiene que superar.  En primer
+lugar, más allá de un precio de ejercicio para que usted
+gane dinero en la operación,
+mientras que con los
+diferenciales de crédito fuera del dinero, si la acción cierra
+plana o incluso un poco a la baja en comparación con
+donde estaba en la apertura, obtendrá  gane
+dinero en todos esos casos, lo que, como
+puede ver en este ejemplo, tiene un
+efecto enorme en la tasa de ganancias, lo que a su vez
+impulsa la rentabilidad y el retorno en
+casi todos los casos, y mucho menos la forma en que
+genera su confianza como comerciante, así que
+ya lo sabe.  qué ha estado haciendo
+mal y por qué sus operaciones con opciones han
+sido tan inconsistentes y ahora sabe
+fácilmente cómo cambiar las cosas para
+aumentar drásticamente su tasa de ganancias en las
+operaciones con opciones, si tiene aunque sea un poco de
+razón en la dirección de acciones. Comerciantes de opciones profesionales.
+son muy conscientes de la ventaja
+inherente a los diferenciales de crédito de venta y,
+como resultado, les encanta negociar con ellos ahora si
+desea aprender tres estrategias de opciones más
+que utilizan los operadores de comercio de ganancias,
+incluido el truco de opciones único
+que le permite ganar dinero mientras
+espere para comprar acciones o ETF al precio que
+desee y la estrategia de ingresos de opciones
+que le permite ganar dinero de manera consistente
+ya sea que el mercado suba, baje o se mueva hacia
+los lados y cómo ganar dinero con una
+operación de acciones o índices incluso si se
+equivoca  la dirección y luego haga clic en el
+enlace que aparece ahora mismo en la
+esquina superior derecha de su pantalla
+que abrirá la
+página de registro gratuito del Taller en una nueva ventana, así que
+no se preocupe, no perderá este video o
+puede registrarse directamente.  gratis en
+opciones.com

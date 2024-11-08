@@ -1,0 +1,99 @@
+\documentclass[12pt]{article}
+\usepackage{graphicx}
+\usepackage{amsmath}
+
+\title{Análisis de Phillips 66 (PSX): Aplicación de una Estrategia de Trading Basada en Productos Refinados}
+\author{Nombre del Trader}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+Este trabajo analiza la empresa Phillips 66 (PSX), una de las mayores compañías de refinación de petróleo en el mundo. Se aplica una estrategia de trading centrada en productos refinados, que busca aprovechar las dislocaciones en los mercados de derivados del petróleo como consecuencia de la volatilidad geopolítica. La estrategia utiliza un enfoque innovador que incluye la identificación de zonas de liquidez, análisis de eventos económicos, y una red bayesiana para la toma de decisiones.
+\end{abstract}
+
+\section{Introducción}
+Phillips 66 (PSX) es una empresa clave en el mercado de refinación y distribución de productos derivados del petróleo, como gasolina y diésel. Su desempeño está fuertemente influenciado por las fluctuaciones en la oferta y la demanda de productos refinados, lo que la convierte en una empresa idónea para implementar una estrategia de trading basada en la volatilidad de estos productos.
+
+\section{Análisis de la Empresa: Phillips 66}
+Phillips 66 refina aproximadamente 2 millones de barriles de crudo por día, con una parte significativa dedicada a la producción de gasolina y otros productos refinados. A diferencia de las empresas que se centran en la producción de crudo, Phillips 66 se beneficia más de los márgenes de refinación. Esta característica la hace una opción interesante para una estrategia que busca aprovechar las dislocaciones en el mercado de productos refinados.
+
+\subsection{Factores Clave}
+La rentabilidad de Phillips 66 depende en gran medida de los márgenes de refinación, que están afectados por varios factores:
+\begin{itemize}
+    \item **Precio del crudo:** Un aumento en los precios del crudo puede reducir los márgenes de refinación, pero la volatilidad del crudo no siempre afecta de igual manera a los productos refinados.
+    \item **Demanda de refinados:** Factores como la demanda de gasolina, diésel y otros productos son determinantes clave para la rentabilidad de Phillips 66.
+    \item **Política energética:** Cambios en las políticas energéticas globales y sanciones, como las impuestas a Irán, pueden afectar el suministro global de refinados y, por ende, a empresas como Phillips 66.
+\end{itemize}
+
+\section{Estrategia de Trading Aplicada a PSX}
+La estrategia se basa en aprovechar la volatilidad de los productos refinados. A continuación, se detallan los pasos clave:
+
+\subsection{Paso 1: Identificación de Zonas de Liquidez}
+Se utilizará el perfil de volumen para identificar zonas de alto volumen, que actúan como zonas de soporte o resistencia clave. Además, se detectarán números redondos en el precio de PSX, que pueden actuar como puntos psicológicos de resistencia o soporte.
+
+\begin{verbatim}
+// Paso 1: Identificar Zonas de Liquidez
+volume_profile = calculate_volume_profile(time_frame="1D", lookback=20_days)
+high_volume_zones = identify_hvns(volume_profile)
+round_numbers = detect_round_numbers()
+\end{verbatim}
+
+\subsection{Paso 2: Análisis de Noticias y Eventos}
+La estrategia se ajusta a las noticias geopolíticas, especialmente eventos que afectan al mercado de refinados. El análisis de eventos económicos relevantes se integrará a la estrategia para identificar periodos de alta volatilidad.
+
+\begin{verbatim}
+// Paso 2: Analizar Noticias y Eventos
+economic_events = get_economic_calendar()
+if significant_event_near():
+    mark_period_as_high_volatility()
+\end{verbatim}
+
+\subsection{Paso 3: Detección de Tendencias en Múltiples Temporalidades}
+Es fundamental alinear las tendencias en diferentes temporalidades antes de ejecutar una operación. Si la tendencia diaria coincide con la de temporalidades menores, esto aumenta la probabilidad de éxito.
+
+\begin{verbatim}
+// Paso 3: Detección de Tendencias en Múltiples Temporalidades
+daily_trend = detect_trend("1D")
+four_hour_trend = detect_trend("4H")
+
+if trends_are_aligned(daily_trend, four_hour_trend):
+    lower_timeframes = ["1H", "15M", "5M"]
+    for each timeframe in lower_timeframes:
+        entry_signal = detect_pattern(timeframe)
+        if entry_signal:
+            trigger_trade(entry_signal)
+\end{verbatim}
+
+\subsection{Paso 4: Red Bayesiana para Decisiones de Entrada}
+Para mejorar la precisión de las entradas, se implementa una red bayesiana que ajusta las probabilidades basadas en la evidencia disponible, como picos de volumen o noticias importantes.
+
+\begin{verbatim}
+// Paso 4: Red Bayesiana para Decisiones de Entrada
+probabilities = calculate_initial_probabilities([market_up, market_down])
+evidence = [volume_spike, price_action, news_impact]
+updated_probabilities = update_probabilities(probabilities, evidence)
+
+if updated_probabilities[market_up] > 0.6:
+    execute_trade(direction="long")
+else if updated_probabilities[market_down] > 0.6:
+    execute_trade(direction="short")
+\end{verbatim}
+
+\subsection{Paso 5: Gestión de la Operación}
+La gestión del riesgo es crucial. Se colocarán niveles de stop loss y take profit basados en puntos pivote y niveles de resistencia o soporte detectados previamente. A medida que el precio se mueva a favor, se ajustarán los stop losses de forma dinámica.
+
+\begin{verbatim}
+// Paso 5: Gestión de la Operación
+set_initial_stop_loss()
+set_take_profit_levels(pivot_points, resistance_levels)
+if price_moves_favorably():
+    adjust_stop_loss(trailing=true)
+close_position_if_conditions_met()
+\end{verbatim}
+
+\section{Conclusión}
+La estrategia aplicada a Phillips 66 demuestra cómo las empresas de refinación pueden beneficiarse de dislocaciones en el mercado de productos refinados. Utilizando análisis técnico, eventos económicos y herramientas avanzadas como redes bayesianas, esta estrategia ofrece una ventaja competitiva en mercados volátiles.
+
+\end{document}

@@ -1,0 +1,594 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR Design</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">OpenAI has introduced &quot;canvas,&quot; a new interface for ChatGPT that provides a separate workspace for writing and coding projects.&nbsp;</div>
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/IiM7ePFHAy29_oPxLFUCcVzBUgmoSNxehwjEAUpdkzo=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/EDxFZywEbNzW8H6zR_9tla8lt74eQa64M0XeQYXzl0Y=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=9488def0-823b-11ef-a78e-c1f65243c49c%26pt=campaign%26t=1728043477%26s=64555f16684519799db2498e0be8e96250cd3bbcab8428bc5b97c445585e44da/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/6g7_ce-8z_VUNUKHyne8icWA9Nps5vxm9IgOVVZx8s8=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Design <span id="date">2024-10-04</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F03%2Fopenai-launches-new-canvas-chatgpt-interface-tailored-to-writing-and-coding-projects%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/vki0nK8aweZz8FpRXTt3MPLUhqJXsT_aaV3pBaSh_k4=373">
+                                    <span>
+                                        <strong>OpenAI launches new ‘canvas' ChatGPT interface tailored to writing and coding projects (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI has introduced "canvas," a new interface for ChatGPT that provides a separate workspace for writing and coding projects. This editable workspace allows users to generate content directly, modify specific sections, and improve AI-generated outputs without redoing entire prompts. Rolling out first to ChatGPT Plus and Teams users, canvas is part of OpenAI's efforts to enhance competitive offerings against similar features from Anthropic's Artifacts and Cursor.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2F9to5mac.com%2F2024%2F10%2F02%2Fapple-continues-work-on-all-glass-macbook-with-virtual-keyboard-and-trackpad%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/Zadska8HYSbn5hSnIs4-j2WZUCTCDUT7g8mZgRrMl40=373">
+                                    <span>
+                                        <strong>Apple continues work on all-glass MacBook with virtual keyboard and trackpad (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apple is developing an all-glass MacBook with a virtual keyboard and trackpad that will use haptic feedback and electrostatic charges to simulate physical keys. A continuation patent published in 2024 confirms the project is still active, though it's uncertain if the virtual keyboard will fully replicate the feel of real typing.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F02%2Ftechcrunch-reimagined-welcome-to-our-new-design%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/rRycmnJuys5yfFcECYo2NCF-TwepU_BhW2Hm2unAP4I=373">
+                                    <span>
+                                        <strong>TechCrunch Reimagined: Welcome to Our New Design (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The redesigned TechCrunch site features improved navigation, a modern aesthetic, and real-time updates on breaking stories. The new interface enhances user experience while retaining top-tier reporting and analysis. A dedicated team led the effort, with support from Yahoo, TechCrunch's parent company.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FRAwrkH/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/HeGq-bDuw_uVfXvau_SoifyhSVzmGjwPgyDHs4oWV8o=373">
+                                    <span>
+                                        <strong>Microsoft Paint, once a joke, could be the future of image editing (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Microsoft Paint's latest update includes AI tools like Generative Fill and Erase, allowing free, easy image modifications on Windows 11. With features such as an 8x resolution upscaler, Paint could challenge Adobe Photoshop. Other tech companies like Meta and Google are also expanding their AI-powered image editing options.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.smashingmagazine.com%2F2024%2F10%2Finterview-bjorn-ottosson-creator-oklab-color-space%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/C8WCAiDbD4qYr7cLTUrvuf_cnvG5Jpg0RzNVy_HbptI=373">
+                                    <span>
+                                        <strong>Interview with Björn Ottosson, Creator of the Oklab Color Space (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Oklab is a perceptual color space designed to better align with human color perception. This interview with Björn Ottosson, the Swedish engineer who created Oklab, explores how it addresses limitations in traditional color spaces like sRGB and Lab and how it gained widespread adoption in browsers and tools such as Photoshop and CSS.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.lukew.com%2Fff%2Fentry.asp%3F2078%26utm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/Q0ebIdXB0lKJclTv5ULsu0_GFQ3RLLWFL8Rjth-M1Qo=373">
+                                    <span>
+                                        <strong>Scaling Platforms Through Use Cases (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    New technology companies often aim to be platforms for broad areas like AI or the Internet of Things. However, a broad vision without a clear strategy can hinder decision-making. Success comes from addressing specific use cases first, for example, Yelp focused on restaurant reviews before scaling to other services.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.kvin.me%2Fcss-springs%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/NrhusVTStYvOuJd4IJ00ijN9gjq_Pf_vxmQKOyv4YT0=373">
+                                    <span>
+                                        <strong>CSS Spring Easing Generator (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This tool lets you intuitively generate spring animations for CSS linear(). It includes presets and customizable inputs for perceptual duration and bounce.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdevpedia.pages.dev%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/xA7dqZKEbwjpbpKFoPw4TkM_e2Bf0xxKsK-nE92RxRk=373">
+                                    <span>
+                                        <strong>Dev Encyclopedia (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Discover concise explanations and samples for tech terms and concepts.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.framer.com%2Fmarketplace%2Fplugins%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/ZZE35bP0FYjJkiRp-nktDlr4X2Ut0ZVDu5solBjozZI=373">
+                                    <span>
+                                        <strong>Framer Plugin Marketplace (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Discover new canvas tools and seamlessly integrate Framer with your favorite apps.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.printmag.com%2Ftype-tuesday%2Fgt-pantheon-by-grilli-type%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/nNNqyUgfoUIUoBWlRZoKqNzwObV_yYpZKCjl-F3mOJ8=373">
+                                    <span>
+                                        <strong>Chisel &amp; Flow: GT Pantheon is a New Classic (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    GT Pantheon, a new typeface from Grilli Type designed by Noël Leu, Tobias Rechsteiner, and Antonio D'Elisiis, features pointed serifs and sharp digital anatomy. It is available in 30 styles across five weights and italics. With optically adjusted faces for micro, text, and display use, it offers a contemporary calligraphic design inspired by Rome's Pantheon, supporting legibility at any size. A free trial version is available.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativeboom.com%2Fnews%2Fpentagram-brand-identity-for-manchesters-sister%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/G_ZU0x4M_ZYXm7g_p9Z6KS66nILZ6itwG1TRp7JOHOM=373">
+                                    <span>
+                                        <strong>Pentagram unveils its identity for Manchester's new innovation district, Sister (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Pentagram has designed a new visual identity for Sister, an innovation district in Manchester, inspired by the city's history in computer science and Alan Turing's legacy. The brand features Sister Mono, a custom typeface based on early code-breaking machines, and a logotype inspired by The Manchester Code to symbolize connectivity and movement.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpenpot.app%2Fblog%2Fthe-important-role-of-design-systems-in-modern-ui%2F%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/yT3NSkpZcNZf6JeceSkVCEZ-NYFskIQEIZ3SfM2_uf8=373">
+                                    <span>
+                                        <strong>The Important Role of Design Systems in Modern UI (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A design system standardizes tools and resources, creating consistent and efficient UI and UX. It helps teams develop a shared language, optimize resources, and proactively address UI challenges. Design systems streamline testing and ensure long-term consistency, allowing companies to create user-friendly, innovative digital experiences across all products.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwf-blog-2021.webflow.io%2Fblog%2Fcognitive-walkthrough%3Futm_source=tldrdesign/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/yU8T8MzNHCZz0-v8jDVBpOSGT2COyholXmg-c-jnV80=373">
+                                    <span>
+                                        <strong>How to Conduct Cognitive Walkthroughs to Improve Your Site's UX (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cognitive walkthroughs help evaluate website usability by simulating a new user's experience and highlighting issues that hinder navigation and understanding, guiding design improvements.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FaZn31a/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/xhWkI1Yen4JqtpI663zVTSEAipMOEn2yoBvbFvrC1Wo=373">
+                                    <span>
+                                        <strong>AI-driven Filmmaking: How Runway is Transforming Visual Storytelling and Creativity with Gen-3 Alpha (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Runway's Gen-3 Alpha model enables AI-driven filmmaking, transforming video styles and enhancing effects for innovative storytelling.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F1Jp8p1/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/sYYiAhssmm6u-j9BaoN2VQ9UVmATJAY6Ov-k_lYmQLs=373">
+                                    <span>
+                                        <strong>Design what makes us human (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    UX design can evoke emotions beyond enjoyment, and as AI grows, more emotionally engaging, culturally aware designs may be needed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F1b9d211c%2F4/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/pHWqDAEodI8idjbsy4tjCxttVS5hxe6wv2wqFSH9n1g=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/1b9d211c/4</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_f2d978c86b6e%2F4/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/LbyL0_bqyjriNZYLVAZ6Pn4aX4iCIWO5bJX8yg33VPI=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of design professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/0w2KjOam1p8FI1SqSxwE3rbvLvd1F5rmKE84xqvLvZ8=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Jae Lee</span>, <span>Matej Latin</span> &amp; <span>Ralph Brinker</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Design, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e1c4e253-3e90-11ed-9a32-0241b9615763%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=9488def0-823b-11ef-a78e-c1f65243c49c%26pt=campaign%26pv=4%26spa=1728043237%26t=1728043477%26s=1620e2a8628a60aadfc11f47494b5caa543bbe521e77b102cc22a18baee37593/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/zyjVeeHqPLWOnIDSDd9oEa3kaTYpZB_f_vO-4XGHHhQ=373">unsubscribe from TLDR Design</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%2Fmanage%3Femail=infourbiss%2540gmail.com/1/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/FOlEXiNrxjm45cucRWCfNmXRmqMltg6kDf9tLMv8pAs=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192576aeaad-2b1cf22a-9d74-44cb-89b2-38267cf24559-000000/L3J6oSxrT4rlN7Jf7L7YDtozZ_dLGyIffup8SHh4lOI=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

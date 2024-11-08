@@ -1,0 +1,156 @@
+WEBVTT
+Kind: captions
+Language: en
+in this tutorial we cover how we measure
+the risk for trading
+strategies we'll go through what we
+consider risk how we track it how to
+find out what the risk is for strategies
+in the leaderboard and what's
+next so what is risk first very
+conceptual important Point risk
+describes what could happen in the
+future so it is a forward-looking
+measure unlike draw down which it
+describes what did happen in the past
+now of course it's true that what did
+happen in the past can inform the future
+but ultimately what you want to know and
+investor wants to know is what could
+happen to his money going forward so at
+datex we give much more weight to the
+measure of risk than we do to draw
+down so how do we track
+risk well first let's look at the
+definition we Define risk in terms of
+trading strategies as to what could
+happen to your money in the future
+future with two potential extremes it
+could be that you either lose or you
+win and of course risk is always related
+to a Target Horizon so for instance
+let's say we took a day so how come how
+much could we make or lose in one day
+well a useful approximation to that is
+what you can see at dwin X in foral
+strategies going to the
+interface checking out the basic charts
+and looking at risk so what do we see in
+here well we see for each of the trading
+days where this strategy has been active
+we see the return plotted on a
+percentage of equity basis so for
+instance in this case this strategy has
+had 162 days with a return between 0 and
+0.45 and so on and so forth both for
+positive and negative
+returns let's go back into the
+presentation
+then of course once we've done it for a
+day we could say well hm how about in a
+week so here we've um rotated the view
+and we have the Horizon of one day then
+we could also do the same thing for a
+week or we could even project the
+different returns to until we reach the
+full Horizon of one month as you see the
+uncertainty as we go further in time
+gets bigger which is why we have a a
+bigger uncertainty in the in in the one
+month
+uh darwinex this is done by taking both
+uh historical data and then simulating
+thousands of uh possible returns
+matching the risk of the strategy and
+the style of the strategy so it's done
+through what people call Monte
+Carlo which takes us to the measure of
+risk at at dwix which is value at risk
+defined as the percentage of loss in the
+worst month every 20 in other words by
+looking at the distribution we take the
+tail the worst tail look at the worst 5%
+probability and for instance a strategy
+having a VAR of 15% will lose more we'll
+lose 15% or more in a month 5% of the
+time which is why we say worst month in
+20 the flip side of that is the obiously
+that the strategy will make more than
+minus 15% 95% of the time or 19 out of
+20 months so we look at the tail risk at
+the 5% probability in one month that's
+how value at risk at that when X is
+Define so what drives the risk or the
+value at risk and the changes to the
+value of risk in a strategy it is
+related positively to the frequency of
+Trades the more trades you do all other
+things being equal the higher your
+risk the higher the leverage and the
+duration of your individual trades all
+other things equal will increase the
+value at risk and also market conditions
+so the higher the market volatility and
+the higher the correlation between the
+assets they usually trade the higher the
+risk those are the three core
+inputs so what do higher values at risk
+actually mean well they basically mean
+less certainty in outcomes an investor
+who were to invest in a high value ad
+RIS strategy such as this one could
+experience larger deviations as we see
+here at the tail than an investor with a
+lower bar who would be much more
+centered around not making or losing
+much which is why we use this to compare
+so
+how do you compare how do you track the
+evolution of risk dwix again we can go
+into the interface this is an extract
+from the and this you would see in the
+darwinia
+charts risk
+management and here you can see the
+evolution of value at risk over time for
+this particular strategy what we're
+looking for here is that the
+fluctuations are ideally as small as
+possible for instance this was a bad
+fluctuation and we we always track the
+minimum risk in the previous period the
+max maximum risk in the previous period
+and the current risk as extrapolated for
+that particular trading
+day now you'll also see that we have a
+risk Master scale in the leaderboard as
+you can see here which has different
+colors uh this is just to explain that
+the this window shows the fluctuation of
+value at risk for the particular
+strategy in the recent period in this
+case the last year where here is is the
+minimum for the period and here is the
+maximum so in other words this is
+basically looking at transposing what
+what we see the minimum and maximum
+observations that we see in the previous
+chart and that's essentially what you
+can see in the leaderboard soe uh
+whenever you see that someone has
+had uh risk of 9 uh 9.4 maximum bar that
+means that in the last period that was
+the maximum and 2.2 was the minimum and
+the the arrow is pointing at the last
+trading day for for the particular
+strategy so that's pretty much it if
+you're wondering what your value risk is
+you can find it out at dwx.com and it's
+100% for free uh a lot of people find it
+very insightful to understand exactly
+how much of the money they're risking
+and if you have any questions feedback
+or suggestions you can always reach out
+to me this is Juan dwx.com and one of
+the founders and my Skype is Juan coloa
+thank you so much for your time

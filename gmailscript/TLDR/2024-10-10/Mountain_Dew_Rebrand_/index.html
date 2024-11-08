@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR Design</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Mountain Dew has unveiled its first rebrand since 2009. The redesign includes the return of &quot;Mountain&quot; in the logo and updated colors&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/ahQF7SmCUyi6c6DH_JqWaoj-xkCjc6JC5B3cjnyDSj8=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/7hjMaXq9lKA0fROUFlUVSNlkA1vy2H2ds2K8dHkfBvc=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=5a561a18-86e6-11ef-b58d-61c8e57d9db1%26pt=campaign%26t=1728561856%26s=1af24823f9e87165c2dbe015e813e337a7bdac1a87e19a45e64b1be4bfeed89c/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/RDjiIO-7PuOuzBriZU0Rp7nIonS5OeWUhENCh--WkYQ=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Design <span id="date">2024-10-10</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.dezeen.com%2F2024%2F10%2F09%2Fmountain-dew-rebrand-reclaim-mountain%2F%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/aFP3v13107O3oAhrVZruyjwKcS-8dAJ1Pp9LpPnQ7TY=374">
+                                    <span>
+                                        <strong>Mountain Dew aims to "reclaim its legacy" with mountain-focused rebrand (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Mountain Dew has unveiled its first rebrand since 2009. Featuring a new logo and packaging highlighting its mountain roots and incorporating the landscape into its identity, the redesign includes the return of "Mountain" in the logo, a citrus leaf outline for the "I," and updated colors, reflecting the brand's adventurous legacy.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2F2024%2F10%2F9%2F24266007%2Fzoom-ai-avatars-clips-talk-for-you%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/QLeb2nUBQHOFQcdBjLDpXI1ut7LUpmkC-X4m3gYhIHU=374">
+                                    <span>
+                                        <strong>Zoom will let AI avatars talk to your team for you (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Zoom is advancing its AI capabilities by allowing users to create personalized AI avatars to attend meetings, initially focusing on sending brief video messages through the Clips feature. Users will have to record an initial video, which Zoom's AI uses to generate an avatar resembling their appearance and voice. Zoom has addressed potential deepfake concerns with advanced authentication, watermarking, and strict usage policies.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2F2024%2F10%2F8%2F24265031%2Fadobe-content-authenticity-web-app-ai-label-availability%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/5jcx24pwAb98yAqBM-5CYe8wpApZaYY58fC3jSaAU5g=374">
+                                    <span>
+                                        <strong>Adobe has a New Tool to Protect Artists' Work from AI (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A new web app launching in early 2025 will expand Adobe's Content Credentials system, helping creatives protect and attribute their work. The app will allow users to apply tamper-evident metadata to content, opt out of AI model training, and recover credentials even if stripped. Its success will depend on industry-wide adoption.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FvWIyBA/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/y4n2tHV09C2n2oP_sy5929SnQ89SA8ICfp7vJ9UgHLk=374">
+                                    <span>
+                                        <strong>Can Facebook win back Gen Z? (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Facebook's popularity among U.S. teens has declined significantly over the past decade, with usage dropping from 71% to 33% as Gen Z prefers image- and video-focused platforms like Instagram, Snapchat, and TikTok. It is adopting TikTok-inspired features to address this, but it's unclear if the changes will attract Gen Z back.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FXOAw2y/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/mYYXkmb9Rm8DyW0nLCk8tRZ2mtNqueKR3OmO9WY6R-0=374">
+                                    <span>
+                                        <strong>You're trying to turn an oil tanker (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Large organizations are like supertankers. Driving change requires time, patience, and consistent effort. Persistent communication, relationship-building, and a deep understanding of colleagues' needs helped gradually influence decision-makers at Cisco. The company only formed a dedicated engineering team for its design system after years of uphill struggle.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fuxknowledgebase.com%2Fdesigning-for-complexity-start-with-these-questions-5476acf184c5%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/MvdVT9tQDFez_pDYFpa87wyI9gcGARQy1pkeNGR1YAs=374">
+                                    <span>
+                                        <strong>Designing for Complexity: Start with These Questions (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The flexible framework introduced in this article offers an effective way to tackle project complexity. By breaking down systems into interconnected parts and asking specific questions, designers can gain clarity and prioritize solutions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.motionape.com%2Fmobar%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/KCxTvruqolo__CostlcbrASKk9OeeMGVbXwwXglzvgE=374">
+                                    <span>
+                                        <strong>After Effects Custom Panels (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    MoBar is a powerful After Effects toolset that boosts your workflow, lets you create custom panels, and offers over 130 pre-built tools for your creative needs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F2TKXiV/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/WzN1rJmkw3ZCEo-otXFTyHAIwY9YKQAwbO1lwke2vO4=374">
+                                    <span>
+                                        <strong>Apply Dithering Effect for Any Images (Figma plugin)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This plugin lets you apply stunning dithering effects to any image. Fine-tune details, add noise, adjust brightness, and enhance glow.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftextbehindimage.rexanwong.xyz%2F%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/oyNxoUF1lrJk08AeRL8dDjaB9vV59GZ1i0kZZekk9lE=374">
+                                    <span>
+                                        <strong>Create Text-behind-image Designs Easily (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This tool allows you to place text behind elements in your photos like a pro.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F2DholN/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/9jKdoQ2QTvySaLmfD07BAfz7NC2AILt4AG2KXZkT5Uk=374">
+                                    <span>
+                                        <strong>How designers create alignment (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Projects are often delayed due to team misalignment, where unclear roles and steps lead to wasted time and confusion. Design plays a key role in creating alignment at strategic, operational, and tactical levels. Tools like product development journals help teams stay organized and move projects forward efficiently.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativeboom.com%2Fnews%2Fdixonbaxis-identity-for-instrument-maker-roli-helps-cut-through-the-noise%2F%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/1OjyObL7mcH9_Tb2L2Ny0sSu4KSrAtQIWafT1O6fZXc=374">
+                                    <span>
+                                        <strong>DixonBaxi's fresh identity for instrument maker ROLI helps cut through the noise (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ROLI, known for innovative instruments like the Seaboard, collaborated with DixonBaxi to create a unified brand identity that reflects its mission to "free the music" within everyone. The rebrand features a new logo inspired by piano keys, a flexible color system, and a warm, accessible tone, uniting ROLI's diverse audience of musicians, from beginners to professionals, while streamlining its product ecosystem.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbigmedium.com%2Fideas%2Flinks%2Fsalesforce-generative-canvas.html%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/5HSrBUr2wsGdzQRlAW0N4FV3B-rVKVidlznSChp-hRw=374">
+                                    <span>
+                                        <strong>Introducing Generative Canvas (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Salesforce's new “generative canvas” pilot introduces AI-driven, adaptive UI for CRM users. It dynamically assembles content and layouts based on user context, offering personalized experiences. Combining AI flexibility with Salesforce's design consistency, it tailors interfaces in real-time, improving efficiency and user relevance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.core77.com%2Fposts%2F133838%2FUX-Design-Case-Study-Starbucks-Behind-the-Counter-System%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/4pAm8546nr0nt2MhWt8OXN47_m5bq6-7U4xRtzTSRkU=374">
+                                    <span>
+                                        <strong>UX Design Case Study: Starbucks' Behind-the-Counter System (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Tactile's project for Starbucks created a unified design system for in-store connected devices, enhancing usability and employee efficiency through a cohesive UX strategy and intuitive interface.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativebloq.com%2Fweb-design%2Fi-just-discovered-web-design-museum-and-got-lost-for-two-hours%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/BaOR_WRbUgOfnUXjNBDD62H8yLgWTyW_ymagFrjAEZQ=374">
+                                    <span>
+                                        <strong>I Just Discovered Web Design Museum and Got Lost for Two Hours (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Web Design Museum offers a nostalgic journey through digital design evolution, showcasing forgotten websites from the 90s to the 2010s for retro design enthusiasts.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.interaction-design.org%2Fliterature%2Farticle%2Fhow-to-pair-fonts-a-practical-guide%3Futm_source=tldrdesign/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/ATj-505Bm150IG9xVJ__VTtP4Wxc7dvRhdndvqRmpN8=374">
+                                    <span>
+                                        <strong>How to Pair Fonts: A Practical Guide (20 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Effective font pairing involves balancing personal preferences, project needs, and cultural context.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F1b9d211c%2F4/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/PUYkb3bsc7LRdcBCdQM7DV1yItnZ03IODVw07VDrwzk=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/1b9d211c/4</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_f2d978c86b6e%2F4/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/4B1MtV-8p1eEHbrx9CkHmd63nJvvW5dwB5EYkuOk1hg=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of design professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/3DUoPYT6fGK_1KeDBXXUyrGaiZ58vSJXSURkjbdCE-4=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Jae Lee</span>, <span>Matej Latin</span> &amp; <span>Ralph Brinker</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Design, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e1c4e253-3e90-11ed-9a32-0241b9615763%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=5a561a18-86e6-11ef-b58d-61c8e57d9db1%26pt=campaign%26pv=4%26spa=1728561655%26t=1728561856%26s=3efc49a0cb6ae8940942ee5f2c5a9361aff287c2737a623e2dae24b7beb381aa/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/b4RPSxcMElHeW7lBBU_jdqFnfw2JiVUDFQ5ER9Qr-6Y=374">unsubscribe from TLDR Design</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/sbNEMQL30N10exGr6SnjRc9vEOc1pYUWc_ivdnib290=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img src="https://www.google-analytics.com/g/collect?v=2&amp;tid=G-SLD27TC46C&amp;cid=2b04e006-819a-11ef-ad4d-4dddba39dee5&amp;en=email_open_design&amp;cn=design_campaign&amp;cm1=infourbiss@gmail.com&amp;cs=campaign_source_design&amp;cm=campaign_medium_design&amp;ck=campaign_keyword_design&amp;cc=campaign_content_design" alt="" dbrq4byfm="">
+<img src="https://www.google-analytics.com/g/collect?v=2&amp;tid=G-41HMGDKB29&amp;cid=2b04e006-819a-11ef-ad4d-4dddba39dee5&amp;en=email_open_design&amp;cn=design_campaign&amp;cs=campaign_source_design&amp;cm=campaign_medium_design&amp;ck=campaign_keyword_design&amp;cc=campaign_content_design" alt="" dbrq4byfm="">
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001927650be29-ab5dbbf3-856b-45f0-b7da-a139a906af3c-000000/x_Ij0Z6YeQkCybLBtaHec7BaPx6G0OSe-J3y4kqah9U=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

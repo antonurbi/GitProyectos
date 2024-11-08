@@ -1,0 +1,661 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">OpenAI DevDay 2024 included announcements about a real-time API enabling voice interaction with AI models and improved model customization&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/nTK6ubMZWrG2mYJz9nqd8lHa40Lv9gvQbnv78AV_zro=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/1KwkJWH32tU3GoDGGBosLZ7P8EEDzJkzg_MKE2PsyNM=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=55ff71ae-808c-11ef-a146-87dc78351347%26pt=campaign%26t=1727867125%26s=03c90ec878102fa6edd61aad1f0aea427545657b9bd29f23eeab88adc303713c/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/pZEN130w0V8tVQdE6cALtTnR3GzWyusatfL_rqCNl60=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbucket.co%2F%3Futm_source=TDLR%26utm_medium=email%26utm_campaign=public_launch_oct/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/784sO7HHfvLQ-3w_yydmYwAVi3BfYR7q3SMFCCWQ1c8=373"><img src="https://images.tldr.tech/bucket-3.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Bucket"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-02</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbucket.co%2F%3Futm_source=TDLR%26utm_medium=email%26utm_campaign=public_launch_oct/2/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/7TOIq5itdNSUwmsMYulyZLrLcclykDL5jh8CC1vY_RQ=373">
+                                    <span>
+                                        <strong>Bucket: B2B deserves better feature flagging (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Feature management tools aren't made for B2B: A/B experiments are useless, segmentation is painful, and the UIs are complex.<p></p><p>Bucket is <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbucket.co%2F%3Futm_source=TDLR%26utm_medium=email%26utm_campaign=public_launch_oct/3/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/Z1Cmii1XcqqmvJVWqsDnsz85RIekPbDu8nHhEisP0pM=373" rel="noopener noreferrer nofollow" target="_blank"><span>feature management, built for B2B</span></a>.&nbsp;</p>
+
+<p>Go from Engineer to Product Engineer in two weeks with:</p>
+
+<p>✅ Simple feature flags for de-risked feature rollouts</p>
+
+<p>✅ Realtime feature adoption metrics and customer feedback&nbsp;</p>
+
+<p>✅ A single feature key for flags, adoption metrics, and customer feedback</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbucket.co%2F%3Futm_source=TDLR%26utm_medium=email%26utm_campaign=public_launch_oct/4/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/ECd3zwnI5Ty3bdtpfZ9P_RCBYQX251UN6DUcEg2nafE=373" rel="noopener noreferrer nofollow" target="_blank"><span>Start for free &gt;&gt;</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.meticulous.ai%2Fblog%2Flessons-from-a-decade%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/rtqis7dKIzQGH5k27BNPZXWS4qv7Q4osQVPSDxuX0-w=373">
+                                    <span>
+                                        <strong>Testing Frontend — Lessons from over a million lines of TypeScript at Palantir (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Focus on unit tests with the right scope, avoid unnecessary component tests, and leverage stable APIs to create scalable integration tests that require minimal maintenance. Having good tests helps maximize engineering velocity, and automated generated tests may help codebases be better tested in the future.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjakelazaroff.com%2Fwords%2Fa-local-first-case-study%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/mNWa_Cj0vXj_q-dNpdSIOcTW0kYcGog6_0qXv_Fy1dU=373">
+                                    <span>
+                                        <strong>A Local-First Case Study (14 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This developer created a local-first web app for trip planning. It was designed to address shortcomings in existing trip planning tools by offering quick data entry, easy comparison features, and support for both structured and unstructured data. The app was built using a local-first architecture using CRDTs and the Yjs library for real-time collaboration and offline functionality.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpiccalil.li%2Fblog%2Fa-guide-to-destructuring-in-javascript%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/STtFXP4XG4dJXRT3l6cr009zWb6GBEmJvUb1wnpqPz0=373">
+                                    <span>
+                                        <strong>A guide to destructuring in JavaScript (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Destructuring in JavaScript allows you to extract values from arrays and objects into separate variables. The ellipsis (...) in destructuring represents a "rest property," which captures remaining elements or properties into a new array or object. It also acts as the "spread operator," which expands iterables like arrays, objects, and strings into individual elements.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsimonwillison.net%2F2024%2FOct%2F1%2Fopenai-devday-2024-live-blog%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/y81MNertqDNkEyeUeBLT3S6i8jyzXKHaN9mJpMMpu3U=373">
+                                    <span>
+                                        <strong>OpenAI DevDay 2024 live blog (36 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI DevDay 2024 included announcements about a real-time API enabling voice interaction with AI models, improved model customization with fine-tuning for vision models, and cost reductions through prompt caching and model distillation. The company highlighted the importance of structured outputs for building reliable applications by unveiling its new Structured Outputs API, which guarantees accurate JSON schema adherence.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fcacm.acm.org%2Farticle%2Fdo-all-problems-have-technical-fixes%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/YGehkOyLpd2kfbnr8cQpg9zQcUQKgnCFlZrxK37Awes=373">
+                                    <span>
+                                        <strong>Do All Problems Have Technical Fixes? (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The "tech imperative” is the idea that all problems can be solved with technology. While the underlying assumption is that technology itself is inherently good, the promotion of technology stems from a pro-attitude rather than a reasoned argument.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdev.to%2Fryansolid%2Fweb-components-are-not-the-future-48bh%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/mfF6kjDFRhOvzB4rgeZNlQl2jItKbpy8BCmVqiEeq9g=373">
+                                    <span>
+                                        <strong>Web Components Are Not the Future (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Web Components introduce unnecessary overhead and complexity due to their reliance on the DOM. They are a compromise that sacrifices flexibility and efficiency for the sake of standardization.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flaunchdarkly.com%2Frisk-meter%2F%3Futm_medium=news_pod%26utm_source=tldr%26utm_campaign=Q3FY25_derisk-innovation_webdev_secondary_10-02%26utm_content=risk-meter/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/hDT5awST2c7nUEEqf6N051UUBVpHvV79tpjoM6MrjqE=373">
+                                    <span>
+                                        <strong>Some risks are easy to overlook. Don't let them sink your next feature release (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Outages, degraded user experience, and lost revenue are just some of the bad outcomes of a mismanaged release process. Think this can never happen to you? Take LaunchDarkly's <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flaunchdarkly.com%2Frisk-meter%2F%3Futm_medium=news_pod%26utm_source=tldr%26utm_campaign=Q3FY25_derisk-innovation_webdev_secondary_10-02%26utm_content=risk-meter/2/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/HFCWb19-bWzO3fv-v6666aAXmXCEsxeshu6ZwkTJYGQ=373" rel="noopener noreferrer nofollow" target="_blank"><span>Software Release Risk Assessment</span></a> to find out what can go wrong in your upcoming feature releases - and what to do about it. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flaunchdarkly.com%2Frisk-meter%2F%3Futm_medium=news_pod%26utm_source=tldr%26utm_campaign=Q3FY25_derisk-innovation_webdev_secondary_10-02%26utm_content=risk-meter/3/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/2rgH2xjHG_pk4DbmkoyPzi-aGp90hjP3H3aNfd5zsT0=373" rel="noopener noreferrer nofollow" target="_blank"><span>Answer 8 questions to get your risk score</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.blog%2Fchangelog%2F2024-10-01-evolving-github-issues-public-preview%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/sLeqBNWJS8uKPJuJEiMWWtdjqHgRGymAb7m5_hcppzM=373">
+                                    <span>
+                                        <strong>Evolving GitHub Issues (Public Preview) (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    GitHub Issues has been revamped with several new features, including sub-issues, issue types, and advanced search. The interface has also been updated, and the project item limit has been increased to 50,000 items. These features are now available in public preview.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fslatedb.io%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/2aPjpWmeiHYeY_AR8kvor84g3lW1gvhhNhiKUbn1-vI=373">
+                                    <span>
+                                        <strong>SlateDB (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    SlateDB is an embedded database that uses object storage for data persistence. Unlike traditional databases, it operates without physical disks and uses the object store's replication capabilities for high availability.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fsourcebot-dev%2Fsourcebot%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/QEQkMz3JhdQW1t6prTve0sf5YSuaLr8_f4TEYA1M7o8=373">
+                                    <span>
+                                        <strong>Sourcebot (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Sourcebot is a code search tool that indexes and searches multiple repositories hosted on GitHub or GitLab. It has features like one-command deployment, multi-repo search, full file visualization, and more.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frailsdeveloper.com%2Fsurvey%2F2024%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/GOw5AhRhmEr4Fr0GWF6fO2nVF458wmwXDOEPHFtnmeY=373">
+                                    <span>
+                                        <strong>2024 Ruby on Rails Community Survey Results (33 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The 2024 Ruby on Rails Community Survey gathered responses from over 2,700 developers across 106 countries, showing that Rails is still relevant in 2024. Stimulus.js has overtaken React as the most popular JavaScript library used with Rails, while PostgreSQL remains the preferred relational database.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwakatime.com%2Fblog%2F67-bots-so-many-bots%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/lsY15eoidy3BfGclF0_gPfq9JBSvCxpmCC09G3MQfnY=373">
+                                    <span>
+                                        <strong>Bots, so many Bots (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ProductHunt has about 60% of user signups automated. This was discovered through a simple test, where an LLM prompt was injected into a product description, leading to a flood of automated comments.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.therepository.email%2Fmullenweg-threatens-corporate-takeover-of-wp-engine%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/QHfz1UnwAyX5YqeVUWYpD7dR4zFn8RNz1UvkmqTOw9w=373">
+                                    <span>
+                                        <strong>Mullenweg threatens corporate takeover of WP Engine (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Matt Mullenweg, CEO of Automattic, has escalated his conflict with WP Engine, demanding a more than 8% licensing deal for the use of WordPress and WooCommerce trademarks. This demand suggests a potential corporate takeover by Automattic, which is accusing WP Engine of perceived minimal contributions to the WordPress project. WP Engine has made counterclaims and attempts to mitigate the damage, but the conflict remains unresolved, with the possibility of a legal battle in the future.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F01%2Fanthropic-hires-openai-co-founder-durk-kingma%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/qC50ZzJRE3xPlkw7O8jJaEc-j_7kvQYmAQ6vC17SMqc=373">
+                                    <span>
+                                        <strong>Anthropic hires OpenAI co-founder Durk Kingma (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Anthropic has hired Durk Kingma, a co-founder of OpenAI and the author of one of the most influential papers in the scientific community, “Adam”.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fchristianselig.com%2F2024%2F10%2Fjuno-removed%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/RPcCh7U5YGC5HFebHtaZ0ftZG9pSOhm6qdgJ489s39Q=373">
+                                    <span>
+                                        <strong>Juno for YouTube has been removed from the App Store (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apple has removed Juno, a Vision Pro app that modified the YouTube website to make it more "visionOS" like, from the App Store due to YouTube's requests.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwumpus-cave.net%2Fpost%2F2024%2F10%2F2024-10-01-death-of-cobol%2Findex.html%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/5Hvq6ExBGCNQhabvQmfCeP9oC_O6y0mFGsBOC80l5gQ=373">
+                                    <span>
+                                        <strong>COBOL has been “dead” for so long, my grandpa wrote about it (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Despite being declared dead in 1992, COBOL continues to live on even today, over 30 years later.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnolanlawson.com%2F2024%2F09%2F18%2Fimproving-rendering-performance-with-css-content-visibility%2F%3Futm_source=tldrwebdev/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/_bO6GOejA7WFyDFPilRxub7sT93Kys3u-d7AyEcgmWE=373">
+                                    <span>
+                                        <strong>Improving rendering performance with CSS content-visibility (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The CSS property `content-visibility` improves web rendering performance by skipping unnecessary work for off-screen elements.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fbc5a1ded%2F3/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/1JIX6fkomSrD8BGdn26i3dSBNl1VA-q8QpHimNvfee4=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/bc5a1ded/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_8f457ba37209%2F3/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/z4q1EUsb2_TrQlrZEWkYYJkkQ3oBOYchLIujFVrwal8=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/FKr-QqJDQIP2qa02fZzCklBlYqc0n879-YKavCSri1Q=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=55ff71ae-808c-11ef-a146-87dc78351347%26pt=campaign%26pv=4%26spa=1727866861%26t=1727867125%26s=78ca2ad7294d047dcb95d29be16a9169c67ea5954161811b42d9391c14bbb631/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/S7ORwlBe7FYoL64QJd2nEa4ovDrVvOahT-rYiJGCNag=373">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=antonurbistondo%2540gmail.com/1/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/rabeZDXfzfvpnJjckx9AWqtWWmGZzGTTit6feVjccyU=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001924ce800cc-0a4953de-4790-49d9-b47a-8a1bf9283687-000000/hWOfezExobnM_JhK29pV-xASPtsGkpyBuCwJlAOtqns=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

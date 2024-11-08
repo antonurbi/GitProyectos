@@ -1,0 +1,304 @@
+WEBVTT
+Kind: captions
+Language: es
+Voy a hablar sobre
+la diferencia entre arima y lstm
+y cuáles son las similitudes entre
+estas dos técnicas de modelado. Arima y
+lstm se usan en series temporales para
+casting
+y arima proviene del
+análisis estadístico clásico, mientras que lstm proviene
+del aprendizaje automático y  La IA
+y ambas se pueden usar para el mismo
+propósito, así que haré una comparación
+entre estas dos técnicas de modelado
+y dónde usarlas, cuáles son
+los pros y los contras y los méritos y
+deméritos de estas dos técnicas, y
+es importante comprender realmente
+cuándo usar Arima.  y cuándo usar lstm,
+entonces, ¿qué es arima? Es la
+media móvil integrada autorregresiva, una
+técnica de modelado de series de tiempo muy popular.
+No es un modelo tan complejo,
+implica cierto nivel de matemáticas,
+pero es fácil de entender las
+matemáticas subyacentes detrás de los
+modelos Arima en contraste con lstm, que es un poco
+más difícil porque está
+basado en una red neuronal,
+por lo que si bien el diseño es muy claro, las
+matemáticas también lo son.  no es muy difícil,
+pero es muy difícil de entender. Ya
+sabes cómo se realiza el pronóstico
+debido a los diversos pasos
+involucrados en la red neuronal. Por
+otro lado, Arima es un
+modelo teóricamente muy sólido, muy
+popular entre académicos y
+profesionales.
+Se usa en muchos.  lugares en
+modelado ambiental en
+cantidad de modelado financiero Finanzas investigación económica
+um, lo que sea,
+incluso en el
+sector tecnológico la gente todavía usa un control remoto
+a pesar de la creciente popularidad de los
+modelos de IA RMI sigue siendo una opción preferida, ya
+sabes, en muchas organizaciones
+ciertamente en la academia sigue siendo bastante,
+muy,  El popular
+lstm, que significa
+memoria a corto plazo, es un
+modelo de red neuronal, en particular su
+red neuronal recurrente,
+y está diseñado para
+modelar datos secuenciales, que no son
+más que datos de series de tiempo, es decir, datos
+recopilados durante diferentes períodos de tiempo,
+ahora neuronales.  La red es diferente en muchos aspectos del
+modelo estadístico clásico en
+que hay diferentes capas en la
+red neuronal y el cálculo es
+mucho más difícil en comparación con el del
+modelo estadístico clásico
+y la segunda diferencia es que los
+modelos de red neuronal probablemente  para
+funcionar mejor cuando tienes un
+conjunto de datos muy grande, pero para conjuntos de datos más pequeños, sí, los
+modelos de redes neuronales no son
+muy adecuados,
+hay otras diferencias, supongo que
+hablaremos de ello por red neuronal,
+se
+aplica principalmente en problemas de ingeniería que
+conoces en la imagen.  reconocimiento en
+ese reconocimiento de voz,
+um ese tipo de cosas y creación de
+aplicaciones, pero, por ejemplo, si
+desea pronosticar correctamente la inflación,
+usará la red neuronal
+lstm en este caso,
+um, ese es el signo de interrogación, dependiendo,
+bueno, puede intentar cualquier cosa incorrecta con la
+que siempre puede  use la cantidad de modelos
+Compare uno con el otro,
+podría hacer eso, pero no
+siempre es recomendable que sepa que
+usa modelos de redes neuronales para
+conjuntos de datos que son más pequeños,
+sin embargo, sabe que los modelos LST son
+realmente buenos, ambos a corto plazo.  y las
+predicciones a largo plazo, los tiempos son los
+modelos IMA en realidad no son tan buenos en
+predicciones a corto plazo, especialmente con
+fluctuaciones que ocurren en el corto plazo, por
+lo que la predicción de tendencias a largo plazo es
+realmente buena para Arima, pero las predicciones a corto plazo
+no son tan confiables,
+mientras que lstm.  es bueno en ambos, así que eso es algo
+bueno, otra cosa es que el
+modelo de Arima no puede manejar los datos de sugerencias que no son estados
+automáticamente, bueno,
+realmente tienes que hacer algo al respecto y,
+por ejemplo, la parte de integración de
+Arima se trata de saber diferenciar
+tus no-estados.  tiempos estacionarios aquí para
+hacerlo estacionario,
+por lo que hay un paso muy específico
+involucrado para hacer que las series no estacionales
+sean estacionarias para poder
+construir un buen modelo de pronóstico y
+hay un poco de subjetividad
+involucrada aquí porque  No sé
+cuántas veces necesitas diferenciar,
+bueno, hay algunas técnicas que puedes
+usar, pero aún así no es puramente
+automático, mientras que en lstm
+no tienes que
+manejar por separado la parte no estacionaria,
+por supuesto, hay cierta
+subjetividad involucrada.  Los modelos de redes neuronales
+o LST también tienen muchos hiperparámetros de parámetros,
+especialmente hiperparámetros que debes
+elegir tú mismo,
+pero
+sabes que la noción de que la forma en que manejas la
+no estacionaridad es algo que está
+automáticamente incorporado en
+los modelos lstm uh, cierto,
+um, así que eso es bueno.  En realidad, la ventaja
+del equipo de L sobre Arima es si quieres
+construir modelos rápidamente. Quieres
+construir cientos de modelos para
+cientos de personas de series temporales que lo hacen
+en algunos sectores, por ejemplo, el comercio electrónico
+y todo lo que creo que puedes hacer rápidamente usando
+LST.  y no tienes que preocuparte demasiado
+por la teoría y cosas de las que
+sí tienes que preocuparte cuando
+construyes modelos de Arima.
+Hay muchas diferencias. Una es la
+diferencia sobre la complejidad. Los
+modelos de Arima son relativamente más simples,
+sobre los que ya hemos hablado.
+Es más fácil de construir, más fácil de entender
+en comparación con los modelos lstm, de hecho,
+cualquier modelo de red neuronal es más
+difícil de entender, especialmente
+comprender la relación entre la
+entrada y la salida, las predicciones del modelo
+y la entrada proveniente de uh, ya que la
+relación de eso es un poco difícil.
+entender a arima en comparación con lo
+siento por
+lstm en comparación con arima la
+interpretabilidad es otra
+diferencia los modelos de arima son relativamente
+fáciles de interpretar, por lo tanto, sabes que son
+bastante
+útiles en realidad en muchos casos, por
+ejemplo, en finanzas, en inversiones,
+la gente realmente quiere entender
+todo en detalle.  cierto, no puede
+ser simplemente una caja negra, así que en finanzas y
+gestión de riesgos en la banca, usted sabe que esas
+áreas los modelos Arima siguen siendo bastante
+populares y los modelos LST
+realmente se usan, sin
+embargo, los modelos LST son
+populares entre los ingenieros y ya
+sabe,
+sí, en ingeniería.  aplicaciones,
+conoces a personas que desarrollan o construyen,
+sabes cosas. Creo que no les importa mucho
+la parte de explicabilidad y su
+lstm es un
+requisito de datos más popular, adecuado para los modelos arima.
+Puedes construir un modelo arima
+con 30 observaciones también,
+pero.  para lstm necesita un conjunto de datos más grande, en
+realidad puede construir
+modelos LST con conjuntos de datos más pequeños, pero
+la ventaja adicional es que
+el valor agregado no es mayor. Quiero decir,
+podría
+construir un modelo rmo Street, ¿por qué
+construir un modelo LST con datos pequeños?  establecer
+el requisito de deuda es mayor, sin embargo, ya
+conoce los modelos de Arima, si los datos son
+estacionarios, entonces es mejor si
+no son estacionarios, entonces sabe que los
+procesos de modelado se vuelven un poco más
+complicados, sin embargo,
+hay formas de hacerlo también correctamente.
+En términos de rendimiento, creo que los
+modelos LST han mostrado un gran rendimiento. No
+está muy claro si los modelos LST
+funcionan mejor
+que Arima en todos los tiempos. Ciertamente, en
+pronósticos a corto plazo funcionan
+mejor. Hay algunas evidencias, pero en
+pronósticos a largo plazo no lo han sido.  en gran parte de la
+evidencia
+y en algunas aplicaciones, la gente ahora
+prefiere lstm, por ejemplo, en el comercio,
+y todas las personas de comercio Quant ahora están
+usando modelos LST en lugar de modelos arima.
+Conozco a un amigo que está trabajando en un
+rendimiento rápido utilizando el pronóstico de modelos lstm
+en comparación con los modelos animales, por lo que
+Se está volviendo cada vez más popular
+entre los profesionales también en finanzas, quiero
+decir, en otros lugares como el comercio electrónico y la
+tecnología, en esos sectores ya es
+popular, pero menos popular en finanzas,
+con respecto a las aplicaciones, por lo que el modelo Arima
+es muy popular entre los
+investigadores académicos, los científicos o los científicos sociales.
+um,
+todos usan el modelo Arima para realizar
+pronósticos.
+Recuerdo que también sigue siendo bastante popular en
+finanzas y Point Finance
+es el modelo al que recurrir si desea hacer
+un pronóstico univariado.
+Sin embargo, lstm se está volviendo más
+popular hoy en día, al menos para usted.  ¿
+La gente está usando
+modelos LST hoy en día
+para comparar el rendimiento de Arima y la
+gente de LSTm está usando modelos LST? Sin embargo,
+es probable que los modelos LSTM se
+ajusten demasiado en algunos casos, por lo que realmente debe
+tener cuidado con la forma en que construimos el modelo y
+cómo lo probamos.  el rendimiento del modelo
+y el modelo lstm como modelo de red neuronal
+no es
+algo que el regulador bancario
+acepte, por lo que esa es también
+otra razón por la cual los modelos lstm son menos
+populares en las finanzas en comparación con otros
+campos,
+así que cuándo usar qué derecho si es así.
+preocupado por la interpretabilidad,
+realmente desea interpretar los resultados con
+mucha claridad, entonces se debe
+preferir arima a lstm, cierto, ese es el
+requisito en finanzas y gestión de riesgos,
+en muchas otras
+áreas, la interpretabilidad no es tan
+importante siempre que la
+precisión de la predicción sea buena.  no importa,
+conozco personas que trabajan en el comercio electrónico y que
+simplemente quieren pronosticar la demanda.
+Al suministro con precisión no le importaba la
+interpretabilidad del modelo.
+Si tienes menos datos, entonces deberías
+preferir arima porque si no los tienes,
+no tienes
+buenos  cantidad de datos Creo que lstm
+no tendrá un buen valor, pero
+siempre puedes intentar algo incorrecto, especialmente
+para realizar evaluaciones comparativas de
+problemas de ingeniería. Se prefiere el equipo LS y
+hoy en día sabes que construir modelos LST
+no es tan difícil. Siempre puedo encontrar
+buenas bibliotecas como solía hacerlo.  En realidad, sería un poco más
+difícil, hace como una década. Los
+requisitos de hardware para una red neuronal son
+más sofisticados en comparación con el
+modelado animal. Quiero decir, puedes construir un
+modelo Arima y una computadora portátil simple, mientras que
+para los modelos de aprendizaje profundo,
+necesitas
+mejores modelos de redes neuronales.  configuraciones y mejor
+hardware, también implementación correcta,
+también es más fácil implementar modelos Arima
+en comparación con los modelos LST, por lo
+que también es otra cosa a considerar
+al elegir uno sobre el otro
+en términos de precisión de predicción,
+no hay una conclusión concreta sobre cuál
+es mejor en  En algunos casos,
+personas que conoces han llegado a la conclusión de que
+sabes que al equipo de LS le va mejor que a Arima,
+mientras que esto se puede cuestionar, no hay
+evidencia clara de que no hay ninguna
+publicación que sepas sobre que a LSTM le vaya
+mejor que a Arima, aunque el equipo de LS se está
+volviendo más popular entre los
+practicantes en kaggle y todo.
+Creo que al equipo de LS le está yendo mejor, eso es
+lo que he escuchado
+en grandes conjuntos de datos. LST
+funciona mejor si tiene una
+cantidad increíble de datos, entonces lstm funciona mejor a
+largo plazo. El área de pronóstico a largo plazo
+funciona muy bien.  Arima es un
+mundo muy teórico, por lo que tienes mucho
+control sobre el modelado del modelo de onda,
+así que
+puedes hacer eso,
+um.

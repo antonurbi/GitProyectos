@@ -1,0 +1,610 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR Design</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Headspace has introduced Ebb, a generative AI-powered chatbot designed to provide personalized support for mental health issues&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/_s62q8dnn1jDtRJdaMZLRzr0bHNwDkorGtTSOdyOzyQ=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/w3LHc1GrctwPKhe_uRIIpL3imJqmamaQqERCZwKInhs=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=fbdb3e50-87b2-11ef-a0c5-cb7d236574d1%26pt=campaign%26t=1728648405%26s=e1d7a48ee51e288543752f1f250aea3f0fb8fe9c0a7ccbab5bb9019a4c6fe68c/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/lmnauF4CMyaCzPw17SFpLE-zG_Go6WVIYxi5yR4yA44=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Design <span id="date">2024-10-11</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fyrshor/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/jsI8tMFZsoeY2xS-yo2xAK1t8NifX0qCBYc3rHKQ1VU=374">
+                                    <span>
+                                        <strong>Headspace's new AI chatbot will offer mental health support to subscribers (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Headspace has introduced Ebb, a generative AI-powered chatbot designed to provide personalized support for mental health issues using motivational interviewing techniques. The chatbot has two main functions: encouraging users to reflect on events and offering app content or prompting gratitude reflections. Ebb cannot give direct mental health advice but will provide crisis hotline information if a user seems at immediate risk. Headspace is considering expanding Ebb's memory and integrating it more deeply with its professional care services to improve user experience.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.androidauthority.com%2Fyoutube-video-player-test-3489270%2F%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/yb_0WvvXNGbTX-0Y76yF-EPPrUKSAErhwBTsAHdF79o=374">
+                                    <span>
+                                        <strong>YouTube is testing a new video player UI on Android, but not everyone is a fan (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    YouTube is testing a revamped video player UI for its Android app that includes several relocated buttons and displays more video information. The update moves elements like the video title and channel details to new positions, adds gesture capabilities for playlist navigation, and includes a second playlist and video chapter buttons. Many Android users are dissatisfied with these changes and expressed dissatisfaction in online forums. While the interface seems more suited to larger screens, user reception has been mixed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativebloq.com%2Fweb-design%2Fux-ui%2Fnewly-released-apple-developer-videos-on-youtube-are-a-treasure-trove-of-design-insights%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/BxoTG0RBWyDxGiulDF_ckrxvZiXUycW6dGla-uB7r9I=374">
+                                    <span>
+                                        <strong>Newly Released Apple Developer Videos on YouTube are a Treasure Trove of Design Insights (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apple's Worldwide Developers Conference is an essential event for app developers and designers. It offers insights into the company's latest software and hardware innovations and design philosophy. Traditionally exclusive to Apple's Developer website and app, WWDC sessions are now accessible on YouTube, providing global access for designers beyond the Apple ecosystem. This new repository is a significant resource for expanding UI/UX design knowledge and skills.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2F9to5mac.com%2F2024%2F10%2F08%2Fios-181-makes-apple-photos-better-in-three-ways-heres-whats-coming%2F%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/EgQA63vy0WIPOegk8TuKf4CJTsAUYRByvgAkFEuPcxk=374">
+                                    <span>
+                                        <strong>iOS 18.1 makes Apple Photos better in three key ways, here's what's coming (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    iOS 18.1 introduces three major AI-powered upgrades to the Photos app: Clean Up for removing unwanted objects, improved natural language search, and custom Memory movie creation. These features enhance photo editing, search accuracy, and personalized video generation, making the app more intuitive and powerful for users.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FfnjOXt/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/BB6vUi2jk6FId0ob7NscJDGOTIgx35_7AreMEOONe4k=374">
+                                    <span>
+                                        <strong>Designing for Canvas Tools (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Canvas tools are adaptable digital platforms that integrate customizable workflows, collaborative features, and accessibility improvements. By creating reusable design libraries, companies can streamline the development of canvas interfaces, ensuring consistent and accessible user experiences. Prioritizing features and layouts in 2D and 3D spaces improves usability, enhancing user satisfaction across diverse accessibility needs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.madebyjw.com%2Fbecoming-a-better-designer%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/hInfdmFJMedEnMRr_ns1z0yi4yi_MtnZUj6fLDKUWqU=374">
+                                    <span>
+                                        <strong>Becoming a Better Designer (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    As challenges evolve from clearly defined problems to undefined complexities, the designer's role expands to encompass critical thinking, collaboration, and communication. Mastery goes beyond technical skills, requiring leadership and the ability to navigate ambiguity while guiding teams toward solutions.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fchromewebstore.google.com%2Fdetail%2Fsvg-collector%2Fbkdhhhmkkfepeidbabdmaholoepijkbk%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/T4obVwFT6iFVkVxXYiE3mM9Rir-kvvcsxQmYzKUYUXA=374">
+                                    <span>
+                                        <strong>SVG Collector (Chrome extension)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This lightweight yet powerful tool allows you to collect, copy, and download SVG elements from any website.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fuxdecisions.com%2Finformation-alchemy%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/1qr6-vB5uW7nE43H7KrdXM4yKtrOt7swuoLX1Z9N7cg=374">
+                                    <span>
+                                        <strong>Information Alchemy (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Learn how to use sense-making tools to organize data chaos when time and resources are limited.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FmDX6o1/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/feHdwK5EMEGOXWxnemcT89Un-edBZ-m0wNrRnBjzF7g=374">
+                                    <span>
+                                        <strong>App Icons (Figma plugin)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This plugin taps into appicons.co, making it easy to search for any app's official icon and import it directly into your Figma designs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fabduzeedo.com%2Falbasound-branding-and-web-design-audiovisuals%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/5GQ6WpOLhE2S2Sql0-XCewNBn4ahC1f-8w0DjenS3Cc=374">
+                                    <span>
+                                        <strong>Albasound: Branding and Web Design for Audiovisuals (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Albasound has revamped its branding and web design. Created by designer Manel Font and featuring a modern logo that integrates the company's initials as sound and light control panels, the new visual identity and website effectively showcase Albasound's audiovisual event management services, setting it apart from competitors.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theuxda.com%2Fblog%2Fbanking-innovations-using-chatgpt-prompts-in-digital-product-design%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/iKtBnlTZku4RP1eCrsyQ8T8ssA16auYN76WEhweHMts=374">
+                                    <span>
+                                        <strong>Banking Innovations: Using ChatGPT Prompts in Digital Product Design (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ChatGPT can enhance financial product design by recognizing patterns, boosting creativity, and simulating diverse user personas to improve UX and anticipate feedback. It aids in prototyping by generating design ideas, testing usability, and ensuring more inclusive, user-friendly products.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthe-brandidentity.com%2Fproject%2Feat-studio-crafts-an-identity-for-wide-worlds-that-holds-a-portal-to-endless-creative-possibilities%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/PbQEwHsq_2MH3qevhDkKfTUiOSTFoFZGeiNIWdaS6x8=374">
+                                    <span>
+                                        <strong>EAT Studio crafts an identity for Wide Worlds that holds a portal to endless creative possibilities (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    EAT studio crafted a visually captivating identity for Wide Worlds, balancing AI and human creativity through a flexible design system based on opposing geometric shapes that emphasizes brand consistency and user-generated content.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.lukew.com%2Fff%2Fentry.asp%3F2080%26utm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/Drl7O6fUpt1sH0QVdgKMKiavhvXPWJZ07UDWURS9xUU=374">
+                                    <span>
+                                        <strong>Is Atomic Design Dead? (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Brad Frost's Smashing Conf talk explored the evolution of design systems, from early frameworks to today's AI-driven tools. He emphasized the growing gap between product needs and design systems, urging collaboration to balance the two. Frost also discussed AI's potential to streamline design systems while raising broader questions about designers' roles.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FtibW9d/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/MWVXUztI6HM5GhaUbaum_u71oY8c5VwmnnlO7t_2hfQ=374">
+                                    <span>
+                                        <strong>Zero-Based Design: A Fresh Approach to Problem Solving (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Zero-based design is a methodology that starts from scratch to create innovative solutions by focusing solely on current user needs, free from legacy constraints.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdesignwanted.com%2Falessandra-genovese-ikea-good-design-better-sleep%2F%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/s02THR24o358kyr9yk44_XbcbzykmsPxipJv0m7f16E=374">
+                                    <span>
+                                        <strong>An Immersive Exhibition Focused on Sleep and the Influence of Design in this Area (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    IKEA's research identifies six key factors that influence sleep: comfort, furniture, light, air quality, sound, and temperature.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.adobe.com%2Fen%2Fpublish%2F2024%2F10%2F04%2Fcreative-design-with-substance-3d-for-googles-pixel-arena%3Futm_source=tldrdesign/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/M8ME0zl_qAZIKE0TBHM5JiVEJp04RgOYFqe6cobuaTI=374">
+                                    <span>
+                                        <strong>Creative Design with Substance 3D for Google's Pixel Arena (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Andrea Arice, Associate Motion Director at Monks, collaborated with Google to create Pixel Arena, a customizable mobile gaming experience.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F1b9d211c%2F4/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/ti9Ym2np5oGP_4yitfItKpz7mP2Xw6Vfit7mbGZP1ls=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/1b9d211c/4</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_f2d978c86b6e%2F4/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/9vl_fHKnxRvZRs9wZxBKRdBNvzh9r5VTbcqYSEQJ1AQ=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of design professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/QNBVaK_AX5UCjoQ3WkMie45yZaQYDFrpxugwUgvU6Fg=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Jae Lee</span>, <span>Matej Latin</span> &amp; <span>Ralph Brinker</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Design, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e1c4e253-3e90-11ed-9a32-0241b9615763%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=fbdb3e50-87b2-11ef-a0c5-cb7d236574d1%26pt=campaign%26pv=4%26spa=1728648129%26t=1728648405%26s=5fd5afcce9b7e96851034df991c47c92ef1522776b50d2ef7deeba47b820dd50/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/v05SSmg75Ri2TgkaTY10rqR2TWIvW1zzYRvyBfPQZu0=374">unsubscribe from TLDR Design</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/YCrgxEtrRH8-nlUMUB2su-i9LlY_sgT9cdAbrt1pOwU=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img src="https://www.google-analytics.com/g/collect?v=2&amp;tid=G-SLD27TC46C&amp;cid=2b04e006-819a-11ef-ad4d-4dddba39dee5&amp;en=email_open_design&amp;cn=design_campaign&amp;cm1=infourbiss@gmail.com&amp;cs=campaign_source_design&amp;cm=campaign_medium_design&amp;ck=campaign_keyword_design&amp;cc=campaign_content_design" alt="" d7tkyi5pp="">
+<img src="https://www.google-analytics.com/g/collect?v=2&amp;tid=G-41HMGDKB29&amp;cid=2b04e006-819a-11ef-ad4d-4dddba39dee5&amp;en=email_open_design&amp;cn=design_campaign&amp;cs=campaign_source_design&amp;cm=campaign_medium_design&amp;ck=campaign_keyword_design&amp;cc=campaign_content_design" alt="" d7tkyi5pp="">
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001927b7961e7-4092360d-0e5b-43ae-ae8c-c4586acc6dd7-000000/IFp-XizvcjD-M_rzVZ8DuBHazjN9lv9b4GvKZXXcunQ=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

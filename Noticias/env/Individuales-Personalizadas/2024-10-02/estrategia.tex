@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Análisis Cuantitativo de la Situación Económica Global y Estrategia de Inversión Basada en Volatilidad Estocástica}
+\author{anto gpt}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Este artículo presenta un análisis cuantitativo de la situación económica global actual, enfocado en el impacto de las políticas económicas de EE.UU., como el aumento de aranceles y el déficit fiscal bajo la posible presidencia de Donald Trump. Utilizamos herramientas matemáticas como modelos de volatilidad estocástica y simulaciones de Monte Carlo para proponer una estrategia de inversión optimizada para el mercado de oro y activos volátiles. 
+\end{abstract}
+
+\section{Introducción}
+La economía global se encuentra en un estado de incertidumbre debido a las políticas económicas propuestas por Donald Trump, como el aumento de aranceles a las importaciones, especialmente provenientes de China. Estas medidas generan presiones inflacionarias y enfrentan a la Reserva Federal (Fed) con un dilema: aumentar las tasas de interés para controlar la inflación o reducirlas para combatir el desempleo. Este trabajo tiene como objetivo desarrollar una estrategia de inversión que aproveche la volatilidad generada por estos eventos económicos.
+
+\section{Marco Teórico}
+
+\subsection{Volatilidad Estocástica}
+La volatilidad estocástica se utiliza para modelar el comportamiento de los precios de activos bajo incertidumbre. En este trabajo, emplearemos el modelo de \textit{Heston} para capturar la dinámica de la volatilidad. Este modelo asume que la volatilidad sigue un proceso de difusión estocástica, descrito por la siguiente ecuación diferencial estocástica (SDE):
+
+\[
+dS_t = \mu S_t dt + \sqrt{V_t} S_t dW_t^S
+\]
+\[
+dV_t = \kappa (\theta - V_t) dt + \sigma \sqrt{V_t} dW_t^V
+\]
+donde \(S_t\) es el precio del activo, \(V_t\) es la volatilidad estocástica, \(\mu\) es la tasa de retorno, \(\kappa\) es la velocidad de reversión, \(\theta\) es la media a largo plazo de la volatilidad, \(\sigma\) es la volatilidad de la volatilidad y \(W_t^S\), \(W_t^V\) son movimientos Brownianos correlacionados.
+
+\subsection{Simulación Monte Carlo}
+Para evaluar el comportamiento futuro del precio del oro bajo diferentes escenarios, utilizamos la simulación de Monte Carlo. Esta técnica nos permite generar múltiples trayectorias posibles para el precio del activo, tomando en cuenta la volatilidad estocástica. La simulación sigue el siguiente esquema:
+
+\[
+S_{t+\Delta t} = S_t \exp \left( \left( \mu - \frac{V_t}{2} \right) \Delta t + \sqrt{V_t} \Delta W \right)
+\]
+
+\subsection{Optimización Estocástica}
+La optimización estocástica se utiliza para maximizar el rendimiento esperado de la cartera, sujeto a restricciones de riesgo, como el \textit{Value at Risk (VaR)}. La optimización considera el comportamiento futuro incierto del mercado, modelado a través de la simulación de Monte Carlo.
+
+\section{Análisis de Resultados}
+
+Dado el aumento esperado en la inflación debido a las políticas arancelarias de Trump, es probable que la Reserva Federal reaccione aumentando las tasas de interés, lo que incrementará la volatilidad en los mercados financieros. La correlación entre el precio del oro y el déficit público sugiere que el oro se comportará como un refugio seguro en este entorno de incertidumbre.
+
+\subsection{Proyecciones del Precio del Oro}
+Las simulaciones Monte Carlo indican que, bajo un escenario de aumento del déficit público y tensión con la Fed, el precio del oro tiene una alta probabilidad de seguir una tendencia alcista. Esto se debe a que los inversores buscarán activos refugio en tiempos de incertidumbre económica.
+
+\subsection{Estrategia de Inversión}
+Con base en los resultados de las simulaciones, proponemos una estrategia que combine posiciones largas en oro y posiciones cortas en bonos del Tesoro, anticipando un aumento en las tasas de interés por parte de la Fed.
+
+\section{Conclusión}
+El análisis cuantitativo basado en volatilidad estocástica y simulación de Monte Carlo sugiere que los inversores deberían adoptar una postura defensiva ante las políticas económicas de Trump. El oro presenta una oportunidad atractiva como activo refugio, mientras que los bonos del Tesoro podrían verse presionados por un aumento de las tasas de interés.
+
+\end{document}

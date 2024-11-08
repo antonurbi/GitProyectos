@@ -1,0 +1,560 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR DevOps</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Kubecost 2.4 introduces advanced GPU monitoring and efficiency tools, OCI integration, and enhanced budgeting governance features&nbsp;</div>
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/tNxQ0rnkBJ_kNoHurQBLECF7uKXJ0pFLpPMNYDCw7dY=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/qgXcaF4wDgeI27a74tFYYJ56dtaa5E60AtNY68pK83M=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=f49fb71a-8226-11ef-8e6e-4f5ef96c2b1b%26pt=campaign%26t=1728039876%26s=f90ab262416ccf2fe1590b6c556dac2d99ee959a1cb412efa6cc33d49868fa47/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/9KmOo7AMCVgL0zt7wD36JnM_9pTAwcK16vCyYBXnBuM=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR DevOps <span id="date">2024-10-04</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.kubecost.com%2Fblog%2F2.4-release-highlights%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/ekTwOVXfIScaqA9MLgdRIAIA27yklypI41uz0oZv4rQ=373">
+                                    <span>
+                                        <strong>Kubecost 2.4 Release Highlights (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Kubecost 2.4 introduces advanced GPU monitoring and efficiency tools, OCI integration, and enhanced budgeting governance features to help teams optimize costs. With new capabilities like GPU utilization tracking and granular cluster rightsizing, it enables organizations to improve efficiency and manage rising GPU and cloud expenses.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.cncf.io%2Fblog%2F2024%2F10%2F01%2Fkarmada-v1-11-version-released-new-cross-cluster-rolling-upgrade-capability-for-workload%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/SdmrzaeOL1YKRlfBM8GwZH6JqWPhYjKol-uXM48bcZ0=373">
+                                    <span>
+                                        <strong>Karmada v1.11 version released (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Karmada has released an update that adds cross-cluster rolling upgrades, enhanced multi-cluster operations, one-step CD execution, and improved offline deployment flexibility.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fhow-cloudflare-auto-mitigated-world-record-3-8-tbps-ddos-attack%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/jDhwYaUVtM9-xh6QZZXI_vLlkI6Od4lAay7m99GuiUU=373">
+                                    <span>
+                                        <strong>How Cloudflare auto-mitigated world record 3.8 Tbps DDoS attack (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cloudflare's advanced DDoS protection systems successfully mitigated a series of unprecedented hyper-volumetric L3/4 attacks, with the largest reaching a record-breaking 3.8 Tbps, showcasing how its autonomous detection and mitigation capabilities protect customers and maintain Internet performance.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Faws.amazon.com%2Fblogs%2Fdevops%2Fsecuring-your-software-supply-chain-with-amazon-codecatalyst-and-amazon-inspector%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/YQnn9SiQEaEWi0yDEgjlU9h_mAig0KseCt3BsTmDe9c=373">
+                                    <span>
+                                        <strong>Securing Your Software Supply Chain with Amazon CodeCatalyst and Amazon Inspector (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Amazon CodeCatalyst streamlines software development by enabling teams to build, deliver, and scale applications with integrated DevSecOps practices. This post demonstrates how to add SBOM generation and scanning to a CodeCatalyst Workflow using Amazon Inspector Scan to detect vulnerabilities early in the development process.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmedium.com%2Fpinterest-engineering%2Fstructured-datastore-sds-multi-model-data-management-with-a-unified-serving-stack-e628f8081971%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/MZAFFvmUBUyp9kRyOku5vAKZ-F7pFXsOQOCJ6Keq6xY=373">
+                                    <span>
+                                        <strong>Structured DataStore (SDS): Multi-model Data Management With a Unified Serving Stack (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog discusses how to transition to Structured DataStore (SDS), a unified platform that enhances data management by consolidating multiple query serving stacks. SDS simplifies maintenance, supports various data models, and improves flexibility and security. It uses a unified query language and shared backends, addressing past challenges of maintenance and knowledge silos.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.honeycomb.io%2Fresources%2Fopentelemetry-semantic-telemetry-reshape-observability%3Futm_source=tldr%26utm_medium=partner%26utm_campaign=2024_tldr_form_otel/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/Pa-HEzdC9XGBPUPeVvPGIOiMQe7kbQmmF9im6P9h7s0=373">
+                                    <span>
+                                        <strong>Free Observability + OpenTelemetry resources from Honeycomb (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Grab a copy of two valuable ebooks from Honeycomb:<p></p><p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.honeycomb.io%2Fresources%2Fopentelemetry-semantic-telemetry-reshape-observability%3Futm_source=tldr%26utm_medium=partner%26utm_campaign=2024_tldr_form_otel/2/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/ZqrlW8Yj0DLu0jPkcgx7lgOxWcMePYEtWjBGYI1GZBs=373" rel="noopener noreferrer nofollow" target="_blank"><span>📗 How OpenTelemetry and Semantic Telemetry Will Reshape Observability</span></a> — covers the tradeoff triangle in observability and why traditional tooling isn't enough</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.honeycomb.io%2Fresources%2Fthe-directors-guide-to-observability%3Futm_source=tldr%26utm_medium=partner%26utm_campaign=2024_tldr_form_otel/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/kCwGQ1AocsHEjStHsXHN46QFoqP6I6q0S9sC8CxkXsE=373" rel="noopener noreferrer nofollow" target="_blank"><span>📘 The Director's Guide to Observability: Leveraging OpenTelemetry in Complex Systems</span></a> — building blocks of observability, OpenTelemetry, and alternatives
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FZxilly%2Fgo-size-analyzer%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/miyM_1FlnTSmQjktTO0ZnjXD4HZj1tQZNNyUWp91rU4=373">
+                                    <span>
+                                        <strong>go-size-analyzer (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Go Size Analyzer is a versatile tool for analyzing the size of Go compiled binaries. It offers cross-platform support, detailed size breakdowns, and multiple output formats for comprehensive binary exploration and comparison.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fcaronc%2Fapprise%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/L5RkNv6jDwq_6xplT8o9w2VIuu_fmJPj64prNBkICrE=373">
+                                    <span>
+                                        <strong>Apprise (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apprise simplifies and streamlines the process of sending notifications across multiple platforms, making it an invaluable tool for developers and system administrators alike.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fautosysops.com%2Fblog%2Fmake-your-azure-virtual-network-more-secure%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/59TYoDun76BR8MuRelj5qI2bSfihyWyNB0uRt2dWcCE=373">
+                                    <span>
+                                        <strong>Improve Azure virtual network security (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article highlights new features in Azure virtual networks, including the upcoming removal of default outbound access by September 2025 and the introduction of private subnets to prepare for this change. It also covers enhancements that offer improved network security options in Azure like virtual network encryption for added security and DDoS protection for individual public IPs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fcontainer-platform-preview%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/sLoJHna7fvK9r5TXeNwyhoXfdAvPOphVylyBArTdy_0=373">
+                                    <span>
+                                        <strong>Our container platform is in production. It has GPUs. Here's an early look (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cloudflare's new container platform enhances its network capabilities by seamlessly running distributed systems, enabling developers to create and deploy software without focusing on underlying infrastructure complexities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fcloudflares-commitment-to-free%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/eLW0fI7LmekPxeRgFGJK-VUooaAqvPqVpsDLLWNtcuU=373">
+                                    <span>
+                                        <strong>Reaffirming Cloudflare's commitment to free (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cloudflare has reaffirmed its commitment to offering a free plan, which has been crucial to its growth and cost management.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.hashicorp.com%2Fblog%2Ffalse-positives-a-big-problem-for-secret-scanners%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/i8h5vrsVOTL2-WrMo4dAJYiLbkiYFtr8V75m-6vlkVo=373">
+                                    <span>
+                                        <strong>False positives: A big problem for secret scanners (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    False positives in cybersecurity, particularly in secret scanning, pose a significant challenge by exhausting resources, increasing labor costs, and potentially allowing actual threats to go unnoticed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frachelbythebay.com%2Fw%2F2024%2F10%2F01%2Flldp%2F%3Futm_source=tldrdevops/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/XoDsA3z99mPbtgNmCVUQX3y0RYkcIG7qERiAuNZa7fo=373">
+                                    <span>
+                                        <strong>Let the network tell you where you are (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article discusses a solution for configuring multiple display machines using LLDP (Link Layer Discovery Protocol) so their locations can be identified automatically via Ethernet switches.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F6fb53e6a%2F10/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/t5bGIi3nrzgZyyIJVQ8fSR2lMbhmroqKdKPc6udv_cw=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/6fb53e6a/10</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_bc421b592e23%2F10/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/djR7-hgsAvHGf9fOjnxiLGOeg-HAK5fNVkcYdBtWRw0=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of devops professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/hsJU-Dn75DyqCxbe--balaHqU2AFU5Tst-2FJqjzIU0=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Kunal Desai</span> &amp; <span>Martin Hauskrecht</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR DevOps, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=f49fb71a-8226-11ef-8e6e-4f5ef96c2b1b%26pt=campaign%26pv=4%26spa=1728039659%26t=1728039876%26s=9514bd2b7a489ec597027e180f00026b36ff90349f88deb36aedd213e454bd19/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/cnPiuagr3cLPtpQFNf_V9h_0KjVxJlOFJyUnNtiXpIQ=373">unsubscribe from TLDR DevOps</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/0eLNkQUra8eXWNd4a4nhW2_jrg2DaFVy-h2MNWMeyZI=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001925733f79f-072a3f12-91cc-47b9-8625-122c299e6585-000000/jpmY-Jngp9zP7okg7YzuBF_QXJZiXs1AYqlp50LD-wo=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

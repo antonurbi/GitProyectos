@@ -1,0 +1,633 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR AI</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Demis Hassabis, John Jumper, and David Baker won the Nobel Prize in Chemistry for their contributions to protein folding with AlphaFold&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/A_CR_mRC--euzk4kdh8HMOV4wdCBY7fyW14YVbHFwu8=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/q6COkbd9m-AU7aDCYzbwMT_VrWd4jp94IZ_IjWxTHP8=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=39264fb0-86f1-11ef-b3aa-cdfb01008e0e%26pt=campaign%26t=1728565754%26s=06d0a136cd5c691773afab6893f992db0f6a8ec3422dbed490d443eb7560d5b1/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/IvB48MVU0Tf2PimI1RILeeQqgSOj0QdsnkoeHQ0X0eQ=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flivekit.io%2F%3Futm_source=newsletter%26utm_medium=email%26utm_campaign=2024-10-10-tldr-ai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/XJoZfEtURT4utG2FfN-BOFAsLfWEuZPphFUk70R7UGQ=374"><img src="https://images.tldr.tech/livekit.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Livekit"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR AI <span id="date">2024-10-10</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flivekit.io%2F%3Futm_source=newsletter%26utm_medium=email%26utm_campaign=2024-10-10-tldr-ai/2/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/RpVsXniIw6ABRCW9U2nmVh5TMlgTGKRM1nGrh4EXZmI=374">
+                                    <span>
+                                        <strong>OpenAI just launched Advanced Voice for ChatGPT, but do you know how they built it? (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    They used <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flivekit.io%2F%3Futm_source=newsletter%26utm_medium=email%26utm_campaign=2024-10-10-tldr-ai/3/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/ZebxD-N59VEllqWgEyLW0h0jiZNFdpgv1N4JoaeHkkY=374" rel="noopener noreferrer nofollow" target="_blank"><span>LiveKit Cloud</span></a>, infrastructure for real time voice AI apps. With it you can:
+
+<p></p>
+
+<ul>
+<li>Transport voice data with ultra-low latency</li>
+<li>Build apps that respond with human-level speed and emotion</li>
+<li>Handle interruptions, transcriptions, RAG, function calling, and more</li>
+<li>Support millions of concurrent agents running at the edge</li>
+<li>Tap into OpenAI's new Realtime API in 10 LOC</li>
+</ul>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flivek.it%2FaEDOT8e/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/PT9O-vFg4jEkVn09spTVhigXVRzbuOeQgUv-SDYYWSs=374" rel="noopener noreferrer nofollow" target="_blank"><span><strong>Build your own Advanced Voice in a free 1 hour workshop on 11/1. Limited spots</strong>—<strong>apply today!</strong></span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;"><span style="font-size:36px;">🚀</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nobelprize.org%2Fprizes%2Fchemistry%2F2024%2Fpress-release%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/VEVeueBUEG9JURPzZkyGbfKRawR7_-7Yiap_G4_m2VI=374">
+                                    <span>
+                                        <strong>AlphaFold wins Nobel Prize in Chemistry (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Demis Hassabis, John Jumper, and David Baker won the Nobel Prize in Chemistry for their contributions to protein folding with AlphaFold among other innovations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01784v1%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/VkJsVm6h8qr8LzG8kt1QxjrEJTZSJ-NJ9bBVVrtaOvA=374">
+                                    <span>
+                                        <strong>Genomic Foundation Model Benchmarking (21 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    GFMBench is a new framework designed to address challenges in genomic foundation model (GFM) development by providing standardized benchmarking tools. With millions of genomic sequences and hundreds of tasks, GFMBench automates benchmarking for open-source GFMs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.tipranks.com%2Fnews%2Fthe-fly%2Fopenai-reducing-dependency-on-microsoft-data-centers-the-information-reports%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/rUx53nJ6QqnxqKWtMJu_6mDcOIgpdXZZeatUqBCeFUc=374">
+                                    <span>
+                                        <strong>OpenAI reducing dependency on Microsoft data centers (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI is reducing its dependence on Microsoft data centers by securing its own compute capacity. Microsoft is also decreasing its reliance on OpenAI as it competes in the AI product market.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Research &amp; Innovation</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.02707%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/p7_CfUjzGF9FExek5VY_8TJqXkkRWmP6n15QW7Q4EB0=374">
+                                    <span>
+                                        <strong>LLMs Know More Than They Show: On the Intrinsic Representation of LLM Hallucinations (21 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Another study that shows language models encode internally when they aren't factual. This evidence can help us steer them and mitigate hallucinations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.05258%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/zkPeA_rrz6GI-blrv4WhYRHzoaWZmMok5FO2aZEgAi8=374">
+                                    <span>
+                                        <strong>Differential Transformer (33 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Transformers tend to over-allocate attention to irrelevant context. This work introduces Diff Transformer, which amplifies attention to the relevant context while canceling noise. Specifically, the differential attention mechanism calculates attention scores as the difference between two separate softmax attention maps. The subtraction cancels noise, promoting the emergence of sparse attention patterns
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.05270v1%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/jjNrUxv5lwSlcyUjgXbBiETSTZJT_EEYDVm8Xg_bF6M=374">
+                                    <span>
+                                        <strong>A Simpler CLIP Fine-Tuning (14 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This paper introduces ProLIP, a method for adapting vision-language models like CLIP without adding extra parameters. By fine-tuning just the last projection matrix of the vision encoder, ProLIP achieves strong results in few-shot classification.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Engineering &amp; Resources</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fd2swt604.na1.hs-sales-engage.com%2FCtc%2FGH%2B23284%2Fd2SwT604%2FJlY3crJ5W95jsWP6lZ3q7W1KNGlv9b2Xv1W1R9dFK7_nYqLVwdbq074g07PW37VFxH2gZN-JW5fpDQl14M9zhW8wfjqm73Znb-W1nMRvz2Md_4JW3yB1P04GHFqyW1vJvG_4TggYmW3H4Jfv6Z4tPkW8LPY3d5b9w6TW2_1rSk2xFl29W1TPLhK4T3qN6W4Nn8rS2Xg_wzW4whd5-3DqY0TN3PQm8WlHHvBW8cjWLF14z-XbVd6BXz6zPcGXW5nQgRJ5y5PjWW4jT4935tsC-DW8v8HGw8KNCDMW2QBgzK8xyPn-W1qXvHG3YZLwrW1MzNVZ3n5GS-W2f3lfn9db5gJW4h1FFS306gxdW78qPBr2w9TQBW7sj4JC8CZ9XmW6pD06f1J6F70W1tDc6R4pcDW8f9ltG2j04%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/6qyG-iaPa9Wkr-lM-VdyodNga_kmIv-JRyRNSKbBQuk=374">
+                                    <span>
+                                        <strong>This company is merging patented next-gen AI, compression &amp; VR technology with the highest grossing character IP in history — and is offering investors a piece—for a limited time (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fd2swt604.na1.hs-sales-engage.com%2FCtc%2FGH%2B23284%2Fd2SwT604%2FJlY3crJ5W95jsWP6lZ3q7W1KNGlv9b2Xv1W1R9dFK7_nYqLVwdbq074g07PW37VFxH2gZN-JW5fpDQl14M9zhW8wfjqm73Znb-W1nMRvz2Md_4JW3yB1P04GHFqyW1vJvG_4TggYmW3H4Jfv6Z4tPkW8LPY3d5b9w6TW2_1rSk2xFl29W1TPLhK4T3qN6W4Nn8rS2Xg_wzW4whd5-3DqY0TN3PQm8WlHHvBW8cjWLF14z-XbVd6BXz6zPcGXW5nQgRJ5y5PjWW4jT4935tsC-DW8v8HGw8KNCDMW2QBgzK8xyPn-W1qXvHG3YZLwrW1MzNVZ3n5GS-W2f3lfn9db5gJW4h1FFS306gxdW78qPBr2w9TQBW7sj4JC8CZ9XmW6pD06f1J6F70W1tDc6R4pcDW8f9ltG2j04/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/M59MJd3RrnGvqRU6c7oEccDbtOPDRLV2Ass21RIqtmo=374" rel="noopener noreferrer nofollow" target="_blank"><span>Elf Labs</span></a>, known for winning historic trademark cases for iconic characters like Snow White, Cinderella, Sleeping Beauty, and the Little Mermaid, is raising an investment round to bring them to life using AI, AR, and VR. With two projects funded and their goal surpassed, limited space remains. Invest before the round closes on <strong>Oct. 30</strong> and earn up to 40% bonus shares and&nbsp;<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fd2swt604.na1.hs-sales-engage.com%2FCtc%2FGH%2B23284%2Fd2SwT604%2FJlY3crJ5W95jsWP6lZ3q7W1KNGlv9b2Xv1W1R9dFK7_nYqLVwdbq074g07PW37VFxH2gZN-JW5fpDQl14M9zhW8wfjqm73Znb-W1nMRvz2Md_4JW3yB1P04GHFqyW1vJvG_4TggYmW3H4Jfv6Z4tPkW8LPY3d5b9w6TW2_1rSk2xFl29W1TPLhK4T3qN6W4Nn8rS2Xg_wzW4whd5-3DqY0TN3PQm8WlHHvBW8cjWLF14z-XbVd6BXz6zPcGXW5nQgRJ5y5PjWW4jT4935tsC-DW8v8HGw8KNCDMW2QBgzK8xyPn-W1qXvHG3YZLwrW1MzNVZ3n5GS-W2f3lfn9db5gJW4h1FFS306gxdW78qPBr2w9TQBW7sj4JC8CZ9XmW6pD06f1J6F70W1tDc6R4pcDW8f9ltG2j04/2/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/V1AZgM5lbbMJa6h8j0ce3CW87K275dCHIR8OZJfuq-Q=374" rel="noopener noreferrer nofollow" target="_blank"><span>exclusive investor perks!</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FOSU-NLP-Group%2FScienceAgentBench%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/-OHVUcYpJAoCWSgzc7exp6diFPGB6pGm9necr4Sll0E=374">
+                                    <span>
+                                        <strong>Science Agent Bench (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Benchmark code for the science agent test. This essentially serves to measure how good models are at producing novel scientific advances.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.04671v1%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/3tTT08GCEfeqUaAdIr5Fk1osWXthmjzQdyEoJpettik=374">
+                                    <span>
+                                        <strong>Controlled Visual Generation (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Controllable AutoRegressive Modeling (CAR) is a new framework that brings precise control to pre-trained visual autoregressive models. The approach allows fine-tuned image generation with fewer resources by progressively refining control representations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.04733v1%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/Mueoor_1a-kkocMN4ph-DfY8CShD_xWVr2Djgj1J818=374">
+                                    <span>
+                                        <strong>Spatiotemporal Prediction with PredFormer (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    PredFormer is a new transformer-based approach for spatiotemporal predictive learning that outperforms existing methods in both accuracy and efficiency.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmashable.com%2Farticle%2Ftiktok-parent-company-bytedance-web-crawler-25-times-faster-than-openai%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/Lr57hQEsPhD9oFAXwwOIsY9BEHoAdo-7uD0vjun8oaY=374">
+                                    <span>
+                                        <strong>TikTok parent company ByteDance has a tool that's scraping the web 25 times faster than OpenAI (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ByteDance is aggressively using its web crawler, Bytespider, to amass data, potentially for developing its own LLM. Bytespider's data consumption rate is significantly higher than its competitors, including OpenAI and Anthropic. The purpose of the collected data remains unclear, but TikTok has been integrating AI-powered features like AI-generated ads and avatars.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F07%2Fsonair-takes-a-cue-from-dolphins-to-build-autonomous-3d-vision-sans-lidar%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/eJMl20IaMWqovcwPSGlKK4KetmNhFqqS7b747gqRRVY=374">
+                                    <span>
+                                        <strong>Sonair takes a cue from dolphins to build autonomous 3D vision without lidar (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Sonair has developed an ultrasound-based 3D computer vision technology for autonomous hardware. Aiming to replace lidar by offering a cost-effective and low-energy alternative, the system uses AI for object recognition and provides a 180-degree field of view. Sonair is initially targeting autonomous mobile robots. It recently raised $6.8 million to support technology aimed at enhancing robot perception.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fclimate.benjames.io%2Fai-go-brrr%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/Zi6E5Qc6FLEDh7UEmq2963vapITZfMEQ8EYDqx9tbDM=374">
+                                    <span>
+                                        <strong>AI will use a lot of energy. That's good for the climate. (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    AI data centers are driving demand for clean, 24/7 energy, pushing tech giants to invest heavily in renewable and nuclear power solutions. This surge in demand could accelerate the cost reduction of clean energy technologies due to their learning rates. In the long run, AI's energy needs may spur policy changes and advancements in clean energy infrastructure.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flanguages.oup.com%2Fproducts%2Fwebinar-what-can-curated-pronunciation-data-do-for-text-to-speech%2F%3Futm_source=tldr%2Bai%26utm_medium=newsletter%26utm_id=ws%2Bon%2Bdemand%2B10102024/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/e6ADeMcFQShfQhCd9Uo2VspyFdBsOKppi7uNbvOPYOk=374">
+                                    <span>
+                                        <strong>Webinar: Using curated pronunciation data for better text-to-speech models (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    What are the linguistic challenges in TTS and AI voice generation? How can they be solved with human-curated pronunciation data? <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flanguages.oup.com%2Fproducts%2Fwebinar-what-can-curated-pronunciation-data-do-for-text-to-speech%2F%3Futm_source=tldr%2Bai%26utm_medium=newsletter%26utm_id=ws%2Bon%2Bdemand%2B10102024/2/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/wTPCG1POI8OkNgKWq5n35gighftY5RLi7VowECVPjNo=374" rel="noopener noreferrer nofollow" target="_blank"><span>Watch the webinar by Oxford Languages and Wellsaid</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgensim2.github.io%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/klQUb9r3CCEpYVvJr66qNqYMqB7tBsD_DXsMXxONGR0=374">
+                                    <span>
+                                        <strong>GenSim scaling robot data with synthetic data (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A great paper that shows how to scale robotic collection data with an improved high quality physics simulation dataset.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fzhu-zhiyu.github.io%2FFLUX-IR%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/kshpA87uUOwwmN9XxpdVXzFVpao7aXic74Ous6yKNt4=374">
+                                    <span>
+                                        <strong>Image Restoration (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This project introduces a new differential equation-based method for image restoration.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F07%2Fteslas-head-of-vehicle-programs-jumps-to-waymo-ahead-of-robotaxi-reveal%2F%3Futm_source=tldrai/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/AyNc0BmMZB4C2ggSFu_ONMrbFAUwXp513hP_XeNtKs0=374">
+                                    <span>
+                                        <strong>Tesla's head of vehicle programs jumps to Waymo ahead of robotaxi reveal (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Tesla's former head of vehicle programs, Daniel Ho, has joined Waymo as programs director.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fae128712%2F2/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/uoi3wadtCABhUTUOXPvowghRNN3cesT2LKdWIvo6q5A=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/ae128712/2</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_cad7ba907a42%2F2/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/fgi9mzkgxPWmZA4Ntk5QAWInPTecrTSia8bLqnEiPRw=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of AI professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/qmx2aLiUdpaBtakME4YQ0Mv87-8PNSD9p_3lmkJtTpc=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Andrew Tan</span> &amp; <span>Andrew Carr</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR AI, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=eedf6b14-3de3-11ed-9a32-0241b9615763%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=39264fb0-86f1-11ef-b3aa-cdfb01008e0e%26pt=campaign%26pv=4%26spa=1728565245%26t=1728565754%26s=db9752374a9f3e027694158fdc3e6eb2adf9f10ec0577f061ebfaad62f7b4f5b/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/kXkof1RHvIbhtJElrNx60PwYjRtSUrv55fbAr9i1X6A=374">unsubscribe from TLDR AI</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%2Fmanage%3Femail=infourbiss%2540gmail.com/1/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/UEigbUKu0_a6HwBHNZRL3J0DDKYoJ9lI7slCxVQ81s0=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192768c3b60-1e4af6d5-4398-4cc6-aa40-8f32f506432c-000000/oOBgfG0X5LPmzmwkeGG-FY2EdQCWlFWkpqSmT439WDk=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

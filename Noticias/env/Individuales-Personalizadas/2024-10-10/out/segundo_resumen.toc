@@ -1,0 +1,10 @@
+\contentsline {section}{\numberline {1}Resumen Económico}{1}{section.1}%
+\contentsline {section}{\numberline {2}Análisis de Mercado}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Mercado del Petróleo}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Mercados Financieros Globales}{2}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Gráficos y Tablas}{2}{subsection.2.3}%
+\contentsline {section}{\numberline {3}Riesgos Potenciales}{3}{section.3}%
+\contentsline {section}{\numberline {4}Estrategia Recomendada}{3}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Estrategia de Trading Basada en Correlación Sectorial}{3}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Estrategia de Indicadores No Convencionales}{3}{subsection.4.2}%
+\contentsline {section}{\numberline {5}Conclusión}{4}{section.5}%

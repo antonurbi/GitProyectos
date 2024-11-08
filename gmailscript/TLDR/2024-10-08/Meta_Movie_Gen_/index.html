@@ -1,0 +1,638 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR AI</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Meta has trained a state-of-the-art movie model. It has 30B parameters and took 6,144 H100s to train. The model was trained on 1B images&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/sA0u3hy8skAGg3Wr9G4SByYoWe1ojPIjYXX11nV7YZo=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/NCKgICaxFM63zy5dl8S1Mk-8ngasOGmN_S3Hu9BtSw0=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=cf502a5e-8491-11ef-8271-151411e4516c%26pt=campaign%26t=1728306667%26s=527d112f0383ae8fc6316146490814a3d2a9ee5b3487f1448ef648feecfe4874/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/WMTrKB_2yzP7kzbtwzQAeQYbIXe5YlQUfa28XrDfvS4=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fapp.dollarflightclub.com%2Fsignup%2Fcheapflights4%3Futm_source=tldr%26utm_medium=paidplacement/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/RQHM08K5P1WALKvKg2l3Oc0onIvS2YRzkqiHT2Z7ILw=373"><img src="https://images.tldr.tech/dollarflightclub50.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Dollar Flight Club"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR AI <span id="date">2024-10-07</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fapp.dollarflightclub.com%2Fsignup%2Fcheapflights4%3Futm_source=tldr%26utm_medium=paidplacement/2/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/d8Y-v3f1cav_GvR9SqUgPLBKHyOrXAxZGmhJ842aP_c=373">
+                                    <span>
+                                        <strong>Spend $1 Today for $2k off Vacations to the World's Most Spectacular Destinations (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Would you spend one dollar if it meant you could travel the world?<p></p><p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fapp.dollarflightclub.com%2Fsignup%2Fcheapflights4%3Futm_source=tldr%26utm_medium=paidplacement/3/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/bwGqXI4C2BJOc9QnDHEvvKsp0Mz_fGAlbqN24vE1-ZM=373" rel="noopener noreferrer nofollow" target="_blank"><span>Dollar Flight Club</span></a> makes that dream a reality. For just $1 today you can join a club of over 1 million members saving up to 90% on every flight. Just select your departure airports, relax, and they'll alert you when great deals rolls in.</p>
+
+<p>You're missing out on flight deals like:</p>
+
+<p>🇫🇷France: $282 roundtrip</p>
+
+<p>🇨🇷Costa Rica: $173 roundtrip</p>
+
+<p>🇪🇸Spain: $247 roundtrip</p>
+
+<p>🇯🇵Japan: $455 roundtrip</p>
+
+<p>🇺🇸Hawaii: $161 roundtrip</p>
+
+<p>You deserve to see the world. Why not see it for next to nothing?</p>
+
+<p>💵 <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fapp.dollarflightclub.com%2Fsignup%2Fcheapflights4%3Futm_source=tldr%26utm_medium=paidplacement/4/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/_nKXFTHydM34F9XCTSBxCtA1qYILrmuDvp8_lvlMMnY=373" rel="noopener noreferrer nofollow" target="_blank"><span>Try for $1</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;"><span style="font-size:36px;">🚀</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fai.meta.com%2Fresearch%2Fmovie-gen%2F%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/k0HkZ8XpxqIqrfmA7bxNrV8JB-_oO3MRgibq9TiSoWM=373">
+                                    <span>
+                                        <strong>Meta Movie Gen (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Meta has trained a state-of-the-art movie model. It has 30B parameters and took 6,144 H100s to train. The model was trained on 1B images and 100m highly curated videos. Interestingly, it is a Temporal Autoencoder and Flow matching Llama. Meta released a 92 page paper, one of the most detailed research reports on the topic.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhuggingface.co%2Fblog%2Fleaderboard-finbench%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/qs82dIHHzSGSwb4rH0suLcobh2MpYFDrzqMSp6i1EQg=373">
+                                    <span>
+                                        <strong>FinLLM Leaderboard (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Open FinLLM Leaderboard offers a specialized evaluation platform tailored for financial language models. It focuses on tasks crucial for finance, such as stock movement prediction, sentiment analysis, and information extraction from financial reports.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblogs.nvidia.com%2Fblog%2Frtx-ai-brave-browser%2F%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/_uTlWU5TnbPWOR-gGcVhFSAfMdJ-P34Jj3DihCkQqIQ=373">
+                                    <span>
+                                        <strong>Ollama in Brave browser (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Nvidia's RTX-Acceleration combined with Ollama allows for running local models in the browser.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Research &amp; Innovation</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01792%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/k2X4kA9LTteNjyhx4hZo5-JiK_1LNRCKJxAfSdaiTuQ=373">
+                                    <span>
+                                        <strong>Embers of Autoregression for o1 (26 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Large language models have limitations due to next token prediction. However, OpenAI's o1 model was trained with a new objective over reasoning traces. Despite this change, o1 still shows signs of limitations due to next token prediction.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.02525%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/AV7bKnJZ7pXI2oiXdZdRbds-LQxgclJyxvvHylLEl1Q=373">
+                                    <span>
+                                        <strong>Contextual Document Embeddings (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This paper describes a method that is almost like a neutral TF/IDF in that it takes information from the entire corpus instead of just a single embedding document. It essentially encodes contextual information about neighboring documents. This method is state-of-the-art on MTEB.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01600%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/m-eIARAN4jqRjvL_wl1-PQTiGYApD1382jKuuZyIIqI=373">
+                                    <span>
+                                        <strong>ENTP: Encoder-only Next Token Prediction (24 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This paper shows a novel design architecture for using encoder-only transformers as next token prediction models. This has been done in other ways before, but the researchers find a great way to prevent cheating. The models have hints of strong performance at scale and also are capable of in-context learning.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Engineering &amp; Resources</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=secondary10072024/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/QCnJIB3L0Fkeak24pp8wCeIy9HcCSsaTR6KKQY333gI=373">
+                                    <span>
+                                        <strong>There aren't many opportunities to speak directly to 5 million tech professionals—this is one of them (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    In advertising, timing is everything. Reach software developers, AI/ML engineers, executives and other tech professionals as they actively read TLDR. With 10 interest-based newsletters, TLDR helps you reach your target audience. <a class="c-link" href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=secondary10072024/2/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/iZnncE996Zmp4CRDNAd3wTOL4FUuMEDL16_IFFhOC9A=373" rel="noopener noreferrer" target="_blank"><span>Learn more</span></a> about launching your first campaign with us.
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fcloneofsimo%2Finfinite-fractal-stream%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/ThMkv92FU5Xle2ZeAALHtR3W9_CoAtksbROpS5jobLo=373">
+                                    <span>
+                                        <strong>Infinite Data Loaders (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    New model testing is limited in the image domain by poor-quality small datasets like CIFAR10. This GitHub repository contains a tool that creates infinite complicated fractals as images or videos for testing.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Ffeder-cr%2FAuto_Jobs_Applier_AIHawk%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/9armibsvUSve7nDELwQi26sYDZ-KJtDhhKAHoxzJ4HY=373">
+                                    <span>
+                                        <strong>Auto Jobs Applier (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    An immensely viral repository that uses language models to automate the job application process and add an additional layer of personalization to the process.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fmiulab%2Fpairdistill%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/5CShR_XoRcSEyqyOOLG-3s3jK0wbJxa_UVImoVsR8YI=373">
+                                    <span>
+                                        <strong>Pairwise Distillation for Dense Retrieval (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This project proposes a new technique called Pairwise Relevance Distillation (PairDistill) to improve the accuracy of dense retrieval methods.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnews.mit.edu%2F2024%2Fjulian-shun-solves-complex-problems-efficiently-1004%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/9jAvxxLMO2_ZuyImD0ClAxC8baQcHPQiFGSnrICbdzk=373">
+                                    <span>
+                                        <strong>Solving Complex Problems with AI (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This study develops high-performance graph algorithms that help solve complex, large-scale problems like detecting fraud in financial networks or finding efficient delivery routes.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01556v1%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/rKPF3dS0WgXCKcNRiOqL_fbs56AzPAcjPrEbeW-U9KY=373">
+                                    <span>
+                                        <strong>Factual Accuracy in AI (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Integrative Decoding is a method that enhances the factual accuracy of large language models, especially for open-ended tasks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.liquid.ai%2Fliquid-foundation-models%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/Y7RkejlXOuAOIZtgEIwEZOTg77__scOPpkIjRB6Zbb8=373">
+                                    <span>
+                                        <strong>Liquid Foundation Models: Our First Series of Generative AI Models (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Liquid AI has announced its first generation of Liquid Foundation Models (LFMs), which deliver state-of-the-art performance with reduced memory usage. The LFMs, optimized for various hardware, include a 1B, 3B, and 40B model and are already available on platforms like LIQUID PLAYGROUND and soon on Cerebras. These models excel in handling sequential data and offer innovations in efficiency and scaling across industries such as financial services and biotechnology.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.microsoft.com%2Fen-us%2Fmicrosoft-copilot%2Fblog%2F2024%2F10%2F01%2Fintroducing-copilot-labs-and-copilot-vision%2F%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/PFp5izVJP1dhtblokeXTum5AE1QrfzYGMFK12JR6gp8=373">
+                                    <span>
+                                        <strong>Introducing Copilot Labs and Copilot Vision (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Microsoft is introducing Copilot Labs to trial advanced AI tools like Think Deeper and Copilot Vision.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F01%2Fopenais-devday-brings-realtime-api-and-other-treats-for-ai-app-developers%2F%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/ECtYIAcdpTohzLGnuGR8v4PjP8CMUcZGm6O7q0nNOt0=373">
+                                    <span>
+                                        <strong>OpenAI's DevDay brings Realtime API and other treats for AI app developers (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI announced new tools at its 2024 DevDay, including a beta Realtime API for near real-time, low-latency, AI-generated voice responses.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F01%2Fmicrosoft-brings-ai-powered-overviews-to-bing%2F%3Futm_source=tldrai/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/c2eP8nVZuFBuIiivcXvILgY1MTw8_rsn-HrvmcQLSd8=373">
+                                    <span>
+                                        <strong>Microsoft brings AI-powered overviews to Bing (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Microsoft has launched Bing generative search, an AI-powered search feature that aggregates and summarizes web information.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fae128712%2F2/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/sp2csNAy4wokimyRXz4JSb2WDL5qdKgIH6cqSRusEpg=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/ae128712/2</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_cad7ba907a42%2F2/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/iOUNpuRoV2-GeqaTkpOf9Vq67DsfSTQxJK5fVhhiBaE=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of AI professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/lm1JjpWSgDF1KAYNX6T3tfIs-kRIR43zypSKJgHPLJg=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Andrew Tan</span> &amp; <span>Andrew Carr</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR AI, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=eedf6b14-3de3-11ed-9a32-0241b9615763%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=cf502a5e-8491-11ef-8271-151411e4516c%26pt=campaign%26pv=4%26spa=1728306079%26t=1728306667%26s=93cf1a5ca01b39f81c96c7b8abab55cc1a512f94c70758d434d939d6effebedc/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/cNcMOS6Lspp1znRYVcsTKvntaq8HfBsyyO79dGTB0_g=373">unsubscribe from TLDR AI</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%2Fmanage%3Femail=infourbiss%2540gmail.com/1/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/zTvV_gn742abO_Zl27x4uKoY5oXxvCGIA-3hn3JgTzY=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192671adf62-d2850ff3-d428-40a9-94cb-1b4cf38e3b9f-000000/Z1Sq4Z6DSuqOw4GP30_cveOrpjXW07kqf5jn3Mg9NVM=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

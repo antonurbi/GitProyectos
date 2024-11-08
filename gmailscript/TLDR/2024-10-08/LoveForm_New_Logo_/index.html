@@ -1,0 +1,593 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR Design</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">LoveFrom, the creative collective led by Jony Ive, has introduced a new mascot, Montgomery the bear. \Monty had previously appeared on Moncler jackets&nbsp;</div>
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/BeqMSBxg76-6hRcNMNIXXM2g9uUWEQlCC4c8QMhgStE=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/5N9862rQgA5tDxTcjkyRDBmUxXsT4LfAI7w3DRaKCGo=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=64d38b34-8488-11ef-a8c9-8bbfc8530518%26pt=campaign%26t=1728302665%26s=4a7eec08c8a199018ca8fe4b0a91d069a4b18318f16f11a97072cc5f882017ff/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/OViSY770qM60YpRcegx-T5SRxD0CdbEwfQmBhTpgEJg=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Design <span id="date">2024-10-07</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativebloq.com%2Fdesign%2Flogos-icons%2Fjony-ives-lovefrom-has-an-adorable-new-logo%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/ROdFgPEo7uyl3W5uJRY9BbrGS2onbvfWhI0DmfkPuh4=373">
+                                    <span>
+                                        <strong>Jony Ive's LoveFrom has an Adorable New Logo (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    LoveFrom, the creative collective led by Jony Ive, has introduced a new mascot, Montgomery the bear. A charming animation of Monty interacting with the LoveFrom wordmark was shared on social media. Monty had previously appeared on Moncler jackets, but his presence now cements him as LoveFrom's official mascot.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F04%2Ffacebook-launches-a-gen-z-focused-redesign%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/nfDWkxOS3joYnCCqPOpKFWtRlmvIcccPXVYPTTgviUc=373">
+                                    <span>
+                                        <strong>Facebook launches a Gen Z-focused redesign (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Meta has redesigned Facebook to appeal to younger users amidst competition from platforms like TikTok and Instagram. The redesign emphasizes local community engagement by introducing a "Local" tab, personalized "Explore" content, and enhanced video features to capture the interests of young adults. Updates also target popular tools like Facebook Groups, Events, and Marketplace and include AI integrations for more personalized experiences.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.yankodesign.com%2F2024%2F10%2F04%2Fa-user-interface-designer-redesigned-mkbhds-panels-app-and-made-it-10x-better%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/QgVuBotpkzQKuVh7tBMExBkSZj95oSIWm4WLzF2luhQ=373">
+                                    <span>
+                                        <strong>A User Interface Designer redesigned MKBHD's Panels app and made it 10x better (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    MKBHD's Panels app underwent a transformative redesign by Juxtopposed that enhanced its UI, addressed bugs, and proposed a less intrusive monetization approach. The initial app launch faced heavy criticism due to functionality issues, excessive wallpaper pricing, and privacy concerns. Juxtopposed's redesign not only improved navigation and visual consistency but also turned the app into a social platform for community engagement and exclusive content sharing.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwebflow.com%2Fblog%2Fapp-spotlight-adobe-express-app%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/5W7B-sy_xy4uSbV2KOkyKB7dLd3XPTDaNpXe1J3RLBQ=373">
+                                    <span>
+                                        <strong>Supercharging Creativity: Bringing the Power of Adobe Express to Webflow Users (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Adobe Express has now integrated with Webflow, allowing teams to create and edit high-quality images and visual assets for the website that adhere to brand guidelines. Powered by Adobe Firefly AI, the tool simplifies image generation and editing. This integration helps businesses meet the growing demand for visually engaging websites while maintaining brand consistency and accelerating content production.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sketch.com%2Fblog%2Fsketch-and-ai%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/pFHJRDVhkZRBy-e3LS2F8-7RgC-T286XIo-GUgdifNw=373">
+                                    <span>
+                                        <strong>Sketch and AI (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The team at Sketch prioritizes designers' needs and workflows when considering AI integration. They reject generative AI for design creation and vow to protect user privacy, ensuring no exploitation of personal work. The company will maintain transparency and only adopt ethical AI models.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fread.cv%2Fdisco_lu%2Ffigma-versioning%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/syq9y_8OTb36ORrTLQHuZq0jGuTYreJJ8mGdmoxHDR8=373">
+                                    <span>
+                                        <strong>Loose Thoughts on Versioning in Figma (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Versioning components and files in Figma can be challenging, especially as designs grow. To manage this, consider creating more components, separate design files, or introducing staging libraries. Each method offers pros and cons, but maintaining multiple component versions and avoiding disruptions is critical to ensuring smooth collaboration between designers and developers.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FJfV8Ao/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/DlFsai2qAMDmWEmVUs8UB2YPKNgtd0zlDxEekx7w7ME=373">
+                                    <span>
+                                        <strong>Neubrutalist (Figma plugin)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This Figma plugin allows users to effortlessly select one or multiple shapes, texts, or objects and apply the solid shadow effect commonly seen in Neubrutalist designs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwhimsical.com%2Fmind-maps%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/lRD_a0tInLrjke40FDtPnvV1ENppVO5FH66DYjo753M=373">
+                                    <span>
+                                        <strong>Mind Map Maker (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Whimsical's free mind map maker helps you visualize, clarify, and organize ideas and information faster.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fopen-props.style%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/W71d50OYBmnU9nXZtxCXYqiNtAlHvMktsUzE-tmjFcs=373">
+                                    <span>
+                                        <strong>Supercharged CSS Variables (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Open Props is a low-level framework built entirely on CSS variables. It is highly customizable and can be adapted to fit any design system.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fabduzeedo.com%2Fexploring-mogos-branding-and-visual-identity-soofi-art-studio%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/-z5rBbzsoDMxWAnDXvOT8oIAjW2tvmA_-KneqBAMrVo=373">
+                                    <span>
+                                        <strong>Exploring Mogo's Branding and Visual Identity by Soofi Art Studio (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Mogo's branding, designed by Soofi Art Studio, features unique typography with a custom "g" and a bold white and dark red color palette to evoke hunger and excitement. The nostalgic 1950s-inspired mascot, combined with the typography and colors, creates a distinctive, memorable visual identity that appeals to all ages while maintaining professionalism.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpiccalil.li%2Fblog%2Fpractical-accessibility-tips-you-can-apply-today%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/ezfhdOm87e1yAQtD3O001oybO_LDuwGuq9KNMeAyVCw=373">
+                                    <span>
+                                        <strong>Practical Accessibility Tips You Can Apply Today (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Dropdowns should use semantic HTML with ARIA attributes for accessibility. Modals require focus management to trap users within the modal. ARIA roles and keyboard navigation are essential for tabbed interfaces. Attention to detail is crucial for building accessible UI patterns. A link to the ARIA Authoring Practices Guide Patterns, which provides a ton of examples, is available at the end of the article.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.smashingmagazine.com%2F2024%2F10%2Fhow-bottom-up-design-approach-enhances-site-accessibility%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/79u0rK2wKBrVcDbgFmd_HLpCELLdQWsr5vX9wI4OLjs=373">
+                                    <span>
+                                        <strong>How a Bottom-Up Design Approach Enhances Site Accessibility (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A bottom-up design approach is essential for accessible web design. It focuses on specific user needs, especially for neurodivergent audiences, addressing small details first. This method helps catch usability issues early, making websites more functional and inclusive. While top-down methods ensure consistency, bottom-up improve accessibility and user experience.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2F2024%2F9%2F24%2F24252410%2Fnintendo-dmca-notices-mario-fan-art-ai-image-detection%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/cxGq-n3RBESepuTtXas-dT9pHsTxJEkQVRc9-eHt0Yg=373">
+                                    <span>
+                                        <strong>An AI-powered Copyright Tool is Taking Down AI-generated Mario Pictures (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    X removed posts featuring Mario images after AI company Tracer filed DMCA notices targeting AI-generated and fan art images, possibly on Nintendo's behalf.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsupercharge.design%2Fblog%2F8-common-ui-color-mistakes%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/ew7xYadLyl7kXbpmj9cmSU75DycXEF1JdVMXvuwUsMg=373">
+                                    <span>
+                                        <strong>Eight Common UI Color Mistakes (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Common UI color mistakes, like using too many colors or poor contrast, can harm design effectiveness, causing confusion and reducing user accessibility.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativeboom.com%2Finspiration%2Fcon-mchugh%2F%3Futm_source=tldrdesign/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/GLlALWyY8gdR00l8XnFu3HIYliH52gsH0tGvwV8AZ2k=373">
+                                    <span>
+                                        <strong>Con McHugh: A journey into textured illustration, playful animation, and big ideas (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    UK-based illustrator and animator Con McHugh is known for his textured, hand-drawn, looping animations that embrace creative imperfections.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F1b9d211c%2F4/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/sgzT4VBA13bkB1orxz-fLHe2uoTiSSXs9Q1sAr5gQFk=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/1b9d211c/4</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_f2d978c86b6e%2F4/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/7kwVZspVd38z9kU1ntjZbMTG4np9w-VR9ygTdh9UoYg=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of design professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/ZX2hspfhG6P0iJOLEgYN0YrKX01II0AIOD45fQnje1E=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Jae Lee</span>, <span>Matej Latin</span> &amp; <span>Ralph Brinker</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Design, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e1c4e253-3e90-11ed-9a32-0241b9615763%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=64d38b34-8488-11ef-a8c9-8bbfc8530518%26pt=campaign%26pv=4%26spa=1728302442%26t=1728302665%26s=623e4a2aea5f8e6544d33ab418e64575eee7a9cf386f7fd4806dca482cf9ebd6/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/2GYXtNFjKwIlL1VHy0TVwvadrKMx-J28oE35eIuwhdM=373">unsubscribe from TLDR Design</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/7wl69mRNIaQGyHaHJBrClmysrmrGh6aQan903obki2A=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019266ddcf66-d504e3b9-4971-49ae-802a-9716c08f6940-000000/ebw8AK-TU1n8SjPU-fr5G2iAnQEdJdoSZYlZNUIAdnM=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

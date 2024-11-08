@@ -1,0 +1,568 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR DevOps</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Grafana Labs has introduced a PromQL-based anomaly detection framework designed to operate without external systems and perform efficiently at scale&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/E8ZWZigcgjFxdGek92RUT6-uts_IUpskTsDJAvw7sfg=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/GnvcFccp94X-JParJefKAMhCYTMY3Mw7r0ZL0hNdv8Y=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=8bd1d63a-8485-11ef-bd33-cd3b3bc83078%26pt=campaign%26t=1728299084%26s=1919c42dc8447286dd34541aa7364861e12f84dae2e4bdc01254cb49e91b9732/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/0cD4TpWpnvOuKZrIwq7O_xKMZkSBKge_rPJzaoqMg14=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fapp.gitpod.io%2Flogin%3Futm_campaign=tldrdevops%26utm_source=Email%26utm_medium=Newsletter/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/mND1sfVWmI5EytSAeusEyBsf2WeoRL3S-XEQyYxZ7FA=373"><img src="https://images.tldr.tech/gitpod.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Gitpod"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR DevOps <span id="date">2024-10-07</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fapp.gitpod.io%2Flogin%3Futm_campaign=tldrdevops%26utm_source=Email%26utm_medium=Newsletter/2/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/gt8cz87Np2nHFDEnI_q-AEAfDYPK1Aay115Wesphfkg=373">
+                                    <span>
+                                        <strong>The fastest way to run Dev Container locally (and in the cloud) (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    No more 'works on my machine' issues or dev environment headaches. <a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fapp.gitpod.io%2Flogin%3Futm_campaign=tldrdevops%26utm_source=Email%26utm_medium=Newsletter/3/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/2aSUykUjTxND2LIA4BvrgM77cbTiEWLBwE-8KyW-6zg=373" rel="noopener noreferrer nofollow" target="_blank"><span>Gitpod Flex</span></a> brings automated, standardized development environments to your laptop—and the cloud.
+
+<p></p>
+
+<p>Describe your <strong>dev-environment-as-code</strong> and streamline <strong>development workflows with automations</strong>:</p>
+
+<ul>
+<li><strong>Setup</strong>: seeding a database or provisioning infra</li>
+<li><strong>Operations</strong>: turning your runbooks into one-click actions</li>
+<li><strong>Editor interfaces</strong>: starting up a server like Jupyter notebooks</li>
+<li><strong>Policies</strong>: running security or scanning tools</li>
+<li><strong>AI workflows:</strong> configuring AI agents or code assistants</li>
+</ul>
+
+<p><a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fapp.gitpod.io%2Flogin%3Futm_campaign=tldrdevops%26utm_source=Email%26utm_medium=Newsletter/4/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/poW1VhQbgPyPpaow_AfXjc1spe3fDBVG4mDBECae3J8=373" rel="noopener noreferrer nofollow" target="_blank"><span><strong>Try Gitpod Flex for free</strong></span></a>: <strong>self-host</strong> in your cloud in <strong>under 3 minutes</strong>, or <strong>run</strong> <strong>locally</strong> on Gitpod Desktop.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.techtarget.com%2Fsearchitoperations%2Fnews%2F366612115%2FFresh-crop-of-startups-takes-on-infrastructure-as-code-toil%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/2NcWz9V65hgSiL87_BX2rTgB_nkrMSHCF2cva65S9J4=373">
+                                    <span>
+                                        <strong>Fresh crop of startups takes on infrastructure-as-code toil (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The shift from DevOps to platform engineering is driving the need for more efficient and visual IT automation methods as traditional infrastructure as code (IaC) struggles with scalability and complexity. New vendors like System Initiative propose innovative solutions, such as a visual interface that eliminates the reliance on IaC tools, that aim to streamline deployment processes and enhance productivity in cloud-native environments.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmitmproxy.org%2Fposts%2Freleases%2Fmitmproxy-11%2F%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/U6629HlenIO34EAhZOCS9bff0sP-R46NgbQw24GHCzc=373">
+                                    <span>
+                                        <strong>Mitmproxy 11: Full HTTP/3 Support (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Mitmproxy 11 introduces full HTTP/3 support and significant DNS enhancements, including extended query types and improved DNS-over-TCP support. Developed by Gaurav Jain for the Google Summer of Code, this version also adapts to privacy advancements like Encrypted Client Hello by stripping ECH keys to facilitate continued functionality.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fqt8FmQ/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/CxLZIfmcTPxL0-8W6_55FOFDIXkEDxKkA9zAz8yDlWE=373">
+                                    <span>
+                                        <strong>GenAI Experiments: Monitoring and Debugging Kubernetes Cluster Health (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Intuit's platform engineers face challenges managing their 325+ Kubernetes clusters due to alert overload and the complexity of debugging. By integrating GenAI tools like k8sgpt and creating Cluster Golden Signals for better detection, debugging, and remediation, they are streamlining the on-call experience and improving issue resolution times.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fcloud.google.com%2Fblog%2Fproducts%2Fidentity-security%2Fhow-to-use-google-clouds-automatic-password-rotation%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/Ae4Wi508XUCYCRsWuz3Fdge4TpXcJATQM1rYcOo-V5Y=373">
+                                    <span>
+                                        <strong>How to get started with automatic password rotation on Google Cloud (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is a guide from Google Cloud on automating password rotation using Secret Manager and Cloud Functions, which reduces the risks associated with manual processes. It outlines a reference architecture for automating password changes specifically for Cloud SQL that can be applied to other systems and secrets.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgrafana.com%2Fblog%2F2024%2F10%2F03%2Fhow-to-use-prometheus-to-efficiently-detect-anomalies-at-scale%2F%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/A3xTg0x0iddqiGXcghDdFcrTovKOZOfNYylEGLJEsOE=373">
+                                    <span>
+                                        <strong>How to use Prometheus to efficiently detect anomalies at scale (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Grafana Labs has introduced an open-source PromQL-based anomaly detection framework designed to operate without external systems and perform efficiently at scale. It offers a solution for quick incident resolution by providing critical context through adaptable anomaly bands and accommodating for long-term patterns.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Finfo.securityjourney.com%2Fowasp-api-training-program%3Futm_campaign=OWASP%2520API%25202024%26utm_source=TLDR%26utm_medium=newsletter/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/DXw-ycZY8OA67CIADUyE75RGtpHXrlXHmfHDm57gN6w=373">
+                                    <span>
+                                        <strong>October is cybersecurity awareness month—there's no better time to brush up on your API security (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    APIs are everywhere in modern software development. Are yours secure? Security Journey is offering free training programs for developers who work with APIs. Through a combination of <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Finfo.securityjourney.com%2Fowasp-api-training-program%3Futm_campaign=OWASP%2520API%25202024%26utm_source=TLDR%26utm_medium=newsletter/2/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/wnYPEXfq211GIA14ShmxaoXxVJhKbySVZgG84_Jiyo8=373" rel="noopener noreferrer nofollow" target="_blank"><span>video lessons and hands-on sandbox exercises</span></a>, learners will gain the knowledge and skills needed to identify, exploit, and defend against API security vulnerabilities in real-world scenarios. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Finfo.securityjourney.com%2Fowasp-api-training-program%3Futm_campaign=OWASP%2520API%25202024%26utm_source=TLDR%26utm_medium=newsletter/3/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/Vcdex_aN9DN6TpEIi5tjQRoJ0kvdQJ0eR8PHwy0lJVg=373" rel="noopener noreferrer nofollow" target="_blank"><span>Get free access</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fhoarder-app%2Fhoarder%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/HwA1TIzQvHwXPCRmy2ub0oDDdXSsrKjXEL9nhbfCkgI=373">
+                                    <span>
+                                        <strong>Hoarder (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Hoarder is a self-hostable app that allows data enthusiasts to bookmark links, take notes, and store images and PDFs. It features AI-powered tagging and full-text search capabilities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fpercona%2Feverest%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/qeRFYwSXdfg1-SappqTKWXAOvpgla3BaV0DyWjGw3nw=373">
+                                    <span>
+                                        <strong>Everest (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Percona Everest is an open-source, cloud-native database platform designed to help developers swiftly deploy code, efficiently scale deployments, and minimize database management burdens while enhancing control over data, configurations, and costs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsecuritylabs.datadoghq.com%2Farticles%2Fthreat-actors-leveraging-docker-swarm-kubernetes-mine-cryptocurrency%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/aH2PJydfz8EGNxuXBtnq7Y-qNWjYyPwArC6KZp2g_IQ=373">
+                                    <span>
+                                        <strong>Threat Actors leverage Docker Swarm and Kubernetes to mine cryptocurrency at scale (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A new cryptojacking campaign is targeting the Docker Engine API, allowing lateral movement to Docker Swarm, Kubernetes, and SSH servers. The threat actor is using Docker Swarm's orchestration for command and control and hosting malicious images on Docker Hub. There are indications that they are also targeting GitHub Codespaces infrastructure.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FIybfqa/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/oJyI2FcY6KfzysEz-3cj1J-z_duf2QnAC_brRXFIkjM=373">
+                                    <span>
+                                        <strong>Memory Leak Issues Are not always Memory Leak (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Faced with scaling issues due to Java's heap memory not being returned to the OS, developers switched to ShenandoahGC before ultimately upgrading to JDK 17, which allowed a return to G1 GC, improving both performance and memory management.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fynwarcs.github.io%2Fexploiting-vs-dump-files%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/Rpm5a0g8kZebQ-Gip2V2s9YyeB3xu4u9d9XgRSJWqas=373">
+                                    <span>
+                                        <strong>Exploiting Visual Studio via dump files - CVE-2024-30052 (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog post discusses the CVE-2024-30052 vulnerability in Visual Studio, which allows arbitrary code execution through specially crafted dump files, leading to severe security risks, and highlights the steps taken to report and mitigate the issue with Microsoft.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthenewstack.io%2Fhow-to-build-an-internal-developer-platform-like-a-product%2F%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/93ECOKBK4HbFxyyMp_YNrhJkhQSgFYF_PewHERlO9J8=373">
+                                    <span>
+                                        <strong>How to Build an Internal Developer Platform Like a Product (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Platform engineering requires a mindset shift to treat internal developer platforms as products, focusing on developer needs and experiences.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpthorpe92.dev%2Fprogramming%2Fsystems%2Fcommon-misunderstandings%2F%3Futm_source=tldrdevops/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/qmuyuPxoKAlt-fbsbGrwB6FznhRNYfZYQQdU7t3PuhE=373">
+                                    <span>
+                                        <strong>Confusing or misunderstood topics in systems programming: Part 0 (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog series explores complex topics in Linux systems programming for beginners and transitioning web developers.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F6fb53e6a%2F10/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/Bea4a4lvcncJSWS7TMCZZx_MVI115WfbPQljXvVIZWY=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/6fb53e6a/10</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_bc421b592e23%2F10/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/qYgQDipRDlzUhP7k2ZmY8yaKdIP39VlEoJ7tnjLxGHY=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of devops professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/ulHXhYaJVfHOcOksOdlIuiZ2fxmWl0j3tLoIEBnKFkg=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Kunal Desai</span> &amp; <span>Martin Hauskrecht</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR DevOps, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=8bd1d63a-8485-11ef-bd33-cd3b3bc83078%26pt=campaign%26pv=4%26spa=1728298860%26t=1728299084%26s=84072c14b4c9149979fb07f5ba0290f3a1037c9094f1dadfd6c112fc4caebcc6/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/6cFtnMKwuiCmcGi4Fh3Z7BsaRmk8XguezaZzLltbXJc=373">unsubscribe from TLDR DevOps</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/rWAGPA3zTaNw34mSqiz3Z-RLVu2N4JWpJC2Nub66McQ=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019266a72adf-940177a4-b0de-449a-845e-3b3af98962b7-000000/vV-awa61qEpB4d2McylkbFCBr_smMGTFfLoRaTGIzSA=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

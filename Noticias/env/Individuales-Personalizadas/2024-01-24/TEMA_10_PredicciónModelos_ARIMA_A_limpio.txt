@@ -1,0 +1,582 @@
+WEBVTT
+Kind: captions
+Language: es
+vamos a comenzar el tema 8 que es el
+último tema se llama predicción en
+series temporales como de los anima es
+el último tema de esta parte segunda que
+hemos denominado modelos de series
+temporales esta parte segunda pues es
+muy útil para pues para profesionales
+que trabajan por ejemplo en áreas de
+planificación de prospectiva sobre todo
+en grandes empresas donde pueden tener
+estas estas áreas y estos departamentos
+y también por supuesto la administración
+y sobre todo también para gente que
+trabaja en departamentos financieros
+pues donde también es importante el
+poder hacer predicción de series
+temporales
+hay una asignatura en un cuarto que
+pertenece a nuestra especialidad que se
+llama métodos de previsión muy
+interesante por supuesto también para
+todos aquellos a los que les gustaría
+estar en un departamento de marketing de
+estudios de mercado son pues labores muy
+habituales el poder hacer predicciones
+habitualmente como digo pues cuando el
+departamento es muy especializado no
+pues
+pues bueno pues el método habitual
+suelen ser los modelos anima por eso los
+estamos introduciendo aquí porque es eso
+es muy fácil que tanto si hacéis esa
+asignatura en cuarto como luego en la
+vida allí por donde os vaya llevando y
+el perfil profesional por el que os
+vayáis inclinando es muy fácil que os
+encontréis con con estos conceptos y por
+eso pues es necesario haberlos visto
+alguna vez por eso estamos ahora
+viéndolo en una asignatura que es
+troncal también por supuesto como digo
+pues pues un poquito más para andar por
+casa como se suele decir de manera más
+informal pues pues bueno es muy habitual
+el tener que hacer predicciones de
+cualquier tipo y bueno pues conocer
+métodos como los alistados exponenciales
+como a veces trabajando con ella
+pues también es bastante útil son muy
+rápidos de aplicar teniendo el software
+que teniendo el virus y entonces bueno
+pues la verdad es que merece mucho la
+pena también el conocerlos y ya pues
+pasando la parte de segunda ya
+entraríamos en la parte tercera que es
+la última parte del curso dedicada a los
+modelos multinacionales también pues muy
+interesantes para otro tipo de o también
+para posiblemente para estos mismos
+perfiles profesionales y también para
+otros diferentes ya hablaremos de ellos
+este tema es un tema que lo que va es a
+abordar de una manera muy práctica pues
+cómo se hace un ejercicio como de los
+anima aunque también tiene un componente
+teórico de algunas cosas que no hemos
+visto hasta ahora pero por supuesto es
+necesario pues tener a mano y a la vista
+el tema 7
+hay que decir que el tema 8 se queda muy
+superficial y en el tema 7 o no se
+entiende bien y por supuesto el tema 7
+que es muy teórico como habéis visto
+pues no no se puede entender y no se
+puede estudiar suficientemente bien si
+no se ha visto el tema 8 porque no se
+entiende nada o se entiende muy poco
+entonces bueno pues el tema 8 viene a
+iluminar y ya ver cómo de manera
+práctica pues de todo este galimatías
+este jaleo no de diferenciación es lo
+que es el componente ar y el componente
+m a cómo se articula todo esto y para
+qué sirve y bueno como pues 7 una serie
+yo cree hacer una predicción que tengo
+que hacer bien
+este tema estaría dividido en cuatro
+partes las más laboriosas son la parte 1
+y 2 en el sentido de que esas son
+aquellas en las que ellos más me voy a
+detener por supuesto en la parte 3 que
+es la parte de estimación y de
+contrastes del modelo anima pues tiene
+también su dificultad pero nosotros no
+lo vamos a ver en este curso es decir
+esto voy a verlo por encima totalmente y
+bien pues apelando a cosas que ya
+conocéis de lo que es la estimación y el
+contraste de un modelo econométrico
+porque en el fondo pues se parece mucho
+pero ya digo no voy a entrar en detalle
+y la predicción como de los anima pues
+pues lo mismo sería la última parte es
+decir bueno ya una vez que yo tengo el
+modelo pues como hago para predecir y
+cómo hago para obtener los valores
+futuros no que es de lo de lo que se
+trata
+bien entonces vamos a pasar ahora a la
+parte de tratamiento de series en donde
+pues lo que vamos a ver es bien en
+principio la parte de recogida de datos
+que ya la había realizado porque cada
+uno ha obtenido había extraído una a una
+serie del ministerio de la base debe
+deshice del ministerio como hacer el
+análisis exploratorio de los datos ya
+habéis hecho parte en la práctica se
+trataría de bueno de ir más allá
+y si la serie no fuera estacionaria cómo
+hacer que la serie sea estacionaria
+recordaréis del tema 6 y también del
+tema 7 que hemos hablado de ello las
+series a veces es necesario dejar
+transformarlas en este caso ya hemos
+visto que es totalmente necesario
+hay que eliminar todo tipo de tendencia
+que tenga la serie en cuanto a la
+identificación de un modelo animal como
+se sabe si el modelo es un ar es un
+estar en la práctica y bueno pues para
+ello el corre logra más nos va a
+resultar de bastante ayuda así como un
+estadístico que ya conocemos que es el
+test q de lyon box
+son los instrumentos que vamos a
+utilizar ya veremos como
+bien entramos por tanto en el punto 81
+que sería el tratamiento de serie ese
+modelo es ánima es decir las series pues
+como en cualquier modelo econométrico no
+son una cosa que uno escoge y ya está es
+verdad que nosotros no hemos podido
+dedicarle todo el tiempo también hubiera
+de goya yo he deseado no haber dedicado
+a lo que es la parte de los datos pero
+bueno ya habéis tenido otras asignaturas
+en donde pues habéis visto también en
+detalle pues cómo tratar los datos cómo
+transformarlos la importancia que tiene
+que es la introducción a la econometría
+no pero pese a todo bueno pues algo algo
+yo os comenté es vamos a recordar
+recordaréis que cuando por ejemplo
+fuimos a veces hice hicimos esta parte
+de la práctica hace hace unas semanas
+pues yo os comenté que teníais que ser
+cuidadosos a la hora de extraer la
+información por ejemplo os comentaré
+pues que a lo mejor había dos series con
+el mismo nombre pero que no eran iguales
+obviamente porque en un a lo mejor pues
+la serie se le se refería al tramo
+antiguo y entonces bueno pues era una
+serie de que a lo mejor el último dato
+era no sé del año 2004
+la otra ya se refería a un tramo más
+moderno porque se haya hecho con una
+metodología nueva y que se refiere al
+año 2010 pues que lógicamente teníais
+que tomar esta última como es lógico no
+o a lo mejor se podrían enlazar las dos
+si fuera necesario tener pues una serie
+como muy en el largo plazo pero pero que
+también nos comenté como como viene aquí
+pues que si queremos hacer una
+predicción por modelos animas pues bueno
+como mínimo mínimo mínimo verdad por
+abajo que lo cual es inaceptable pues
+habría que tener entre 30 y 40 datos
+cuando se trata de datos trimestrales no
+y que cuando se trabaja con series
+mensuales pues por lo menos pues habría
+que trabajar entre 72 y 120 con datos
+mensuales el tener más más más más más
+datos más observaciones es porque cada
+año es porque aquí se está pensando en
+términos anuales como cada año tiene 12
+meses mientras que en el caso el
+trimestral cada año tiene cuatro
+trimestres no pues en el fondo estamos
+hablando pues no sé si son cuatro
+trimestres entre 30 y 40 no pues
+estaríamos en si fuera caso de 40 pues
+por lo menos cuatro años que menos que
+cuatro años pues serían incluso pues
+necesario más pero cómo
+y aquí pues lo mismo sería un poquito el
+equivalente no o incluso pues algún año
+más
+y la verdad es que como dice aquí pues
+lo ideal sería tener entre 6 y 10 años
+completos de información con eso pues
+pues bueno ya nos aseguramos que la
+técnica funciona es decir esta técnica a
+diferencia de lo que puede pasar con los
+alisados exponenciales que no requieren
+de tanta información es una técnica que
+requiere de un mayor volumen de datos o
+sea de una mayor historia que se llama
+cuando hablamos en términos de series
+temporales hablamos de series con
+historia a la historia qué quiere decir
+el número de datos pasados vale
+entonces también es verdad que lo
+contrario tampoco es bueno también
+volvemos a hablar aquí de lo que
+decíamos en la econometría 1 del burro
+grande ande o no ande o sea tampoco es
+cuestión de decirlo yo mi serie tiene
+datos desde el año 50 no sé cómo pasa
+con el ipc por tanto pues yo voy a tomar
+datos desde el año 50 fíjate la cantidad
+de datos que tengo voy a hacer un modelo
+maravilloso bueno pues no siempre se
+puede asegurar que esto sea una buena
+cosa porque pues porque a veces uno
+tiene tantos ciclos económicos tiene
+buenos que tantas vicisitudes que ha
+podido pasar un país no sé si es el caso
+de españa- y lo que sería pues una
+variable tan tan fundamental como es el
+índice de precios al consumo del ipc no
+pues pues hombre la verdad es que a lo
+mejor tampoco es bueno tener tanta
+información entonces hay que llegar como
+un equilibrio entonces bueno pues el
+equilibrio si ahora mismo nos
+encontramos pues no sé pues pues pues
+que te digo yo pues podemos tener una
+información hasta prácticamente si es
+una serie de alta frecuencia pues hasta
+el mes pasado no
+el mes anterior pues sí pues no sé pues
+a lo mejor pues sí ahora mismo estamos
+en pues en el mes de abril pues que
+tengamos información hasta febrero o
+pongamos por caso
+bueno pues pues bueno pues echarle pues
+a lo mejor pues con tener diez años no
+pues hasta diciembre no sé de hace diez
+años pues ya estaría bien
+y ya ya habría cosas ya estaríamos
+observando a un ciclo por lo menos no
+entonces ya más allá pues 15 años pues
+quizás 15 años no como muchísimo 20
+porque quizá más allá pues como estamos
+diciendo ya estamos mezclando demasiadas
+cosas y a lo mejor tampoco funciona bien
+la técnica entonces no es fácil y
+tampoco pues no sé hay una regla
+entonces si se puede y si se tiene
+suficiente información como como se dice
+aquí pues hombre habría que intentar
+evitar puntos de cambio radical de
+tendencia se cortando la serie yo de
+hecho les recomendé que si la serie era
+muy larga muy larga pues la cortara es
+la corta vez que quiere decir pues que
+solamente tomará es de excel pues no sé
+la información pues desde pues desde
+hace eso diez veinte años como mucho
+también se puede cortarlas
+pues con ayuda de samper en el fichero y
+views con lo cual si fuera necesario
+pues podríamos también acotar la que es
+de lo que se trata de lo que estamos
+hablando aquí
+bien entrando ya en el análisis
+exploratorio una vez que bueno pues
+tenemos una información suficiente y que
+pensamos que pues que va a ser útil que
+es lo que sucede a partir de aquí bueno
+pues que sabemos que hay que cumplir
+unos requisitos pues al igual que bueno
+pues hablábamos de las hipótesis básicas
+en el modelo econométrico clásico pues
+aquí antes incluso de llegar a las
+hipótesis básicas que también se tienen
+que cumplir pero hay un hay un requisito
+previo y es el requisito con los datos
+que en los modelos econométricos pues no
+existía necesariamente bueno sabíamos
+que podíamos transformar las series en
+logaritmos en tasas no pero no era una
+cosa obligatoria necesariamente aquí sí
+aquí obligatoriamente si la serie tiene
+algún tipo de tendencia no como estamos
+viendo por ejemplo aquí con una serie de
+lippi del índice de producción
+industrial lo que hay una tendencia pues
+pues claramente creciente no es una
+serie antigua fijaros vas desde el desde
+el año 76 hasta el año 96 bueno pues en
+este periodo
+este índice después pues con algunas
+contracciones en algún momento pero
+sigue una tendencia general creciente no
+está claro podemos seguir una dinámica
+pues con una línea recta
+y esta línea tiene una pendiente
+positiva respecto de la horizontal por
+tanto en la tendencia pues va a ser
+creciente luego también podemos
+sospechar cómo tiene mucha
+estacionalidad si unimos los picos
+inferior y superior pues vemos que hay
+cierta forma más o menos de embudo o sea
+aquí en la primera parte del año 76 las
+diferencias entre las partes superior e
+inferior de la serie son más pequeñas
+que las oscilaciones o las diferencias
+en la parte del año 96 esto podría ser
+muy indicativo podría ser porque todo
+esto es exploratorio o no en principio
+podría ser indicativo de teros
+elasticidad entonces bueno pues vimos en
+el tema anterior pues que podríamos por
+ejemplo pues dividir por su periodo es
+la serie no y en cada su periodo por
+ejemplo aquí hemos representado ocho sus
+periodos como las dividimos en ocho
+trocitos y calculamos la media ves que
+aquí son datos del índice entonces bueno
+pues si representamos las medias para
+cada su periodo vemos que las medias van
+hacia arriba pues lógico lo que ya
+imaginábamos el diagrama por ejemplo de
+rango media
+o en este caso es la desviación típica
+sería pues en cada su periodo se calcula
+la media y también se calcula la
+desviación típica y se representan y lo
+que vemos es que hay una dinámica
+creciente os a medida que aumenta la
+media aumenta también la varianza o la
+desviación típica en este caso no que es
+una medida de dispersión por lo cual
+entendemos también pues heteros
+elasticidad en lo que no podemos ver tan
+fácilmente es la tendencia en media en
+la parte estacional pero bueno ya
+estamos viendo que desde luego ésta
+sería así tal y como está la serie de
+lippi no se puede trabajar con ella y no
+y no se puede movilizar con modelos
+animal sino que hay que transformarla
+hay que hacerla estacionaria no qué es
+lo que estamos diciendo aquí
+como podríamos porque claro vamos a ver
+en el área positiva anterior pues lo que
+se presenta pues bueno son métodos
+clásicos para poder identificar de
+manera exploratoria pues esto la
+presencia por lo menos de tendencia en
+media en la parte regular y de tendencia
+en varianza que es lo que más se puede
+ver no pero es que estos gráficos que
+hay aquí abajo no los ofrece views
+entonces como ellos no los ofrece pues
+yo os propongo algo que es equivalente y
+que es otra manera de presentar esto que
+hay aquí y es lo que ya hicisteis en la
+práctica es decir bueno pues vamos a
+dividir por sus tramos por sus periodos
+aquí lo hemos hecho en 1 2 3 4 5 6 y 7
+sus periodos vamos a calcular los
+valores medios pues más o menos a ojo
+vale y vamos a unirlos vamos a ver que
+efectivamente la línea en que se crea es
+una línea ascendente con lo cual pues
+estamos ya viendo que hay tendencia en
+media en la parte regular y en cuanto a
+la tendencia en varianza pues si
+calculamos pues una medida como es el
+recorrido es decir la diferencia entre
+valor máximo y el mínimo a través de los
+óvalos volvemos que si calculamos el
+primero valor y lo vamos luego pegando
+pues no nos va a servir no vamos bien
+vamos a tener que estirar cada vez
+porque la varianza o la dispersión
+aumenta aumenta del primer su periodo al
+último su periodo con lo cual de una
+manera muy fácil y muy rápida estamos
+viendo que también hay tendencia en
+varianza es otra manera de representar
+esto que vemos aquí luego que es el
+diagrama de las medias o el diagrama del
+rango media lo estamos viendo aquí pues
+con los puntitos y los óvalos de manera
+rápida no es de lo que se trata porque
+el análisis exploratorio realmente pues
+no tiene más que esa finalidad es decir
+pues es un análisis que uno pues pueda
+realizar más o menos a simple vista como
+ya sabemos el análisis exploratorio
+tiene enorme gente bueno pues
+deficiencias por qué por qué por qué nos
+podemos equivocar porque solamente a
+simple vista pues no podemos a veces no
+es fácil no es fácil ver en algunas
+ocasiones será fácil en otras ocasiones
+no será fácil saber si hay tendencias
+sobre todo tendencia en varianza que es
+la más compleja de brno sobre todo si
+ésta es significativa o no significativa
+entonces bueno pues el análisis
+exploratorio sirve como para un primer
+golpe de vista pero evidentemente no
+puede ser un análisis definitivo
+en el tema 7 vimos que el corre lo grama
+nos podría ayudar entonces el corre
+logra ma es un instrumento que vamos a
+utilizarlo ya lo conocemos no está
+formado por dos funciones una de auto
+correlación y otra de auto correlación
+parcial los valores de los coeficientes
+de auto correlación están aquí donde
+pone hace los de auto correlación
+parcial en donde pone peace de pars al
+auto correlation y luego también se nos
+ofrece pues bueno pues una medida
+alternativa que es el test q el que ya
+ya ya vimos para lo que servía sobre
+todo cuando se trataba de identificar lo
+que le pasaba a la perturbación
+aleatoria en este caso el corre lo grama
+lo vamos a utilizar para otra cosa es
+decir nosotros vamos a utilizar el
+correo lo grama
+de dos maneras o para dos cosas para dos
+objetivos el objetivo que tenemos ahora
+con él es el objetivo de saber si la
+serie tiene tendencia en media en la
+parte regular y si la tiene también en
+la parte estacional porque la tendencia
+en media la parte regular pues bueno era
+más fácil de observar pero lo que no
+podemos ver de manera visual
+exploratoria al menos con facilidad es
+la tendencia en media en la parte
+estacional entonces él corre lo grama
+nos puede ayudar para decir si existe
+esta tendencia en media tanto en la
+parte regular como en la parte
+estacional como vimos en el tema 7 de
+qué manera el cronograma nos puede decir
+esto bueno pues yo ya comenté en el tema
+7 que cuando los primero solamente será
+útil para hacer este análisis la función
+de auto correlación en este caso no nos
+va a interesar observar la función
+parcial ni tampoco el test q para nada
+solamente nos vamos a fijar en los
+valores de los coeficientes de auto
+correlación para el retardo número uno
+para retardo dos para retardo 3 etcétera
+entonces os decía yo que en el tema 7
+que cuando estos valores son por lo
+menos pues para el orden 1 2 3 4 5 6 no
+para los primeros hasta hasta
+el 8 o el 10 cuando estos valores son
+todos muy significativos al menos están
+fuera de las barras de confianza
+pues todo esto es un poco pues diríamos
+un sospechoso no teníamos nosotros el
+lenguaje coloquial un poco mosqueante no
+porque él porque no es normal o sea lo
+normal es que a lo mejor sea
+significativo pues no sé el corre lo
+grama pues para el primer retardo o para
+el segundo como mucho y el tercero si
+quieres pero ya para el cuarto el quinto
+el sexto esto esto es lo que pasa es que
+lo que nos está diciendo este correo
+grama es que la serie que en este caso
+es la serie original en la serie
+original es una serie que tiene
+tendencia al media y por tanto pues pues
+lo que hay que hacer primero es
+diferenciar la para luego otra vez poder
+saber cuál es el tipo de modelo que le
+va bien si el sónar uno si es un arma 11
+o lo que sea entonces lo que nos está
+diciendo él corre lo grama de una manera
+más perfecta que la simple observación
+no es que la serie es ésta en concreto
+pues sería la serie original del ipi es
+una serie que tiene fuerte tendencia en
+media la parte regular porque 'el
+correo' grama para
+elegir los los coeficientes de auto
+correlación de orden 1 2 3 4 etcétera
+son todos muy significativos e incluso
+en este caso son todos hasta el orden 36
+cosa rarísima cómo se sabe si hay
+tendencia en media pero en la parte
+estacional bueno cuando se analiza la
+parte estacional de la serie lo que
+hacemos es tomar en este caso esta es
+una serie mensual vale entonces coge
+lippi entonces lo que hacemos es tomar
+los retardos de orden 12 24 y 36 porque
+el retardo de orden 12 es que por
+ejemplo que vemos que es un coeficiente
+de auto correlación muy grande lo que
+nos está diciendo en el de orden 12 es
+que hay correlación entre la y en un
+periodo y subte y la ahí en subte -12
+que quiere decir entre la y en el mismo
+mes pero del año anterior y esto de
+manera sistemática entonces bien pues es
+lógico pensar que cuando analizamos la
+parte estacional que es como la
+dimensión estacional de la serie vamos a
+olvidarnos de todos los datos y le vamos
+a hacer un zoom lo vamos a concentrar
+sólo en el 12 en el 24 y en el 36
+tanto el coeficiente de orden 12 como el
+coeficiente de orden 24 como el de orden
+36 son claramente significativos muy
+fuertemente fuera de bandas eso también
+el signo de que hay tendencia en media
+pero en la parte estacional y que
+tenemos que diferenciar la serie pero de
+orden 12 en este caso al ser una serie
+mensual si fuera una serie trimestral
+pues bueno habría que fijarse en los
+órdenes 12 24 y 36 sino que nos
+tendríamos que fijar en el orden 48 y 12
+no que es lo que es lo propio de una
+serie trimestral porque el orden 4
+querría decir si fuera trimestral pues
+que hay una correlación entre cada
+trimestre y el trimestre correspondiente
+pero del año anterior no no es lo que
+tiene sentido pues es fijarnos en los
+retardos de orden 48 y 12 no y lo mismo
+si fueran muy significativos pues
+también sería indicativo de que hay
+estacional y que por tanto la serie hay
+que diferenciarlo resumiendo el correo
+lo grama es un buen instrumento para
+decirnos si
+la serie tiene algún tipo de tendencia
+en media ya sea en la parte regular ya
+sea en la parte estacional sin embargo
+el corredor a mano nos puede decir nada
+sobre la tendencia en varianza la
+tendencia en varianza es algo que o bien
+observamos en el análisis exploratorio
+luego veremos qué es lo que podemos
+hacer con ella entonces si nos vamos por
+ejemplo a la aplicación como vamos a ver
+a continuación pues la aplicación pues
+ya veremos cómo se genera el correo
+grama nosotros hemos generado corre
+logra más pero para modelos de regresión
+para el error pero vamos a ver qué es
+posible ni views solicitar un correo
+gamma para una serie normal y corriente
+es decir por la serie del ipc y tanto se
+está diferenciada como si no lo está yo
+podría pedir rápidamente el correo lo
+grama y ver el corre lo grama de esa
+serie y en esto ya lo vemos luego a
+continuación
+[Música]

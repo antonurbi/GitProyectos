@@ -1,0 +1,243 @@
+WEBVTT
+Kind: captions
+Language: en
+okay let's have a look at options now
+options there are two types there's
+calls and there's puts and for each of
+these you need a buyer and a seller to
+form one call option requires one buyer
+one seller to form one put requires one
+buyer one seller now unlike forwards and
+futures were both the buyer and the
+seller end up with an obligation in
+options because of the word think of the
+word you have an option
+well the option gives the buyer the
+right but not the obligation they have
+the option to do something if they want
+the buyer has the right if it's a call
+the buyer has a right to buy if it's a
+put the buyer has a right to sell well
+if the buyer has a right that means the
+seller has an obligation the buyer has a
+right to buy the seller is obliged to
+sell if the buyer has a right to sell
+the seller is obliged to buy what a
+specific asset this is called the
+underlying asset the underlying asset at
+a specific price this is called the
+strike or exercise price notice it's not
+called the delivery price it could also
+be called the delivery price but the
+term strike price and exercise price
+take on meaning when we're talking about
+options but not so much about futures
+and forwards by a specific date and
+rather than call the delivery date we
+call it the expiration date the
+expiration date so there we are options
+can be American style or European style
+we'll talk more about these later this
+is just to introduce you to some
+terminology and there's a common
+misconception about them so let me clear
+them up now American style options means
+they can be exercised at any time during
+the life of the option for a European
+style we're talking about last day
+exercise only most exchange traded
+option
+our american-style any time exercise I
+didn't say all now most most OTC options
+are typically european-style last day
+exercise only and a lot of embedded
+options when we start looking at bond
+contracts some some of them carry
+embedded options calls and puts
+typically tend to be european-style and
+even one step further something called a
+Bermuda style which means there's
+multiple exercise dates but can only be
+exercised on those dates here's the
+misconception between American style and
+European style that a lot of beginners
+don't quite pick up on the the style
+pertains to exercise not trading
+European style options have only one
+exercise date American style exercise
+any time but they are both any time
+training just because you have a
+European option doesn't mean you can't
+trade it it just means you can't
+exercise it until the last day but you
+can trade it at any time so some people
+get confused thing I don't want a
+European option because what if I have
+to get out well you can just you can't
+exercise you can get out it's any time
+trading unlike forwards though with
+options money does change hands when the
+contract is entered into that is called
+a premium options cost money they're not
+free to enter into they cost money the
+premium changes hands a buyer pays the
+seller you're buying a call you pay the
+seller you're buying a put you pay the
+seller so let's have a look at how the
+payoff charts change when we're talking
+about options the buyer if it's a call
+buyer let's work with a call and and
+puts adjust the opposite the call buyer
+pays X to enter into the contract B call
+seller receives X
+so the buyer pays the seller the premium
+and it's ex so let's say that the buyer
+is out ex there's ex right there the
+buyer we'll start here at negative x
+that's their profit on day one is
+negative x because they paid for
+something that will either be worth
+something in the future or worth nothing
+the seller on the other hand starts with
+X so they're on day one is their profit
+and let's put our strike price in at K
+now this is a call which gives the buyer
+the right to call away from the seller
+some asset at this price so clearly if
+the price is below it's not in any
+interest at all for the caller to pay X
+K for something that's worth less so if
+we follow the profit through on this one
+the all the way up to the strike price
+the call buyer will lose negative x so
+if on expiration date let's say that K
+is a hundred and the asset is $99.99 the
+call buyer loses all the premium because
+now the premiums worth noting on
+expiration date and it has no value
+whatsoever because it's not worth called
+paying something paying a hundred for
+something that you can sell in the
+market for $99.99 even a hundred a
+hundred is only fair money which means
+that the seller makes the entire premium
+up to that point now for every move
+above K the call buyer will experience a
+linear relationship with the price of
+the asset the seller will realize a
+the asset but in the opposite direction
+the point of breakeven here is the
+strike price plus the premium paid so if
+the call buyer paid three dollars for an
+option and K is a high
+as soon as the price gets to 103 the
+call buyer breaks even the seller breaks
+even after that the buyer experiences
+gains the seller experienced losses but
+this is important here for the call
+buyer no matter how far down the price
+the linear relationship with the with
+the underlying asset goes the call buyer
+has a limited loss it has a limited loss
+it can only lose ax dollars because if
+the price drops to zero which you know
+it may not happen but let's just say
+theoretically it could go to zero X is
+the most that the call buyer can lose
+however once breakeven is passed and the
+price of the stock continues to go up X
+called the call buyer can experience
+unlimited game unlimited game limited
+loss with unlimited game that's a nice
+asymmetrical payoff your downside is
+limited your upside is unlimited but
+flip it around
+remember this is zero-sum right look at
+the call seller no matter how far down
+the price of the stock falls the seller
+can only make so much money the seller
+has a limited gain and the gain is
+limited to the premium however as the
+price of the underlying continues to go
+up the seller continues to lose and lose
+and lose which means the seller is
+facing unlimited loss that's a terrible
+payoff to enter into bets that if you
+win you only win small if you lose you
+can lose big so that's an asymmetrical
+payoff for the seller yet there are
+times where combining calls and puts or
+combining several puts together
+completely changes these payoffs this is
+just for holding a straight call this is
+for selling for being short a a a call
+and that's all that payoff is the
+options payoff charts can get very very
+complicated so you're going to
+learn how to do these quickly we'll
+revisit options in a lot more detail
+once we get to chapters 10 and 11 we'll
+look more deeply into those maybe maybe
+more than you want to we're gonna close
+out this chapter with a brief and I mean
+brief discussion of the types of traders
+we're going to encounter throughout this
+textbook we're going to use lots of
+examples of the different financial
+instruments that we talked about and
+we're going to look at them in terms of
+how three groups of traders use them
+hedgers speculators and arbitrage so
+just so you have a handle on what that
+all means hedgers use derivatives to
+reduce or eliminate risk that's what
+they're trying to do just reduce or
+eliminate risk by locking in a price
+speculators on the other hand are taking
+on risk they're trying to make a price
+bet so they're trying to profit from
+some kind of directional bet whether
+prices will go up or prices will go down
+now when they take on risk one of the
+things you're going to see is that with
+derivatives it's not just straight risk
+the risk can be engineered in other
+words they can take on a little bit of
+risk a little bit more risk a lot of
+risk a lot of risk - a little bit they
+can engineer the level of risk they're
+comfortable with it's not as if it's a
+one shot you got to take the whole risk
+profile or not it can be engineered risk
+can be taken on and then reduced or
+raised to the level that they're
+comfortable with speculators can even
+make a bet
+make a price bet on no direction it
+doesn't have to be directional it can be
+non directional to make absolutely no a
+bet on absolutely no direction so we're
+gonna see how that's done a lot of this
+is done with options and then we have
+arbitrage arbitrage is a riskless profit
+it takes advantage of mispriced assets
+either across time so we could look at a
+spot price today versus a forward price
+and if there's a mispricing given the
+interest rate there may be a trade that
+in a riskless profit or it could be
+across a time or place so an asset could
+be selling in London let's say gold
+could be selling in London for 1210 us
+and gold could be selling in the u.s.
+for 1200 so it makes sense to buy gold
+in the u.s. and sell it in the in London
+until the price tends to converge we're
+riskless profit disappear so we're gonna
+see hedging examples we're going to see
+speculating examples and we're going to
+see arbitrage examples in all of the
+assets that we all owe the financial
+securities that we talk about throughout
+this course there's a wrap up of chapter
+1 I'll see you in chapter 2

@@ -1,0 +1,619 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR InfoSec</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">American Water, the largest U.S. water utility, reported a cyberattack on Thursday. The company paused billing and shut down certain systems&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/FHaQSm1w0VJ24FWnBxhgl-hw2Z_vOT9c4r1cHDh8C8Y=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/Q7m8nHMLzSAHbu1f253Celwqr_h4GWVLxgDxSmrtlwc=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=da90c3f2-862f-11ef-bd83-777c05753f9e%26pt=campaign%26t=1728479653%26s=e5fb907546cbb6fa6838d85391b6d4e58828c787fcea8170bc9e0e777c11f088/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/pOpPVgs6mf90JUouyaunGXxF_llD9-RrzuO7NPa2i8M=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nudgesecurity.com%2Fuse-cases%2Fai-security%3Futm_medium=sponsored%26utm_source=tldr2%26utm_content=newsletter%26utm_campaign=ai_security%26utm_term=text_discover-gen-ai_500/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/yGBpVFalafR8Y27ka4qkSoWn7s0qXy_IP9p5WT0-5sk=374"><img src="https://images.tldr.tech/nudge.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Nudge Security"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Information Security <span id="date">2024-10-09</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nudgesecurity.com%2Fuse-cases%2Fai-security%3Futm_medium=sponsored%26utm_source=tldr2%26utm_content=newsletter%26utm_campaign=ai_security%26utm_term=text_discover-gen-ai_500/2/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/3HWbfV9oLAr6gCEv-uInUwtES-4YSvlO6FFC_cEZm0s=374">
+                                    <span>
+                                        <strong>Who's using genAI apps in your org? Find out today with Nudge Security (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    New genAI apps are popping up every other day. You need a way to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nudgesecurity.com%2Fuse-cases%2Fai-security%3Futm_medium=sponsored%26utm_source=tldr2%26utm_content=newsletter%26utm_campaign=ai_security%26utm_term=text_discover-gen-ai_500/3/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/S1JxBO7p8k0ETaM2sSBCH3fUk5uMSE74xM4zVQHeUuQ=374" rel="noopener noreferrer nofollow" target="_blank"><span>discover, secure, and govern genAI usage</span></a> — ideally, one that's more scalable than chasing people over email.
+
+<p></p>
+
+<p>Nudge Security's patented discovery method finds and categorizes virtually any new SaaS app, even those you didn't know existed. No agents, browser plug-ins, or network proxies required.</p>
+
+<p>Within minutes of <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nudgesecurity.com%2Fuse-cases%2Fai-security%3Futm_medium=sponsored%26utm_source=tldr2%26utm_content=newsletter%26utm_campaign=ai_security%26utm_term=text_discover-gen-ai_500/4/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/0zLLjhcR_J3m8gjaANftXn6ltvJLWTct12Bz-fiRfhI=374" rel="noopener noreferrer nofollow" target="_blank"><span>starting a free trial</span></a>, you'll have a full inventory of every genAI app account ever created by anyone in your org, along with security profiles that help you quickly vet new or unfamiliar apps.</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nudgesecurity.com%2Fuse-cases%2Fai-security%3Futm_medium=sponsored%26utm_source=tldr2%26utm_content=newsletter%26utm_campaign=ai_security%26utm_term=text_discover-gen-ai_500/5/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/vfJLnJyVM6JTcL_15BDKOPfjRNH2bvU7Y-ZhGIdpY88=374" rel="noopener noreferrer nofollow" target="_blank"><span>↗️ Get your free genAI inventory</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🔓</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Attacks &amp; Vulnerabilities</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fedition.cnn.com%2F2024%2F10%2F08%2Fbusiness%2Famerican-water-cyberattack-hnk-intl%2Findex.html%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/JKY60RVoID97zSFohVkeEXDiCAUX6jSxXueJKyRak4M=374">
+                                    <span>
+                                        <strong>American Water, the largest water utility in US, is targeted by a cyberattack (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    American Water, the largest U.S. water utility, reported a cyberattack on Thursday. The company paused billing and shut down certain systems but believes facilities and operations weren't affected. It is working with law enforcement to investigate the incident's scope.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.darkreading.com%2Fcyberattacks-data-breaches%2Fgorillabot-goes-ape-cyberattacks-worldwide%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/jPZZ_x7_PZDF4yDtHHXqW-H-mw9fQ1Z008Nmj5crH8c=374">
+                                    <span>
+                                        <strong>GorillaBot Goes Ape With 300K Cyberattacks Worldwide (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A new Mirai variant called GorillaBot launched 300,000 DDoS attacks last month, affecting 20,000 organizations worldwide. It employs 19 attack methods, primarily UDP and TCP ACK Bypass floods. The botnet, which supports multiple architectures, targeted organizations in 113 countries, with China and the US most affected.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FaNwMow/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/YLXVwbzPnStDXxn05__UBgJYrJShhD162I7a99yshbY=374">
+                                    <span>
+                                        <strong>5.11 Tactical Suffered a Data Breach (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    5.11 Tactical, which mashes tactical equipment that is favored by local and national law enforcement agencies, suffered a data breach. In a filing with the Maine Attorney General, 5.11 Tactical disclosed that 27,742 individuals who purchased products online between July 12 to August 22 may have had their information exposed. Exposed information includes full names, email addresses, payment card numbers, payment card expiration dates, and payment card security codes.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Strategies &amp; Tactics</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Funit42.paloaltonetworks.com%2Fphishing-platform-sniper-dz-unique-tactics%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/aZCAifc1mlJExNF_bhJA9hHgLaxsaH-nTY1sxmvQdgo=374">
+                                    <span>
+                                        <strong>Investigating Infrastructure and Tactics of Phishing-as-a-Service Platform Sniper Dz (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Phishing-as-a-Service platform Sniper Dz has been detected using over 140,000 unique phishing websites. It uses various techniques to hide its malicious activity such as utilizing proxymesh[.]com to hide backend servers, obfuscating template code, abusing legitimate SaaS platforms, and employing malicious redirects. Sniper Dz offers these services free of charge on its platform and also provides a centralized infrastructure for exfiltrating credentials and tracking victims.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Foutpost24.com%2Fblog%2Fexploiting-permissive-cors-configurations%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/aTBc1tapw1iOw7Owb3qMw4Kzld5e1RtyZiF0NhWZUb0=374">
+                                    <span>
+                                        <strong>Exploiting Trust: Weaponizing Permissive CORS Configurations (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Websites can employ CORS to allow for sharing of data to a different website, bypassing same-origin restrictions. This blog post presents a collection of case studies that showcase CORS misconfigurations that can be exploited such as arbitrary reflected origin, only checking the beginning of the Origin header, trusting related subdomains or localhost, and other more complicated techniques. Advice to pentesters hunting for CORS vulnerabilities includes making sure to scan all endpoints, considering related domains, applying context to findings, and testing for subdomain reflection.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftbhaxor.com%2Fdocker-containers-security%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/cU_4-roMp5aTPfBx83uEmGIJ4rsLFaqhOxmlswhY644=374">
+                                    <span>
+                                        <strong>Docker Containers Security (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is a series of articles that describe how Docker Container Security works, how to exploit vulnerabilities as well as how to fix and secure your Docker deployment. Another series on Linux Privilege Escalation as well as some fundamental understanding of Docker are prerequisites for this course.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FCISOfy%2Flynis%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/fvxL-WRGrffzDVpz-t7ZlRIsbl1U1iuF7_NKkH9JEkQ=374">
+                                    <span>
+                                        <strong>Lynis (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Lynis is a security auditing tool for systems based on UNIX like Linux, macOS, BSD, and others. It performs an in-depth security scan and runs on the system itself. The primary goal is to test security defenses and provide tips for further system hardening.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F35oezd/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/q4VNv3FJujMGZZiaEoQ1BBJvDuFr4GzuryIIryI0Nk4=374">
+                                    <span>
+                                        <strong>Tamnoon (Product Launch)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Tamnoon combines purpose-built AI technology for cloud remediation, guided by cloud security experts, to safely reduce critical threat exposures.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fvxfemboy%2Fghostport%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/Lx164qpiL6uPz3z1VJ-ZFhuq8e9zaKLre-KGdAfv0rE=374">
+                                    <span>
+                                        <strong>Ghostport (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ghostport is a tool that misleads port scanners by responding with convincing signatures.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.independent.co.uk%2Fnews%2Fworld%2Feurope%2Fukraine-hack-cyberattack-russia-tv-putin-b2625196.html%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/EWj7phWJ2dNtRlI9lV8uWnXuwE3EFAmDBCCAKxjPw08=374">
+                                    <span>
+                                        <strong>Huge hack shuts down Russian online state media on Putin's birthday (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ukrainian-linked hackers reportedly conducted an "unprecedented" cyberattack on Russian state broadcaster VGTRK, disabling online broadcasting and internal services, on Putin's birthday. The Kremlin expressed support and is investigating the incident.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F07%2Fapple-fixes-bugs-in-macos-sequoia-that-broke-some-cybersecurity-tools%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/Ea1lG0dZvZSjlZFnQINaHHbCfzRDmhtuZhYLTIL1AjY=374">
+                                    <span>
+                                        <strong>Apple fixes bugs in macOS Sequoia that broke some cybersecurity tools (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apple has released macOS 15.0.1, addressing compatibility issues with third-party security software that arose in the initial Sequoia release. The update reportedly fixes networking problems that affected products from CrowdStrike and Microsoft.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.linkedin.com%2Fpulse%2Fvulnerability-management-isnt-finding-issues-its-fixing-miessler-jwmac%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/fC0W7NDgkC4B7CcdT-JalQwyLfVX_0GXoOWhP2l6zlU=374">
+                                    <span>
+                                        <strong>Vulnerability Management Isn't About Finding Issues - It's About Fixing Them (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Most vulnerability management tools only handle the simplest portion of vulnerability management - finding vulnerabilities. Most tools don't have enough context to provide helpful remediation advice for practitioners to take action on their findings. The future of vulnerability management tools will include a set of AI agents that constantly build up context and state of the environment to not only find vulnerabilities, but pinpoint everywhere that they're in use and how they could be fixed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fsecurity.googleblog.com%2F2024%2F10%2Fevaluating-mitigations-vulnerabilities.html%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/w7g-n2yAa0g8i1kJ7jQnvp-5hJg0f6Dg__WpR7YkKok=374">
+                                    <span>
+                                        <strong>Evaluating Mitigations &amp; Vulnerabilities in Chrome (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Chrome Security team describes how they evaluate and prioritize security improvements based on how they reduce potential harm to users and increase costs for attackers, considering factors like bug reliability, ease of exploitation, and impact across Chrome's large user base.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fkrebsonsecurity.com%2F2024%2F10%2Fpatch-tuesday-october-2024-edition%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/BwYK6Qh_2oaPo1UGHJy-B9A2oYj8EgZIpYcPO4_a3cs=374">
+                                    <span>
+                                        <strong>Patch Tuesday, October 2024 Edition (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Microsoft, Adobe, and Apple have released security updates to fix numerous vulnerabilities, including active attacks on Windows and other software.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhackread.com%2Flua-malware-hit-student-gamers-fake-game-cheats%2F%3Futm_source=tldrinfosec/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/4nZLRb08Iw5EotPOYFtfzUQiUtQKVaEuCbWs7JgDH38=374">
+                                    <span>
+                                        <strong>Lua Malware Targeting Student Gamers via Fake Game Cheats (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Lua malware has been discovered in fake game cheats and is spread globally through techniques like SEO poisoning.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F9c8a806a%2F8/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/nHlBT8MEYX6I-7FJGlKLYPWnB8g-yg4kQPkxmpB9Nns=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/9c8a806a/8</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_14d48d82f243%2F8/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/KFnwpAQ0-XNGAKvfE08UR42tMTdluDkbeIMCfHl_nxg=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of cybersecurity professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/AXEZzxgtiE_A9URZKcpsQ5iE0sKFbHURrRsXM31A7N8=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Prasanna Gautam</span>, <span>Eric Fernandez</span> &amp; <span>Sammy Tbeile</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Information Security, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=8d9cea11-3e94-11ed-9a32-0241b9615763%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=da90c3f2-862f-11ef-bd83-777c05753f9e%26pt=campaign%26pv=4%26spa=1728478886%26t=1728479653%26s=f97c1a586db7f8e4e4024c1fb2401d26397d50e26191c411b1facaf7825b92fe/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/uw6kAsqdZGvFtkgHd6RHERWwaPbE6Hc7xym_6UJV1Qs=374">unsubscribe from TLDR Information Security</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%2Fmanage%3Femail=infourbiss%2540gmail.com/1/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/2tP8I7NkEnvG7CCeIdb4iGTQnFzkkckYEGv_Kevw-yg=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192716a6ed1-3d16ad30-63b7-46e8-8d21-32c9e43434f9-000000/aM-OUURtNF8IMmpp3ESTLTHFgqhhccxj-ackQ7pu8ZQ=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

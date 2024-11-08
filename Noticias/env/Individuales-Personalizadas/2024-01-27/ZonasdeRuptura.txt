@@ -1,0 +1,185 @@
+
+
+RESUMEN
+
+El video es un tutorial detallado sobre cómo identificar y diseñar zonas de oferta y demanda en gráficos.
+El YouTuber mapea la estructura del eurodólar en diferentes temporalidades y explica que las zonas de oferta y demanda se
+aplican de la misma manera en todas las temporalidades.
+El tutorial cubre desde la temporalidad semanal hasta la de 4 horas.
+El YouTuber avisa que no cubrirá la temporalidad de 15 minutos en esta lección, pero menciona que la identificación y
+diseño de las zonas es igual en todas las temporalidades.
+El tutorial se irá paso a paso, explicando la correlación entre la estructura y las zonas de oferta y demanda
+a medida que se baja de temporalidad.
+
+
+CONTENIDO
+
+En el texto, el autor presenta un tutorial detallado sobre cómo identificar y diseñar zonas de oferta y demanda en
+los gráficos.
+Se menciona que se aplicará la teoría explicada en lecciones anteriores y se enfocará únicamente en las zonas de estructura
+que causan rupturas externas e internas.
+Se indica que se ha mapeado toda la estructura del euro/dólar desde la temporalidad semanal hasta la de 4 horas.
+Esto facilitará la identificación y diseño de zonas.
+Sin embargo, se menciona que la temporalidad de 15 minutos no se cubrirá en este video, pero se abordará en
+una lección práctica posterior.
+El autor advierte que la identificación y diseño de zonas es igual en todas las temporalidades, por lo que el
+proceso será el mismo, ya sea en la temporalidad semanal, de 15 minutos o incluso de 1 minuto.
+El tutorial comienza con la explicación de cómo se mapeó la estructura desde el punto de partida en el gráfico,
+y se enfatiza que se llevará a cabo de manera detallada, abordando una temporalidad a la vez.
+Se menciona que el objetivo es que los espectadores comprendan mejor la correlación entre la estructura y las zonas de
+oferta y demanda a medida que se desciende en las temporalidades.
+El autor señala que el proceso se iniciará desde la temporalidad semanal, luego se descenderá a la diaria y finalmente
+se concluirá en la de 4 horas.
+Esto permitirá una comprensión más clara de la correlación entre las temporalidades y las zonas de oferta y demanda.
+En resumen, el análisis del texto revela los siguientes puntos:
+1.
+Se trata de un tutorial detallado sobre cómo identificar y diseñar zonas de oferta y demanda en los gráficos.
+2.
+Se aplicará la teoría previamente enseñada en lecciones anteriores.
+3.
+Se enfocará únicamente en las zonas de estructura que causan rupturas externas e internas.
+4.
+Se ha mapeado toda la estructura del euro/dólar desde la temporalidad semanal hasta la de 4 horas.
+5.
+La temporalidad de
+
+RESUMEN
+
+En este diálogo, se discute sobre cómo identificar y diseñar zonas de oferta y demanda en un gráfico de precios.
+Se menciona la importancia de leer correctamente la estructura interna de un impulso para identificar los rangos que se convertirán
+en zonas de interés.
+También se destaca la importancia de las zonas extremas y decisionales al momento de identificar quiebres de estructura.
+Finalmente, se menciona un ejemplo de un retroceso seguido de una fuerte caída que rompe un nivel de soporte.
+
+
+CONTENIDO
+
+En el texto se proporcionan varios pasos y conceptos clave para determinar las zonas de oferta y demanda:
+1.
+Identificar el quiebre de estructura:
+El autor menciona que cuando hay un impulso alcista o bajista, es importante observar si se produce un quiebre de
+estructura.
+En este caso específico, el quiebre de estructura es bajista.
+2.
+Zona extrema:
+El texto explica que una vez que se produce el quiebre de estructura, se forma una zona extrema.
+Esta zona extrema es la región más alta del impulso bajista.
+3.
+Zona decisional:
+También se menciona la importancia de la zona decisional, que es la zona que causa o provoca la ruptura de
+estructura.
+En este contexto, la vela bajista es la que provoca esa ruptura.
+4.
+Importancia de leer correctamente la estructura interna:
+El autor enfatiza que para identificar y diseñar correctamente las zonas de oferta y demanda, es fundamental leer correctamente la
+estructura interna del impulso.
+Esto se debe a que la estructura interna crea los rangos que se convertirán en las zonas de interés para
+tomar oportunidades.
+5.
+Análisis de la estructura interna:
+El texto muestra un análisis de la estructura interna del impulso bajista, con retrocesos y movimientos de precios.
+Se resalta la importancia de comprender cómo se crean esos rangos dentro de la estructura interna.
+En cuanto a los datos de análisis del texto, se proporciona información específica sobre un impulso bajista en un gráfico.
+Se menciona que el precio crea un impulso, luego retrocede, vuelve a impulsar y rompe un rango interno, para luego
+caer de manera fuerte y decisiva, rompiendo un último nivel de mínimos inferiores.
+El texto también destaca la importancia de diseñar y dibujar los rangos de manera precisa para poder identificar las zonas
+de oferta y demanda correctamente.
+En general, el texto proporciona información detallada sobre cómo analizar y determinar las zonas de oferta y demanda en un
+contexto específico de mercado.
+
+
+RESUMEN
+
+En este texto, el hablante explica cómo se pueden identificar y monitorear las zonas de oferta y demanda en un
+gráfico de precios.
+Se menciona que cuando hay un quiebre en el precio, se crea un rango que luego es mitigado.
+También se destaca la importancia de identificar los últimos puntos de compra antes de las ventas y viceversa.
+Se menciona la existencia de una zona fresca sin mitigar, que se etiqueta como zona semanal.
+
+
+CONTENIDO
+
+El texto proporciona información sobre cómo se pueden determinar las zonas de oferta y demanda en base a los movimientos
+del precio en un gráfico.
+A continuación se presentan los pasos y los datos de análisis encontrados en el texto:
+1.
+Identificación de un quiebre:
+El análisis comienza identificando un quiebre en el precio, es decir, un cambio brusco de dirección.
+2.
+Creación de un rango:
+Cuando se produce un quiebre, se crea un rango en el gráfico.
+Este rango es mitigado cuando el precio vuelve a bajar y rompe el último "lower low".
+3.
+Mitigación del rango:
+La mitigación del rango se produce cuando el precio retrocede para llenar las órdenes en el rango anterior.
+Una vez que el precio cae, se crea otro rango.
+4.
+Determinación de la naturaleza del rango:
+Dependiendo de la cantidad de velas que conformen el rango, este puede ser considerado como un "rango de oferta" o
+como un "pivote de oferta".
+Un rango de oferta está compuesto por varias velas, mientras que un pivote de oferta solo está compuesto por unas
+pocas velas.
+5.
+Significado de una zona de oferta o demanda:
+Una zona de oferta es creada por las últimas compras antes de las ventas, mientras que una zona de demanda
+es creada por las últimas ventas antes de las compras.
+6.
+Creación de una zona fresca:
+Si un rango o pivote no es mitigado después de un desequilibrio, se considera una zona fresca que puede ser
+monitoreada en el futuro.
+7.
+Etiquetado de las zonas:
+Para mantener el análisis organizado, se recomienda etiquetar las zonas identificadas según su frecuencia (semanal, diaria, etc.).
+En términos de datos de análisis, el texto presenta información sobre la creación, mitigación y naturaleza de los rangos o
+pivotes en el gráfico.
+También se menciona la diferencia entre una zona de oferta y una zona de demanda y la importancia de identificar
+zonas frescas para futuros análisis.
+No se proporcionan datos específicos sobre los precios o activos analizados,
+
+RESUMEN
+
+En este diálogo, el orador destaca la importancia de considerar tanto las temporalidades más bajas como las más altas al
+operar en el mercado financiero.
+Se enfatiza que no se debe ignorar lo que está sucediendo en plazos más largos, como el semanal o mensual,
+ya que esto puede influir en la dirección de los precios.
+Además, se menciona que cuando el precio se encuentra en una zona de oferta importante, puede crear una reacción para
+facilitar un retroceso en una tendencia alcista.
+El orador menciona la importancia de estar preparado para evaluar las ventas en esta situación, considerándolas como oportunidades para operaciones
+swing a largo plazo.
+Finalmente, se subraya que el precio puede tomar todo el tiempo que sea necesario para crear la liquidez necesaria en
+temporalidades mayores, acumulando o distribuyendo órdenes.
+
+
+CONTENIDO
+
+En el texto proporcionado, el autor está hablando sobre el concepto de "zona de oferta" en el contexto de análisis
+técnico en el trading.
+Aquí se presentan los pasos para determinar las zonas y los datos de análisis del texto:
+1.
+Definición de una zona de oferta:
+El autor menciona que el precio se encuentra en una "zona de oferta", que es un área donde hay una
+mayor presión de venta y es probable que el precio disminuya o tenga una reacción bajista.
+2.
+Duración de la mitigación de la zona de oferta:
+El autor indica que puede tomar varios años para que el precio vuelva a entrar y mitigar esta zona.
+Esto implica que una vez que el precio alcanza una zona de oferta, es probable que tarde mucho tiempo en
+superarla.
+3.
+Importancia de las temporalidades más altas:
+El autor resalta la importancia de no solo centrarse en las temporalidades más bajas, como las de 4 horas, 15
+minutos o incluso 5 minutos.
+También es importante prestar atención a las temporalidades más altas, como el gráfico semanal o mensual, para comprender el contexto
+general y la tendencia a largo plazo.
+4.
+Preparación para posibles ventas:
+El autor sugiere que si se está en una zona de oferta en una temporalidad alta, es importante estar preparado
+para evaluar las oportunidades de ventas (swing trades) en lugar de buscar compras.
+Esto implica estar atento a posibles retrocesos o cambios en la tendencia alcista.
+5.
+Acumulación y distribución de órdenes:
+El autor menciona que cuando el precio mitiga zonas importantes en temporalidades mayores, puede tomar todo el tiempo necesario para
+crear la liquidez necesaria.
+Esto implica que el precio puede tomar su tiempo para acumular o distribuir órdenes de compra o venta.
+En resumen, el análisis del texto proporcionado se centra en la importancia de identificar zonas de oferta en temporalidades altas,
+tener paciencia para esperar el desarrollo de la estructura de precios y estar preparado para aprovechar las oportunidades de venta
+en lugar de buscar compras en zonas de oferta.

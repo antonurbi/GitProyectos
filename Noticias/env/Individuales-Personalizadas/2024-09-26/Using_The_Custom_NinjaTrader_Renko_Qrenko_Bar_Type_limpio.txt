@@ -1,0 +1,138 @@
+WEBVTT
+Kind: captions
+Language: en
+what is cinko how do I put it on a chart
+and what do the settings mean I'm Austin
+with Quant View and I'm going to show
+you just that so I have a blank chart
+here we have one minute candlesticks on
+it this is an RT chart I'm using rty
+because rty has 10 ticks per point and
+it's going to make it easier for us to
+uh show all the uh Q Rinko settings and
+what they all do so how do we get Q
+Rinko onto your chart we're going to go
+up to the top and we're going to hit
+data
+Series so data series we're going to
+look at type we're going to click the
+little down selector box and we're going
+to go to the bottom where it says Q
+Rinko and I'm going to click on that so
+these are the parameters that we can set
+to make cinko look different so for our
+purposes we're going to put in 10 for
+shift we're going to put in 20 for
+offset and we're going to put in 40 for
+range now I don't use these settings to
+trade with I'm just using these to make
+it easier to show what all of the
+different settings do for Q Rinko so
+what do they mean so first let's go back
+to the data series here we have shift
+and we put in tin for shift so what is
+shift sh uh shift for a downtrend I'm
+going to pull up the measurement tool
+here for downtrend shift is the
+measurement from the bottom of a bar to
+the bottom of the next bar and this is a
+downtrend so we have 10 ticks between
+the bottom of this bar to the bottom of
+that bar that is your shift well what
+about an uptrend so for an uptrend we
+measure from the top of a bar to the top
+of the next bar and there is another 10
+ticks so that is our tick shift so the
+next the next parameter that we have
+here wrong window the next parameter
+that we have is offset and we put in 20
+so what is offset offset let's pull up
+my measurement tool here again offset is
+the measurement from the bottom of a
+Down bar to the top of the next one and
+this is 20 ticks that is what we put in
+so what about an uptrend uptrend we
+measure from the top of a bar to the
+bottom of the next bar and that again is
+20 ticks
+so let's go back to our data series and
+our last value here our range or our our
+reversal range pull up the measurement
+tool again for a reversal to the upside
+we'll be measuring from the bottom of
+the Red Bar to the top of the green bar
+remember we put in 40 ticks so that's
+where we get the
+40 pull up the measurement tool again
+and this time we'll do a reversal to the
+downside so we will measure from the top
+of the green bar to the bottom of the
+red bar and again there's our 40 ticks
+now reversal bars also show tails and
+the only reason that they show the Tails
+is that they want to show where the
+price actually moved before it closed
+this bar so we can see that it got a
+little bit above the the top of this
+green bar but it didn't make all the way
+to the shift range or there are shift
+settings so it didn't print that bar
+instead It reversed and went down and
+hit the bottom of the the range so it
+printed us a red
+bar so what settings do I use to trade
+typically um for M andq and we'll switch
+to an M
+andq chart here let's go ahead and do
+that so I'm going to go down to micros
+and then I'm going to go to
+[Music]
+mnq and then for M and Q let's pop in
+some new values so for shift I typically
+use as a baseline seven or offset I use
+11 and for uh range I use
+33 so this will give you a pretty decent
+Q Rinko bar for m andq uh it's it's kind
+of the Baseline it's not really fast and
+it's not really slow it gives you some
+nice ranges to work with um now for my
+algorithms my automated trading I
+typically don't use
+71133 I use a um I have a lot of um a
+lot of performance really good
+performance with 10 10 and 30 or 35
+depending on which one you're using so
+this kind of it really just shows the
+big trends it doesn't it kind of shows
+the consolidation all in one spot it
+doesn't give you some big runs in there
+it makes it easier for you to figure out
+where it's going and how it's how it's
+going to react um so I will use this
+whenever I don't want to deal with chop
+this is a good way to do that um my
+algorithms work very well with this
+setting uh for a faster setting for my
+faster algorithms I will use a setting
+of three or and seven and then 14 now
+this is going to move very fast now the
+consolidation you can see that it shows
+a lot more movement in there um when
+we're using other Quant view indicators
+uh that's going to make it easier for us
+to get the really the micr trins
+something very quick we're quick in and
+out uh so that's pretty much the Q
+ringco Bar type uh I will pop in some of
+the uh the default or Baseline values
+that I use for a few tickers I'll put
+that into the ninja trading channel in
+the uh the pro the pro area on the
+Discord server if you are not a member
+of Quant view you want to head over to
+the Quant view. website and you want to
+sign up for this 7-Day trial you get to
+use all of the Quant View
+uh indicators and strategies for 7 days
+free of charge we'll hope to see you
+there thanks

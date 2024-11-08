@@ -1,0 +1,233 @@
+WEBVTT
+Kind: captions
+Language: es
+Hola muy buenas a todos Bienvenidos a un
+vídeo más de tecnología con Berto como
+ya sabréis muchos de vosotros pues ya ha
+llegado la gran actualización para las
+versiones de Windows 10 y Windows 11 de
+este año la 22h2 y en Este vídeo lo que
+vamos a hacer pues va a ser enfrentar
+estas dos versiones de Windows para ver
+qué rendimiento da cada una de ellas y
+para ver si efectivamente pues Windows
+11 va incrementando el rendimiento con
+respecto a Windows 10 pero antes de nada
+vamos con la intro y comenzamos
+[Música]
+antes de ver los resultados que me han
+proporcionado las distintas pruebas que
+he realizado las versiones de Windows 10
+y Windows 11 22 h2 quería comentaros que
+evidentemente utilizado el mismo equipo
+para las dos versiones ese equipo es un
+portátil el cual tiene las siguientes
+especificaciones este equipo no es
+compatible oficialmente con Windows 11
+por si alguien le interesa y también
+deciros de que este equipo es un
+portátil con lo cual yo he mantenido
+siempre conectado ese portátil a la
+corriente eléctrica para que el equipo
+diese siempre pues el 100% de su
+rendimiento en las diferentes pruebas
+también deciros de que la selección de
+diferentes pruebas que he elegido para
+hacer este vídeo pues son las mismas que
+ya utilicé para hacerla súper
+comparativa de versiones de Windows 10 y
+Windows 11 os dejaré en la descripción
+de este vídeo esos vídeos para que el
+que le interese conocer nuevas versiones
+de Windows 10 y Windows 11 para que así
+pues pueda seleccionar la versión de
+Windows que más se adapte a sus
+necesidades dicho Todo esto vamos a ver
+los resultados que me han dado las
+pruebas la primera de ellas es pues
+cuánto tardaba el sistema operativo en
+arrancar como vemos en Windows 11 ha
+tardado
+16,66 segundos y en Windows 10 ha
+17,79 segundos como vemos no hay mucha
+diferencia entre cada una de las
+diferentes versiones la siguiente prueba
+era Pues de cuánto espacio ocupa el
+sistema operativo en el disco duro una
+vez que ya se ha instalado como vemos
+tampoco hay muchas diferencias en
+Windows 11 ocupado 39,7 gigas y en
+Windows 10 39,9 GB prácticamente igual
+la siguiente prueba era ver pues cuantos
+procesos tenía el segundo plano el
+sistema dispositivo como vemos tampoco
+hay diferencias en Windows 11 48
+procesos y en Windows 10 47 procesos
+después revisé Pues cuántos procesos de
+Windows estaban corriendo en segundo
+plano también con el sistema operativo y
+vemos Que en Windows 11 pues tenía 87
+procesos y en Windows 1089 con lo cual
+tampoco hay mucha diferencias después
+revisé cuánto consumía de memoria RAM el
+sistema operativo aquí sí que vemos que
+hay una ligera diferencia en Windows 11
+tiene un consumo de 2,9 gb de memoria
+RAM y en Windows 10 tiene un consumo de
+2,5 gb de memoria RAM Aquí sí que vemos
+Que Windows 10 es más liviano en el
+sentido del consumo de memoria RAM y
+para que el que le interese pues tener
+un sistema operativo el cual pues no
+consuma mucha memoria RAM Pues a día de
+hoy tiene que seleccionar Windows 10
+después en la siguiente que revise Pues
+fue Cuántos procesos tenía la cpu
+corriendo en segundo plano y aquí vemos
+de que en Windows 11 había pues 155
+procesos de cpu y luego en Windows 10
+pues había 141 procesos como vemos sí
+que hay diferencias y Windows 11 pues se
+Ejecutan más procesos en la cpu en
+segundo plano y la siguiente prueba Pues
+fue Cuántos números de su procesos tenía
+también la cpu en segundo plano y vemos
+Que en Windows 11 pues tenía
+1716 sus procesos mientras que en
+Windows 10 pues tenían 1314 su procesos
+Aquí vemos a grandes rasgos c que tanto
+Windows 10 como Windows 11 son muy
+similares en el sentido de rendimiento
+del propio sistema operativo si es
+cierto de que vemos de que Windows 10
+pues tiene menor consumo de memoria RAM
+y tienen Menores en números de procesos
+y sub procesos corriendose en la cpu
+para que el que le interese Pues un
+mayor rendimiento pues vemos de que a
+día de hoy Windows 10 el le va a ofrecer
+un mejor rendimiento con respecto a
+Windows 11 pero vemos de que luego las
+diferentes pruebas como de cuánto ha
+tardado el sistema operativo en arrancar
+qué espacio ocupan el disco duro o por
+ejemplo Cuántos números de procesos hay
+corriendo en segundo plano pues vamos de
+que no hay grandes diferencias vistas
+todas estas pruebas ahora vamos a pasar
+a diferentes programas que he
+seleccionado el cual pues son distintos
+beige Park para ver pues qué puntuación
+le dan a cada una de las dos versiones y
+la primera prueba que realice Pues fue
+con el programa de compresión el 7 zip
+el benchmar que incluye con este
+programa pues vemos de que en el
+apartado de compresión vemos Que en
+Windows 11 pues ha obtenido una nota de
+17.198 puntos y en Windows 10 pues ha
+obtenido un resultado de 17.3
+49 puntos no hay mucha diferencia son
+prácticamente iguales y después en el
+apartado de la descompresión vemos de
+que en Windows 11 alcanzado una
+puntuación de
+18.285 puntos y en Windows 10 alcanzado
+una puntuación de
+18.810 puntos como vemos tampoco es una
+diferencia muy significativa el
+siguiente benchmar que utilicé pues fue
+el de octane 2.0 esto es un benchmark
+que se ejecuta a través del navegador en
+este caso Google Chrome y como vemos la
+puntuación Aquí sí que hay muchísimas
+diferencias Windows 11 ha obtenido una
+puntuación de 25.103 puntos mientras que
+Windows 10 ha obtenido una puntuación de
+38.716 puntos como vemos una diferencia
+muy grande yo pienso de que el resultado
+de esta prueba pues lo que nos quiere
+decir este que el navegador de Google
+Chrome está mucho más optimizado para
+utilizarse en Windows 10 que en Windows
+11 porque si no realmente no le
+encuentro mucha explicación a esta
+diferencia de resultados el siguiente
+benchmark fue el de Heaven que como
+vemos en Windows 11 obtuvo una
+2.921 puntos mientras que en Windows 10
+obtuvo un resultado de
+2.902 puntos como vemos resultados muy
+parejos entre las dos versiones el
+siguiente benchmark fue el de geekbage 5
+que Aquí vemos que en la prueba de cpu
+de Single Core pues vemos tekken Windows
+11 obtuvo una puntuación de 855 puntos y
+en Windows 10 f-890 puntos si es cierto
+que hay diferencias pero tampoco es muy
+significativa en la prueba de gitspain 5
+Pero esta vez el multicore vemos Que en
+Windows 11 obtuvo una puntuación de
+2.755 puntos y en Windows 10 de 2872
+puntos prácticamente realmente muy
+similares y después en la prueba de gpu
+pues vemos de que en Windows 11 obtuvo
+32.173 puntos y en Windows 10 obtuvo
+34.063 puntos sí que hay diferencias en
+el apartado de la gpu pero tampoco son
+resultados de bastante abismales Aunque
+sí es cierto que aquí en el nickbain 5
+pues ha obtenido un mejor resultado pues
+Windows 10 en el siguiente benchmark fue
+el de novavents vemos de que aquí en
+Windows 11 se obtuvieron 1668 puntos y
+en Windows 10 se obtuvieron 1669 puntos
+prácticamente iguales por no decir
+iguales en el siguiente benchmark que
+fue con el juego de Far Cry 5 vemos que
+la media de fps Pues en Windows 11 fue
+de 69 y en Windows 10 fue de 68
+juego de Shadow of the Tomb Raider vemos
+de que la media de fps también en el
+benchmark que obtiene este juego Pues en
+Windows 11 vemos de que hay 57 fps y en
+Windows 10 hay 58 fps como vemos también
+muy similares y hasta aquí todas las
+pruebas que he realizado a estas dos
+versiones de Windows el resultado de
+todas ellas lo que nos indica es que
+Windows 11 todavía no es superior al
+rendimiento que nos ofrece Windows 10 de
+hecho Windows 10 Pues tiene un menor
+consumo de memoria RAM o tiene una menor
+cantidad de procesos de cpu en segundo
+plano pero hay que reconocer de que
+Windows 11 avanza favorablemente y
+prácticamente en determinadas pruebas
+Pues no hay ninguna diferencia con
+respecto a la versión de Windows 10 sin
+duda el día de mañana Windows 11 será
+superior a Windows 10 Aunque a día de
+hoy todavía no lo sea pero vemos de que
+Microsoft está trabajando en esta nueva
+versión de Windows y sin duda pues vemos
+de que Windows 11 cada vez es más parejo
+a Windows 10 cosa que hace un año no
+podíamos decir lo mismo me gustaría
+saber en los comentarios de este vídeo
+que versión de Windows utilizas tú o qué
+te ha parecido esta comparativa Recuerda
+que de los mejores comentarios que tenga
+Este vídeo Pues seleccionaré los que más
+me gusten y aparecerán en el siguiente
+vídeo que suba al Canal también deciros
+de que ha habilitado la función de
+miembros del Canal para que el que
+quiera unirse a esta gran comunidad no
+olvidéis de seguirme en todas las redes
+sociales Si os ha gustado el vídeo no
+olvidéis darle un buen Like si todavía
+no estáis suscritos al Canal de
+tecnología converto suscribiros para más
+vídeos interesantes como este y nada nos
+vemos en la próxima chao chao

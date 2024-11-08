@@ -1,0 +1,620 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR InfoSec</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">The Internet Archive suffered a security breach that exposed 31 million email addresses and usernames. It also suffered a separate DDoS attack.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/uhwZQc76_U2nJmFqqKLkJYBpGIYPoRi9TIb-7vkAuNQ=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/OMJdrWUzOWjsFwtrR54Mvgv8gKL5p8OX9F0aHeMaybI=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=cf051cdc-87be-11ef-8c8a-0b1e33cbf78a%26pt=campaign%26t=1728651932%26s=6e8855f8ea3e7a1031cd0568d36fbeb64e30b88da901ea4a3e242b3d3e4eb673/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/5jXRQlO4S7kSlGDwEVMZsmt_qrxygoNOE4iy7l-Exqg=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.nordpass.io%2Faff_c%3Foffer_id=898%26aff_id=110530%26url_id=28708/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/dRmuTvh7u6n4frCbiU_dId9cPBNa7WX3m1sQXOtKtTw=374"><img src="https://images.tldr.tech/nordpass-2.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="nordpass.com"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Information Security <span id="date">2024-10-11</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.nordpass.io%2Faff_c%3Foffer_id=898%26aff_id=110530%26url_id=28708/2/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/0SGJqVEC7RYUkRqpqSVVX1hThLhwznIqgOgnQu6PqSk=374">
+                                    <span>
+                                        <strong>abc!234qw (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ☝️That's a bad password. But that's what employees will use when you don't give them better options — and they'll store passwords in shared Drive files and other insecure methods.<p></p><p>Choose <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.nordpass.io%2Faff_c%3Foffer_id=898%26aff_id=110530%26url_id=28708/3/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/q15LoZMYc54Wu4bL6C6PkJIUqZeBedOC8CNq7YpC68Q=374" rel="noopener noreferrer nofollow" target="_blank"><span>NordPass</span></a> password manager, powered by NordVPN, to give your team the tools they need <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.nordpass.io%2Faff_c%3Foffer_id=898%26aff_id=110530%26url_id=28708/4/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/Lk1jg5dvJyyeswpmvovHUxI3y_9Ro5y9NXECN023WdY=374" rel="noopener noreferrer nofollow" target="_blank"><span>to manage and share passwords and other sensitive data safely</span></a>:</p>
+
+<p>✅ Set company-wide password rules and make them easy to follow them with tools to generate, store, and manage strong passwords.</p>
+
+<p>✅ Make password management and credential sharing simpler and safer with the only major password manager that uses the XChaCha20 encryption algorithm.</p>
+
+<p>✅ Streamline access control in your org and manage access rights for individuals and groups.</p>
+
+<p>➕ Easy-to-use interface, data breach scans, and 24/7 support.</p>
+
+<p>👉<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgo.nordpass.io%2Faff_c%3Foffer_id=898%26aff_id=110530%26url_id=28708/5/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/kAwjP1jMxU5Zuvc3-toulr4pvRlgRLV9iBEAHHfcN8k=374" rel="noopener noreferrer nofollow" target="_blank"><span>Get NordPass for your business with 35% off</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🔓</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Attacks &amp; Vulnerabilities</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2F2024%2F10%2F10%2F24267048%2Fmarriott-ftc-settlement-agreement-52-million-fine%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/PMUeqVwxq8KCvf7Qxxm_iqvPkmNW0z2P4Uy97C9fpVs=374">
+                                    <span>
+                                        <strong>Marriott agrees to pay $52 million settlement after multiple data breaches (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Marriott agreed to a $52 million settlement with 49 states over data breaches affecting 334 million customers between 2014-2020. The breaches were attributed to poor security practices, including inadequate password controls and outdated systems. One incident in 2020 resulted in 20GB of stolen data.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F09%2Fthe-internet-archive-slammed-by-ddos-attack-and-data-breach%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/T3akVV7p799OPqWATKsIg7U9b9QWD-4K_7U0BfeOAVI=374">
+                                    <span>
+                                        <strong>The Internet Archive slammed by DDoS attack and data breach (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Internet Archive suffered a security breach that exposed 31 million email addresses and usernames. It also suffered a separate DDoS attack. The organization has addressed these issues and plans to share more information as it becomes available.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F09%2Findias-star-health-confirms-data-breach-after-cybercriminals-post-customers-health-data-online%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/1kAnCIcF3vYqv5qlSPhqjvWr-sVKkBx47pWtEIIV4cg=374">
+                                    <span>
+                                        <strong>India's Star Health Confirms Data Breach After Cybercriminals Post Customers' Health Data Online (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Star Health, one of India's largest insurance companies, has confirmed a data breach after hackers created Telegram chatbots that leaked personal data belonging to 31M customers. The leaked data included full names, phone numbers, addresses, tax details, claims information, and customer ID cards. Star Health has not confirmed whether customer data was leaked and is suing Telegram and Cloudflare due to the hackers making use of their products.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Strategies &amp; Tactics</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.trailofbits.com%2F2024%2F09%2F24%2Fnotes-on-aws-nitro-enclaves-attack-surface%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/d9eUg8hDGs8qsisJHkcBgSG6lud9QH01_WyE9zFDIwQ=374">
+                                    <span>
+                                        <strong>A Few Notes on AWS Nitro Enclaves: Attack Surface (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This post presents an in-depth overview of the attack surface of AWS Nitro Enclaves, a confidential computing solution for EC2. Developers should treat Nitro enclaves as a single trust zone and implement end-to-end security practices. They should also seek to mitigate side channel attacks through proper CPU allocation and using constant-time processing. Developers should verify that the enclave is using kvm-clock for timing and nsm-hwrng for entropy. It is critical to implement robust attestation verification practices.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdzone.com%2Farticles%2Faws-letsencrypt-lambda-why-i-wrote-a-custom-tls-provider-for-aws%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/n5yt-vD747vjWWjmtLERcQ1G3ZHAtfkJiHYtZkkbpxg=374">
+                                    <span>
+                                        <strong>AWS LetsEncrypt Lambda or Why I Wrote a Custom TLS Provider for AWS Using OpenTofu and Go (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This developer wrote a Lambda function that utilizes LetsEncrypt to create and renew TLS certificates that are more portable without relying on AWS Certificate Manager. The function takes in an event from a manual run or Event Bridge, requests a certificate from LetsEncrypt, creates a new TXT record in Route53 if needed for verification, and then optionally stores it in AWS Secrets Manager. The source code for the Lambda function and OpenTofu/Terraform module is provided.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="http://tracking.tldrnewsletter.com/CL0/http:%2F%2Fsecurity.googleblog.com%2F2024%2F10%2Fusing-chromes-accessibility-apis-to.html%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/bXDb45HaEargVORhUFcz33mJ2rGt6iRB9kFXQtlQtBU=374">
+                                    <span>
+                                        <strong>Using Chrome's accessibility APIs to find security bugs (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Chrome is using accessibility APIs to find security bugs in its user interface code. By fuzzing the accessibility tree of UI controls, the Chrome team hopes to automatically discover and fix potential vulnerabilities. This approach aims to improve Chrome's overall security and stability for all users.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Finterlynk-io%2Fsbomqs%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/tHeCGRScBcgH5jP1CwJfdGLwTKJKwWzTWxCoD_V1ynY=374">
+                                    <span>
+                                        <strong>sbomqs (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    sbomqs is a tool for assessing an SBOM's quality and compliance. The higher the score, the more consumable and compliant your SBOMs are.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FPaperMtn%2Fslack-watchman%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/0HjkKCRncU9xDgp2iN8k4ehF6hUGkLowSaKxLZV1FYE=374">
+                                    <span>
+                                        <strong>Slack Watchman (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Slack Watchman is a tool for monitoring and enumerating Slack Workspaces for secrets.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Ftrickster0%2FNamelessC2%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/rYvk1q-uBwkdoMAH15la1j5uZP2c6h7djk-Jmj6ttJQ=374">
+                                    <span>
+                                        <strong>Nameless C2 (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Nameless C2 is a Rust-based Windows C2 implant that is only 256kb in size.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theregister.com%2F2024%2F10%2F09%2Fsmart_tv_spy_on_viewers%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/BLkUdSprpp9YPq_st1riOGsrk9IVSzsv8N1TLw5lV_s=374">
+                                    <span>
+                                        <strong>Smart TVs are spying on everyone (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Smart TVs and streaming services are collecting extensive viewer data using advanced surveillance techniques. This includes personalized ads, content recognition, and AI-based targeting. A report by the Center for Digital Democracy criticizes these practices as undermining privacy and forcing unfair terms on consumers to access video content.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.darkreading.com%2Fcybersecurity-operations%2Faustralia-intros-first-national-cyber-legislation%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/UxUyD7nvPncRED08kaBFVFBOO66m9AsFrRa3zdeTiII=374">
+                                    <span>
+                                        <strong>Australia Intros Its First National Cyber Legislation (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Australia has introduced the Cyber Security Bill 2024, aiming to establish security standards for smart devices, ransomware reporting, and cybersecurity incident coordination. It proposes a Cyber Incident Review Board, reforms to the SOCI Act, and information-sharing protocols.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftcm-sec.com%2Ftop-soc-analyst-certifications%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/EWAen1hqjl5GFD90OsUSteVFQtVZafbm4xry1Ix0jtM=374">
+                                    <span>
+                                        <strong>Top 5 SOC Analyst Certifications for 2024 (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The post compares the CompTIA CySA+, TCM Security PJSA, Security Blue Team BTL1, HackTheBox CDSA, and the OffSec OSDA. Summaries are provided for each section, with an infographic presented at the end.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2F45700826.fs1.hubspotusercontent-na1.net%2Fhubfs%2F45700826%2FThe%2520State%2520of%2520Attacks%2520on%2520GenAI%2520-%2520Pillar%2520Security.pdf%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/5dasu5EXnNj_rpPEtnf-uSiIKvwnPDDcM_mbtRIOkpA=374">
+                                    <span>
+                                        <strong>The State of Attacks on GenAI (25 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This report, based on real-world analysis of more than 2,000 AI applications, found that 90% of successful attacks resulted in the leakage of sensitive data.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ffedscoop.com%2Fcisa-chief-ai-officer-lisa-einstein-cyber-ai-policy%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/95Ssa6z4ss7eT58-8kV7MQxcjCa5VwZqmuVmbSgHi68=374">
+                                    <span>
+                                        <strong>CISA official: AI tools ‘need to have a human in the loop' (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    CISA's Chief AI Officer emphasizes the importance of having humans involved in AI tools for cybersecurity.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fkrebsonsecurity.com%2F2024%2F10%2Flamborghini-carjackers-lured-by-243m-cyberheist%2F%3Futm_source=tldrinfosec/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/OP59BO92kW-h4d8MWeoETfGJ-Rkss-ASNyC3eDqWOXM=374">
+                                    <span>
+                                        <strong>Lamborghini Carjackers Lured by $243M Cyberheist (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The parents of a teenager involved in a $243 million cyberheist were carjacked in their Lamborghini by men aiming to ransom them.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F9c8a806a%2F8/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/DxjF5bQYrXxyjYHyryacoF7G5TVjHemylAE-e7FNhH8=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/9c8a806a/8</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_14d48d82f243%2F8/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/8VJU60R3lz_IJf_fQeCxwhIovAhaD8glVBBUr7SvK_s=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of cybersecurity professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/pnnpME-qN3JAZE66ut_rDpUoOTVuHE7niuSuaGc8oqU=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Prasanna Gautam</span>, <span>Eric Fernandez</span> &amp; <span>Sammy Tbeile</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Information Security, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=8d9cea11-3e94-11ed-9a32-0241b9615763%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=cf051cdc-87be-11ef-8c8a-0b1e33cbf78a%26pt=campaign%26pv=4%26spa=1728651683%26t=1728651932%26s=d7f80a729339bcd5acd81da9499d2eae83fdc623a71218371c51b710f7497cee/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/6CBtXc4mYwfvtIAsTE3bv86bDXPyd7sUMpl9ge5bYS0=374">unsubscribe from TLDR Information Security</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/gMeUvSeNGONL5ZFNd0ZCz-ZOjGui8MYtawsXHyBwPG4=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001927baf3324-cb9ae067-4909-4ddd-abc2-04950f4f8e25-000000/79Yv8eNpIz6HHIIcwSTiOGgYoW2KfJLLQxRJurUgidE=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

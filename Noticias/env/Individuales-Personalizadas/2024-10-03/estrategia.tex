@@ -1,0 +1,73 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\title{Estrategia de Inversión Basada en Modelos GARCH en un Entorno de Volatilidad}
+\author{Corredor de Bolsa}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\section{Análisis de la Situación Económica Actual}
+
+En base a la transcripción del análisis del mercado global, podemos destacar los siguientes puntos clave que afectan las decisiones de inversión:
+
+\begin{itemize}
+    \item \textbf{Conflicto geopolítico}: A pesar del conflicto entre Irán e Israel, los mercados no han reaccionado con un desplome significativo, lo cual se debe principalmente a políticas monetarias expansivas en China, Japón y Estados Unidos.
+    \item \textbf{Políticas monetarias expansivas}: Estas políticas están creando un \emph{viento a favor} para los mercados de acciones, a través de estímulos fiscales y monetarios.
+    \item \textbf{Mercado de petróleo}: La amenaza de una guerra de precios en la OPEP no ha afectado significativamente el precio del petróleo, que se mantiene estable.
+    \item \textbf{Elecciones en EE.UU.}: El continuo gasto público, impulsado por el creciente déficit, probablemente mantendrá el crecimiento económico en el corto plazo.
+\end{itemize}
+
+Basado en este análisis, podemos esperar que los mercados experimenten una corrección en octubre, seguida de un rebote en los precios de las acciones, especialmente en el índice \textit{S\&P 500}.
+
+\section{Estrategia de Inversión: Modelos GARCH para Capturar la Volatilidad}
+
+Dado el entorno económico descrito, proponemos una estrategia basada en el uso de modelos de \textbf{volatilidad condicional}, como el modelo GARCH (\textit{Generalized Autoregressive Conditional Heteroskedasticity}), para aprovechar las fluctuaciones del mercado.
+
+\subsection{Modelo GARCH}
+
+El modelo GARCH es útil para predecir la volatilidad en los mercados financieros y está dado por las siguientes ecuaciones:
+
+\begin{equation}
+    y_t = \mu + \epsilon_t
+\end{equation}
+donde \( \epsilon_t \sim N(0, h_t) \) y la varianza condicional \( h_t \) está modelada como:
+
+\begin{equation}
+    h_t = \alpha_0 + \alpha_1 \epsilon_{t-1}^2 + \beta_1 h_{t-1}
+\end{equation}
+
+Aquí:
+\begin{itemize}
+    \item \( \alpha_0 \) es el término constante,
+    \item \( \alpha_1 \) mide el impacto de los shocks pasados en la volatilidad actual (\( \epsilon_{t-1}^2 \)),
+    \item \( \beta_1 \) refleja el efecto de la varianza pasada sobre la volatilidad actual.
+\end{itemize}
+
+\subsection{Aprovechando la Corrección del Mercado}
+
+Dado que se espera un aumento en la volatilidad durante el mes de octubre, utilizamos el modelo GARCH para identificar los siguientes puntos clave:
+
+\begin{enumerate}
+    \item \textbf{Identificar un aumento en la volatilidad}: Al observar un aumento en \( h_t \), podemos esperar movimientos bruscos en el mercado. Esto es indicativo de una corrección en los precios.
+    \item \textbf{Tomar posiciones en opciones}: Durante periodos de alta volatilidad, una estrategia efectiva sería comprar opciones \textbf{put}, las cuales aumentan de valor si el mercado cae.
+    \item \textbf{Posicionarse para la recuperación}: Una vez que el modelo muestra una disminución en la volatilidad (\( h_t \) comienza a reducirse), puede ser un buen momento para tomar posiciones largas en el índice \textit{S\&P 500}, aprovechando el repunte esperado.
+\end{enumerate}
+
+\subsection{Optimización del Riesgo}
+
+Para gestionar el riesgo asociado a esta estrategia, podemos calcular el \textit{Value at Risk} (VaR). El VaR nos proporciona una medida del riesgo de pérdida financiera, dado un nivel de confianza y un horizonte temporal:
+
+\begin{equation}
+    VaR = \mu - z_{\alpha} \cdot \sigma
+\end{equation}
+donde \( z_{\alpha} \) es el cuantil de la distribución normal correspondiente al nivel de confianza \( \alpha \), y \( \sigma \) es la desviación estándar del retorno.
+
+\section{Conclusión}
+
+La utilización del modelo GARCH en este contexto de incertidumbre económica nos permitirá anticipar los movimientos de volatilidad del mercado. Con esta información, podremos tomar decisiones de inversión más informadas, tales como la compra de opciones \textit{put} durante la corrección y la toma de posiciones largas una vez que la volatilidad disminuya. Esto maximizará el rendimiento potencial mientras se gestiona adecuadamente el riesgo mediante el uso del \textit{Value at Risk}.
+
+\end{document}

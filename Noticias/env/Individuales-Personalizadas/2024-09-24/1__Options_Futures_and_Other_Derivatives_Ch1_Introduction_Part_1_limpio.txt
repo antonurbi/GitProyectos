@@ -1,0 +1,382 @@
+WEBVTT
+Kind: captions
+Language: en
+[Music]
+well here we are right at the very
+beginning this is a uh a long road this
+is probably one of the uh best textbooks
+underlying this course which is the hall
+book it's the standard uh for options uh
+uh Futures and other derivatives in any
+course at either the upper upper level
+undergraduate courses in finance or at
+the MBA level so it is uh at times
+challenging uh however uh here's a
+here's a promise to you that if you can
+get through this um it elevates you
+above all others who can't in in this
+field it is the standard so I'm going to
+try to get you through each chapter uh
+in a little bit uh not such a a hard
+academic way but with uh a huge amount
+of real world experience with Futures
+options and derivatives that I can bring
+a um perhaps a a better insight into
+some of the topics so here we go we're
+just going to jump right into uh the
+first
+chapter uh and start uh as if you'd
+never seen these before so derivatives
+what are they well they are at the very
+heart financial
+instruments uh whose Val value depends
+on or I put in Brackets here is derived
+from and you'll notice derived is the
+root of derivatives and that's how we
+get the word derivative because its
+value is derived from the value of some
+other and this is a critical word a lot
+of other definitions sort of skip this
+but this is critical some other more
+basic underlying variable so let's deal
+with the more basic this means that
+whatever the financial instrument is
+deriving its value
+from that particular asset has a price
+that's closer to the value of it
+itself so for instance if uh uh you have
+an option on a stock the option derives
+its value from the price of the stock
+but the price of the stock derives its
+value from the value of of the company
+itself it's next in line in other words
+so it's not that uh it deres its value
+off of something more complex or more
+higher order like a like a second order
+derivative you can't go the other
+way and it says it deres the value of
+some other more basic underlying
+variable now why didn't I put underlying
+asset why am I putting underlying
+variable there well it's because it
+doesn't necessarily have to be an asset
+uh it could be a real
+asset uh like
+property
+it could be a financial asset and a
+financial asset could be a share of
+stock it could be an
+index whether it be a stock index a
+housing price index the rate of
+inflation the index that track rate of
+inflation could be an index it could
+even be just an
+event it could be just an event uh for
+instance uh the the amount of snowfall
+in a given region perhaps a ski resort
+wants to hedge against a bad winter and
+maybe there's an option for the uh uh a
+bet that they can make a derivative
+available that bets on the amount of of
+snowfall that pays off if it's under a
+certain amount and doesn't if it's over
+a certain amount we can all think of
+catastrophe bonds or what are called cat
+bonds uh that cat bonds will pay off
+except in the event of a catastrophe uh
+so if a cat catastrophe happens then
+obviously it doesn't so that's why it's
+called an under Ling variable as opposed
+to an underlying asset because the
+underlying doesn't necessarily need to
+be an asset an event is not an asset so
+let's very be very clear about the
+definition of a derivative to be
+inclusive it is derived from the value
+of some other more basic underlying
+variable now derivatives can be exchange
+traded or over-the-counter exchange
+traded are standardized contracts OTC
+can be standardized but they allow for a
+lot of customization that can't be found
+on
+exchanges uh on exchange traded a buyer
+and a seller uh come together to form a
+contract we'll see later on that all
+derivatives require a buyer and a seller
+and they they uh enter their contract
+through a clearing house so that the
+Clearing House is the counterparty to
+all contracts the buyer enters into a
+contract with the Clearing House and the
+seller enters into a contract with the
+Clearing House it eliminates
+counterparty risk if the buyer wins and
+the seller can't pay well that's a big
+problem but the Clearing House is
+counterparty to all and there's never
+been a default on an exchange traded
+derivative
+never highly regulated highly regulated
+because they're exchange traded which
+means they're available to people
+anybody can can uh make a transaction in
+a Futures Contract or an options
+contract so a lot of Regulation there to
+protect the investors on
+OTC uh uh they can the transaction is
+between a buyer and a seller this is
+called bilateral clearing but as we can
+see here if the buyer wins big and the
+seller loses if the seller is unable to
+pay the buyer hasn't really won anything
+have they in other words they're in a
+position as if they had never entered
+into the contract to begin with which
+well what was the point of that or and
+this is really becoming more and more
+popular now ever since uh 2008 2009 that
+really changed a lot of opinions about
+about this wild wild West over the
+counter derivative trading now the buyer
+and seller can opt to clear through a
+central party a central counterparty
+which means that they can eliminate
+counterparty Risk by opting to choose a
+central counterparty not only that a lot
+of Regulation is pushing this
+Marketplace to say look if it can be
+cleared by a central counterparty do it
+the more standardized or the less
+customized the OTC contract is the more
+this becomes necessary and not just uh
+optional but slowly and slowly it's
+moving towards more and more of these of
+these OTC derivatives being being
+cleared through a central counterparty
+so that it reduces this kind of
+counterparty
+risk the OTC market is less regulated
+I'm not going to say there's no
+regulation This is highly regulated
+Exchange Trade is highly regulated OTC
+is just less regulated not as highly
+regulated it's less regulated but this
+regulation is increasing will it ever
+get to the level of of the exchange
+traded probably not because you don't
+want to constrain the ability for
+customization here and these are these
+are intelligent people these are
+institutions that are trading they're
+not they're not retail Traders they're
+institutions so they know what they're
+doing they don't need that kind of
+protection they need
+flexibility uh they have the
+responsibility uh uh to deal with that
+flexibility so let them go right so it's
+less regulated regulation is increasing
+but it'll never get to the point where
+it's as regulated as an
+exchange dollar value-wise uh the
+over-the-counter Market is roughly about
+12 times larger than the exchange traded
+market in terms of the principal dollars
+underlying the assets that's all it is
+in terms of the principal dollars
+underlying the assets if we look at the
+value of the contracts
+itself um the exchange traded actually
+is larger if we look at just the value
+the market value of the financial uh
+remember these are financial instruments
+so if we had to settle up everything
+just the dollar value of them uh The
+Exchange Trade It is larger but the
+dollars underlying the Assets in the
+over-the-counter Market are about 12
+times larger but keep in mind these are
+institutional Traders they may uh one
+contract may represent one $0000 million
+whereas on an exchang traded uh uh uh
+Marketplace uh a I think the largest uh
+Forex contract I've seen is for if you
+get into the Swedish and the Norwegian
+Crona uh they can amount to depending on
+the exchange rate up to 200 uh 250
+300,000 uh us uh that's considered a
+large contract the standard contract in
+most foreign currency on the Futures
+Market is about uh $100,000 the British
+pound of 625 so they vary but they're
+nowhere near 100 million well one
+contract here could represent 100
+million so when we say that it's much
+much much larger uh it's in terms of the
+the principal value of the underlying
+assets not the value of the derivative
+contract itself in uh in this
+introduction I'm just going to introduce
+some of the terminology that we'll be
+looking at in more detail later on but
+we'll start with forwards or forward
+agreements and it is an AG agement to
+buy or
+sell to buy or sell a specific asset
+often referred to as the underlying
+asset at a specific price and since
+we're talking about forwards we're
+talking about a delivery price when we
+talk about options we talk about an
+exercise price but this would be a
+delivery price at a specific price at a
+certain future date T and we tend to
+call this the delivery date when we uh
+look at options we'll call that the
+exercise date or the expiration date but
+this will be the delivery date so it's
+an agreement to buy or sell a specific
+asset at a specific price agreed on
+today agreed on at the time that we
+enter into the contract but to be
+delivered at some future date so we'll
+agree on the asset and the future date
+at which we'll we'll trade it but we'll
+agree on a price today it's called a
+forward contract they're OTC traded over
+the- counter traded if the forward is
+exchange traded it is simply called a
+future that's just the difference
+between forwards and Futures when you
+hear the term forward that means it's
+OTC traded when you hear the term
+Futures it's a forward agreement that
+just happens to be exchange traded
+that's all a buyer has a long position a
+seller has a short position you need a
+buyer and a seller to every derivative
+contract there has to be a long and a
+short simple as that both parties are
+obligated to perform this is key both
+are
+obligated obligated both have an
+obligation when we look at options we'll
+see that that's not true in options but
+for forwards and Futures both parties to
+the contract buyer and seller are
+obligated to do something there is no
+cost to enter a forward or future
+agreement other than paying the
+commission on the exchange or paying any
+kind of commission on a Futures exchange
+however there will be margin but the
+margin doesn't leave your account the
+key Point here is that no money trades
+hands when the contract is entered I
+don't have to if I'm the buyer I don't
+have to pay the seller anything today I
+may have to segregate a certain amount
+of my money as margin but I don't have
+to part with it so that's important
+let's look at some payoff graphs you're
+going to have to get used to these if
+you don't like payoff graphs stop now
+stop now because there's a lot of these
+uh throughout the uh throughout all the
+the textbook well here's what we need
+some terminy ology s subt is the spot
+price at time t a spot price means a
+spot Market the price in a spot market
+and a spot Market is what you can buy
+and sell it for right then and there at
+that point in time right now that's
+called a spot market so you can think of
+a stock market as a spot Market at any
+point what's the What's 100 shares of
+IBM trading at I want to buy it right
+now go ahead well that's the spot price
+that's the spot
+market and K is the delivery price K
+will be the specific price that uh uh
+that the parties agree to the certain
+future date will be at time T sometime
+in the future so let's look at uh an
+example an agreement to buy or sell an
+asset for $100 in 3 months so T is 3
+months K is is is 100 so we can put K
+down here representing the buyer and the
+seller both are obligated to perform
+something at that $100 Mark so there is
+K in terms of the buyer and here is K in
+terms of the seller we'll put buyer up
+here and we'll put seller down here to
+show their payoff
+charts well let's uh look at two
+examples here let's say that uh uh in
+example one if the spot price uh equals
+$150 at time
+T the
+buyer makes
+$50 how do I arrive at that
+because uh they've agreed to trade it in
+3 months at 100 so the seller must sell
+to the buyer for 100 in 3 months time
+the spot price is 150 it doesn't matter
+there's an agreement to trade at the
+price of $100 so they trade at
+$100 the buyer can immediately sell in
+the spot Market
+at150 thereby making $50 so we can see
+that the buyer would make $50 at time T
+however the seller would have to has to
+deliver the asset to the buyer so the
+seller would have to go into the spot
+Market pay $150 for it and then sell it
+for $100 the seller would lose
+$50 well if the spot Market uh the spot
+price at uh time T is
+$75 the
+buyer loses
+$25 don't they because they still must
+perform they're obligated to buy it for
+$100 they sell it they're going to lose
+$25 whereas the seller will make the
+$25 so we can see very very quickly here
+that this is a zero sum zero sum because
+for the buyer to make a dollar the
+seller must lose a dollar
+no wealth is created in a derivatives
+contract let's be clear about that now
+no wealth is created only
+transferred so for the buyer to win the
+seller must
+lose for the seller to win the buyer
+must lose and if we draw our
+charts we can see that they are
+asymmetrical in terms of payoff dollar
+for dollar so that if you add these two
+together you will get a straight line so
+we have a gain here with a loss here it
+Nets to zero and if you draw them out
+together you will get a straight line
+showing no wealth creation only wealth
+transfer this is an important point to
+remember for a buyer to win the seller
+must lose for a seller to win the buyer
+must lose the sum of their gains and
+losses always sum to zero it is a zero
+sum and that's what a payoff graph looks
+like so we can see where the payoff is
+each time when we get into options keep
+in mind here there was no cost to enter
+so basically the payoff is is a linear
+relationship with the price of the
+underlying asset with the spot price
+once we have options there is a cost to
+enter these payoff graphs change there's
+forwards Futures nice introduction we're
+going to get into it in a lot more this
+is just something something to introduce
+you to
+it

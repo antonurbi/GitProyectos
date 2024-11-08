@@ -1,0 +1,564 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR DevOps</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">TypeScript 5.7 Beta is now out, bringing improvements like checks for uninitialized variables and path rewriting for imports.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/C2jxj4P5Dgjdx0e8I6oLmVTFEGhgDelSuPK0eeuEK84=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/-sULvHsrqyXeBy6ej6nTr1SKm4CfAdc0KAQLP5m0p_o=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=dd98635c-87ab-11ef-89e8-65b645133dcf%26pt=campaign%26t=1728644719%26s=ca8789f2dd407838f9466a48104638f1757f5719cab39acd2ad545a2e6a8a670/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/6A8g_VuraJs3Lt0WLj8l3g55QpnpKOW_0XkGnECJOOk=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-devops-primary-241011-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/sI-r3UE9KXjAjsirdRzZW3IQgNyORRl_TRksc6KDET4=374"><img src="https://images.tldr.tech/sonar.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="SonarSource"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR DevOps <span id="date">2024-10-11</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-devops-primary-241011-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/2/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/Tnz9lKnPeDT6ElLIjuc8cJdpsbRT3_mMwaY47KShCaQ=374">
+                                    <span>
+                                        <strong>Trust your developers, verify your AI-generated code with Sonar (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    It's important to ensure that the code generated by LLMs goes through proper quality checks before going into production. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-devops-primary-241011-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/3/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/3M4PLzgz8qRkFgF8ZIWAM5MPptzFzPAQSJnhwmpWrqQ=374" rel="noopener noreferrer nofollow" target="_blank"><span>Sonar's code assurance workflow</span></a> ensures that AI-generated code meets the highest standards to produce software that is secure, reliable, maintainable, and of unparalleled quality. Using Sonar, development teams can:
+
+<p></p>
+
+<ul>
+<li>Minimize risk in AI code generation</li>
+<li>Detect bugs, vulnerabilities, and quality issues in all code</li>
+<li>Derive more value from code created by both AI and humans</li>
+<li>Boost productivity with AI-generated code fixes</li>
+</ul>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-devops-primary-241011-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/4/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/rIOIeI-RV7LcVMBaI4JkwNYzlxc7h5q6AEchc9nf6vU=374" rel="noopener noreferrer nofollow" target="_blank"><span>Learn how Sonar helps improve AI-generated software development!&nbsp;</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdevblogs.microsoft.com%2Ftypescript%2Fannouncing-typescript-5-7-beta%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/KZHB5x7DkM8VNXVb9vU3KylP98zO7nrFWmwcc3TF1Qw=374">
+                                    <span>
+                                        <strong>Announcing TypeScript 5.7 Beta (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    TypeScript 5.7 Beta is now out, bringing improvements like checks for uninitialized variables, path rewriting for imports, and support for running TypeScript code without a build step. It adds a new compiler option for handling file extensions when transitioning from development to production and includes support for ECMAScript 2024 features.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fevery.to%2Fp%2Fthe-disappearance-of-an-internet-domain%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/2dIL1r2UD7vkZsNfOvqt4382o-LsOY-_1dbIjbOEu4U=374">
+                                    <span>
+                                        <strong>The Disappearance of an Internet Domain (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This post examines how the transfer of sovereignty over the Chagos Islands to Mauritius will lead to the retirement of the popular .io domain, showcasing how shifting geopolitical landscapes can directly impact digital infrastructures and internet communities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Faws.amazon.com%2Fblogs%2Fdatabase%2Fget-started-with-amazon-elasticache-for-valkey%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/XWMM8ZRsiBh9tt7qxGEuzVntH7L1Cs4vFWoUwryzuxw=374">
+                                    <span>
+                                        <strong>Get started with Amazon ElastiCache for Valkey (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Amazon ElastiCache now supports Valkey version 7.2 with serverless and node-based clusters, offering significant cost reductions and seamless integration with Redis-compatible APIs and enhancing performance for real-time applications with the backing of AWS' operational excellence and security.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fluckymike.dev%2Fposts%2Fwarm-handoffs%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/xcynY1mlTT72VHeybPJ_E0T8KCYml0OPOlXqVe16Uhk=374">
+                                    <span>
+                                        <strong>Warm Handoffs (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Warm Handoffs in organizations using Slack ensure inquiries are directed to the appropriate team, improving communication and avoiding a siloed culture. This method involves actively guiding the question to the right channel with appropriate context, rather than just redirecting or tagging others. Organizations need to adopt this as a strict policy, reinforced consistently, to foster better collaboration and efficiency in communication.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthenewstack.io%2Fredis-users-want-a-change%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/oQuAZxZfMTz34GN_b0dDiuxBLG5J3RKandnGGDd71lo=374">
+                                    <span>
+                                        <strong>Redis Users Want a Change (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Redis' recent licensing changes have prompted 75% of its users to seek alternatives, with Valkey, an open-source fork, gaining significant interest — 63% of surveyed users are already familiar with it. As organizations navigate these changes, many are evaluating Valkey for its open-source support. The need for reliable operational support will be critical for widespread adoption.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmonitoring2.substack.com%2Fp%2Fai-agents-invade-observability%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/NcImFxOMuzk4r7UjaXw-2vYlDZZbfkpLaXZai7chTaE=374">
+                                    <span>
+                                        <strong>AI agents invade observability: snake oil or the future of SRE? (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This post discusses the emergence of AI agents in the observability and monitoring space, highlighting how companies are exploring new models for operational insights using generative AI. It raises questions about the effectiveness and potential risks of these AI solutions while noting the excitement from venture capitalists and the need for benchmarks to assess their utility.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnortherndata.de%2Fnvidia-h100-gpus%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/SqYIKaasAHzUvX12wqLxZO70BDSlANoyjXFd-fm5EoU=374">
+                                    <span>
+                                        <strong>Access AI-ready compute, powered by clean energy (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Want to build on the same hardware that's used to power OpenAI? NVIDIA's Tensor Core GPUs were designed to deliver up to 9x faster AI training on the largest models. Start today on Northern Data Group's generative AI cloud platform: Get <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnortherndata.de%2Fnvidia-h100-gpus/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/h_5SMWCmjN6qbMXCXtzs07X3-hOtUB5IjLh9zoBp1Bg=374" rel="noopener noreferrer nofollow" target="_blank"><span>instant access to NVIDIA H100 GPUs</span></a> or go big with <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnortherndata.de%2Fnvidia-h200-gpus%3Futm_medium=newsletter%26utm_source=tldr-devops%26utm_campaign=20241009/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/Lurp6swR9aC5Pn5s5Rl1YcM3O8wjUIJ0PhFwigqNlFI=374" rel="noopener noreferrer nofollow" target="_blank"><span>NVIDIA H200 GPUs</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudtrooper.net%2F2024%2F10%2F01%2Fazure-subnet-peering%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/an5HpyCef0bkbT-BK1aZolSwh-06JWSL7WhKs7iaMrk=374">
+                                    <span>
+                                        <strong>Azure Subnet Peering (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article explores a new feature in Azure called subnet peering, which allows greater control over system routes in virtual network peering. When the author tested this feature, they found it did not resolve the administrative challenges of managing GatewaySubnet routing tables and SD-WAN appliances as hoped, but it offered a useful approach to controlling specific subnet communication.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthenewstack.io%2Fa-guide-to-linux-access-control-lists%2F%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/uifjAYeLOmYqZh4PfS0U5CeuK9tpiLlfunahA5rr0tI=374">
+                                    <span>
+                                        <strong>A Guide to Linux Access Control Lists (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article explains Linux Access Control Lists, which provide more flexibility than standard Linux permissions by allowing administrators to assign different access levels to multiple users and groups. It covers the use of ACL-related commands and emphasizes their importance in managing permissions on shared systems.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fengineeringblog.yelp.com%2F2024%2F10%2Fhow-we-improved-our-android-navigation-performance-by-~30.html%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/HSyUvHY5VRzlSE7XsZoCpZv12QrQm_QNZs6IVrCwAss=374">
+                                    <span>
+                                        <strong>How we improved our Android navigation performance by ~30% (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    In 2019, Yelp's Core Android team successfully improved its app's navigation performance by transitioning from multiple separate activities to a single activity architecture using fragments, achieving up to a 60% boost in speed and smoother animations across screens.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnetflixtechblog.com%2Fintroducing-netflix-timeseries-data-abstraction-layer-31552f6326f8%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/wEIkrFdMp2UG6uMxTPWVdH0zF9JNGqDG6sx8Yfx-SFY=374">
+                                    <span>
+                                        <strong>Introducing Netflix's TimeSeries Data Abstraction Layer (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Netflix's TimeSeries Data Abstraction Layer is a scalable solution for storing and querying vast volumes of temporal event data with millisecond latency, crucial for real-time and long-term decision-making. This infrastructure powers key services like user interaction tracking, system performance monitoring, and feature rollout analysis, ensuring Netflix operates efficiently across its global platform.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcommunity.microsoft.com%2Ft5%2Fapps-on-azure-blog%2Fazure-kubernetes-service-baseline-the-hard-way%2Fba-p%2F4130496%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/9aGfOXCZV5VEmhtGuSTP8IYYhA5USBPckyJtYsWwUlw=374">
+                                    <span>
+                                        <strong>Azure Kubernetes Service Baseline - The Hard Way (25 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The post explains the network design and configuration in the AKS baseline architecture, detailing how subnets and virtual networks work together to secure and support a resilient Azure Kubernetes Service (AKS) cluster.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhardcoresoftware.learningbyshipping.com%2Fp%2F222-automating-processes-with-software%3Futm_source=tldrdevops/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/UxQMl_C8h7XX6EFwNPs-QR4ujOPnue_eYI5tcX7JmbU=374">
+                                    <span>
+                                        <strong>Automating Processes with Software is HARD (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Automation is often seen as a solution to repetitive tasks, but it's more complex due to the fragility of systems and variability of inputs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F6fb53e6a%2F10/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/HdOH5bt-hgG2nsmwNCJznaC2M_RVgyGaAb8kmreMCAY=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/6fb53e6a/10</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_bc421b592e23%2F10/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/w1kFPJL9Ej9tSiM9iulJSGOlB-XmfI17R1uOza1eBcA=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of devops professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/nVayZ0B9qI9v4zeHZsqtrDK7n5DEExNvcF1DikdgTPw=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Kunal Desai</span> &amp; <span>Martin Hauskrecht</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR DevOps, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=dd98635c-87ab-11ef-89e8-65b645133dcf%26pt=campaign%26pv=4%26spa=1728644474%26t=1728644719%26s=ff8e7a16d1fc06175d61a3253da59f55091d61993e7a02cb0cc45ad3bc0248e9/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/fqP9guOQbC0WauzfHd8-zb9fY0ybLQC93e5oz0zeEB4=374">unsubscribe from TLDR DevOps</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/wTFwD23cWNU3AlrxEZchKUJaGF36cqCOR4xueBbIsCU=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001927b412491-b32cad81-404a-4e46-9b79-754394214983-000000/39RdhdegZ-Mb4BjEAYD5cY0zEzEy1kt9GVJvgoOTs-o=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

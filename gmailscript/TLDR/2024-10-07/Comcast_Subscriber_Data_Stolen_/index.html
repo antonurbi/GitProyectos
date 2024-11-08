@@ -1,0 +1,613 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR InfoSec</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Comcast revealed that data on over 200K customers was stolen in February in a ransomware attack on its former debt collector, FBCS.&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/mG3bSR_2aZaypiTRpOY-vS8BAFQnYmXPoogLQcc0_co=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/ygnrugyystMs38nUEQUV8KjHo8-2x_YVYIcdJPFe2Ak=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=21a52470-848e-11ef-957c-297d8e9da678%26pt=campaign%26t=1728306297%26s=ae24ce05d4339983d68a26271a32be4f41b3ef9046bec2330f4d48eb3b29d351/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/G9v3xM-5OvPWRK3_BdSjXP2BMLRnwIjM9kWA2pTJgnU=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.threatlocker.com%2Febooks%2Fsecure-remote-workforces%3Futm_source=tldr%26utm_medium=sponsor%26utm_campaign=remote-work-ebook_10-7-24%26utm_content=remote-work-ebook%26utm_term=newsletter/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/OdSQrnx25qaJ3V0dYG0OEq1xgUrwHRd573jMrKZy0uI=373"><img src="https://images.tldr.tech/threatlocker50.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Threatlocker"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Information Security <span id="date">2024-10-07</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.threatlocker.com%2Febooks%2Fsecure-remote-workforces%3Futm_source=tldr%26utm_medium=sponsor%26utm_campaign=remote-work-ebook_10-7-24%26utm_content=remote-work-ebook%26utm_term=newsletter/2/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/L9wSVSorlMoO3geYK-d4wc6Aqv7A4TukSGe-tNH9c7M=373">
+                                    <span>
+                                        <strong>Remote Work: A Ticking Time Bomb&nbsp;(Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Remote work introduces security risks that jeopardize your company's data and operations - from unvetted software and shadow IT to vulnerable home networks and public Wi-Fi.<p></p><p>These threats can lead to data breaches, system infections, and costly downtime.</p><p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.threatlocker.com%2Febooks%2Fsecure-remote-workforces%3Futm_source=tldr%26utm_medium=sponsor%26utm_campaign=remote-work-ebook_10-7-24%26utm_content=remote-work-ebook%26utm_term=newsletter/3/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/yeCM2lQn7raEaF4CzOeJTmxZsLekXNOgoonG9fa8vTk=373" rel="noopener noreferrer nofollow" target="_blank"><span>In ThreatLocker®'s eBook, you'll learn how to</span></a>:</p>
+
+<ul>
+<li>Prevent unauthorized applications &amp; malware from executing</li>
+<li>Secure devices connected to home networks</li>
+<li>Protect your company's data from potential breaches</li>
+</ul>
+
+<p>In honor of Cybersecurity Awareness Month, take proactive steps to strengthen your remote work security! <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.threatlocker.com%2Febooks%2Fsecure-remote-workforces%3Futm_source=tldr%26utm_medium=sponsor%26utm_campaign=remote-work-ebook_10-7-24%26utm_content=remote-work-ebook%26utm_term=newsletter/4/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/FMQhFgfeSz_fSnRcuFIvXFsyx17viy07RaVrH25pm5w=373" rel="noopener noreferrer nofollow" target="_blank"><span>Download the eBook</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🔓</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Attacks &amp; Vulnerabilities</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsecurityaffairs.com%2F169390%2Fsecurity%2Fwordpress-litespeed-cache-plugin-flaw-site-takeover.html%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/MA9RWRjYb8pBC-pQrqQPWG9ORnMs16QRVIkW8PFi9Y8=373">
+                                    <span>
+                                        <strong>WordPress LiteSpeed Cache plugin flaw could allow site takeover (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A serious flaw in the WordPress LiteSpeed Cache plugin affecting versions up to 6.5.0.2 could allow attackers to run harmful code. The vulnerability allows for arbitrary script injection when certain settings are enabled, potentially leading to account hijacking and site takeover. The issue was fixed in version 6.5.1, but site admins should act quickly to secure their websites.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthehackernews.com%2F2024%2F10%2Falert-over-700000-draytek-routers.html%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/A9Vsfe7s_Qa04UttJ_-xIBK1ussF9oOSJrKo4yrR3Gc=373">
+                                    <span>
+                                        <strong>Alert: Over 700,000 DrayTek Routers Exposed to Hacking via 14 New Vulnerabilities (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Researchers discovered 14 security vulnerabilities, dubbed DRAY:BREAK, in DrayTek routers used in homes and businesses. These flaws could allow attackers to take control of affected devices, potentially gaining access to enterprise networks. The vulnerabilities range in severity, with two rated critical, including one with the highest possible CVSS score of 10.0.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theregister.com%2F2024%2F10%2F04%2Fcomcast_fcbs_ransomware_theft%2F%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/Nv1g2sG6YbZ-H9I9TkjboEYFKhPxxhBkeFbDL3KTcNE=373">
+                                    <span>
+                                        <strong>About a quarter million Comcast subscribers had their data stolen from debt collector (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Comcast revealed that data on over 200K customers was stolen in February in a ransomware attack on its former debt collector, FBCS. The company learned in July that customer information was compromised, including names, addresses, SSNs, and account details from around 2021.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Strategies &amp; Tactics</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FIUozm5/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/HMzS5my5oXAmmHLm7crMKRnfIT_stY9Z8ZVybpTOF9M=373">
+                                    <span>
+                                        <strong>To catch a predator admin: the power of OSINT (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This blog post describes an investigation using OSINT tools that uncovered a disturbing online CSAM marketplace run by 'JoeHaze'. Despite challenges with law enforcement response, efforts were made to gather evidence and report the predator to authorities for further action. The importance of protecting children from online predators was emphasized throughout the investigation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdangerzone.rocks%2Fnews%2F2024-09-23-gvisor%2F%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/Mard6vXTisDYcEpdinUTyGI8lC0xKZArmMGlVg6IchQ=373">
+                                    <span>
+                                        <strong>Safe Ride into the Dangerzone: Reducing Attack Surface with gVisor (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Dangerzone is a software that sanitizes potentially risky documents by detonating them in a container, creating a pixel map of the document, then converting that image back to a document. Prior to version 0.7.0, Dangerzone relied on Linux containers that are hardened via removing process and network capabilities, minimal user ID mapping, and syscall filtering via seccomp. To address gaps in its security posture, Dangerzone integrated with gVisor, which is an application kernel that has minimal privileges. To enable multiplatform support, Dangerzone implemented a nested container strategy where the outer container runs as a compatibility layer and the inner layer runs the gVisor and Dangerzone logic.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fa3d7Lc/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/5zGTP-tVRED__kbFlVVHTGaqXSwrw1xRLGPv7MwfG-4=373">
+                                    <span>
+                                        <strong>Prioritizing Detection Engineering (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Detection Engineering is a concept that emphasizes the importance of managing the workload and complexity of a detection stack. Prioritizing detection projects involves focusing on foundational steps, collaborating on high-quality detections, and managing the work involved in detection engineering. By intentionally addressing operational management challenges and avoiding premature staffing, a successful detection program can be developed with thoughtful planning and strategic implementation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftheanchorgroup.swoogo.com%2Fdevseccon%2F5954645%3Fref=hackernews%26utm_medium=em-pa%26utm_source=hackernews%26utm_content=events_241008_devseccon%26utm_campaign=dm_pp-hackernews-240927_241008_devseccon/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/82kdL3j2Cn3k57PtvyB8DVGnligc3JqsLu_SY41njIY=373">
+                                    <span>
+                                        <strong>🆓 Last chance to be part of Snyk's DevSecCon 2024 Oct 8-9! (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Don't miss out on your chance to register for DevSecCon 2024! From the exciting lineup of 20+ sessions, here's one that you can't skip: <strong>Ali Diamond, from Hak5: "I'm A Software Engineer, and I Have to Make Bad Security Decisions—why?" </strong><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftheanchorgroup.swoogo.com%2Fdevseccon%2F5954645%3Fref=hackernews%26utm_medium=em-pa%26utm_source=hackernews%26utm_content=events_241008_devseccon%26utm_campaign=dm_pp-hackernews-240927_241008_devseccon/2/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/Fq-2g7nd50rB1gepuKNxPMpcxSA2UO81K-MUpxuztQA=373" rel="noopener noreferrer nofollow" target="_blank"><span>Save your spot!</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fhaveibeensquatted%2Ftwistrs%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/Xhao_c9QrSHdP3yiwrKym6ZbzoJEOnfTdwETGclu6Ww=373">
+                                    <span>
+                                        <strong>Twistrs (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A domain name permutation and enumeration library powered by Rust.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.apono.io%2F%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/G8hWjizO4Y4Pj223e_69sFWxpdyl8TpEohtoYll7oig=373">
+                                    <span>
+                                        <strong>Apono (Product Launch)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Apono provides organizations with an understanding of privileged access within their cloud environments, enforces robust security guardrails, and leverages AI-driven least privilege and anomaly detection capabilities to enhance security measures.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fnianticlabs%2Fvenator%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/EFwDdxSIatrBgF-YyJ9x095dyDf0yUG8yNrs2aFijVI=373">
+                                    <span>
+                                        <strong>Venator (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Venator is an open-source threat detection platform that simplifies rule management and deployment using K8S CronJobs or Helm. It can also be run standalone or with other job schedulers like Nomad.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fx6sFjF/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/0ezZZWByeW27ie831805l6n15YwbmBor6xyuJR4MN4s=373">
+                                    <span>
+                                        <strong>Ryanair flight booking practices catch eye of EU privacy watchdog (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ireland's Data Protection Commission launched an inquiry into Ryanair's customer verification process, focusing on its use of facial recognition technology and biometric data. The investigation stems from complaints about additional ID checks for third-party bookings.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.darkreading.com%2Fvulnerabilities-threats%2Fmanufacturers-ransomwares-biggest-target%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/VY-i_XV2hGMiv4KGn-3CU3I7WxpNi3u-69nMntieWT8=373">
+                                    <span>
+                                        <strong>Manufacturers Rank as Ransomware's Biggest Target (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The manufacturing industry has become the top target for ransomware attacks, accounting for 21% of incidents. A study by Black Kite reveals that 80% of manufacturing companies have critical vulnerabilities, with 67% listed in CISA's Known Exploited Vulnerabilities catalog.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpulse.latio.tech%2Fp%2Fwhat-do-i-think-about-wiz-code%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/rueAP-jf5LiugeFUIBiwNVnShDxZh38ZAHLFRcZ7J4c=373">
+                                    <span>
+                                        <strong>What Do I Think About Wiz Code? (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This post contextualizes Wiz's new AppSec offerings via Wiz Code within Wiz's product line and the CNAPP and ASPM industries. Wiz Code offers SCA, secrets scanning, and IaC scanning, which largely already existed via the WizCLI, but with Code the UX is tied together more succinctly and scanning can be done via a GitHub integration (pipelineless). Wiz Code is a nice add on for Wiz customers and shows promise for the CNAPP space but lags behind full ASPM providers or industry leading AppSec products.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.bleepingcomputer.com%2Fnews%2Fsecurity%2Fuk-nuclear-site-sellafield-fined-440-000-for-cybersecurity-shortfalls%2F%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/aE03jEbKryg1Q1kV0CMEkbkKlojeVJfcIMWX-DvOw2s=373">
+                                    <span>
+                                        <strong>UK nuclear site Sellafield fined $440,000 for cybersecurity shortfalls (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Sellafield, a UK nuclear site, was fined $440,000 for cybersecurity failures that exposed sensitive information.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsecurityaffairs.com%2F169362%2Fsecurity%2Fgoogle-removed-kaspersky-apps-from-the-play-store.html%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/L7Bp1wSGzkBZRVriCFvxVSSxoiZc8ITr5czk33uUkMI=373">
+                                    <span>
+                                        <strong>Google removed Kaspersky's security apps from the Play Store (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Google removed Kaspersky's security apps from the Play Store and suspended its developer accounts due to restrictions imposed by the U.S. Department of Commerce.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsecurityaffairs.com%2F169460%2Fapt%2Fsalt-typhoon-hacked-us-broadband-providers.html%3Futm_source=tldrinfosec/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/_3g0LiCFJuf3H-EJaNuQVYcZDc3PwTNQ7-wH0yMUZHA=373">
+                                    <span>
+                                        <strong>China-linked group Salt Typhoon hacked US broadband providers and breached wiretap systems (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A group linked to China, called Salt Typhoon, hacked U.S. broadband providers like Verizon and AT&amp;T, potentially accessing systems for lawful wiretapping.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F9c8a806a%2F8/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/WWals6T5vEToLwnIl8WeDCN5xxcPuR9GpBT9Gig3KeA=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/9c8a806a/8</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_14d48d82f243%2F8/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/8dvGB0U37pjCOrazfXFH4Nua1dl2Z7uKUX8UjjNd8zE=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of cybersecurity professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrinfosec%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/LIB0ACmRxLM9Cs3X-gm94xPRNYIoMtJJsMqMSpJp1J0=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Prasanna Gautam</span>, <span>Eric Fernandez</span> &amp; <span>Sammy Tbeile</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Information Security, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=8d9cea11-3e94-11ed-9a32-0241b9615763%26lc=2b075d86-819a-11ef-84b1-b1a3fea1c8b1%26p=21a52470-848e-11ef-957c-297d8e9da678%26pt=campaign%26pv=4%26spa=1728306058%26t=1728306297%26s=ff71081cf5a189415008e674b3285585aeff6db48e99b414579f67c65cd61adc/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/ojvzGSJOdnpAloI7d1i3xXeog-Bw1ZPXNDAUYO8rv2w=373">unsubscribe from TLDR Information Security</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Finfosec%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/GyPgCnL5qHmZO5vIBhg4F6Q4Nvol6iRKSjLPwzirB3Y=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019267153b79-f68d4f29-802a-41ec-999c-484bbb72882f-000000/Pzq0112-yplmMxqsdC50qB-1atCkx1D6roJ21gXY14A=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

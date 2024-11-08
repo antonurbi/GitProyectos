@@ -1,0 +1,662 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">WP Engine has sued Automattic and WordPress founder Matt Mullenweg for libel, slander, attempted extortion, unfair competition, and more.&nbsp;</div>
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/zdDk_KMKHXZovUKEjw0v8OM6aZ1I0eKcFdZctJB0MYE=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Q-2mCMAI8CyygEhAipiYDEXfDCvbseLxbOtAR-0XvJ8=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=00e48c78-8153-11ef-9445-49aee256bd4a%26pt=campaign%26t=1727953490%26s=81788fb9fe48d4c994b6670d2da3f82eaecafdd67b3dd9426cf06a9e6759452f/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/XMZNoHQWFO6YfwbM9GgnSH9BB8xw9O9ebxzW0J6oiyg=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fbuilder-day-2024-announcements%3Futm_medium=native%26utm_source=newsletter%26utm_campaign=2024-q4-pay-gbl-developers-dp-ge-general-tldr_webdev_1_093024/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Hxr4ZFI8d5nfdlTSdnYmxgAsoVs2MPH2m6iBc64gcvc=373"><img src="https://images.tldr.tech/cloudflare.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Cloudflare"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-03</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fbuilder-day-2024-announcements%3Futm_medium=native%26utm_source=newsletter%26utm_campaign=2024-q4-pay-gbl-developers-dp-ge-general-tldr_webdev_1_093024/2/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/mLI3EVM7w2Sqxa_zfauzlufIkVdW5nDeSu4JFAn7da0=373">
+                                    <span>
+                                        <strong>🎂&nbsp;Celebrate Cloudflare's 14th birthday with <em>a lot</em> of new features (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnewyork.camundacon.com%2Fpage%2F3899887%2Ftickets%3Futm_medium=paid_leadgen%26utm_source=tldr%26utm_campaign=CamundaCon.NA.24Q4.Oct/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/KCUMfXSTbZsLlLRWMCvdORvDk38ACWb1pA5oa_LoZnE=373" target="_blank"><span><strong>In celebration of its 14th Birthday Week, Cloudflare has recently announced loads of new </strong></span></a><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FQdlxh8/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/TeFl8qs2nYCk5BU2KXFABDbCrLyjJ4xHM0uw_1JkbgE=373" target="_blank"><span>developer platform</span></a> <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.cloudflare.com%2Fbuilder-day-2024-announcements%3Futm_medium=native%26utm_source=newsletter%26utm_campaign=2024-q4-pay-gbl-developers-dp-ge-general-tldr_webdev_1_093024/3/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/E5SHB8SoK8v5oLhJI62_LsmAZ8TRfo91h4vnVNqUMkc=373" target="_blank"><span>product updates</span></a>:
+
+<p></p>
+
+<p>⚙️&nbsp;Queues, Calls TURN server,&nbsp;and Vectorize are now generally available</p>
+
+<p>🖼️&nbsp;More for free: 5000 free image transformations a month for all accounts, free tier for Vectorize, and more</p>
+
+<p>🏃&nbsp;Speed improvements for Workers KV and Workers AI</p>
+
+<p>✏️&nbsp;AI Gateway enhances AI App monitoring with persistent logs of user prompts and AI responses</p>
+
+<p>🏎️&nbsp;Zero-latency SQLite storage in every Durable Object</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FuaPQXs/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/S6_QqbCRizP5UW4DrF8mI4Fh9X_dvr2oSzTOzhYNBZI=373" target="_blank"><span>Get started on Cloudflare</span></a> — the one-stop spot for building, optimizing, and securing your websites.
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FhSr9Ko/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/l-C3S_gFDB2vI922XvV3FqXJibfYXdJGTHTx5nCXodU=373">
+                                    <span>
+                                        <strong>The hardest bug investigation of my career and the insane code that caused it (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A weird bug in an augmented reality system caused disorienting visual glitches and interestingly, only happened every Wednesday. After an extensive, months-long investigation involving robotic arms, lasers, and a high-FPS camera, the root cause turned out to be due to a time-translation hack using day-of-week words in German and English neglecting to account for the German word for Wednesday, "Mittwoch." This oversight led to timestamp discrepancies, resulting in the weekly glitches and an unpredictable error correction mechanism.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjimmyhmiller.github.io%2Fugliest-beautiful-codebase%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Cy8ahZcR8nRu2MBWw1k39l__4bNEranUUmLIRGFl-iQ=373">
+                                    <span>
+                                        <strong>"We ran out of columns" - The best, worst codebase (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is the story of a massive, poorly designed legacy codebase with a chaotic database structure, including a table with a single column and row used for generating IDs and a manually-updated calendar table. The codebase itself was a mishmash of technologies, with a mix of VB and C#, various JavaScript frameworks, and even a shipping manager built in a weekend by a lone developer. Despite its flaws, developers found the chaotic nature of the system freeing, as they were forced to create isolated, independent solutions within the larger mess.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.zachdaniel.dev%2Fp%2Fserialization-is-the-secret%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/6sWVoOqxYB5KqcaCw2mA0_moxWVAc2tKwzRnij_icUk=373">
+                                    <span>
+                                        <strong>Serialization is the Secret (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    JavaScript is a mutable programming language, while Elixir leans towards immutability. While both languages appear to have similar variable assignment behavior, Elixir achieves this through "rebinding," creating new variables with new values instead of mutating existing ones. This immutable approach, along with Elixir's process-based concurrency, eliminates the possibility of race conditions and unexpected state changes that are common in mutable languages.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Feaftan.github.io%2Fhash-ordering%2F%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/nkMFFCcFfOwlQRtpWQ3CpsDlmtyVHMDAXMKhZlQsv6w=373">
+                                    <span>
+                                        <strong>Hash ordering and Hyrum's Law (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Hyrum's Law states that any observable behavior in a system, even if undocumented, will be relied upon by some users. This has massive consequences, especially during large-scale migrations, as users might depend on seemingly insignificant details like hash iteration order. One example is the iteration order of hash tables in Java, which is technically unspecified but often remains stable for years. This can lead to users inadvertently writing code that depends on the order, causing problems during Java version upgrades.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fread.engineerscodex.com%2Fp%2Fgood-programmers-worry-about-data%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/q3GsecJV12j5Dfc0dbGEGBZUgSCRAvwk8bzjVJ14pqk=373">
+                                    <span>
+                                        <strong>Good programmers worry about data structures and their relationships (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Linus Torvalds (the creator of Git and Linux) says that data structures are more important than code in software development since good data structures lead to better code design and maintainability. This developer supports this view with personal experience, describing how restructuring data in a project allowed a team to move faster in the long run. The prioritization is also how Git grew to be the dominant version control system.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fshiftmag.dev%2Fperformance-management-for-engineers-4283%2F%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/e0-uteRhe2dtoZJWSi4VtB82O-bFlb5RAZd69TWhOK0=373">
+                                    <span>
+                                        <strong>Healthy Performance Management for Engineers? It's Possible! (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Traditional performance reviews can be ineffective for engineering roles. Instead, a better way to manage performance is by setting clear expectations while also being dynamic, since the nature of development is always changing.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnewyork.camundacon.com%2Fpage%2F3899887%2Ftickets%3Futm_medium=paid_leadgen%26utm_source=tldr%26utm_campaign=CamundaCon.NA.24Q4.Oct/2/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/VTSdD7N6SeBhTmCyHtM-fBVDR3nMBBVBftQixCDpq9o=373">
+                                    <span>
+                                        <strong>Free virtual tickets to CamundaCon NYC, the annual process orchestration conference (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.enterprise-ready.com%3Futm_medium=newsletter%26utm_source=tldr-tech%26utm_campaign=20241003/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/8MJUS4xZ6aOG-R45Z0dY_s4u-BemoBQSxNVoBzx2E7A=373" target="_blank"><span><strong>If you're into automation — as a software developer, architect, or digital transformation expert — you don't want to miss </strong></span></a><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnewyork.camundacon.com%2Fpage%2F4152456%2Fvirtual-only%3Futm_campaign=CamundaCon.NA.24Q4.Oct%26utm_medium=paid_leadgen%26utm_source=tldr/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/L-t194La9_PvYP6IR1eoBnL4GWwYps20FaQIKoiydIA=373" target="_blank"><span>CamundaCon</span></a>. Level up in technical sessions and business talks (including speakers from Gartner, Forrester, Capital One, and Walmart) and get new ideas for your automation projects. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnewyork.camundacon.com%2Fpage%2F4152456%2Fvirtual-only%3Futm_campaign=CamundaCon.NA.24Q4.Oct%26utm_medium=paid_leadgen%26utm_source=tldr/2/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/YpUNrcxJIjqg77cvEAH-hnbIhNsWIA57Ri9fMz9wl2E=373" target="_blank"><span>Join virtually for $0</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fvictorqribeiro%2FTinyJS%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/vwqTwoogBjV0bb9vhXs6ckaUQtZYkBLUYwxMiTP3aV0=373">
+                                    <span>
+                                        <strong>TinyJS (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    TinyJS is a JavaScript library for dynamically creating HTML elements with deep property assignment. It makes DOM manipulation easier by allowing you to generate standard HTML tags programmatically, apply properties, append content, and select DOM elements.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FdimdenGD%2Fultimate-express%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/QrrdI0XBdHpEFK7RMS8DZm3zOyuuHor5P_217opxM1w=373">
+                                    <span>
+                                        <strong>Ultimate Express (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ultimate Express is a drop-in replacement for Express.js that offers faster performance using µWebSockets while maintaining full Express compatibility.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjustine.lol%2Fmutex%2F%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Z4H-iq6BaIYeILgJ68RTDNZEKp0PAveelYlkR1dzNP0=373">
+                                    <span>
+                                        <strong>The Fastest Mutexes (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cosmopolitan Libc's new mutex implementation is much faster than other popular libraries. One of the secrets behind the implementation is nsync, a C library written by a distinguished engineer at Google.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fneurelo.substack.com%2Fp%2Fin-the-land-of-llms-can-we-do-better%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/C8fTLQsdVcXRpsCbzyt2bFClZDILl-Ulp_-ZKrspxNA=373">
+                                    <span>
+                                        <strong>In the land of LLMs, can we do better mock data generation? (16 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Using LLMs to generate mock data has proven to be much harder than expected. A team explored using LLMs to generate Rust code for dynamic INSERT queries for their database platform, but found the generated code bad. Eventually, the team developed a hybrid approach, using LLMs to predict faker (Python package) methods for data generation while using topological sorting for accurate insertion order.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FExpensify%2FApp%2Fblob%2Fmain%2FcontributingGuides%2FOFFLINE_UX.md%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/0fs2HVK3ttej8qidxaVHrHcy0zKsxvg2UMIYQNvzTaE=373">
+                                    <span>
+                                        <strong>Offline UX Patterns (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Expensify's offline UX patterns prioritize "optimistic responses," assuming API requests will succeed when the user is back online and allowing them to proceed as if the action is complete. These responses can be incorporated with or without feedback, where the user is either aware or not aware that a request is pending and/or sent.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2F8chananon.github.io%2Ftut%2Fscraping1.html%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/6RFy_-mz5Jw8Z2_bNS5cWLnr4Q3u77ypcBIni69-_PU=373">
+                                    <span>
+                                        <strong>Web Scraping with your Web Browser: Why Not? (13 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Web scraping can be effectively done directly within a web browser, despite the widespread reliance on Python and other external tools. While limitations like CORS restrictions exist, they can be overcome with the use of proxy servers. This article shows a simple web scraper built entirely within a web browser using just a few lines of JavaScript code.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fkettanaito.com%2Fblog%2Fdont-sleep-on-abort-controller%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/1JEPTAPAh5gq6nroYbZXuXj-NRs7ySrntN9xoGKecWI=373">
+                                    <span>
+                                        <strong>Don't Sleep on AbortController (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    AbortController is a JavaScript API that allows you to abort various operations like network requests, event listeners, and streams in a clean way.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwpengine.com%2Fwp-content%2Fuploads%2F2024%2F10%2FComplaint-WP-Engine-v-Automattic-et-al.pdf%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/gyin-27WlCjtFNNaY1i5_9P5qu5hDDZTpkFR7ZWt93Y=373">
+                                    <span>
+                                        <strong>WP Engine sues Automattic and WordPress Founder (62 page PDF)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    WP Engine has sued Automattic and WordPress founder Matt Mullenweg for libel, slander, attempted extortion, unfair competition, and more.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.pixelstech.net%2Farticle%2F1727412048-Why-TCP-needs-3-handshakes%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Qqqs8ZiimDI3HKQYTFdb04iWqxbHruwzXxAZv8M1-7U=373">
+                                    <span>
+                                        <strong>Why TCP needs 3 handshakes (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    TCP requires three handshakes to establish a connection because it makes sure both parties confirm their ability to send and receive data.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmonsterlessons-academy.com%2Fposts%2Fangular-routing-essentials-all-you-need-to-know-in-one-post%3Futm_source=tldrwebdev/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/YynAlAQKIdIzPKYLMsQpuQ8xLj1qZbLDkvxgl_SxGeE=373">
+                                    <span>
+                                        <strong>Angular Routing Essentials: All You Need to Know in One Post (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A comprehensive guide to Angular Routing that covers essential concepts like defining routes, links, and outlets and advanced features like data resolvers and route protection.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fbc5a1ded%2F3/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/SfCYdlTe7XWnALsHkCpfBYKOokXMdxUjYxv5ybzWIbM=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/bc5a1ded/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_8f457ba37209%2F3/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/LiT6cD70mUyj8N1-MijrIESsjFAHaaDwA6LmFf-r6G0=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/Z-3u6pZpNPC334TLf_eEjRrSrdFSGh1iVfPyeIECLHs=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=00e48c78-8153-11ef-9445-49aee256bd4a%26pt=campaign%26pv=4%26spa=1727953254%26t=1727953490%26s=4b74ba4a18b0961a3d1e0beff7283f457db1efd150ff968bd1fc100f182eb3e8/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/G8vRmQlb_jPsnbyxBbf1d-hXX7xGZzK1fYWDhhV81Ik=373">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=antonurbistondo%2540gmail.com/1/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/GmFZryf6XJtwetAsLcBOJPGzIpxOwSVteD1ZsCv1IfE=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192520dd1c7-3b808955-5b6c-4886-be0e-b362f3c5de25-000000/mOEx99o6xjcFd8RkujoXkpaP5AfX6JyOLl87Wi2efrc=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

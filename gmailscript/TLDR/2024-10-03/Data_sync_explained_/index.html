@@ -1,0 +1,653 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">React Query tackles the challenge of data synchronization by keeping the data displayed on the screen up-to-date with the server state.&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/4cdnbrG0p5wFDR92sI01p_e5pzqBev-ex901Q3cy6fM=372" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/81aQqfnZFyKgCCalL-fo6322ZUnepRxkQmMX_QLvtxE=372" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=fcfe83ce-7fc3-11ef-8e6a-4355e2233c82%26pt=campaign%26t=1727780728%26s=c22cbc57a60ba9db0358f90a99e6ba0bdb49d66db58527eca0b49301a8bf3369/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/LjHGQyivzvc6LySjYzok557ZVMxt-_WcGK-DX-b4V2M=372"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/d1CZmurabOMIcu1WrJzpEmQcMXyn6xUhdh00EcC5rm4=372"><img src="https://images.tldr.tech/speakeasy.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Speakeasy"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-01</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/2/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/nc_YSnbBDPHPa042JbQBH076oEKnLDQ4I-YyqAoExV0=372">
+                                    <span>
+                                        <strong>Generate handwritten SDKs (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    🤔 Invest hundreds of hours your team doesn't have in maintaining SDKs by hand…<p></p><p>🤨 …or generate half-baked SDKs that leave a bad taste in your users' mouths?</p><p>Those are two bad options.</p><p>Fortunately, you have a third choice…</p><p>😍 Use <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/3/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/ZdJRSju8b6oyjw-u64BwdOaPT14CD6N-cZ7iUdOQHtQ=372" rel="noopener noreferrer nofollow" target="_blank"><span>Speakeasy</span></a> to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/4/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/eGb60VDwarlnyRW0N5iBPJGYHk0M1gXkfQ_Rv2H8Trs=372" rel="noopener noreferrer nofollow" target="_blank"><span>generate ergonomic, type-safe SDKs in over 10 languages</span></a>.</p>
+
+<p>Speakeasy's generator is designed based on input from language experts, so it gets the details and the nuances just right.</p>
+
+<p>Build SDKs that your team is proud of, and that other developers rave about. Add OAuth2.0, custom code, retries, pagination and more.</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/5/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/cYhnTxB39u5N2_OKs6T59AvsjQrzGwzPtjtDBTDMSp8=372" rel="noopener noreferrer nofollow" target="_blank"><span>Upload your OpenAPI spec to get started</span></a> ↗️
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fngrok.com%2Fblog-post%2Fhow-we-built-ngroks-data-platform%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/qkrG4bftfyKk9NiHRMfRSlNwvWtiku2mXAkS7JNn2bk=372">
+                                    <span>
+                                        <strong>How we built ngrok's data platform (23 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ngrok built its data platform with an engineering team of just one person, using open-source tools and self-hosting on Kubernetes. They had challenges like complex schemas and large data volumes, which were addressed through code generation, schema normalization, and scaling Apache Flink with Protobuf messages.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fui.dev%2Fc%2Fquery%2Fdata-synchronization%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/bcNSE-AMVsbofLwaxMrId7DqXlntitzKv-NH9maaZxA=372">
+                                    <span>
+                                        <strong>Data Synchronization (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    React Query tackles the challenge of data synchronization by keeping the data displayed on the screen up-to-date with the server state. It uses a "Stale While Revalidate" strategy, where data is considered stale by default and refetched in the background when triggers like changes in query keys, new component mounts, window focus, or device going online occur. This allows for a smooth user experience with instant data delivery while still making sure the cache stays synchronized with the server.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.marginalia.nu%2Flog%2Fa_111_phrase_matching%2F%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/L4dlM7mI6ElboIMVFi6GOagPbqVz0FnAlk1D36qSHjk=372">
+                                    <span>
+                                        <strong>Phrase Matching in Marginalia Search (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A search engine added phrase matching by transitioning from approximate word position storage to storing precise positions using compressed lists. This change required implementing a new way to store information about word occurrences within different document fields. The ranking algorithm was upgraded to take advantage of the new phrase matching capabilities, incorporating factors like phrase presence, keyword distance, and early occurrence.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fpaulgraham.com%2Fwhen.html%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/7m4Y91QQDNHPFvLioHfnNLYfm7k6wvCUUSqTJdFt-sA=372">
+                                    <span>
+                                        <strong>When To Do What You Love (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    If your main goal is to make money, you may have to compromise on your passion, as most people pay you for what they want, not what you want. However, if you are passionate about something that is also in high demand, like a niche market, you can potentially earn a living from it. Building a startup can be a viable option here, but mostly if it arises from your own passions and interests.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgrugbrain.dev%2F%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/HapsZUdP7IH5LdPg_L5JYNT3IEKjUbZtKKCH-RkCDBs=372">
+                                    <span>
+                                        <strong>The Grug Brained Developer (24 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is a list of various pieces of advice on writing good software. For example, good devs fight against complexity, say "no" to unnecessary features, and embrace simple solutions. They are also patient and refactor thoughtfully.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.botbarrier.com%2Fpublic%2Farticles%2Fdont-be-afraid-to-reinvent-the-wheel.html%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/cDXtrNeF6K-hyYrNiYXdwLfRkvQllaIhzCxfakmlWPw=372">
+                                    <span>
+                                        <strong>Don't be Afraid to Re-Invent the Wheel (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Relying heavily on external codebases can create risks like security vulnerabilities, dependence on third-party maintenance, and ongoing integration work. It's fine to sometimes replicate external code from packages in internal codebases because this gives developers better control and security over that code.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.datadoghq.com%2Fresources%2Ffrontend-developer-kit%2F%3Futm_source=tldrnewsletter%26utm_medium=newsletter%26utm_campaign=dg-coreplatform-ww-frontend-kit-webdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/RXpcj6GYPihEh5sWcQYlAmpW_Qezd0Kv5cxJ2jHxztU=372">
+                                    <span>
+                                        <strong>The Front-end Developer Kit (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.datadoghq.com%2Fresources%2Ffrontend-developer-kit%2F%3Futm_source=tldrnewsletter%26utm_medium=newsletter%26utm_campaign=dg-coreplatform-ww-frontend-kit-webdev/2/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/jsfMF1ljPtKG52IZIBD6kn7aLAweOmPXyN_hrNNGmOk=372" rel="noopener noreferrer nofollow" target="_blank"><span>collection of Datadog resources</span></a> is worth a bookmark for any front-end developer (or anyone who finds themselves doing front-end work). It includes a technical best practices guide, a solutions brief on catching and resolving issues proactively, and a popular recorded webinar on how to better monitor and optimize front-end apps. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.datadoghq.com%2Fresources%2Ffrontend-developer-kit%2F%3Futm_source=tldrnewsletter%26utm_medium=newsletter%26utm_campaign=dg-coreplatform-ww-frontend-kit-webdev/3/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/9HVNm3NjdndPu_jbuwLjtrapq3W4Qmg-4HtDNJHb3p0=372" rel="noopener noreferrer nofollow" target="_blank"><span>Access all resources here</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fjehna%2Fhumanify%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/LoXLMDWhmWVsE7fgGWTxvlzrIB9bS1sYV63W-foyq24=372">
+                                    <span>
+                                        <strong>HumanifyJS (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    HumanifyJS is a tool that uses LLMs and Babel to deobfuscate, unminify, transpile, decompile, and unpack JavaScript code, making it more readable for humans.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fyellow-footed-honeyguide%2Ffacad%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/Om29CcLpOMiKqhmlk4U4XWh5HOISnx44_fWCJ7bHzm4=372">
+                                    <span>
+                                        <strong>Facad (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Facad is a colorful directory listing tool for the command line that features emoji-based file and directory icons, sorted output, support for symlinks and executables, and customizable column width.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FEvolutionAPI%2Fevolution-api%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/kWigY7DA_3U3DFc1yQHWfRcdFm4ZtH5y7mfyw1CCy-A=372">
+                                    <span>
+                                        <strong>Evolution API (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    EvolutionAPI is an open-source WhatsApp integration API that provides a RESTful API service for controlling WhatsApp functions, allowing users to create multiservice chats, service bots, and other systems utilizing WhatsApp.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbenn.substack.com%2Fp%2Fdo-ai-companies-work%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/JUIGjU212_BnvBoWY8JjCQfpI5PTL4VI2pMJsD2AFbM=372">
+                                    <span>
+                                        <strong>Do AI companies work? (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    AI companies face economic challenges due to the high costs of building and maintaining models. As newer and more advanced LLMs emerge, older ones quickly become obsolete, making it easy for a company to be left behind. Now, companies must either spend enormous amounts of money to stay ahead or risk falling behind and losing market share.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2Fpolicy%2F2024%2F9%2F30%2F24256395%2Fepic-sues-google-samsung-antitrust-auto-blocker%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/w--5Ye10WRdBX5FjG39I7opOe37bdmPZyXm1Tc3nTlQ=372">
+                                    <span>
+                                        <strong>Epic is suing Google — again — and now Samsung, too (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Epic Games is suing Google and Samsung. The lawsuit focuses on Samsung's "Auto Blocker" feature, which makes it difficult for users to install apps from third-party stores. Epic argues that Auto Blocker is designed to protect Google and Samsung's app stores, not users, and that it is blocking the growth of the Epic Games Store.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.sequinstream.com%2Fat-most-once-at-least-once-and-exactly-once-delivery%2F%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/YD-g9n7S33JsTN2RAzhxkKzUW8ZLHyqp78yVSgtwgCc=372">
+                                    <span>
+                                        <strong>No such thing as exactly-once delivery (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The difference between delivery and processing in messaging systems is that delivery refers to the act of successfully transferring a message to a receiver, while processing covers the entire message lifecycle, including delivery, processing by the receiver, and acknowledgement. Sequin is a Postgres streaming library that prioritizes exactly-once processing by making sure that every message is delivered, processed, and acknowledged without duplication. Achieving exactly-once delivery is practically impossible due to the two-phase commit problem - confirming the simultaneous confirmation of message delivery across different locations.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwalzr.com%2Fbop-spotter%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/omQnpdpIqj7GiovBaBnwXnFJwvsOipAfxckJTv611hc=372">
+                                    <span>
+                                        <strong>Bop Spotter (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Bop Spotter is an experimental project that is using a modified Shazam app attached to a pole to monitor music trends in San Francisco's Mission district.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fverygood.ventures%2Fblog%2Fboring-code-part-1%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/XSaPyojO74zKcLIZf8QTzlqdU6Zg6iaB9CIrJTCE-Ic=372">
+                                    <span>
+                                        <strong>Are you saying that my code is boring? Thank you! (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    “Boring” code is the best kind of code because it allows teams to focus on solving business problems without the distraction of technical complexities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.ru.nl%2Fen%2Fresearch%2Fresearch-news%2Fdont-believe-the-hype-agi-is-far-from-inevitable%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/KjA3NZdtjg763DTncqtxPV_6qiKY63PZofUxwEwdUcU=372">
+                                    <span>
+                                        <strong>Don't believe the hype: AGI is far from inevitable (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Despite claims from large tech companies, achieving artificial general intelligence (AGI) with human-level cognition is still far away due to the need of both further improvements in AI along with more compute power.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Funfashionable.blog%2Fp%2Fyc%2F%3Futm_source=tldrwebdev/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/TPzpE4H7AzYwyvYavGzlyYnhgtqElYvI7ZS-1KiBODw=372">
+                                    <span>
+                                        <strong>Y Combinator Traded Prestige for Growth (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Y Combinator is experiencing a decline due to its overemphasis on growth over prestige.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fbc5a1ded%2F3/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/KG2UfJ46qPUhS1POn0oN7gRnaGQL8oqwH9WDpoc0OoM=372" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/bc5a1ded/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_8f457ba37209%2F3/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/VXngkh6wevkZyKnZaSFdkP7_DkNQI_Di6qJIOQzCTwY=372" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/15k29i8Y00JDGOUaAci98gyW8lps0lvcWh7oDvUuFic=372"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=0e28358c-f0aa-11ed-aebe-778a2a7aabea%26p=fcfe83ce-7fc3-11ef-8e6a-4355e2233c82%26pt=campaign%26pv=4%26spa=1727780488%26t=1727780728%26s=6afa5429ed9a9becaac5c30ee2f5559f3ca7a3824a864926e3ebb09d905b0f9f/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/VnyYC-tSbUNdI6gRPQ3DAuDAEHXwas5HYCH-i9Ib2g0=372">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=antonurbistondo%2540gmail.com/1/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/9UxhNJfjMouxHUipO9h34HSrQ_NKQpNSp_Bm_Wk_qyA=372">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019247c1b038-6b129473-1e62-4c0d-baf6-35b80fd4d267-000000/Ik_dlKj5RxCxcNdTV5_2BeQp0cOR_LUExS2j82XzD6I=372" style="display: none; width: 1px; height: 1px;">
+</body></html>

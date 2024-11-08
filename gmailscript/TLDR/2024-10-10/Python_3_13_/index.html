@@ -1,0 +1,536 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR DevOps</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Python 3.13 introduces a new interactive interpreter, experimental free-threaded mode (PEP 703), and a Just-In-Time compiler (PEP 744).&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/1d2tIKgNdOdnjVAr2gqmAqAohWURK85CQZAdZsg4P-Q=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/-DaxSaEONeETpiRVr9DlKwoRVngooeyBd0Q3169dm4Y=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=48dc791e-8617-11ef-8c9e-777c05753f9e%26pt=campaign%26t=1728472431%26s=b4ab7d3dd206f7880e2b0ad2b38377f520fc0f6f20ed3dd3d925c9102744e193/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/6ADXj9ROD13ZkH8WitKo1bGfEXqRs7BvFHkbtSVHk4w=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span></td></tr></tbody></table>
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=9oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/OGmqSm4iBSVaszVdE4nKsKONysD19TZZcmSw0h9ekPA=374"><img src="https://images.tldr.tech/doit50.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="DoiT International"></a></td></tr></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR DevOps <span id="date">2024-10-09</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=9oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/2/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/xYxhLn6Ue_FosoDs6RMpw2DBlPVGZbVmhF8ET71urho=374">
+                                    <span>
+                                        <strong>🆓 O'Reilly's Cloud Native DevOps with Kubernetes (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Learn how to:<p></p><ul><li>Run applications on managed cloud Kubernetes or on-prem</li><li>Optimize clusters for cost and performance</li><li>Choose the best tools for developing, testing, and deploying your applications.</li></ul><p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=9oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/3/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/VyyfiSmPbnm8lwHZUtyV2CpCaDbyqB4oJq3WWcI8f7M=374" rel="noopener noreferrer nofollow" target="_blank"><span>Get the 2nd edition free (compliments of DoiT)</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdocs.python.org%2F3.13%2Fwhatsnew%2F3.13.html%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/BoP_dhHaihieM4hNdo8wkyeW-YHwomv3o8qnzyg2Ses=374">
+                                    <span>
+                                        <strong>What's New In Python 3.13 (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Python 3.13 introduces a new interactive interpreter, experimental free-threaded mode (PEP 703), and a Just-In-Time compiler (PEP 744). It also improves error messages with color-highlighted tracebacks and allows modifications to the locals() function. The update removes deprecated APIs and enhances type parameters with default values. For detailed information and migration guidance, refer to the official Python documentation and relevant PEPs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.infoq.com%2Fnews%2F2024%2F10%2Fvalkey-80-memory-efficiency%2F%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/a3w3QxoIKL_soEp8e7oYrWpL5ozkOkkupRjkYl-L3IY=374">
+                                    <span>
+                                        <strong>Valkey 8.0 Now GA with Improved Memory Efficiency (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The Linux Foundation released Valkey 8.0 a couple of weeks ago. It offers up to 20% more capacity than previous and maintains compatibility with Redis. Key improvements include per-slot dictionaries, a new multi-threaded architecture, and memory optimizations, boosting performance without breaking command syntax.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.docker.com%2Fblog%2Fdocker-best-practices-using-tags-and-labels-to-manage-docker-image-sprawl%2F%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/ktXToTR9g1alQLfIDZhUSzMb-LkNnXDPh24E0FH8LmQ=374">
+                                    <span>
+                                        <strong>Docker Best Practices: Using Tags and Labels to Manage Docker Image Sprawl (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Relying solely on the "latest" tag is misleading, as it doesn't guarantee you're pulling the most recent version. A better approach to managing Docker image sprawl is to use semantic versioning with tags and employ labels for tracking image metadata, ensuring clarity and consistency in identifying Docker images.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fengineeringblog.yelp.com%2F2024%2F10%2Fmigrating-from-postgres-to-mysql.html%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/DM-72FpYdUWT61zo6WMN-L4lMCa6l6HwaOFPoL2cudU=374">
+                                    <span>
+                                        <strong>Migrating in-place from PostgreSQL to MySQL (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    In a complex migration project, Yelp successfully transitioned its Reservations service from a PostgreSQL database to a Yelp-standard MySQL database, overcoming numerous technical challenges to ensure uninterrupted service for restaurant clients while ultimately benefiting from enhanced performance and support.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjerf.org%2Firi%2Fpost%2F2024%2Fnot_about_python%2F%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/KQOz8bQF84o5k5lE4B6dWex4vzbsWlWhI_qJkWz1fW0=374">
+                                    <span>
+                                        <strong>This Post Is Not About Python (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Python is slower compared to languages like C, especially when using complex features, and struggles with efficient multi-CPU usage. Despite these limitations, Python can still be effective for many projects due to its ease of use and the speed of modern hardware. Engineers need to choose the right tool for specific needs critically and without bias, avoiding favoritism that can lead to poor decision-making and project failures.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Resources &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fgrafana%2Fpromql-anomaly-detection%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/7VZkaxJhWQdJf2rSNGQXFtAIMhgXW1wDONrwG5ImAvs=374">
+                                    <span>
+                                        <strong>promql-anomaly-detection (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Framework for anomaly detection in time series data using Prometheus/PromQL.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fvisualsubnetcalc.com%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/YLX5HqHfuFRgRL4YuJijqibllLkOIzCd4QC-kjx-ilw=374">
+                                    <span>
+                                        <strong>Visual Subnet Calculator - Split/Join (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Effortlessly create and customize network layouts by splitting and joining subnets, adding notes and colors, and collaborating with others through a shareable link.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdreher.in%2Fblog%2Funprotected-container-registries%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/F4O7ATlK92zmu1YXC6Yulz-OLjQX5xP6hxkoe4Nd6_o=374">
+                                    <span>
+                                        <strong>Unprotected container registries (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Unprotected container registries pose a significant risk to cybersecurity, with over 10,000 still unsecured, exposing sensitive data to potential attackers. To combat this issue, organizations must enforce strict security measures, including authentication and regular audits, while the community should prioritize awareness and best practices in securing these vital resources.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdzone.com%2Farticles%2Faws-letsencrypt-lambda-why-i-wrote-a-custom-tls-provider-for-aws%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/5FdkTCKwbmYIJwny4PZXJ3zgRJZ8ujEJCQpAsI29BUY=374">
+                                    <span>
+                                        <strong>AWS LetsEncrypt Lambda – or Why I Wrote a Custom TLS Provider for AWS Using OpenTofu and Go (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This post discusses the limitations of using AWS Certificate Manager for certificates outside of AWS services and suggests LetsEncrypt as an alternative. It introduces a Lambda function that automates the issuance and renewal of LetsEncrypt certificates, which can be used with AWS services and stored in AWS Secrets Manager for other environments like EC2 instances.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.hashicorp.com%2Fresources%2Fthe-coldest-monday-with-a-1-million-cloud-bill-terraform-to-the-rescue%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/NU9lop6nqI2XADy7rMfDhfzlpd5DYzw_-D7kv1mrVx8=374">
+                                    <span>
+                                        <strong>The coldest Monday with a $1 million cloud bill: Terraform to the rescue (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A compromised service key led to a cryptomining attack at a startup that resulted in over $1 million in unexpected cloud costs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fcommunity.intersystems.com%2Fpost%2Febpf-cilium-fhir%25C2%25AE-star-wars-story%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/ujvk3U-NIH0oV8MQeDONGiysHGKuZGnGpGE0PGLvl8U=374">
+                                    <span>
+                                        <strong>eBPF - Cilium on FHIR® - A Star Wars Story (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Anakin Skywalker, now a new employee of the Galactic Empire, faces a critical moment after being severely injured on Mustafar, as he navigates galactic health systems powered by advanced FHIR technology for his emergent medical needs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.pulumi.com%2Fblog%2Fcloud-native-secret-management-with-pulumi-esc-and-external-secrets-operator%2F%3Futm_source=tldrdevops/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/x1Fvn6qi79yPvXeG8dOMP8qDwEhG2xid5B5BdDsw-Kk=374">
+                                    <span>
+                                        <strong>Pulumi ESC and External Secrets Operator: The Perfect Solution for Today's Cloud-Native Secret Management (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Pulumi ESC and External Secrets Operator enhance cloud-native secret management by securely managing and synchronizing sensitive data across Kubernetes clusters.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F6fb53e6a%2F10/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/GsG3ss4inb9WlPLKkDciqNskR7pTZA4GpFkD5aJSz3Q=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/6fb53e6a/10</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_bc421b592e23%2F10/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/RjSU0ZRmHx6DpU20MCPGBlELbniNVipFQGvon38lD3I=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a></td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of devops professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrdevops%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/lhTsikXTGNbl-Pw5mT5Vki13L7k5x_0GijrLLFH39qA=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Kunal Desai</span> &amp; <span>Martin Hauskrecht</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR DevOps, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=1c5ddf10-b6dc-11ed-a12f-33c00cd07e37%26lc=2b06d1f4-819a-11ef-b8fa-b3ad60f8f70a%26p=48dc791e-8617-11ef-8c9e-777c05753f9e%26pt=campaign%26pv=4%26spa=1728471651%26t=1728472431%26s=39b92547395c2fc7c2c1a5c3307d51fd8f50769b1250b4e7d8486e9f253ddcb2/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/fCmT1D88JRY9vRei-w29ktFxMVQfYWp3mRKSW4PoxkM=374">unsubscribe from TLDR DevOps</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdevops%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/-QisIxU1cQXbX4C7D_7N5Zt_r06gaWP7P3udN-Vuy-M=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019270fc3bfd-933d6961-834a-4463-bf62-c5a078b5a6aa-000000/HVLfr5lfmKFnWLgDILxyYocD-MO4yjDdo7RDpsxNb3s=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

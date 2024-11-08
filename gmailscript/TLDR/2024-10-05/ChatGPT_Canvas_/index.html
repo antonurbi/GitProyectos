@@ -1,0 +1,630 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display:none; font-size:0px; line-height:0px; max-height:0px; max-width:0px; opacity:0; overflow:hidden; visibility:hidden; mso-hide:all;">Canvas is a new interface for ChatGPT that allows users to collaborate with AI on writing and coding projects beyond simple chat.&nbsp;</div>
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/8c9MxivsjaFkCiUPdQh9UaWiu6TYpdTbrZtf8JaqVas=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/V3SRXPjuozWbJVX7n4HkChWk1znRpdC0Xhzhm_QnXpY=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=e8738704-8236-11ef-8fa9-2fcae64b3625%26pt=campaign%26t=1728040061%26s=53cacec27264782a6099d67e4710af776afbf952dafeb0c8fed866a4387d7395/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/Tww14HINX9OgBWeNNkqPDc0gh6TPv8VEAYfUVUnGEqU=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-04</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.robinwieruch.de%2Freact-component-types%2F%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/v7uvl79tKUnVItjIbkmBWOBU2PARdRYWlcfySBPFG9w=373">
+                                    <span>
+                                        <strong>Types of React Components [2024] (12 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This is a comprehensive overview of the different types of React components that have evolved since its release in 2013. It starts with older, now deprecated methods like createClass and Mixins, then transitions to Class Components, which were the industry standard before the introduction of Function Components with React Hooks. The article then focuses on the advantages of Function Components and React Hooks, before ending off with React Server Components (the latest addition to the React ecosystem).
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbuildui.com%2Fposts%2Fhow-to-control-a-react-component-with-the-url%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/puAV9vJaeyTYCMk68WalZfY73riCCUQA3tIcF6L0Nzw=373">
+                                    <span>
+                                        <strong>How to control a React component with the URL (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    React components can be controlled with the URL. An example is shown in this post where URL query parameters are used as the single source of truth for component state, making sure the component and URL stay in sync across different actions. The useSearchParams Next.js hook is used to read and update the URL parameters.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.mertcan.vercel.app%2Fcomprehensive-guide-to-nodejs-addons%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/bxA5PCNsI3zuAoRpc2ob5XDf6mJjvwZbtENlfg2S6R4=373">
+                                    <span>
+                                        <strong>A Comprehensive Guide to Node.js Addons (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Node.js addons are dynamic libraries written in C, C++, or Rust that enhance Node.js applications by providing access to system-level resources, improving performance, and integrating external native libraries with JavaScript code. They are useful for performance-critical tasks, interacting with hardware, and utilizing existing native libraries. These addons work by using the Node-API (N-API) to expose native functions to JavaScript, which are compiled into a binary file (.node) and loaded into the Node.js application.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fnews.ycombinator.com%2Fitem%3Fid=41731914%26utm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/0iHfCCSQmv0fSiwiIhjq2kssUcevGSMS2NoCYAa06Xw=373">
+                                    <span>
+                                        <strong>Ask HN: For those who can choose to go to the office, and go, why do you go? (Hacker News Thread)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Developers who choose to go into the office voluntarily value the social aspect of office work, finding it great for collaboration, mentorship, and maintaining mental health. Others appreciate the separation of work and home life, the structured environment, and the availability of better equipment and resources at the office.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmdalmijn.com%2Fp%2Fare-scrum-masters-too-much-overhead%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/krPYcIh8WX25_unqu8M1RBUq633A_gQ8Lkdheqzg5Vo=373">
+                                    <span>
+                                        <strong>Are Scrum Masters Too Much Overhead? (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Scrum Masters can be unnecessary overhead, especially in startups and scale-ups. Instead, Scrum should be a background process, allowing teams to focus on delivering value rather than adhering to strict Scrum practices.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fit-notes.dragas.net%2F2024%2F10%2F03%2Fi-solve-problems-eurobsdcon%2F%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/Oc5_8JUd_1iaiJaPXtW2HiP_oYZpvnjhrX3_pPEB7c0=373">
+                                    <span>
+                                        <strong>I Solve Problems (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A developer migrated many of his servers from Linux to BSDs due to their stability and reliability. He focuses on solving client problems effectively rather than selling specific technologies, which has led him to implement a variety of BSD solutions including OpenBSD for security, NetBSD for longevity, and FreeBSD with ZFS for performance and storage.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=4oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/TpEumMxK0samuw1JBqptxY1aKngyCccsII8GVrLJ9Gg=373">
+                                    <span>
+                                        <strong>🆓 O'Reilly Guide: Cloud Native DevOps with Kubernetes (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This updated second edition guides you through the growing <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=4oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/2/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/CXKJRX1LYi1PGt77Y6wPl6FJPCy3_x-5gtJBjthBov4=373" rel="noopener noreferrer nofollow" target="_blank"><span>Kubernetes ecosystem</span></a> and provides practical solutions to everyday problems. You'll walk through an example containerized application running in Kubernetes step-by-step, from the development environment through the continuous deployment pipeline, exploring patterns you can use for your own applications. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fresources.doit.com%2FCloud_Native_DevOps_with_Kubernetes%3Futm_source=tldr%26utm_medium=4oct2024newsletter%26utm_content=CloudNativeDevOps_Kubernetes/3/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/RSI6arxdHOQQWQxQCamgGGr9e2AlrS6c3YAKmchr_bQ=373" rel="noopener noreferrer nofollow" target="_blank"><span>Get it free from DoiT</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F25UtNS/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/5-AdL89keXJzK0eID5Pd-ZtDE8A9J9VRXViIZ-_8e-k=373">
+                                    <span>
+                                        <strong>Canvas is a new way to write and code with ChatGPT (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Canvas is a new interface for ChatGPT that allows users to collaborate with AI on writing and coding projects beyond simple chat. It provides a dedicated space for working on projects, offering features like inline feedback, editing tools, and version control.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2FYonom%2Fassistant-ui%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/mca4Y7A4muyQHzORHDmYbjJW1v3BXZsW_iEGKNFBVfU=373">
+                                    <span>
+                                        <strong>Assistant UI (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Assistant UI is a set of React components for AI chat, with Langchain, Vercel AI SDK, TailwindCSS, and shadcn-ui integrations. It also supports various models out of the box, like Claude, GPT, and Gemini.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhtmx.org%2Fessays%2Fwhy-gumroad-didnt-choose-htmx%2F%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/f-kmlnsAU_wLxppmN4MyEI0sDO297fjhx_0aBln_hcM=373">
+                                    <span>
+                                        <strong>Why Gumroad Didn't Choose htmx (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Gumroad initially liked htmx for its new project, Helper, as it was simpler than React. However, Gumroad ultimately used React/Next.js due to htmx's limitations in handling complex user interactions, state management, and scaling with the project's increasing complexity. htmx's server-centric approach led to clunky solutions for features like drag-and-drop, dynamic forms, and real-time collaboration.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.tanayj.com%2Fp%2Fopenai-and-anthropic-revenue-breakdown%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/5LrpcQW65ZVGzq7rtwllXAKhRHRXFFHZAezrHgFtvMM=373">
+                                    <span>
+                                        <strong>OpenAI and Anthropic Revenue Breakdown (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    OpenAI, with an estimated $5 billion annualized revenue, dominates the consumer market with ChatGPT, while Anthropic, at $1 billion, relies more heavily on its API business. Despite Anthropic's faster growth, OpenAI still has a significant lead in the consumer market. Both companies have substantial capital requirements and are betting on reduced inference costs, price increases, and a shift towards inference-time compute to improve profitability.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fexpo.dev%2Fblog%2Fhow-to-synchronize-reactive-local-first-apps-with-tinybase%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/jMsksFq0FE1bkY008EaUUYv_K86K8gaJwyY-xihABQI=373">
+                                    <span>
+                                        <strong>How to synchronize reactive local-first apps with TinyBase (16 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    TinyBase is an open-source JavaScript data store that can be used to build local-first apps. It provides features like reactivity, offline persistence, and deterministic data synchronization using CRDTs. This article shows how to build a simple app with data structure implementation, local persistence, and real-time synchronization across multiple devices.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.ycombinator.com%2Fblog%2Fcorrecting-the-record%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/tEDYze8YBvSVESloARLdapoj-uMo400iXfvoY8jVYek=373">
+                                    <span>
+                                        <strong>Correcting the record for Continue and PearAI (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Garry Tan, president of Y Combinator, apologizes for initially defending PearAI's inappropriate use of open source code in its AI code editor and acknowledges Continue's positive contributions to the open source community.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.entrepreneur.com%2Fbusiness-news%2Fgoogle-recommits-to-hybrid-work-schedule-unlike-amazon%2F480683%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/liSCVfDDId7D2kWdrn8lqb_N3JqSqt6ntkZI-PHPr0A=373">
+                                    <span>
+                                        <strong>Google Recommits to Hybrid Work Schedule Unlike Amazon (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Amazon and Salesforce have mandated full-time return to office work, but Google has reassured its employees that its current hybrid work policy, which allows staff to work remotely at least two days a week, will remain in place.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fjvns.ca%2Fblog%2F2024%2F10%2F01%2Fterminal-colours%2F%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/yWqy4vZ6_ZJD3U9_98AWfEdJgj6L-um3KTRF0Ruoh7Y=373">
+                                    <span>
+                                        <strong>Terminal colors are tricky (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Terminal colors are tricky due to inconsistent color implementations, contrast issues, program-specific color conflicts, and the impact of different terminal types and color support levels.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fmacwright.com%2F2024%2F09%2F19%2Fthe-extra-rules-of-hooks%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/-z98hJyeOaZ_Ma9RTxg16p-ikIOedsBPsE-L8aB7EX8=373">
+                                    <span>
+                                        <strong>The unspoken rules of React hooks (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    React's documentation inadequately explains the "unspoken rules" of useEffect dependencies, especially regarding the stability of return values from built-in and third-party hooks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fautomattic.com%2F2024%2F10%2F03%2Fmeritless%2F%3Futm_source=tldrwebdev/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/YIrj9vNsaCWUZKIo2sCzynJS7YkvJKO1uF2JiNBbcus=373">
+                                    <span>
+                                        <strong>Response to WP Engine's Meritless Lawsuit (1 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    WordPress founder Matt Mullenweg has published a response to the lawsuit brought on by WP Engine.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F7349b0af%2F3/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/LnHxieiCT7QO4DmJdG-UjvKa2LxJgwP9suJVTcvb1Oo=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/7349b0af/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_3de5f5548c83%2F3/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/1ksJt7z453vr8Kxj2CD6uYUQc40pz81a6MWiaULVR08=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/LpfD4DzXs-FF5bDGE85rnf0mnINH0KDhKAgM9xr1KsY=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=e8738704-8236-11ef-8fa9-2fcae64b3625%26pt=campaign%26pv=4%26spa=1728039657%26t=1728040061%26s=c22bbed01fb64fde506f4829bdbcf39f76a5e07be7c7d050131d184488a97f09/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/4ahrlpqJgGHiH611-SuC-uq7VeHOmzfHUx4G40lWJKk=373">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=infourbiss%2540gmail.com/1/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/4bFwBCXh86LTpSLFkqAwZts2Qkyt2QnpoV_HAyggHuQ=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/010001925736ca64-ee5adac4-01d7-4985-8b96-e47b97ef5824-000000/AW53InTYPA7KUNyFbqiZh-vfOzWTLLvL_vf5uRN9SXc=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

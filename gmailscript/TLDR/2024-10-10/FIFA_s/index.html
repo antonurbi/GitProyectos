@@ -1,0 +1,575 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR Design</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">The FIFA Club World Cup 2025, with 32 teams, is set to take place in the U.S. next summer. It has been surrounded by mystery and controversy&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/0aW0SWl7wg4OIFVYmKM8hIGs44xphILItpy765blJsM=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/4vndy_QEF2DidcCJ8BIQ4zg1G3AfneESyJ4K30Y6PmQ=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=3024af36-8626-11ef-8646-777c05753f9e%26pt=campaign%26t=1728475528%26s=24392009f3d5e0adc86577c1aef003d61a0d16b73bda332f7396c5bd51c41c7b/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/Xht9gK3MpDwZdaVnrwJcEIEso-lygdjHbEnv3fa0rEw=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR Design <span id="date">2024-10-09</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">📱</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>News &amp; Trends</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FAJQYRm/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/G8G52WcyQM4uFYfs0ZAfZsqBLQgzkiA61FKiH8b_oDo=374">
+                                    <span>
+                                        <strong>What FIFA's new controversial logo reveals about the power of branding (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The FIFA Club World Cup 2025, with 32 teams, is set to take place in the U.S. next summer. It has been surrounded by mystery, controversy, and limited details, raising concerns about player workload due to its expansion. Though criticized for its design, the recent unveiling of the tournament's logo has made the event feel more concrete and less confusing despite ongoing uncertainties.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.theverge.com%2F2024%2F10%2F8%2F24265025%2Fgoogle-docs-tabs-organization-feature-availability%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/vp71kSfcOAFF1uGoylwV9batX4aZzxOXMHAN5_D5xqQ=374">
+                                    <span>
+                                        <strong>Google Docs will let users organize information into tabs (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Google Docs is adding tabs and subtabs to help organize longer documents. The feature is available to all Google Workspace and personal account users. These tabs can be created via the bullet-point symbol, labeled individually, and easily navigated or shared. Editing is limited to those with editor access.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F06%2Fcpo-paul-gubbay-says-squarespace-is-training-its-ai-tools-with-curation-and-taste%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/7RQhrGeYVzn_iLuA44tEKjq6Ls4CO5V69V0sJ47r1oU=374">
+                                    <span>
+                                        <strong>Website Builder Squarespace Says it's Training its AI Tools with Curation and Taste (7 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Squarespace's Design Intelligence integrates generative AI tools to streamline website creation while maintaining customization. It is aimed at helping users create unique, design-driven sites. Instead of replacing designers, AI enhances the design process, offering faster, curated results that reflect individual brand identities and tastes.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativebloq.com%2Fdesign%2Fbranding%2Fwhat-brands-can-learn-from-instagrams-new-sonic-logo-where-did-it-go-wrong%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/IBPASGrBlAi_PIP96VIqSa58AJxJzK2BjgqhTL-AyPQ=374">
+                                    <span>
+                                        <strong>What brands can learn from Instagram's new sonic logo: where did it go wrong? (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Criticisms about Instagram's new sonic logo for Reels highlight the growing importance of sonic branding for consumer recognition. Successful examples like MGM's Roaring Lion and McDonald's jingle show how sound can evoke emotional and physiological responses, influencing brand perception.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fread.cv%2Fdisco_lu%2Ftypography-variables-structure%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/Pz9k5KyA_N_alJ5PXYzYu6T5qal_x5ijHsgtqhCCcQ0=374">
+                                    <span>
+                                        <strong>Typography Variables Structure (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Set up Typography Primitives and Typography collections to manage typography variables structure. The Primitives collection should hold font families, scales, and weights. The main Typography collection groups should contain text styles. Aliasing primitives ensures that updates to fonts or sizes reflect across the system, reducing manual changes and increasing efficiency.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fabduzeedo.com%2Fmatch-agencys-new-branding-and-web-design-approach%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/xOfavS0Cm3UyzDEy5la2qNSQZ7Ounso0Qd9NKmwRceA=374">
+                                    <span>
+                                        <strong>Match Agency's New Branding and Web Design Approach (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Match Agency has launched a new visual identity to celebrate its second anniversary that emphasizes simplicity and functionality with a modern yet timeless black-and-white color palette that enhances clarity and focus. The redesign incorporates clean typography, a grid system for structure, and a striking "brutalist symbol," creating a cohesive brand experience that balances aesthetic appeal with user-friendly design across both digital and physical materials.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.superflex.ai%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/FwxASaUFoC3O8tD1t5_raf79YR22eklwO3OGIhiwqU4=374">
+                                    <span>
+                                        <strong>Write Front-end Code from Figma (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Superflex helps you write front-end code from Figma, images, and prompts while matching your coding style and utilizing your UI components.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.pencilandpaper.io%2Fproduct%2Fdata-tables-ux-checklist-download%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/Aj15IRAao1PiW-IL1I6CoCBb8_IiiKIIOiliDQynsaQ=374">
+                                    <span>
+                                        <strong>Data Tables UX Checklist (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This comprehensive UX checklist for complex data tables includes common issues, successful traits, filtering behavior, prioritizing and evaluating for next steps, and data presentation best practices.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fcsspeeper.com%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/JA_NFmSt1W9F_QWOCHNHu87b_AORXe-gshBa4O2-RDo=374">
+                                    <span>
+                                        <strong>Smart CSS Viewer Tailored for Designers (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Inspect styles in a simple, well-organized, and beautiful way with this Chrome extension.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farstechnica.com%2Ftech-policy%2F2024%2F10%2Fartist-appeals-copyright-denial-for-prize-winning-ai-generated-work%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/LVPu3aHayfWrOZ7qPuiL5BVh00hvz0I4TbLdtfDBsRo=374">
+                                    <span>
+                                        <strong>Artist Appeals Copyright Denial for Prize-winning AI-generated Work (15 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Synthetic media artist, Jason Allen, is appealing the US Copyright Office's denial to register his Midjourney-generated work, "Théâtre D'opéra Spatial." The Office rejected it due to the extensive use of AI, claiming insufficient human authorship. Allen argues that his iterative prompt process qualifies as creative input deserving copyright protection.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.creativeboom.com%2Ftips%2Fhow-to-differentiate-yourself-as-a-creative-in-a-saturated-market%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/3UBEl4Txnha5qea4U3pMlaH4CwQxUgmig_23RtajUz8=374">
+                                    <span>
+                                        <strong>How to differentiate yourself as a creative in a saturated market (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Standing out in today's creative industry requires embracing your personal story, style, and values while tapping into what excites you most about your craft. Using short-form video, storytelling, and diversifying your skills can help you connect with audiences and differentiate yourself.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fraffdimeo.com%2Fthe-rise-of-individualism-and-the-effects-on-the-workplace%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/-D3yt79Wa0GGbmDraYVOt9m5NNgeCakfg06GnqOJhTI=374">
+                                    <span>
+                                        <strong>The Rise of Individualism and the Effects on the Workplace (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Pop bands like the Spice Girls and Backstreet Boys dominated the '90s, but today's music scene is dominated by solo artists, reflecting a shift toward individualism.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2F5Ao0oN/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/h1IUBNVeCmG4X8vovBULGo3_s0zEcJQQkGoL3nViJf8=374">
+                                    <span>
+                                        <strong>How Creators and Artists Can Control Their Legacy After Death (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Michael Crichton's estate is suing Warner Bros. over "The Pitt," claiming it is an unauthorized reboot of ER and that Crichton's contractual rights require approval for sequels and spin-offs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nngroup.com%2Farticles%2Fhow-to-test-digital-icons%2F%3Futm_source=tldrdesign/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/NbAys40xkiT7avVPCp0TuwcROIrkKbdvF4IQkwu40KI=374">
+                                    <span>
+                                        <strong>Icon Usability: When and How to Evaluate Digital Icons (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Effective icon usability depends on recognizability, correct interpretation, and factors like relevance, findability, and visual appeal.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F1b9d211c%2F4/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/BtT1VuQB67fD0S0vQAL8BmHM8Kqf9nNUCq39eERD5gg=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/1b9d211c/4</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_f2d978c86b6e%2F4/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/jL_n4BOYCkJQDo4jZCN3wQuuZik0qpVd_NUMIpGZBPE=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of design professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2Ftldr-marketing-and-design-sponsorship-opportunities%3Futm_source=tldrdesign%26utm_medium=newsletter%26utm_campaign=advertisecta/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/OZU4W2mSVanX6wte4jAXyrrIXW8aUpjMwCBNt2ZX4WE=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Jae Lee</span>, <span>Matej Latin</span> &amp; <span>Ralph Brinker</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Design, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e1c4e253-3e90-11ed-9a32-0241b9615763%26lc=2b04e006-819a-11ef-ad4d-4dddba39dee5%26p=3024af36-8626-11ef-8646-777c05753f9e%26pt=campaign%26pv=4%26spa=1728475235%26t=1728475528%26s=8636d1d38f327317eb0466e8b952305e810dacfea615e46953cbf73f3d8234c3/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/FNAgTp8gcflt9qFwEzKPEmnNrsDFIBPYa373ttRhihQ=374">unsubscribe from TLDR Design</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fdesign%2Fmanage%3Femail=infourbiss%2540gmail.com/1/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/lDzKOqeESD8o_RRsDIaSBFMbUv1boYqE7KDTItaAuMw=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/01000192712b7d48-9de3a9ed-7931-4cfd-9d0b-7dbd469874d3-000000/_60m21kbtkg0EyuHUjZLc3TN9PyenlNvvXoiouiDqe8=374" style="display: none; width: 1px; height: 1px;">
+</body></html>

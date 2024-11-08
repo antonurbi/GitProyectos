@@ -1,0 +1,611 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR WebDev</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Age doesn’t matter in tech as long as individuals possess the necessary skills. Some tech giants are taking steps to address age diversity&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/NhRCG5DzVzbng6PWkZ9wP_AQGqxTmuXT_ui_bYqAm9s=373" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/MDnBOCh5Wt4lCq1YZD1iVLpQ4AQuNcOZ3pA-cK9j1Ko=373" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=2f468046-861f-11ef-bbde-c5fa389c4367%26pt=campaign%26t=1728471996%26s=85d8c3fcbc6de2859c76f96f1ff47c8ee83155cf33da7d1ca9887fe91afb36c8/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/SPBynT6WafWCnkwTPB8EmFPu33J37hiGXp8hRpNHnFI=373"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>&nbsp;TLDR Web Dev <span id="date">2024-10-09</span></strong></h1>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Articles &amp; Tutorials</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fengineeringblog.yelp.com%2F2024%2F10%2Fmigrating-from-postgres-to-mysql.html%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/hkBMsizDHUGWRj2ihD2Oshlm1TDsoqPji-NMxHRlFZg=373">
+                                    <span>
+                                        <strong>Migrating in-place from PostgreSQL to MySQL (11 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Yelp Reservations, acquired in 2013, was originally built with a PostgreSQL database. Recently, the service was migrated in-place to a Yelp-standard MySQL database. This involved overcoming challenges like data consistency, handling PostgreSQL-specific features, and managing the release process with minimal service disruption.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.nodejs-security.com%2Fblog%2Fdo-not-use-secrets-in-environment-variables-and-here-is-how-to-do-it-better%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/1xL1JlpOYe__89n-HuzkfLI_3rKDbkEm0Q8UYZ_4CcA=373">
+                                    <span>
+                                        <strong>Do not use secrets in environment variables. Here's how to do it better (24 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Storing secrets in environment variables is a common practice but actually may be a security risk when secrets are poorly managed, leaked through frontend code, exposed in .env files, logged unintentionally, or inherited by child processes. Developers should try to use secrets stores instead.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.scattered-thoughts.net%2Fwriting%2Fsmolderingly-fast-btrees%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/95p9hEr4HW0YWYns24-hQSxshjt1Osq5Raqm0ALGIbo=373">
+                                    <span>
+                                        <strong>Smolderingly fast b-trees (16 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The benchmark matters when comparing the performance of B-trees and hashmaps. Different benchmarks show hashmaps benefit more from cache behavior and speculative execution. B-trees avoid hashmap pitfalls like flooding and rehashing, but hashmaps with additional measures for order and iteration may be easier to use in development.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Opinions &amp; Advice</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fzakirullin%2Fcognitive-load%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/d4NBT-ttgMGLWvS5Ynptuk7p5F4y52NPe8P1VRKgW50=373">
+                                    <span>
+                                        <strong>Cognitive Load is what matters (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Cognitive load refers to the mental effort required to understand and work with code. Excessive cognitive load can lead to confusion, errors, and delays. Developers should work on reducing extraneous cognitive load while working on code by avoiding overly complex conditionals, minimizing inheritance, and using clear, self-describing variable names.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fkristoff.it%2Fblog%2Fstatic-site-paradox%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/1zMZ2U70c0gOZopi20OAN8ENoP3PQJKAInsIXt8AHhs=373">
+                                    <span>
+                                        <strong>The Static Site Paradox (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Ironically, professional software engineers are more likely to use simple static HTML websites for their personal blogs, while regular users are often stuck with more resource-intensive CMS platforms like WordPress. This disparity is because creating a static website requires technical knowledge and effort that many users lack, while readily available CMS solutions are much easier to use (even though they are more complex under the hood).
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fchrisdone.com%2Fposts%2Fhtmx-critique%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/NFIbtvz8-bUwR2mk5QXc7V6U7LDyC5Xx-hkOBuTN1eA=373">
+                                    <span>
+                                        <strong>A modest critique of htmx (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    htmx is an open-source front-end JavaScript library that extends HTML with custom attributes that enable the use of AJAX directly in HTML. While the core concept of htmx is appealing, its implementation is more complicated because of issues with inheritance, state management, and integration with other libraries like React. For example, htmx's reliance on replacing DOM elements wholesale causes problems with maintaining browser-local state and conflicts with libraries like React that manage their own state.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🚀</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Launches &amp; Tools</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/h4TdozyknsNM0igxUwqi2J1IyXEovwQRDYk83QqwZ5I=373">
+                                    <span>
+                                        <strong>Speakeasy: Generate handwritten SDKs in +10 languages (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Why spend hundreds of hours your team doesn't have on building and maintaining SDKs? With <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/2/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/hrx69lGZrHf9PgAuhamVE1XNd6PDiknX6-ZoH0P7Aqk=373" rel="noopener noreferrer nofollow" target="_blank"><span>Speakeasy,</span></a> you can upload your OpenAPI spec and get SDKs your API users will love, including OAuth2.0, custom code, retries, pagination, and more. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.speakeasy.com%2Fproduct%2Fsdk-generation%3Futm_source=webdev-tldr/3/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/pfZrLTE2vocqYdNDxCUvBHtvy6zBIdpOEW5W3lw9eM8=373" rel="noopener noreferrer nofollow" target="_blank"><span>Start for free →</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fbrisa.build%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/1t5akkHSE09LgOQDCa7HfumMzdBOy5VQlDOfKcdZ9tY=373">
+                                    <span>
+                                        <strong>Brisa (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Brisa Framework is a web platform framework that aims to unify server and client-side development. It offers server-rendered JSX components and minimal JavaScript shipped to the browser. Brisa uses a web component island-based architecture, allowing for interactive elements to be rendered on the server and hydrated on the client with native Web APIs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fplayer.style%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/fRHrG7BA2KbQtdvv6kquYRopA2wzXW1DIpJFxA94ZRY=373">
+                                    <span>
+                                        <strong>Player.style (Website)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Player.style offers a collection of pre-built video and audio player themes designed to be easily implemented in any web player or app framework.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdynomight.substack.com%2Fp%2Fdata-wall%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/gn7ydTZ7OrrtRjuTr2YpZcR9XXA21SzsY9ZoDGkHRxc=373">
+                                    <span>
+                                        <strong>The real data wall is billions of years of evolution (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The current focus on data as the driving force of AI progress is misguided. Instead, the real data wall is the vast amount of information encoded within our evolutionary history, far exceeding any data set used in AI training. This "evolutionary data" includes not only DNA but also the complex information embedded in the structure and function of our cells.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.trevorlasn.com%2Fblog%2Fageism-in-tech%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/vrGFkl9ixH-MQaE9sF1mCJweH1iaYl8ae4aiI09zu-U=373">
+                                    <span>
+                                        <strong>Is Age Really a Factor in Tech? (5 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Age doesn't matter in tech as long as individuals possess the necessary skills. While some tech giants are taking steps to address age diversity, there still needs to be systemic changes to combat ageism in tech.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwritings.stephenwolfram.com%2F2024%2F10%2Fon-the-nature-of-time%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/Ew2i0WupTiVePJMdPogcgFh78mJRBaO6MZ0C9jLfcwI=373">
+                                    <span>
+                                        <strong>On the Nature of Time (32 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    From a computational perspective, time is not a fundamental coordinate but rather a reflection of the universe's computational processes. This idea is supported by the concept of computational irreducibility, which states that the only way to determine a system's future state is to trace through each computational step. Time, therefore, becomes a robust and irreplaceable element of our experience, reflecting the fundamental nature of computation.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fkaiwenwang.com%2Fwriting%2Fcanvases-versus-documents%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/q_3oSn7oTmfLDVgjtjVnLP9kuL_RI_-4rEH4MLDffIQ=373">
+                                    <span>
+                                        <strong>Canvases versus Documents (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Web design may be shifting away from immersive "canvas-style" layouts and back to more structured, document-like designs.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Froman.pt%2Fposts%2Fdont-let-dicts-spoil-your-code%2F%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/mz5IENRkvEllI2RbmiABn4YYl4vrU0pFec3kcW4wUik=373">
+                                    <span>
+                                        <strong>Don't let dicts spoil your code (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    For better code structure and maintainability in Python, it's better to use dataclasses, Pydantic, and TypedDicts instead of using dictionaries.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fworld.hey.com%2Fdhh%2Fautomattic-is-doing-open-source-dirty-b95cf128%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/1qVXCq8MDpZ4uIGHavibVubV-fxjna61AlZE5n9IFI4=373">
+                                    <span>
+                                        <strong>Automattic is doing open source dirty (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The creator of Ruby on Rails argues that Automattic's demand for 8% of WP Engine's revenue is a violation of open source principles and the GPL license.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fblog.appsignal.com%2F2024%2F10%2F07%2Fwhats-new-in-ruby-on-rails-8.html%3Futm_source=tldrwebdev/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/9-GEm4LffipiCXltSutJ8ZttMi7qEmf6hhMX-5TJlpg=373">
+                                    <span>
+                                        <strong>What's New in Ruby on Rails 8 (9 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Rails 8 introduces updates like easier deployments, a modern asset pipeline, improved SQLite capabilities, and more Active Record features.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2F7349b0af%2F3/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/_dTom--dB8_9dtKgNOBBeES6f__k9H4Pxh4o6yOv68c=373" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/7349b0af/3</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_3de5f5548c83%2F3/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/j275J3kI87EUwv7x70Bj7nRWIV6MS6R6DqQkRW2IApM=373" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of web developers and engineering decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrwebdev%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/V-NtoF4V_Ec-8TG_OmlerYLzdixD_YX9YdGZU2sPhHk=373"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Priyam Mohanty</span>, <span>Jenny Xu</span> &amp; <span>Ceora Ford</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR Web Dev, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=e8d201ca-3e93-11ed-9a32-0241b9615763%26lc=2b04a29e-819a-11ef-b1cf-57d23cda3001%26p=2f468046-861f-11ef-bbde-c5fa389c4367%26pt=campaign%26pv=4%26spa=1728471636%26t=1728471996%26s=12bd012635474d1676ac71add8005581b2497e5bdbfa2c830670a21e2412f5d6/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/5yJ4xVkGt7kqTlMlaHmslm_kgNxdUjTB1G3vEP-y9RY=373">unsubscribe from TLDR Web Dev</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fwebdev%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/cySUkaOk32H90UGQ2SI49SljnpeWNHOvCmR5479EQ1o=373">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+
+
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019270f59a0d-a0558aa4-7a53-4598-b0da-f3a9b6910b58-000000/sDWASBgiZW1WkVPOLlYGnAeKk4sao7-ApAkEtT_oMDI=373" style="display: none; width: 1px; height: 1px;">
+</body></html>

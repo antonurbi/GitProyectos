@@ -1,0 +1,327 @@
+WEBVTT
+Kind: captions
+Language: es
+hablemos de
+impulso y estoy hablando de un alto
+impulso con respecto al comercio intradiario,
+ya sea que esté operando con su propia cuenta
+o con una
+cuenta de apoyo, y cuáles son algunas de las
+características que una persona puede
+capturar con diferentes tipos de
+indicadores y he estado  ya sabes, en
+esta búsqueda durante mucho tiempo y en mi
+mente ahora tengo lo mejor de lo mejor
+y estoy hablando de tres años que he
+estado jugando con unas seis o siete
+herramientas diferentes para capturar cierto tipo
+de movimientos de impulso.  y eso es lo que
+estamos haciendo, básicamente somos
+reconocimiento de patrones o atrapamiento de patrones ENT,
+operadores, estamos tratando de
+atrapar ciertos patrones como un
+indicador que nos muestra un cambio en el impulso
+de un giro a otro, ese es un
+tipo de patrón como con  Con las
+herramientas de igrid, estamos tratando de capturar
+puntos de transición en el impulso para aprovecharlas
+para operaciones intradía o operaciones a más largo
+plazo
+y, a veces, el mercado nos brinda
+cambios de impulso nítidos muy bien definidos
+y, a veces, no es así, así que el
+igrid que puedo  rastrear cambios de
+impulso es realmente bueno y tiene
+mucha capacidad de ajuste, por lo que puedo trabajar con
+ese indicador en muchos
+instrumentos diferentes. Ya sabes,
+puedo rastrear cualquier instrumento en una amplia gama
+de marcos de tiempo, pero luego, cuando realmente
+quiero bajar.  hasta cuando el mercado simplemente se
+desgarra y se vuelve de naturaleza realmente lineal, ¿
+cuáles son algunas formas en que puedo ver eso
+a través de un indicador de que podría tener una
+actividad comercial para hablar a través de la
+automatización?
+Así que aquí hay algunos ejemplos de lo que se me
+ocurrió y algo que he  He estado
+trabajando durante varios meses para lograr que
+realmente ame el mecanismo
+que puede atrapar el patrón y una vez que
+ese mecanismo esté donde me gusta y
+esté haciendo lo que quiero, lo que
+originalmente pretendía, entonces puedo tomarlo
+y tenerlo.  el indicador tiene resultados o ya
+sabe, haga una estrategia o lo que sea para
+luego trabajar en la gestión comercial para
+atrapar el patrón que estoy tratando
+de capturar, por lo que hay dos cosas a
+tener en cuenta cuando el mercado adquiere un gran
+impulso con lo que yo llamo este
+comerciante de inclinación.  herramienta y la he mostrado antes
+e hice avances masivos con ella
+en las últimas dos semanas, probablemente alrededor de ocho
+semanas, en las que ya no le hago nada
+al indicador. Ahora he estado
+avanzando hacia el tipo de automatización que
+existiría.  aprovechando
+este tipo de configuraciones, hay
+un par de
+cosas, la número uno es
+el ángulo de inclinación, ya sabes cuánto
+ángulo estoy inclinando hacia arriba o hacia
+abajo, entonces, ¿cuál es mi ángulo de ascensión o
+cuál es mi ángulo de descenso o
+descenso?  o como quieras llamarlo,
+mi ángulo de inclinación hacia arriba, ángulo de inclinación hacia abajo,
+así que ya sabes, y supongo que sabes,
+que en realidad es un
+punto po muy importante para Benchmark, ya que
+tengo que tener una cierta cantidad de
+aumento repentino en el precio o un  cierta cantidad de
+inclinación repentina hacia abajo en el precio para que haya un
+nivel de referencia de inclinación hacia arriba y
+hay diferentes maneras, así que estábamos
+midiendo la inclinación de una manera y luego tuvimos un gran
+avance en una forma más nueva que es más
+eficiente para medir qué tan inclinados
+estamos hacia arriba.  o hacia abajo para que pueda ser una salida
+para que podamos ver algunos
+trabajos de optimización, está bien si mi inclinación es
+tan grande o inferior, no toque ningún
+Long y luego, si mi inclinación es ahora tan
+grande y luego teniendo  esa es una salida muy
+específica y definida
+y la optimización dice wow, si
+estoy en esa cantidad de inclinación o mayor
+inclinación hacia arriba ahora puedo activar una
+operación larga, por lo que esa inclinación es una gran cosa,
+otra cosa también que agregué a  la
+mezcla que
+aumentó la
+verificación uh, está bien, sí, obtuve la
+inclinación correcta, pero ¿el impulso es fuerte o
+es realmente fuerte? ¿Está desgarrando
+lo estrecho que es el espacio entre las
+bandas, por lo que la inclinación número dos hacia arriba o hacia abajo es
+un colapso del espacio entre ellas?  el
+canal, esto no es una regresión lineal normal,
+estas líneas verticales están
+unidas con puntos de anclaje y puedo
+ajustar dónde están los puntos de anclaje
+a un conjunto de bandas de precios adaptativas únicas,
+no una regresión lineal, sino
+bandas de precios adaptativas, y ya sabes, he creado toneladas
+de  bandas que no se recalculan ni
+se repintan, así que sé cómo construir un
+precio adaptable, por
+lo que tomar una línea y anclarla en dos
+puntos de
+contacto en el lado superior e inferior es
+parte del mecanismo y luego, para
+las tendencias alcistas, descubrimos que está bien dondequiera que esté.  El
+lado superior está anclado, podemos hacer que
+la línea inferior corra paralela a ella, pero
+cuando se voltee haremos lo contrario, eso
+podría confundirte, pero eso
+no es algo que
+necesites saber absolutamente, pero esa fue otra parte
+de esto.  proceso de trabajar trabajar
+trabajar muchos meses muchos meses muchos
+meses finalmente consiguiendo alguna manera de
+atrapar el patrón que estoy buscando, así que
+observemos un poco cómo el mercado
+avanza desde lo que yo diría que no está en
+ese tipo de impulso específico que
+Quiero involucrarme, así que digamos que
+la inclinación alcista del mercado cumplió con mis
+criterios justo aquí, entonces el
+objetivo estaría bien. Voy a
+implementar una operación. Tendré algún tipo de
+stop grueso luego, a medida que el mercado lo pruebe.  para
+mí que continúa moviéndose en la
+dirección deseada, puedo tener la parada,
+uh,
+al final, etc., ya sabes,
+no es difícil determinar dónde
+deberían estar mi parada y mi objetivo con un
+poco de trabajo de optimización y luego
+el agradable  La cuestión es que puedo mirar y luego observar
+una amplia gama de marcos de tiempo por
+instrumento y obtener algunos que
+realmente capturan estas ráfagas de
+movimiento y la idea es tratar de
+llegar a algún lugar en el primero, ya sabes, del
+33 al 37% del tiempo.  muévete para que cuando
+entre quede al menos un poquito
+o mucho que pueda entrar y
+hacer que mi parada alcance el punto de equilibrio además de Trail it
+Trail it Trail it uh para luego tomar
+bocados rápidos del mercado y luego  Siempre y
+cuando el mercado mantenga una cierta
+cantidad de movimiento de precios en esa
+dirección del impulso, mi
+herramienta que he
+desarrollado se mantiene en una cierta cantidad, en
+este caso, con una inclinación hacia arriba y mantiene una
+cierta distancia entre las
+dos líneas.  mantiene que la
+distancia mínima no se vuelve muy amplia, entonces estoy
+dispuesto a mantener el intercambio si las
+líneas del canal se ensanchan demasiado significa que estoy
+empezando a pasar del impulso a la
+oscilación. Puedo hacer que la parada comience a
+moverme más rápido, así que  ya sabes, si se revierte,
+obtengo más ganancias si se mantiene
+estrecho. Puedo mantener mi stop tal vez un
+poco más pasivo, por lo que es una
+medida importante para ingresar al comercio.
+Es una medida importante para seguir
+analizando para permanecer en el comercio.
+eso es lo número uno, cuál es el
+ángulo de inclinación del Tilt Trader y luego
+cuál es la
+distancia de expansión o, en este caso, cuál es el
+colapso, de modo que cuanto más colapsado
+esté el indicador encima de sí mismo, más
+fuerte será el impulso. Oye, quiero
+quédate en ese bebé y dale la
+oportunidad de ejecutarse. Quiero que mi parada de seguimiento
+sea un poco más pasiva
+y así sucesivamente para poder usar todo eso y
+luego descubrir qué tipo de
+gestión comercial funciona para ese patrón que
+tengo.  Acabo de quedar atrapado. He estado buscando
+formas de captar estos movimientos desde siempre
+y es como si ahora finalmente encontré
+algo y he estado trabajando con ello
+en segundo plano para
+asegurarme de que este sea el indicado y esté
+configurado y  Hago lo que quiero y es como si estuviera
+bien, ahora estoy allí. Está bien, ahora puedo pasar
+a la gestión comercial y tengo a
+alguien con quien nunca he trabajado
+antes, trabajando conmigo en esto, uh,
+uh, no solo para, ya sabes,  Ya
+tenemos el borrador en nt8, la
+idea era ponerlo en Quant. Creo que
+los cuantos podrían ser mejores para atrapar
+estos movimientos cuando son muy rápidos y
+quiero hacer mucha actividad de flujo de órdenes
+en el movimiento.  o o o muchas
+fases múltiples de gestión in tril
+en otras palabras, quiero
+asegurarme de que dondequiera que se ejecute no tenga
+excepciones de pedidos o problemas para moverme, ya
+sabes, no quiero que haya
+problemas de confiabilidad si  Termino operando en
+períodos de tiempo realmente bajos
+que no son transacciones de alta frecuencia,
+pero lo veo así y me
+acerco bastante a él si eso tiene sentido,
+así que ahora que he seguido y seguido,
+veamos algunos de estos movimientos.  Puedo
+explicar el concepto y en qué
+he estado trabajando, está bien, así que este es el
+período previo a la comercialización, esto se acerca
+a las 6:00 de la mañana,
+hora de Chicago, hora central de EE.
+UU., ya lo sabes. Podría descubrirlo.
+Puedo operar con TR las 24 horas del día.
+Puedo saber que puedo usarlo en FX.
+Ya uso una versión de esto en
+FX con un cierto tipo de bandas cuando
+obtenemos un cierto ángulo de inclinación y estrechez,
+pero encontré esto, creo.  es mucho más
+efectivo que eso para una
+actividad intradía más rápida, eh,
+comercio de futuros ESP y eso ya lo sabe. Trader
+ocho, el indicador, ahora mire eso
+allí mismo, vea cómo se
+desarrolló,
+obtuvimos un cierto ángulo de inclinación y luego
+obtuvimos un cierto  cantidad de colapso, de modo
+que todo ese período de tiempo en el que el
+indicador es
+estrecho, luego, a medida que el mercado
+cambia de impulso, el indicador se amplía
+un
+poco, luego el indicador comienza a inclinarse,
+pero todavía es un poco ancho y luego, durante un
+período de tiempo, el
+indicador llega a  una caída bastante baja, ya sabes, una
+inclinación hacia abajo bastante significativa y se estrecha
+poco y cuanto más se acelera el impulso,
+mire simplemente observe lo que
+hace el canal, puede visualizar cómo se
+puede utilizar para apuntar y
+tengo esto en una reproducción realmente rápida, así que
+sabes, mucho más rápido, sabes, no es
+como si lo estuviera ejecutando a la
+velocidad típica del mercado y la verdad, no estoy
+optimizado este indicador para este período de tiempo.
+Simplemente lo vomité para hacer el
+video, así que podría estar en un  completamente,
+no conoces en absoluto las mejores configuraciones de la
+barra de anclaje, como si estuviera en las barras número cinco y 20
+o ya sabes, para poder controlar los puntos.
+Algunas otras cosas sobre la velocidad y la
+capacidad de respuesta de las
+bandas ortopédicas adaptativas subyacentes que formarán
+parte de  Una optimización para decir que esto
+son los mejores
+movimientos de configuración en este
+gráfico en particular y en este momento en particular voy
+a bajar un poco y, como usted,
+todo se trata de las
+bandas, um, y ya puedo decir que estas
+bandas no tienen tiempo de activación.  cuadro I
+Ya puedo decirlo, pero quería que
+vieras la
+visualización de lo que
+hacen las líneas del canal horizontal y
+cómo podrían utilizarse para buscar el
+ángulo de inclinación hacia arriba o hacia abajo para activar las
+operaciones de la distancia entre
+los dos, entonces, eh, ya sabes, ya
+terminé de obtener el indicador donde
+necesitaba obtenerlo en dos plataformas, ahora
+está bien, construyamos un
+modelo funcional con él en modo real, intercambiando algunas
+cuentas de evaluación administrando
+el uso cuando yo.  Me siento muy bien
+con él, entonces es como si ahora estuviera
+listo para funcionar, se puede implementar
+y puedo comenzar a moverme en otras
+plataformas, como para mi
+comercio de divisas, y cualquier otra plataforma en la que
+pueda usar esto definitivamente con
+la mentalidad de usar.  es para el
+comercio intradiario, así que simplemente quería
+repasar, ya sabes, hay muchas maneras que
+puedes considerar para atrapar
+movimientos de
+impulso y muy rápido, esto es
+a una velocidad, así que vamos, déjame hacer que
+estos indicadores sean más.  responsivo y
+veremos un poco de este día como se desarrolla
+con él configurado
+en un nivel un poco más responsivo para concluir configure esto
+en un momento un poco más responsivo uh
+esto es pre-mercado, lo aceleraré  solo
+para mostrarle que sabe que al final la
+optimización nos dirá
+qué desviación de ancho se debe establecer
+como
+punto de partida, qué período de retrospectiva y puntos Ang ER
+y luego, al final, lo sabrá por
+instrumento en el marco de tiempo.  Tendré
+configuraciones donde puedo
+capturar este tipo de movimientos y entrar,
+tomar una pieza y salir y luego,
+cuando haga otro movimiento, entrar, tomar una
+pieza y salir, y así sucesivamente, así que con suerte
+eso te hará saber eso.  El
+proceso que sigo, construyo cosas y cuál soy
+la herramienta que captura P. Que tengas un buen día,
+fin de semana.

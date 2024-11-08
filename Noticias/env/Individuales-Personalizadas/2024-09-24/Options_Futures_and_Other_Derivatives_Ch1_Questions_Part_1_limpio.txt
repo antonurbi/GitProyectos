@@ -1,0 +1,243 @@
+WEBVTT
+Kind: captions
+Language: en
+question 1 3 what is the difference
+between entering into a long forward
+contract when the forward price is $50
+and taking a long position in a call
+option with a strike price of $50 so
+there are two big differences and we can
+combine them into one chart here the
+when we when a buyer and the seller
+enter into a forward contract both are
+obligated so both have a commitment to
+do something however no money changes
+hands so the buyer as the price of the
+underlying asset goes up the payoff for
+the buyer continues to increase
+so there's unlimited gains if the price
+drops there are unlimited losses while
+theoretically because it's bounded below
+by 0 but there are unlimited losses the
+losses don't stop the other thing I want
+to point out about the forward contract
+is the payoff is the profit we don't
+have to change the shape of the curve at
+all to account for the profit we don't
+have to shift it in any direction simply
+because no money changed hands a buyer
+and a seller enter into a forward
+contract no money changes hands so your
+payoff and your profit are exactly the
+same and it's a linear combination or a
+linear relationship to the price of the
+underlying for an option the buyer has a
+right the seller has an obligation so we
+have a contingent contract not
+necessarily a commitment so if the price
+of the asset were under $50 the buyer of
+the call option wouldn't exercise the
+payoff would be zero and that would be
+the same for the seller the payoff would
+be zero so we have a limited loss for
+the caller for the caller for the buyer
+of the call and then after that the
+payoff is identical to the payoff had he
+entered into a forward contract so he
+gets the same payoff as the forward on
+the upside with limited downside saying
+my payoff could be zero or some
+think positive the difference with the
+option that we don't have with the
+forward is that the payoff line and the
+profit line are different the profit
+line gets shifted downwards by the
+amount of the call so the buyer had to
+pay the cell or something that's the
+premium which is will denote as seen on
+so if it's not exercised while the
+payoff of the contract is zero the
+profit of the contract is negative up to
+the $50 point and then it starts to
+climb until it hits a break-even point
+and the break-even point is the exercise
+price plus whatever the premium is so if
+I can exercise at 50 I don't actually
+make a profit until I cover my cost of
+acquiring that contract so my profit
+will be lower under the call option than
+it would be under the forward however I
+have a limited loss versus an unlimited
+loss here so about $50 the forward is
+more profitable so if the price ends
+above 50 I wish I were in the forward if
+you look over here below $50 - the
+premium - the premium on the call the
+option loses less because if we extend
+the forward contract down at this point
+here where the loss is identical for the
+forward and for the option this distance
+in here is the call premium so below 50
+minus C naught we wish we were in the
+call option above $50 we wish we were in
+the forward contract question one five
+an investor enters into a short forward
+contract to sell 100,000 British pounds
+for u.s. dollars at an exchange rate of
+1.5 zero zero zero dollars per pound how
+much does the investor gain or lose if
+the exchange rate at the end of the
+contract is a 149 and be 150 - so the
+investor entered into a short forward
+contract so the investor is short and
+the quote were given
+1.50 if we're looking at it in terms of
+a currency quote it would be written
+like this and currencies are always
+quoted in pairs with the first pair
+being a one so one British Pound buys
+150 US dollars and so that's how we read
+all currency quotes so when I see 1.50 I
+want to put it in a term that I can
+understand one British Pound buys a
+dollar fifty u.s. dollars now when we're
+trading currencies and here we're really
+just trying to figure out the gain or
+loss but we need to be specific the
+question says how much does the investor
+gain or lose if the exchange rate at the
+end of the contract is 149 and 152 you
+cannot just give me a number you must
+give me a number in the proper currency
+if this currency changes am I going to
+gain or lose US dollars or my ganna gain
+or lose British pounds it matters the
+order of the currency matters so we're
+looking at the the pound the Sterling
+dollar here the payoff whenever you
+trade this this particular spot rate or
+any contract where it's quoted this way
+the payoff will always be in the
+currency of the second pair so the
+payoff is going to be in u.s. dollars so
+as the rate goes from 150 to 149 I can
+calculate the quantity in terms of a
+number but the currency will always be
+in US dollars if on the other hand it
+were quoted the other way around as USD
+if we had written it this way and
+whatever this rate happens to be if it's
+a dollar 50 this would be point six six
+six seven and we traded the currency in
+reverse the payoff would be in British
+pounds it wouldn't be in US dollars
+would be in British pounds just
+something you want to know about how it
+actually works in the real world you
+have to be careful about when you're
+asked how much money would you make you
+can't just quote it in one currency you
+have to quote it in the correct currency
+in this case we would be making US
+dollars so
+let's go we have we started at 150 - 149
+that is the direction that we want to go
+is point zero one zero zero the
+difference between the two is point zero
+one zero zero times $100,000 because it
+dropped 100 pips this is one penny the
+first to mean there a penny the other
+two decimal places these are called pips
+and there are 100 pips in a penny so we
+have a change of 100 pips times 100
+thousand dollars if you multiply that
+out it is one thousand US dollars if the
+gain or losses and in pounds now because
+it's in dollars right B asks us whatever
+150 - well 150 - 150 - is negative zero
+point zero to negative 200 pips times
+100,000 you would lose two thousand
+dollars a trader enters into a short
+cotton futures contract when the futures
+price is 50 cents per pound the contract
+is for delivery of 50 thousand pounds
+how much does the trader gain or lose of
+the cotton price at the end of the
+contract is forty eight point two perp
+and and fifty one point three perp ound
+well that's easy enough we would solve
+it the same way we solved the previous
+question we are short at fifty and minus
+forty eight point two cents per pound
+will give us one point eight cents the
+contract is for fifty thousand pounds so
+if we multiply fifty thousand times one
+point eight we will get ninety thousand
+but this is cents now these are all in
+pennies so if we divide that by 100 we
+will get nine hundred dollars
+most contracts for AG products when I
+say egg corn wheat soybean live cattle
+hogs these are typically always quoted
+in pennies so when we
+she quote on corn for instance and you
+see that corn is being quoted at 392 and
+1/8
+that's not $392 and 1/8 of a dollar
+that's 392 pennies per bushel so it
+would be three dollars and 92 cents per
+bushel same with soybean soybean might
+be quoted as 10 75 that's not a thousand
+75 that's ten dollars and 75 per bushel
+so just be aware that we don't put point
+five oh and point four eight two in
+front of this it is quoted full as full
+pennies and then you just have to make
+the conversion at the end of turn it
+into dollars so our second one we were
+short at 50 cents - 51 point three zero
+gives us negative one point three
+pennies it doesn't sound like a lot
+pennies negative one point three pennies
+but we got to do that 50 thousand times
+so we're we've lost sixty five thousand
+pennies of course divided by our hundred
+pennies to get a dollar means we have
+lost six hundred and fifty dollars so on
+these contracts especially when the
+underlying is a huge quantity pennies
+pennies can add up to significant
+dollars 116 a trader writes a December
+put option with a strike price of $30
+the price of the option is four dollars
+under what circumstances does the trader
+make a gain so I've written we have to
+be very clear what I've done here I've
+written a put option and I get that
+means I get four dollars I'm the writer
+of it so I get four dollars it's got a
+strike price of $30 so the first thing I
+want to do is I want to draw my chart
+here so I'm gonna put a point right here
+and this is four dollars I get to keep
+that for at all or so as long as the
+prices above thirty bucks I get to keep
+that four dollars as the price of the
+underlying and I'll put the price here
+the notation here to show you what it is
+as the price of the underlying starts to
+drop this is what happens to the put
+contract so there we go I'm in a better
+position now to answer this question
+under what
+circumstances does the trader make a
+game well $30 under below 30 I start
+losing but I got $4 for doing that so it
+could fall all the way down to $26 and
+that would be my break-even point so
+that's the first thing I want to know my
+break-even point will be $30 minus 4
+equals 26 so I will make a gain on any
+on any finish of the underlying greater
+than $26 I will make a game
+you

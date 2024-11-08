@@ -1,0 +1,645 @@
+<!DOCTYPE html><html lang="en"><head><meta http-equiv="Content-Type" content="text/html charset=UTF-8"><meta charset="UTF-8"><meta name="viewport" content="width=device-width"><meta name="x-apple-disable-message-reformatting"><title>TLDR AI</title><meta name="color-scheme" content="light dark"><meta name="supported-color-schemes" content="light dark"><style type="text/css">
+			:root {
+				color-scheme: light dark; supported-color-schemes: light dark;
+			}
+			
+			*,
+			*:after,
+			*:before {
+				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			}
+			
+			* {
+				-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;
+			}
+			
+			html,
+			body,
+			.document {
+				width: 100% !important; height: 100% !important; margin: 0; padding: 0;
+			}
+			
+			body {
+				-webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility;
+			}
+			
+			div[style*="margin: 16px 0"] {
+				margin: 0 !important;
+			}
+			
+			table,
+			td {
+				mso-table-lspace: 0pt; mso-table-rspace: 0pt;
+			}
+			
+			table {
+				border-spacing: 0; border-collapse: collapse; table-layout: fixed; margin: 0 auto;
+			}
+			
+			img {
+				-ms-interpolation-mode: bicubic; max-width: 100%; border: 0;
+			}
+			
+			*[x-apple-data-detectors] {
+				color: inherit !important; text-decoration: none !important;
+			}
+			
+			.x-gmail-data-detectors,
+			.x-gmail-data-detectors *,
+			.aBn {
+				border-bottom: 0 !important; cursor: default !important;
+			}
+			
+			.btn {
+				-webkit-transition: all 200ms ease; transition: all 200ms ease;
+			}
+			
+			.btn:hover {
+				background-color: #f67575; border-color: #f67575;
+			}
+			
+			* {
+				font-family: Arial, Helvetica, sans-serif; font-size: 18px;
+			}
+			
+			@media screen and (max-width: 600px) {
+				.container {
+					width: 100%; margin: auto;
+				}
+				.stack {
+					display: block!important; width: 100%!important; max-width: 100%!important;
+				}
+				.btn {
+					display: block; width: 100%; text-align: center;
+				}
+			}
+			
+			body,
+			p,
+			td,
+			tr,
+			.body,
+			table,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			h6,
+			div,
+			span {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			
+			@media (prefers-color-scheme: dark) {
+				body,
+				p,
+				td,
+				tr,
+				.body,
+				table,
+				h1,
+				h2,
+				h3,
+				h4,
+				h5,
+				h6,
+				div,
+				span {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+			
+			a {
+				color: inherit !important; text-decoration: underline !important;
+			}
+
+		</style><!--[if mso | ie]>
+		<style type="text/css">
+			a {
+				background-color: #FEFEFE !important; color: #010101 !important;
+			}
+			@media (prefers-color-scheme: dark) {
+				a {
+					background-color: #27292D !important; color: #FEFEFE !important;
+				}
+			}
+	 </style>
+			<![endif]--></head><body class="">
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">Anthropic has announced a new batch processing API that enables developers to send batches of up to 10,000 queries per batch.&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;‌&nbsp;</div>
+
+
+
+<div style="display: none; max-height: 0px; overflow: hidden;">
+<br>
+</div>
+
+<table align="center" class="document"><tbody><tr><td valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" class="container" width="600"><tbody><tr class="inner-body"><td>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr class="header"><td bgcolor="" class="container">
+
+<table width="100%"><tbody><tr><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" style="margin-top: 0px;" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div style="text-align: center;">
+<span style="margin-right: 0px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/foM8g3z1LBM8bSg0LuRiOvuIxpC27Hqzsm6zMsc-UAA=374" rel="noopener noreferrer" target="_blank"><span>Sign Up</span></a>
+|<span style="margin-right: 2px; margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisetopnav/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/ejVq3LBypDayZxjRfATNAEHhxemRSTCjnxaMD7Tanfs=374" rel="noopener noreferrer" target="_blank"><span>Advertise</span></a></span>|<span style="margin-left: 2px;"><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Fweb-version%3Fep=1%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=6805e828-862d-11ef-8e01-292970a9bbb1%26pt=campaign%26t=1728479461%26s=176ba9b67d1e4bc52134c6e3b4d731584896f5c91039b4c4a1f8aa8333424397/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/QFkGMapuK9uFDo2Hg5Vt5poTLX61if9oYE1eVTjJj6s=374"><span>View Online</span></a></span>
+<br>
+</span></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="text-align: center;"><span data-darkreader-inline-color="" style="--darkreader-inline-color:#3db3ff; color: rgb(51, 175, 255) !important; font-size: 30px;">T</span><span style="font-size: 30px;"><span data-darkreader-inline-color="" style="color: rgb(232, 192, 96) !important; --darkreader-inline-color:#e8c163; font-size:30px;">L</span><span data-darkreader-inline-color="" style="color: rgb(101, 195, 173) !important; --darkreader-inline-color:#6ec7b2; font-size:30px;">D</span></span><span data-darkreader-inline-color="" style="--darkreader-inline-color:#dd6e6e; color: rgb(220, 107, 107) !important; font-size: 30px;">R</span>
+<br>
+</td></tr></tbody></table>
+
+<br>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr id="together-with"><td align="center" height="20" style="vertical-align:middle !important;" valign="middle" width="100%"><strong style="vertical-align:middle !important; height: 100%;">Together With </strong>
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/THSu2bNOwL_0-hb-40EvgsxEDNfH1qHDMqyGdVmN-Cc=374"><img src="https://images.tldr.tech/incogni50.png" valign="middle" style="vertical-align: middle !important; height: 100%;" alt="Incogni"></a></td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width:100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;">
+<div style="text-align: center;">
+
+<h1><strong>TLDR AI <span id="date">2024-10-09</span></strong></h1>
+</div>
+</td></tr>
+<tr id="sponsy-copy"><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/2/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/lfNRhZoUZgXsPqgXhOETCwOfrkmNRGndTneT5W17YVk=374">
+                                    <span>
+                                        <strong>Hackers stole millions of Social Security numbers. Data brokers sell them legally (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Criminal hacker group USDoD has allegedly leaked 2.7BN records of personal information — including names, addresses, dates of birth, Social Security numbers, and phone numbers.<p></p><p>At the same time, <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/3/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/1dHk--oMzKul4IqHFNN-P8PayrPbaumZ0smkIhw3wNA=374" rel="noopener noreferrer nofollow" target="_blank"><span>legal data brokers are selling the same personal data</span></a> (including SSNs!) to every spammer and scammer under the sun.</p>
+
+<p>Hackers aren't your problem to solve. But you can do something about those brazen data brokers, and that's <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/4/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/gVaoB90WYJHc4lVt0tASXwf-d-3uV1b5Pw6XhisUq3I=374" rel="noopener noreferrer nofollow" target="_blank"><span>sign up to Incogni today</span></a>. They'll send dozens of removal requests, <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/5/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/lew21m8h2uVQ6I-T8YbkEb6Zs4gilFEwbt98bO15oIw=374" rel="noopener noreferrer nofollow" target="_blank"><span>deleting your personal data</span></a> from the data brokers you know—and the ones you don't.</p>
+
+<p><a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fget.incogni.io%2Faff_c%3Foffer_id=1151%26aff_id=16286/6/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/NLhi0QgFY1iZi6S0RnM0-r8rXWRoB2l25rd_Y03jqpY=374" rel="noopener noreferrer nofollow" target="_blank"><span>Get 60% off with code TLDRAI</span></a>
+
+
+</p>
+</span></span></div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr>
+<tr bgcolor=""><td class="container">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td style="padding: 0px;">
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;"><span style="font-size:36px;">🚀</span></span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Headlines &amp; Launches</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2Fi5Pf70/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/fyFDffZkGW3d-m-c76Ti7K2KB812JmCDSo0V6kmPHV0=374">
+                                    <span>
+                                        <strong>Hopfield and Hinton win physics Nobel prize (6 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Two scientists involved in the creation of the neural network win the Nobel Prize in Physics.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.anthropic.com%2Fnews%2Fmessage-batches-api%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/fPSEsRgUTJ-i6Kh3DEIgJm_surj8R08wTB5qCYQqcAI=374">
+                                    <span>
+                                        <strong>Anthropic Batches API (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Anthropic has announced a new batch processing API that enables developers to send batches of up to 10,000 queries per batch. Each batch is processed in less than 24 hours and costs 50% less than standard API calls. This makes processing non-time-sensitive tasks more efficient and cost-effective.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fglaive.ai%2Fblog%2Fpost%2Freflection-postmortem%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/1USIafydmKzgK9b2g8JH8uBa6kexLK90MBySrt8fNWY=374">
+                                    <span>
+                                        <strong>Update on Reflection-70B (8 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    A deep dive post mortem on what happened with the much hyped Reflection-70B model. It had bugs in its benchmark code. Its team has fixed them and performance is still very impressive, but not quite to the level they claimed.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧠</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Research &amp; Innovation</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.03617%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/-GDVTI-MRI2Qnr25qrvn7YHjKy779ZWN9pfMtnRJ3AU=374">
+                                    <span>
+                                        <strong>What matters for model merging at scale (21 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Model merging is a way to combine two models and get the performance of each. However, it doesn't always scale properly with model size. This paper explores what is needed to make it work well with a really large model.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01131%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/z1ZWVxx39ohy0y2o_t8joRRWtsYZLMJdNTzHOynYAzI=374">
+                                    <span>
+                                        <strong>Normalized representations on the hypersphere (38 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Normalizing the internal representation of language models is the target of a lot of resource activity. This work shows that if you put every internal vector on a hypersphere, it dramatically decreases convergence time for reasonably sized models.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.01999%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/09Wxn7wNlEaYKFCsZfN_6BbGPhNg3P70YPQ-Pb0hYns=374">
+                                    <span>
+                                        <strong>CodeMMLU (18 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Language models are getting so good at writing code that many benchmarks are saturating. This paper suggests a benchmark that is harder and aims to determine how models perform on reasoning and code generation tasks.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🧑‍💻</span></div>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Engineering &amp; Resources</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsonarsource.zoom.us%2Fwebinar%2Fregister%2F2317279779848%2FWN_w0ejMYXxTRiOgsAH9lSVpg%23%2Fregistration%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/abrUGSBg-X033m-hghVudvh1Dki2egAExlFR-yciX-Q=374">
+                                    <span>
+                                        <strong>Webinar: Improving the quality of AI-generated code (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Developing code with AI assistants? <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fsonarsource.zoom.us%2Fwebinar%2Fregister%2F2317279779848%2FWN_w0ejMYXxTRiOgsAH9lSVpg%23%2Fregistration/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/C1tjOmwmdHGZy6wKv2lKeTam8PeZ3eGaSf1pP_FMXlw=374" rel="noopener noreferrer nofollow" target="_blank"><span>Register for Sonar's webinar</span></a> on October 16 to learn how to boost developer productivity and improve code security in your SDLC. You'll explore how to harness the full potential of AI coding assistants with Sonar's latest capabilities - <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-ai-secondary-241009-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/r6trnt84812Q-5BZad2eVvb55keOUvmqot5MxEoEG-A=374" rel="noopener noreferrer nofollow" target="_blank"><span>Sonar AI Code Assurance and Sonar AI CodeFix</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fgithub.com%2Fswairshah%2FIntensify%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/iO1As_0G8M7QduZ4GUA2p2Cw7JUIl8rcnBW6FxWG8Y0=374">
+                                    <span>
+                                        <strong>Color logit printing in the terminal (GitHub Repo)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    The intensify package is a nice way to show logprobs or other real number modulated text based on the color of the terminal.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Foooolga.github.io%2FJEDi.github.io%2F%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/52LOooRpZRCQn5B1PB6B_YJuQ9c6H7AW0iEQw11tqV0=374">
+                                    <span>
+                                        <strong>Measuring Video Quality in AI (4 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    JEDi is a new metric based on Joint Embedding Predictive Architecture (JEPA). It improves evaluation accuracy while needing fewer samples and better aligning with human assessments, offering a stronger alternative to FVD.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Farxiv.org%2Fabs%2F2410.04939v1%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/w_5AGumYaQBqhlGDpRjVnQOWx5MdDJAxlSkn2VTWqPY=374">
+                                    <span>
+                                        <strong>Place Recognition for Robotics (17 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    PRFusion and PRFusion++ are multimodal models designed to improve place recognition in robotics and computer vision.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">🎁</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><strong><h1>Miscellaneous</h1></strong></div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftechcrunch.com%2F2024%2F10%2F02%2Ffour-legged-robot-learns-to-climb-ladders%2F%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/o5Ws4s2h0SwxR7NKr8sb_KKvekvBGrZLs7CB8mIp2OY=374">
+                                    <span>
+                                        <strong>Four-legged robot learns to climb ladders (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    ETH Zurich used reinforcement learning to enable the ANYMal robot to climb ladders with 90% success rate. Enhancing quadrupedal robots' capabilities in industrial settings, the system improved climbing speed by 232x compared to existing methods. This research highlights the integration of robot morphology and advanced control policies.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FTEVjTA/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/qYMdUAnUZgQroKdqpv0vnRIc44s5ex9WvDVk9tNvCn0=374">
+                                    <span>
+                                        <strong>Three Subtle Examples of Data Leakage (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    This article explores the pitfalls of data leakage in machine learning, highlighting two scenarios where improper data handling led to misleading model performance. One company made the mistake of filtering data based on an upper price limit before modeling, while another faced issues by not adhering to a strict chronological split. Key takeaways include the importance of detecting leakage and understanding its impact on model accuracy.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fdynomight.substack.com%2Fp%2Fdata-wall%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/Y7aEr6mxnnmy0mnAJco-hDYRUBdxGdPmwlKXPj8D46Y=374">
+                                    <span>
+                                        <strong>The real data wall is billions of years of evolution (10 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    AI development faces potential challenges from a "data wall" as language models approach training on all available text. This article argues against relying on human analogies for overcoming data limitations, highlighting the vast data and evolutionary processes that contribute to human intelligence. While human learning strategies might not directly apply to AI, this doesn't rule out other modalities or algorithmic progress for advancing AI capabilities.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;"><span style="font-size: 36px;">⚡</span></div></div>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding-top: 0px; padding-bottom: 0px;">
+<div class="text-block">
+<div style="text-align: center;">
+
+<h1><strong>Quick Links</strong></h1>
+</div>
+</div>
+</td></tr></tbody></table>
+
+<table bgcolor="" style="table-layout: fixed; width: 100%;" width="100%"><tbody><tr><td style="padding:0;border-collapse:collapse;border-spacing:0;margin:0;" valign="top">
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-ai-quicklink-241009-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/RE4TT1ktJ-fo33gtMBZ0yeDaQeOdGDfS3pmG8hRmy1s=374">
+                                    <span>
+                                        <strong>Trust your developers, verify your AI-generated code (Sponsor)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Better code = better software. Sonar's tools and code assurance workflows instill confidence and create accountability for AI-generated code, helping you produce software of unparalleled quality. <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fwww.sonarsource.com%2Flp%2Fsolutions%2Fai-assurance-codefix%2F%3Futm_medium=paid%26utm_source=tldr%26utm_campaign=ss-ai-assisted-dev%26utm_content=blast-ailaunch-ai-quicklink-241009-x%26utm_term=ww-psp-x%26s_category=Paid%26s_source=Paid%2520Other%26s_origin=tldr/2/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/qXJiBmfzdWfIzLuAs5iDz16z_DhFpFhYmuLEMwUNCUc=374" rel="noopener noreferrer nofollow" target="_blank"><span>See how it works</span></a>
+</span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fthreadreaderapp.com%2Fthread%2F1843653246612873701.html%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/uvrlXz5WLZZnficEe9_ou3Lr_P8P508k_ZyJ9zKgzKk=374">
+                                    <span>
+                                        <strong>Braintrust raises $36M Series A (2 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Braintrust, which helps Airtable, Brex, Notion, and Stripe build AI products, has raised $36M in a Series A led by a16z.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhamming.ai%2F%3Futm_source=tldrai/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/isxiMsO0bEfMSprgohVKW4L-Hca26NIC3GnwmqKgXFI=374">
+                                    <span>
+                                        <strong>Hamming (Product)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Hamming AI brings trust to AI voice agents.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+<table align="center" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block">
+<span>
+                                <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Flinks.tldrnewsletter.com%2FZpbKCw/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/pBJyE9aydWzkVJ6tg6E0gP-XbCIpaYijXq2xKMUIgX4=374">
+                                    <span>
+                                        <strong>Clout Kitchen raises $4.45M for AI gaming pal that mimics content creators (3 minute read)</strong>
+                                    </span>
+</a>
+<br>
+<br>
+<span style="font-family: &quot;Helvetica Neue&quot;, Helvetica, Arial, Verdana, sans-serif;">
+                                    Clout Kitchen raised $4.45 million in seed funding to develop AI-powered "Backseat AI" buddies for League of Legends that offer gameplay tips and commentary in the voices of popular creators.
+                                </span>
+</span>
+</div>
+</td></tr></tbody></table>
+
+</td></tr></tbody></table>
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Love TLDR? Tell your friends and get rewards!
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+Share your referral link below with friends to get free TLDR swag!
+</div>
+</td></tr>
+<tr><td align="left" style="padding: 10px;">
+<div class="text-block">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Frefer.tldr.tech%2Fae128712%2F2/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/uEzg3XljX27hbSTxQ9kRJKJVjLuN3y5iq5-ZqCq1dFA=374" style="color: #464ba4; text-decoration: underline;">https://refer.tldr.tech/ae128712/2</a>
+</div>
+</td></tr>
+<tr></tr>
+<tr><td align="left" style="padding:5px 10px;">
+<a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fhub.sparklp.co%2Fsub_cad7ba907a42%2F2/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/kbcZTOSS_2gSY4DmT8lg9RaAt5wHO7SDy3xETCTPC1U=374" style="font-size: 16px; line-height: 1.6;  padding: 10px 0; display: inline-block;  text-decoration: underline;"><span style="mso-text-raise:13pt; text-decoration: underline;">Track your referrals here.</span></a>
+</td></tr></tbody></table>
+
+
+
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td align="left" style="word-break: break-word; vertical-align: top; padding: 5px 10px;">
+
+<p style="padding: 0; margin: 0; font-size: 22px; color: #000000; line-height: 1.6; font-weight: bold;">
+Want to advertise in TLDR? 📰
+</p>
+</td></tr>
+<tr><td class="container" style="padding: 0px 10px 15px;">
+<div class="text-block">
+If your company is interested in reaching an audience of AI professionals and decision makers, you may want to <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fadvertise.tldr.tech%2F%3Futm_source=tldrai%26utm_medium=newsletter%26utm_campaign=advertisecta/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/iNfdl69-RFTL40sCiKULMNeYc_KTX52Vkvr1sUczxEA=374"><strong><span>advertise with us</span></strong></a>.
+</div>
+<br>
+<div class="text-block">
+If you have any comments or feedback, just respond to this email!
+<br>
+<br> Thanks for reading,
+<br>
+<span>Andrew Tan</span> &amp; <span>Andrew Carr</span>
+<br>
+<br>
+</div>
+<br>
+</td></tr></tbody></table>
+
+<table align="center" bgcolor="" border="0" cellpadding="0" cellspacing="0" width="100%"><tbody><tr><td class="container" style="padding: 15px 15px;">
+<div class="text-block" id="testing-id">If you don't want to receive future editions of TLDR AI, please <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Fa.tldrnewsletter.com%2Funsubscribe%3Fep=1%26l=eedf6b14-3de3-11ed-9a32-0241b9615763%26lc=2b0abbfc-819a-11ef-86d3-57d23cda3001%26p=6805e828-862d-11ef-8e01-292970a9bbb1%26pt=campaign%26pv=4%26spa=1728478859%26t=1728479461%26s=e55a2676dc0a35182a3923bdddab0cc337fc59b4fb9f08822e0adc4435f1fa6c/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/oVNdS_dRSldurdKDslMUWKR2ncMd6E6S8iEy7W28ugU=374">unsubscribe from TLDR AI</a> or <a href="https://tracking.tldrnewsletter.com/CL0/https:%2F%2Ftldr.tech%2Fai%2Fmanage%3Femail=infourbiss%2540gmail.com/1/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/29evMTJnFHPajPeZTTshdQnknr-fW_7S_nMJVGskDVk=374">manage all of your TLDR newsletter subscriptions</a>.
+<br>
+</div>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+</td></tr></tbody></table>
+
+
+
+<img alt="" src="http://tracking.tldrnewsletter.com/CI0/0100019271678056-0f6347b1-eae8-4e53-9c40-62b33385a6f2-000000/hGEhTejGCds1AAMDhVy-sc2ES3Ot3KnsRIP4LF1RChY=374" style="display: none; width: 1px; height: 1px;">
+</body></html>
