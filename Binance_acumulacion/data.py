@@ -3,6 +3,8 @@ import pandas as pd
 
 api_key = 'iDktkFPFVo5aD0JhXwz300akc6uJv0zhvynlVV5GFjPbrrez8hpr38ZEmXOqw7On'
 api_secret = 'r5L5SLe2DFXsQYnpJRCbq86wwG3b2dDrwN8CgHBAW7M33xQHfhSl7Gp2xr0MRGAg'
+api_key = ''
+api_secret = ''
 
 client = Client(api_key, api_secret)
 
